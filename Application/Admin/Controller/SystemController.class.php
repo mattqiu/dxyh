@@ -22,7 +22,7 @@ class SystemController extends BaseController
      * 角色管理
      */
     public function role_manage(){
-
+        //$this->error('测试');
         $this->display();
     }
 

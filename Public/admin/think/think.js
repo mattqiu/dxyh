@@ -1,11 +1,11 @@
-//dom¼ÓÔØÍê³ÉºóÖ´ĞĞµÄjs
+//domåŠ è½½å®Œæˆåæ‰§è¡Œçš„js
 $(function(){
-    //ajax getÇëÇó
+    //ajax getè¯·æ±‚
     $('.ajax-get').click(function(){
         var target;
         var that = this;
         if ( $(this).hasClass('confirm') ) {
-            if(!confirm('È·ÈÏÒªÖ´ĞĞ¸Ã²Ù×÷Âğ?')){
+            if(!confirm('ç¡®è®¤è¦æ‰§è¡Œè¯¥æ“ä½œå—?')){
                 return false;
             }
         }
@@ -13,7 +13,7 @@ $(function(){
             $.get(target).success(function(data){
                 if (data.status==1) {
                     if (data.url) {
-                        updateAlert(data.info + ' Ò³Ãæ¼´½«×Ô¶¯Ìø×ª~','alert-success');
+                        updateAlert(data.info + ' é¡µé¢å³å°†è‡ªåŠ¨è·³è½¬~','alert-success');
                     }else{
                         updateAlert(data.info,'alert-success');
                     }
@@ -40,7 +40,7 @@ $(function(){
         }
         return false;
     });
-    //ajax post submitÇëÇó
+    //ajax post submitè¯·æ±‚
     $('.ajax-post').click(function(){
         var target,query,form;
         var target_form = $(this).attr('target-form');
@@ -48,14 +48,14 @@ $(function(){
         var nead_confirm=false;
         if( ($(this).attr('type')=='submit') || (target = $(this).attr('href')) || (target = $(this).attr('url')) ){
             form = $('.'+target_form);
-            if ($(this).attr('hide-data') === 'true'){//ÎŞÊı¾İÊ±Ò²¿ÉÒÔÊ¹ÓÃµÄ¹¦ÄÜ
+            if ($(this).attr('hide-data') === 'true'){//æ— æ•°æ®æ—¶ä¹Ÿå¯ä»¥ä½¿ç”¨çš„åŠŸèƒ½
                 form = $('.hide-data');
                 query = form.serialize();
             }else if (form.get(0)==undefined){
                 return false;
             }else if ( form.get(0).nodeName=='FORM' ){
                 if ( $(this).hasClass('confirm') ) {
-                    if(!confirm('È·ÈÏÒªÖ´ĞĞ¸Ã²Ù×÷Âğ?')){
+                    if(!confirm('ç¡®è®¤è¦æ‰§è¡Œè¯¥æ“ä½œå—?')){
                         return false;
                     }
                 }
@@ -72,14 +72,14 @@ $(function(){
                     }
                 })
                 if ( nead_confirm && $(this).hasClass('confirm') ) {
-                    if(!confirm('È·ÈÏÒªÖ´ĞĞ¸Ã²Ù×÷Âğ?')){
+                    if(!confirm('ç¡®è®¤è¦æ‰§è¡Œè¯¥æ“ä½œå—?')){
                         return false;
                     }
                 }
                 query = form.serialize();
             }else{
                 if ( $(this).hasClass('confirm') ) {
-                    if(!confirm('È·ÈÏÒªÖ´ĞĞ¸Ã²Ù×÷Âğ?')){
+                    if(!confirm('ç¡®è®¤è¦æ‰§è¡Œè¯¥æ“ä½œå—?')){
                         return false;
                     }
                 }
@@ -91,7 +91,7 @@ $(function(){
                 //alert(JSON.stringify(data));
                 if (data.status==1) {
                     if (data.url) {
-                        updateAlert(data.info + ' Ò³Ãæ¼´½«×Ô¶¯Ìø×ª~','alert-success');
+                        updateAlert(data.info + ' é¡µé¢å³å°†è‡ªåŠ¨è·³è½¬~','alert-success');
                     }else{
                         updateAlert(data.info ,'alert-success');
                     }
@@ -130,7 +130,7 @@ $(function(){
         msg.className="msg";
         var msgTitle=document.createElement("div");
         msgTitle.className="msg-title";
-        msgTitle.innerHTML="ÌáÊ¾ĞÅÏ¢";
+        msgTitle.innerHTML="æç¤ºä¿¡æ¯";
         msg.appendChild(msgTitle);
         var a=document.createElement("a");
         a.href="javascript:;"
@@ -147,7 +147,7 @@ $(function(){
         t.innerHTML=2;
         cc.appendChild(t);
         cc.className="c";
-        $(cc).append("Ãëºó×Ô¶¯¹Ø±Õ");
+        $(cc).append("ç§’åè‡ªåŠ¨å…³é—­");
         msgContent.appendChild(cc);
         msg.appendChild(msgContent);
         mask.appendChild(msg);

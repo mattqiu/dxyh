@@ -31,7 +31,8 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="/Public/admin/css/ace-ie.min.css" />
     <![endif]-->
-
+    <!--Thinkphp框架error/success函数返回界面弹出框提示-->
+    <link href="/Public/admin/think/think.css" rel="stylesheet" />
     <!-- inline styles related to this page -->
 
     <!-- ace settings handler -->
@@ -44,7 +45,6 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
-<link href="/Public/admin/think/think.css" rel="stylesheet" />
 </head>
 <body>
 <!--顶部导航-->
@@ -346,7 +346,7 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<!-- PAGE CONTENT BEGINS 网页内容开始 -->
-
+						<a href="<?php echo U('System/role_manage');?>" class="ajax-get">点击测试</a>
 						<!-- PAGE CONTENT ENDS 网页内容结束 -->
 					</div>
 				</div>
@@ -405,7 +405,9 @@
 
 <script src="/Public/admin/js/ace-elements.min.js"></script>
 <script src="/Public/admin/js/ace.min.js"></script>
-<!-- inline scripts related to this page -->
+<!--Thinkphp框架error/success函数返回界面弹出框提示-->
 <script src="/Public/admin/think/think.js"></script>
+
+<!-- inline scripts related to this page -->
 </body>
 </html>

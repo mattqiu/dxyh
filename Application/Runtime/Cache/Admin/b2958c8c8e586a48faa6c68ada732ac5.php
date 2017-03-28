@@ -32,7 +32,8 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="/Public/admin/css/ace-ie.min.css" />
     <![endif]-->
-
+    <!--Thinkphp框架error/success函数返回界面弹出框提示-->
+    <link href="/Public/admin/think/think.css" rel="stylesheet" />
     <!-- inline styles related to this page -->
 
     <!-- ace settings handler -->
@@ -420,6 +421,9 @@
 
 <script src="/Public/admin/js/ace-elements.min.js"></script>
 <script src="/Public/admin/js/ace.min.js"></script>
+<!--Thinkphp框架error/success函数返回界面弹出框提示-->
+<script src="/Public/admin/think/think.js"></script>
+
 <script type="text/javascript">
     (function(){
         var wait = document.getElementById('wait'),href = document.getElementById('href').href;
