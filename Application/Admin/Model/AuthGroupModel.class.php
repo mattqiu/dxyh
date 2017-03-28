@@ -12,6 +12,11 @@ use Think\Model;
 class AuthGroupModel extends BaseModel
 {
     public function getAuthGroupSelect(){
+        if (IS_POST){
+            var_dump($_POST);
+            
+        }
+
         return $this->getDataList(null, "id,title");
     }
 }

@@ -45,7 +45,6 @@
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
 <!--顶部导航-->
 <div class="navbar navbar-default" id="navbar">
@@ -105,8 +104,6 @@
         </div><!-- /.navbar-header -->
     </div><!-- /.container -->
 </div>
-
-<!--left菜单导航-->
 <div class="main-container" id="main-container">
     <script type="text/javascript">
         try{ace.settings.check('main-container' , 'fixed')}catch(e){}
@@ -116,249 +113,235 @@
         <a class="menu-toggler" id="menu-toggler" href="#">
             <span class="menu-text"></span>
         </a>
-
         <div class="sidebar" id="sidebar">
-            <script type="text/javascript">
-                try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
-            </script>
+    <script type="text/javascript">
+        try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+    </script>
 
-            <div class="sidebar-shortcuts" id="sidebar-shortcuts">
-                <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-                    <button class="btn btn-success">
-                        <i class="icon-signal"></i>
-                    </button>
+    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+        <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+            <button class="btn btn-success">
+                <i class="icon-signal"></i>
+            </button>
 
-                    <button class="btn btn-info">
-                        <i class="icon-pencil"></i>
-                    </button>
+            <button class="btn btn-info">
+                <i class="icon-pencil"></i>
+            </button>
 
-                    <button class="btn btn-warning">
-                        <i class="icon-group"></i>
-                    </button>
+            <button class="btn btn-warning">
+                <i class="icon-group"></i>
+            </button>
 
-                    <button class="btn btn-danger">
-                        <i class="icon-cogs"></i>
-                    </button>
-                </div>
-
-                <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-                    <span class="btn btn-success"></span>
-
-                    <span class="btn btn-info"></span>
-
-                    <span class="btn btn-warning"></span>
-
-                    <span class="btn btn-danger"></span>
-                </div>
-            </div><!-- #sidebar-shortcuts -->
-
-            <ul class="nav nav-list">
-                <li>
-                    <a href="index.html">
-                        <i class="icon-dashboard"></i>
-                        <span class="menu-text"> 仪表盘 </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" class="dropdown-toggle">
-                        <i class="icon-desktop"></i>
-                        <span class="menu-text"> 科普中心 </span>
-
-                        <b class="arrow icon-angle-down"></b>
-                    </a>
-
-                    <ul class="submenu">
-                        <li>
-                            <a href="<?php echo U('Coptic/copticType');?>">
-                                <i class="icon-double-angle-right"></i>
-                                科普分类管理
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('Coptic/index');?>">
-                                <i class="icon-double-angle-right"></i>
-                                科普文章管理
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#" class="dropdown-toggle">
-                        <i class="icon-list"></i>
-                        <span class="menu-text"> 活动中心 </span>
-
-                        <b class="arrow icon-angle-down"></b>
-                    </a>
-
-                    <ul class="submenu">
-                        <li>
-                            <a href="<?php echo U('Activity/index');?>">
-                                <i class="icon-double-angle-right"></i>
-                                活动分类管理
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('Activity/activityType');?>">
-                                <i class="icon-double-angle-right"></i>
-                                活动管理
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#" class="dropdown-toggle">
-                        <i class="icon-text-width"></i>
-                        <span class="menu-text"> 家庭护理 </span>
-
-                        <b class="arrow icon-angle-down"></b>
-                    </a>
-
-                    <ul class="submenu">
-                        <li>
-                            <a href="<?php echo U('HomeCare/index');?>">
-                                <i class="icon-double-angle-right"></i>
-                                家庭护理
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="widgets.html" class="dropdown-toggle">
-                        <i class="icon-group"></i>
-                        <span class="menu-text"> 用户管理 </span>
-
-                        <b class="arrow icon-angle-down"></b>
-                    </a>
-
-                    <ul class="submenu">
-                        <li>
-                            <a href="<?php echo U('UserManage/user_list');?>">
-                                <i class="icon-double-angle-right"></i>
-                                用户管理
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('UserManage/integral');?>">
-                                <i class="icon-double-angle-right"></i>
-                                积分明细
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('UserManage/collection');?>">
-                                <i class="icon-double-angle-right"></i>
-                                用户收藏列表
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('UserManage/user_activity');?>">
-                                <i class="icon-double-angle-right"></i>
-                                用户参加活动列表
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#" class="dropdown-toggle">
-                        <i class="icon-gears"></i>
-                        <span class="menu-text"> 系统设置 </span>
-
-                        <b class="arrow icon-angle-down"></b>
-                    </a>
-
-                    <ul class="submenu">
-                        <li>
-                            <a href="<?php echo U('System/role_manage');?>">
-                                <i class="icon-double-angle-right"></i>
-                                角色管理
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('System/account_manage');?>">
-                                <i class="icon-double-angle-right"></i>
-                                账户管理
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('System/website_image');?>">
-                                <i class="icon-double-angle-right"></i>
-                                网站图片
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('System/link_mangae');?>">
-                                <i class="icon-double-angle-right"></i>
-                                友情链接
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('System/about_us');?>">
-                                <i class="icon-double-angle-right"></i>
-                                关于我们
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php echo U('System/modify_password');?>">
-                                <i class="icon-double-angle-right"></i>
-                                修改密码
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul><!-- /.nav-list -->
-
-            <div class="sidebar-collapse" id="sidebar-collapse">
-                <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
-            </div>
-
-            <script type="text/javascript">
-                try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
-            </script>
+            <button class="btn btn-danger">
+                <i class="icon-cogs"></i>
+            </button>
         </div>
-        <!--content右边内容部分-->
+
+        <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+            <span class="btn btn-success"></span>
+
+            <span class="btn btn-info"></span>
+
+            <span class="btn btn-warning"></span>
+
+            <span class="btn btn-danger"></span>
+        </div>
+    </div><!-- #sidebar-shortcuts -->
+
+    <ul class="nav nav-list">
+        <li>
+            <a href="<?php echo U('Index/index');?>" class="ajax-get">
+                <i class="icon-dashboard"></i>
+                <span class="menu-text"> 仪表盘 </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="icon-desktop"></i>
+                <span class="menu-text"> 科普中心 </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo U('Coptic/copticType');?>">
+                        <i class="icon-double-angle-right"></i>
+                        科普分类管理
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('Coptic/index');?>">
+                        <i class="icon-double-angle-right"></i>
+                        科普文章管理
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="icon-list"></i>
+                <span class="menu-text"> 活动中心 </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo U('Activity/index');?>">
+                        <i class="icon-double-angle-right"></i>
+                        活动分类管理
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('Activity/activityType');?>">
+                        <i class="icon-double-angle-right"></i>
+                        活动管理
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="icon-text-width"></i>
+                <span class="menu-text"> 家庭护理 </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo U('HomeCare/index');?>">
+                        <i class="icon-double-angle-right"></i>
+                        家庭护理
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li>
+            <a href="widgets.html" class="dropdown-toggle">
+                <i class="icon-group"></i>
+                <span class="menu-text"> 用户管理 </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo U('UserManage/user_list');?>">
+                        <i class="icon-double-angle-right"></i>
+                        用户管理
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('UserManage/integral');?>">
+                        <i class="icon-double-angle-right"></i>
+                        积分明细
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('UserManage/collection');?>">
+                        <i class="icon-double-angle-right"></i>
+                        用户收藏列表
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('UserManage/user_activity');?>">
+                        <i class="icon-double-angle-right"></i>
+                        用户参加活动列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#" class="dropdown-toggle">
+                <i class="icon-gears"></i>
+                <span class="menu-text"> 系统设置 </span>
+
+                <b class="arrow icon-angle-down"></b>
+            </a>
+
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo U('System/role_manage');?>">
+                        <i class="icon-double-angle-right"></i>
+                        角色管理
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('System/account_manage');?>">
+                        <i class="icon-double-angle-right"></i>
+                        账户管理
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('System/website_image');?>">
+                        <i class="icon-double-angle-right"></i>
+                        网站图片
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('System/link_mangae');?>">
+                        <i class="icon-double-angle-right"></i>
+                        友情链接
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('System/about_us');?>">
+                        <i class="icon-double-angle-right"></i>
+                        关于我们
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo U('System/modify_password');?>">
+                        <i class="icon-double-angle-right"></i>
+                        修改密码
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul><!-- /.nav-list -->
+
+    <div class="sidebar-collapse" id="sidebar-collapse">
+        <i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+    </div>
+
+    <script type="text/javascript">
+        try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+    </script>
+</div>
         <div class="main-content">
             <div class="breadcrumbs" id="breadcrumbs">
                 <script type="text/javascript">
                     try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
                 </script>
-
-                <!--页面路径导航-->
                 <ul class="breadcrumb">
                     <li>
                         <i class="icon-home home-icon"></i>
-                        <a href="#">首页</a>
+                        <a href="<?php echo U('Index/index');?>">首页</a>
                     </li>
 
                     <li>
                         <a href="#">其他页面</a>
                     </li>
                     <li class="active">空白页面</li>
-                </ul><!-- .breadcrumb -->
-
-                <!--页面搜索-->
-                <!--<div class="nav-search" id="nav-search">
-                    <form class="form-search">
-                        <span class="input-icon">
-                            <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                            <i class="icon-search nav-search-icon"></i>
-                        </span>
-                    </form>
-                </div>--><!-- #nav-search -->
+                </ul>
             </div>
 
             <div class="page-content">
@@ -367,38 +350,35 @@
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
 
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.page-content -->
-        </div><!-- /.main-content -->
-
-        <!--right设置功能-->
-        <div class="ace-settings-container" id="ace-settings-container">
-            <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
-                <i class="icon-cog bigger-150"></i>
-            </div>
-
-            <div class="ace-settings-box" id="ace-settings-box">
-                <div>
-                    <div class="pull-left">
-                        <select id="skin-colorpicker" class="hide">
-                            <option data-skin="default" value="#438EB9">#438EB9</option>
-                            <option data-skin="skin-1" value="#222A2D">#222A2D</option>
-                            <option data-skin="skin-2" value="#C6487E">#C6487E</option>
-                            <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
-                        </select>
                     </div>
-                    <span>&nbsp; 选择皮肤</span>
                 </div>
             </div>
-        </div><!-- /#ace-settings-container -->
-    </div><!-- /.main-container-inner -->
+        </div>
+        <div class="ace-settings-container" id="ace-settings-container">
+    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+        <i class="icon-cog bigger-150"></i>
+    </div>
+
+    <div class="ace-settings-box" id="ace-settings-box">
+        <div>
+            <div class="pull-left">
+                <select id="skin-colorpicker" class="hide">
+                    <option data-skin="default" value="#438EB9">#438EB9</option>
+                    <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                    <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                    <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                </select>
+            </div>
+            <span>&nbsp; 选择皮肤</span>
+        </div>
+    </div>
+</div><!-- /#ace-settings-container -->
+    </div>
 
     <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
         <i class="icon-double-angle-up icon-only bigger-110"></i>
     </a>
-</div><!-- /.main-container -->
-
+</div>
 <!-- basic scripts -->
 
 <!--[if !IE]> -->

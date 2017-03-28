@@ -151,7 +151,7 @@
 
     <ul class="nav nav-list">
         <li>
-            <a href="<?php echo U('Index/index');?>">
+            <a href="<?php echo U('Index/index');?>" class="ajax-get">
                 <i class="icon-dashboard"></i>
                 <span class="menu-text"> 仪表盘 </span>
             </a>

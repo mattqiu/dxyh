@@ -150,7 +150,7 @@
 
     <ul class="nav nav-list">
         <li>
-            <a href="<?php echo U('Index/index');?>">
+            <a href="<?php echo U('Index/index');?>" class="ajax-get">
                 <i class="icon-dashboard"></i>
                 <span class="menu-text"> 仪表盘 </span>
             </a>
@@ -348,12 +348,12 @@
                 <div class="page-header">
 
                     <span>所属角色</span>
-                    <select name="" form="form1" class="nav-search-input">
+                    <select name="" form="form1">
                         <option>请选择</option>
                         <option>平台管理员</option>
                     </select>
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" class="nav-search-input" />
+                    <input type="text" name="keyword" form="form1" />
                     <input type="submit" name="" value="搜索" form="form1">
                     <a href="<?php echo U('System/account_add');?>" class="btn btn-xs btn-info">添加</a>
                     <form action="" method="get" id="form1"></form>

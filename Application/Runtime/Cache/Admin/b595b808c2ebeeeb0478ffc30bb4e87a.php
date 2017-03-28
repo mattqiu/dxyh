@@ -44,6 +44,7 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+<link href="/Public/admin/think/think.css" rel="stylesheet" />
 </head>
 <body>
 <!--顶部导航-->
@@ -150,7 +151,7 @@
 
     <ul class="nav nav-list">
         <li>
-            <a href="<?php echo U('Index/index');?>">
+            <a href="<?php echo U('Index/index');?>" class="ajax-get">
                 <i class="icon-dashboard"></i>
                 <span class="menu-text"> 仪表盘 </span>
             </a>
@@ -405,5 +406,6 @@
 <script src="/Public/admin/js/ace-elements.min.js"></script>
 <script src="/Public/admin/js/ace.min.js"></script>
 <!-- inline scripts related to this page -->
+<script src="/Public/admin/think/think.js"></script>
 </body>
 </html>

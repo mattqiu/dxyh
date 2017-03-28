@@ -150,7 +150,7 @@
 
     <ul class="nav nav-list">
         <li>
-            <a href="<?php echo U('Index/index');?>">
+            <a href="<?php echo U('Index/index');?>" class="ajax-get">
                 <i class="icon-dashboard"></i>
                 <span class="menu-text"> 仪表盘 </span>
             </a>
@@ -351,11 +351,11 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 10rem;">
+                        <form class="form-horizontal" role="form" style="padding-top: 10rem;" action="<?php echo U('System/account_add');?>" method="post">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 账号 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" />
+                                    <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" name="accountName" />
                                 </div>
                             </div>
 
@@ -364,7 +364,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-2" class="col-xs-10 col-sm-5" />
+                                    <input type="password" id="form-field-2" class="col-xs-10 col-sm-5" name="passwd" />
                                 </div>
                             </div>
 
@@ -373,7 +373,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 确认密码 </label>
                                 <div class="col-sm-9">
-                                    <input type="password" id="form-field-3" class="col-xs-10 col-sm-5" />
+                                    <input type="password" id="form-field-3" class="col-xs-10 col-sm-5" name="confirmPasswd" />
                                 </div>
                             </div>
 
@@ -382,7 +382,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 所属角色 </label>
                                 <div class="col-sm-9">
-                                    <select name="authId" class="col-xs-1">
+                                    <select name="authId" class="col-sm-5">
                                         <option value="0">请选择</option>
                                         <?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                     </select>
@@ -393,7 +393,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" type="button">
+                                    <button class="btn btn-info" type="submit">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>
