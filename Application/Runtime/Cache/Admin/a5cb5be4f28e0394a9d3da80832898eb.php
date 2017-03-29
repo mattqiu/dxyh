@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>空白 - 达晓医护</title>
+    <title>新增账户 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +31,8 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="/Public/admin/css/ace-ie.min.css" />
     <![endif]-->
-
+    <!--Thinkphp框架error/success函数返回界面弹出框提示-->
+    <link href="/Public/admin/think/think.css" rel="stylesheet" />
     <!-- inline styles related to this page -->
 
     <!-- ace settings handler -->
@@ -464,6 +465,9 @@
 
 <script src="/Public/admin/js/ace-elements.min.js"></script>
 <script src="/Public/admin/js/ace.min.js"></script>
+<!--Thinkphp框架error/success函数返回界面弹出框提示-->
+<script src="/Public/admin/think/think.js"></script>
+
 
 <!-- inline scripts related to this page -->
 </body>

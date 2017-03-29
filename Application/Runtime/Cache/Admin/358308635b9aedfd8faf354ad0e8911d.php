@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>空白 - 达晓医护</title>
+    <title>编辑账户 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +31,8 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="/Public/admin/css/ace-ie.min.css" />
     <![endif]-->
-
+    <!--Thinkphp框架error/success函数返回界面弹出框提示-->
+    <link href="/Public/admin/think/think.css" rel="stylesheet" />
     <!-- inline styles related to this page -->
 
     <!-- ace settings handler -->
@@ -45,10 +46,8 @@
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
-	<!--top菜单导航-->
-	<!--顶部导航-->
+<!--顶部导航-->
 <div class="navbar navbar-default" id="navbar">
     <script type="text/javascript">
         try{ace.settings.check('navbar' , 'fixed')}catch(e){}
@@ -106,18 +105,16 @@
         </div><!-- /.navbar-header -->
     </div><!-- /.container -->
 </div>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
 
-	<div class="main-container" id="main-container">
-		<script type="text/javascript">
-			try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-		</script>
-
-		<div class="main-container-inner">
-			<a class="menu-toggler" id="menu-toggler" href="#">
-				<span class="menu-text"></span>
-			</a>
-			<!--left菜单导航-->
-			<div class="sidebar" id="sidebar">
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <div class="sidebar" id="sidebar">
     <script type="text/javascript">
         try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
     </script>
@@ -154,7 +151,7 @@
 
     <ul class="nav nav-list">
         <li>
-            <a href="index.html">
+            <a href="<?php echo U('Index/index');?>" class="ajax-get">
                 <i class="icon-dashboard"></i>
                 <span class="menu-text"> 仪表盘 </span>
             </a>
@@ -330,51 +327,93 @@
         try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
     </script>
 </div>
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="<?php echo U('Index/index');?>">首页</a>
+                    </li>
 
-			<!--content右边内容部分-->
-			<div class="main-content">
-				<div class="breadcrumbs" id="breadcrumbs">
-					<script type="text/javascript">
-						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
-					</script>
+                    <li>
+                        <a href="<?php echo U('System/account_manage');?>">系统设置</a>
+                    </li>
+                    <li>
+                        <a href="<?php echo U('System/account_manage');?>">账户管理</a>
+                    </li>
+                    <li class="active">编辑账户</li>
+                </ul>
+            </div>
 
-					<!--页面路径导航-->
-					<ul class="breadcrumb">
-						<li>
-							<i class="icon-home home-icon"></i>
-							<a href="#">首页</a>
-						</li>
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <form class="form-horizontal" role="form" style="padding-top: 10rem;" action="<?php echo U('System/account_edit');?>" method="post">
+                            <input type="hidden" name="aid" value="<?php echo ($rows["aid"]); ?>" />
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 账号 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" name="accountName" value="<?php echo ($rows["aname"]); ?>" />
+                                </div>
+                            </div>
 
-						<li>
-							<a href="#">其他页面</a>
-						</li>
-						<li class="active">空白页面</li>
-					</ul><!-- .breadcrumb -->
+                            <div class="space-4"></div>
 
-					<!--页面搜索-->
-					<!--<div class="nav-search" id="nav-search">
-						<form class="form-search">
-							<span class="input-icon">
-								<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-								<i class="icon-search nav-search-icon"></i>
-							</span>
-						</form>
-					</div>--><!-- #nav-search -->
-				</div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 密码 </label>
+                                <div class="col-sm-9">
+                                    <input type="password" id="form-field-2" class="col-xs-10 col-sm-5" name="passwd" />
+                                </div>
+                            </div>
 
-				<div class="page-content">
-					<div class="row">
-						<div class="col-xs-12">
-							<!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                            <div class="space-4"></div>
 
-							<!-- PAGE CONTENT ENDS 网页内容结束 -->
-						</div><!-- /.col -->
-					</div><!-- /.row -->
-				</div><!-- /.page-content -->
-			</div><!-- /.main-content -->
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 确认密码 </label>
+                                <div class="col-sm-9">
+                                    <input type="password" id="form-field-3" class="col-xs-10 col-sm-5" name="confirmPasswd" />
+                                </div>
+                            </div>
 
-			<!--right设置功能-->
-			<div class="ace-settings-container" id="ace-settings-container">
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 所属角色 </label>
+                                <div class="col-sm-9">
+                                    <select name="authId" class="col-sm-5">
+                                        <option value="0">请选择</option>
+                                        <?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($rows["group_id"],$vo['id'],"selected")); ?>><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button class="btn btn-info" type="submit">
+                                        <i class="icon-ok bigger-110"></i>
+                                        提交
+                                    </button>
+
+                                    &nbsp; &nbsp; &nbsp;
+                                    <button class="btn" type="reset">
+                                        <i class="icon-undo bigger-110"></i>
+                                        重置
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS 网页内容结束 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ace-settings-container" id="ace-settings-container">
     <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
         <i class="icon-cog bigger-150"></i>
     </div>
@@ -393,13 +432,12 @@
         </div>
     </div>
 </div><!-- /#ace-settings-container -->
-		</div><!-- /.main-container-inner -->
+    </div>
 
-		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-			<i class="icon-double-angle-up icon-only bigger-110"></i>
-		</a>
-	</div><!-- /.main-container -->
-
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div>
 <!-- basic scripts -->
 
 <!--[if !IE]> -->
@@ -428,7 +466,10 @@
 
 <script src="/Public/admin/js/ace-elements.min.js"></script>
 <script src="/Public/admin/js/ace.min.js"></script>
+<!--Thinkphp框架error/success函数返回界面弹出框提示-->
+<script src="/Public/admin/think/think.js"></script>
 
-		<!-- inline scripts related to this page -->
-	</body>
+
+<!-- inline scripts related to this page -->
+</body>
 </html>

@@ -34,12 +34,14 @@
                 <div class="page-header">
 
                     <span>所属角色</span>
-                    <select name="" form="form1">
-                        <option>请选择</option>
-                        <option>平台管理员</option>
+                    <select name="authId" form="form1">
+                        <option value="0">请选择</option>
+                        <volist name="auth" id="vo">
+                            <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>{$vo.title}</option>
+                        </volist>
                     </select>
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" />
+                    <input type="text" name="keyword" form="form1" value="{$keyword}" />
                     <input type="submit" name="" value="搜索" form="form1">
                     <a href="{:U('System/account_add')}" class="btn btn-xs btn-info">添加</a>
                     <form action="" method="get" id="form1"></form>
@@ -60,30 +62,33 @@
                             </thead>
 
                             <tbody>
+                            <volist name="rows" id="vo">
                             <tr>
                                 <td class="center">
-                                    1
+                                    {$vo.aid}
                                 </td>
 
                                 <td>
-                                    <a href="#">ace.com</a>
+                                    {$vo.aname}
                                 </td>
-                                <td>$45</td>
-                                <td class="hidden-480">3,330</td>
+                                <td>{$vo.title}</td>
+                                <td class="hidden-480">{$vo.create_time}</td>
                                 <td class="center">
-                                    <button class="btn btn-xs btn-info">
+                                    <a class="btn btn-xs btn-info" title="编辑" href="{:U('System/account_edit',array('id'=>$vo['aid']))}">
                                         <i class="icon-edit bigger-120"></i>
-                                    </button>
+                                    </a>
 
-                                    <button class="btn btn-xs btn-danger">
+                                    <a class="btn btn-xs btn-danger" title="删除" href="{:U('System/account_del',array('id'=>$vo['aid']))}">
                                         <i class="icon-trash bigger-120"></i>
-                                    </button>
+                                    </a>
                                 </td>
                             </tr>
+                            </volist>
                             </tbody>
                         </table>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
+                    {$page}
                 </div>
             </div>
         </div>

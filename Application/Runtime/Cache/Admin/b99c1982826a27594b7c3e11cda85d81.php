@@ -31,7 +31,8 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="/Public/admin/css/ace-ie.min.css" />
     <![endif]-->
-
+    <!--Thinkphp框架error/success函数返回界面弹出框提示-->
+    <link href="/Public/admin/think/think.css" rel="stylesheet" />
     <!-- inline styles related to this page -->
 
     <!-- ace settings handler -->
@@ -348,12 +349,12 @@
                 <div class="page-header">
 
                     <span>所属角色</span>
-                    <select name="" form="form1">
-                        <option>请选择</option>
-                        <option>平台管理员</option>
+                    <select name="authId" form="form1">
+                        <option value="0">请选择</option>
+                        <?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" />
+                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
                     <input type="submit" name="" value="搜索" form="form1">
                     <a href="<?php echo U('System/account_add');?>" class="btn btn-xs btn-info">添加</a>
                     <form action="" method="get" id="form1"></form>
@@ -374,30 +375,31 @@
                             </thead>
 
                             <tbody>
-                            <tr>
+                            <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                 <td class="center">
-                                    1
+                                    <?php echo ($vo["aid"]); ?>
                                 </td>
 
                                 <td>
-                                    <a href="#">ace.com</a>
+                                    <?php echo ($vo["aname"]); ?>
                                 </td>
-                                <td>$45</td>
-                                <td class="hidden-480">3,330</td>
+                                <td><?php echo ($vo["title"]); ?></td>
+                                <td class="hidden-480"><?php echo ($vo["create_time"]); ?></td>
                                 <td class="center">
-                                    <button class="btn btn-xs btn-info">
+                                    <a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('System/account_edit',array('id'=>$vo['aid']));?>">
                                         <i class="icon-edit bigger-120"></i>
-                                    </button>
+                                    </a>
 
-                                    <button class="btn btn-xs btn-danger">
+                                    <a class="btn btn-xs btn-danger" title="删除" href="<?php echo U('System/account_del',array('id'=>$vo['aid']));?>">
                                         <i class="icon-trash bigger-120"></i>
-                                    </button>
+                                    </a>
                                 </td>
-                            </tr>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                             </tbody>
                         </table>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
+                    <?php echo ($page); ?>
                 </div>
             </div>
         </div>
@@ -454,6 +456,9 @@
 
 <script src="/Public/admin/js/ace-elements.min.js"></script>
 <script src="/Public/admin/js/ace.min.js"></script>
+<!--Thinkphp框架error/success函数返回界面弹出框提示-->
+<script src="/Public/admin/think/think.js"></script>
+
 
 <!-- inline scripts related to this page -->
 </body>

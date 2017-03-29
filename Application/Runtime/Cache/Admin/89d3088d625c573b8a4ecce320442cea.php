@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>空白 - 达晓医护</title>
+    <title>编辑角色 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +31,8 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="/Public/admin/css/ace-ie.min.css" />
     <![endif]-->
-
+    <!--Thinkphp框架error/success函数返回界面弹出框提示-->
+    <link href="/Public/admin/think/think.css" rel="stylesheet" />
     <!-- inline styles related to this page -->
 
     <!-- ace settings handler -->
@@ -44,6 +45,18 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+<style type="text/css">
+    ul dl {
+        margin: 0;
+    }
+    ul li {
+        list-style-type:none;
+        margin-left: 14px;
+    }
+    ul li input[type="checkbox"] {
+        margin-left: 20px;
+    }
+</style>
 </head>
 <body>
 <!--顶部导航-->
@@ -338,9 +351,12 @@
                     </li>
 
                     <li>
-                        <a href="#">其他页面</a>
+                        <a href="<?php echo U('System/role_manage');?>">系统设置</a>
                     </li>
-                    <li class="active">空白页面</li>
+                    <li>
+                        <a href="<?php echo U('System/role_manage');?>">角色管理</a>
+                    </li>
+                    <li class="active">编辑角色</li>
                 </ul>
             </div>
 
@@ -348,7 +364,57 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <form class="form-horizontal" role="form" style="padding-top: 20px;" action="<?php echo U('System/role_add');?>" method="post">
+                            <input type="hidden" name="gid" value="<?php echo ($rows["id"]); ?>"/>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" name="authName" value="<?php echo ($rows["title"]); ?>" />
+                                </div>
+                            </div>
 
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 角色描述 </label>
+                                <div class="col-sm-9">
+                                    <textarea id="form-field-2" class="col-xs-10 col-sm-5" style="height: 100px;" name="content"><?php echo ($rows["content"]); ?></textarea>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" > 角色权限 </label>
+                                <div class="col-sm-9" style="margin-top: 20px;">
+                                    <?php if(is_array($auths)): $i = 0; $__LIST__ = $auths;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><ul>
+                                            <dl><input type="checkbox" class="auth"/><?php echo ($vo["app_name"]); ?></dl>
+                                            <?php if(is_array($vo["sub_app"])): $i = 0; $__LIST__ = $vo["sub_app"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_app): $mod = ($i % 2 );++$i;?><li>
+                                                    <?php echo ($sub_app["app_name"]); ?>
+                                                    <?php if(is_array($sub_app["auth"])): $i = 0; $__LIST__ = $sub_app["auth"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$role): $mod = ($i % 2 );++$i;?><input type="checkbox" name="rules_id[]" class="sub_auth" value="<?php echo ($role["id"]); ?>"   <?php echo (checkboxTell($rows["rules"],$role['id'])); ?>/><?php echo ($role["title"]); endforeach; endif; else: echo "" ;endif; ?>
+                                                </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </ul><?php endforeach; endif; else: echo "" ;endif; ?>
+
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button class="btn btn-info" type="submit">
+                                        <i class="icon-ok bigger-110"></i>
+                                        提交
+                                    </button>
+
+                                    &nbsp; &nbsp; &nbsp;
+                                    <button class="btn" type="reset">
+                                        <i class="icon-undo bigger-110"></i>
+                                        重置
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
                 </div>
@@ -407,7 +473,32 @@
 
 <script src="/Public/admin/js/ace-elements.min.js"></script>
 <script src="/Public/admin/js/ace.min.js"></script>
+<!--Thinkphp框架error/success函数返回界面弹出框提示-->
+<script src="/Public/admin/think/think.js"></script>
+
 
 <!-- inline scripts related to this page -->
+<script type="text/javascript">
+    //主分支全选与反全选
+    $(".auth").click(function () {
+        if ($(this).prop('checked') == true){
+            //alert($(this).parent().parent().find('li input:checkbox').length)
+            $(this).parent().parent().find('li input:checkbox').prop('checked', true);
+        }else{
+            $(this).parent().parent().find('li input:checkbox').prop('checked', false);
+        }
+    });
+
+    //子分支选中主分支同时选中，子分支取消选中时判断是否还有其余子分支选中，没有时取消选中的主分支
+    $(".sub_auth").click(function () {
+        if ($(this).prop('checked') == true){
+            $(this).parent().parent().find('dl input:checkbox').prop('checked', true);
+        }else{
+            if ($(this).parent().parent().find('li input:checkbox:checked').length == 0){
+                $(this).parent().parent().find('dl input:checkbox').prop('checked', false);
+            }
+        }
+    });
+</script>
 </body>
 </html>

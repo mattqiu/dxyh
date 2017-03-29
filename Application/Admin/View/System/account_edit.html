@@ -1,4 +1,4 @@
-<include file="Public/header" title="新增账户 - 达晓医护"/>
+<include file="Public/header" title="编辑账户 - 达晓医护"/>
 </head>
 <body>
 <include file="Public/top"/>
@@ -29,7 +29,7 @@
                     <li>
                         <a href="{:U('System/account_manage')}">账户管理</a>
                     </li>
-                    <li class="active">添加账户</li>
+                    <li class="active">编辑账户</li>
                 </ul>
             </div>
 
@@ -37,11 +37,12 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 10rem;" action="{:U('System/account_add')}" method="post">
+                        <form class="form-horizontal" role="form" style="padding-top: 10rem;" action="{:U('System/account_edit')}" method="post">
+                            <input type="hidden" name="aid" value="{$rows.aid}" />
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 账号 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" name="accountName" />
+                                    <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" name="accountName" value="{$rows.aname}" />
                                 </div>
                             </div>
 
@@ -71,7 +72,7 @@
                                     <select name="authId" class="col-sm-5">
                                         <option value="0">请选择</option>
                                         <volist name="auth" id="vo">
-                                            <option value="{$vo.id}">{$vo.title}</option>
+                                            <option value="{$vo.id}" {$rows.group_id|Judgement=###,$vo['id'],"selected"}>{$vo.title}</option>
                                         </volist>
                                     </select>
                                 </div>

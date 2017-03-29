@@ -171,4 +171,20 @@ class BaseModel extends Model
         }
         return $this->limit($pageNum, $pageSize)->select();
     }
+
+    /**
+     * 基础连表查询统计数
+     * @param array $join   连表信息
+     * @param array $where  查询条件
+     * @return mixed
+     */
+    public function getJoinCount($join=array(), $where=array()){
+        if ($join){
+            $this->join($join);
+        }
+        if ($where){
+            $this->where($where);
+        }
+        return $this->count();
+    }
 }

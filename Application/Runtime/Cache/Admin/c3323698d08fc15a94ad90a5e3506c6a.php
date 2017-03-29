@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>空白 - 达晓医护</title>
+    <title>角色管理 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -338,20 +338,52 @@
                         <a href="<?php echo U('Index/index');?>">首页</a>
                     </li>
 
-                    <li>
-                        <a href="#">其他页面</a>
-                    </li>
-                    <li class="active">空白页面</li>
+                    <li class="active">角色管理</li>
                 </ul>
             </div>
 
             <div class="page-content">
+                <div class="page-header">
+                    <a href="<?php echo U('System/role_add');?>" class="btn btn-xs btn-info">添加</a>
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+                            <thead>
+                            <tr>
+                                <th class="center">序号</th>
+                                <th class="center">角色名称</th>
+                                <th class="center">角色描述</th>
+                                <th class="center">操作</th>
+                            </tr>
+                            </thead>
 
+                            <tbody>
+                            <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                    <td class="center">
+                                        <?php echo ($vo["id"]); ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo ($vo["title"]); ?>
+                                    </td>
+                                    <td><?php echo ($vo["content"]); ?></td>
+                                    <td class="center">
+                                        <a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('System/role_edit',array('id'=>$vo['id']));?>">
+                                            <i class="icon-edit bigger-120"></i>
+                                        </a>
+
+                                        <a class="btn btn-xs btn-danger" title="删除" href="<?php echo U('System/role_del',array('id'=>$vo['id']));?>">
+                                            <i class="icon-trash bigger-120"></i>
+                                        </a>
+                                    </td>
+                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </tbody>
+                        </table>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
+                    <?php echo ($page); ?>
                 </div>
             </div>
         </div>
