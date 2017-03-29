@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 20px;" action="{:U('System/role_add')}" method="post">
+                        <form class="form-horizontal" role="form" style="padding-top: 20px;" action="{:U('System/role_edit')}" method="post">
                             <input type="hidden" name="gid" value="{$rows.id}"/>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
@@ -74,7 +74,7 @@
                                 <div class="col-sm-9" style="margin-top: 20px;">
                                     <volist name="auths" id="vo">
                                         <ul>
-                                            <dl><input type="checkbox" class="auth"/>{$vo.app_name}</dl>
+                                            <dl><input type="checkbox" class="auth" {$rows.rules|parentCheckboxTell=###,$vo['sub_app']}/>{$vo.app_name}</dl>
                                             <volist name="vo.sub_app" id="sub_app">
                                                 <li>
                                                     {$sub_app.app_name}
@@ -93,7 +93,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" type="submit">
+                                    <button class="btn btn-info ajax-post" type="submit" target-form="form-horizontal">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>

@@ -74,14 +74,25 @@ function checkboxTell($rules="", $tell=0){
 
 function parentCheckboxTell($rule="", $tell=array()){
     if (!empty($rule) && $tell){
-
+        $rule = explode(',', $rule);
+        $auth = array();
+        foreach($tell as $k=>$val){
+            foreach ($val['auth'] as $key=>$item){
+                $auth[] = $item['id'];
+            }
+        }
+        foreach ($rule as $key=>$item){
+            if (in_array($item, $auth)){
+                return "checked";
+            }
+        }
     }
 }
 
 
 function array_column_cube($list=array(), $keys=""){
     if ($list){
-        $arr = array();
+        static $arr = array();
         foreach ($list as $key=>$item){
             if ($key == $keys){
                 if (is_array($item)){

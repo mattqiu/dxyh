@@ -179,14 +179,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Coptic/copticType');?>">
+                    <a href="<?php echo U('Coptic/copticType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Coptic/index');?>">
+                    <a href="<?php echo U('Coptic/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普文章管理
                     </a>
@@ -204,14 +204,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Activity/index');?>">
+                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Activity/activityType');?>">
+                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动管理
                     </a>
@@ -229,7 +229,7 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('HomeCare/index');?>">
+                    <a href="<?php echo U('HomeCare/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         家庭护理
                     </a>
@@ -248,28 +248,28 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('UserManage/user_list');?>">
+                    <a href="<?php echo U('UserManage/user_list');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/integral');?>">
+                    <a href="<?php echo U('UserManage/integral');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         积分明细
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/collection');?>">
+                    <a href="<?php echo U('UserManage/collection');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户收藏列表
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/user_activity');?>">
+                    <a href="<?php echo U('UserManage/user_activity');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户参加活动列表
                     </a>
@@ -287,35 +287,35 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('System/role_manage');?>">
+                    <a href="<?php echo U('System/role_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         角色管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/account_manage');?>">
+                    <a href="<?php echo U('System/account_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         账户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/website_image');?>">
+                    <a href="<?php echo U('System/website_image');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         网站图片
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>">
+                    <a href="<?php echo U('System/link_mangae');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/about_us');?>">
+                    <a href="<?php echo U('System/about_us');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         关于我们
                     </a>
@@ -364,7 +364,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 20px;" action="<?php echo U('System/role_add');?>" method="post">
+                        <form class="form-horizontal" role="form" style="padding-top: 20px;" action="<?php echo U('System/role_edit');?>" method="post">
                             <input type="hidden" name="gid" value="<?php echo ($rows["id"]); ?>"/>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
@@ -388,7 +388,7 @@
                                 <label class="col-sm-3 control-label no-padding-right" > 角色权限 </label>
                                 <div class="col-sm-9" style="margin-top: 20px;">
                                     <?php if(is_array($auths)): $i = 0; $__LIST__ = $auths;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><ul>
-                                            <dl><input type="checkbox" class="auth"/><?php echo ($vo["app_name"]); ?></dl>
+                                            <dl><input type="checkbox" class="auth" <?php echo (parentCheckboxTell($rows["rules"],$vo['sub_app'])); ?>/><?php echo ($vo["app_name"]); ?></dl>
                                             <?php if(is_array($vo["sub_app"])): $i = 0; $__LIST__ = $vo["sub_app"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_app): $mod = ($i % 2 );++$i;?><li>
                                                     <?php echo ($sub_app["app_name"]); ?>
                                                     <?php if(is_array($sub_app["auth"])): $i = 0; $__LIST__ = $sub_app["auth"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$role): $mod = ($i % 2 );++$i;?><input type="checkbox" name="rules_id[]" class="sub_auth" value="<?php echo ($role["id"]); ?>"   <?php echo (checkboxTell($rows["rules"],$role['id'])); ?>/><?php echo ($role["title"]); endforeach; endif; else: echo "" ;endif; ?>
@@ -402,7 +402,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" type="submit">
+                                    <button class="btn btn-info ajax-post" type="submit" target-form="form-horizontal">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>

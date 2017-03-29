@@ -67,12 +67,43 @@ class SystemController extends BaseController
      * 角色编辑
      */
     public function role_edit(){
+        if (IS_POST){
+            $requset = I('post.');
+            if (!$requset['authName'] || empty($requset['authName'])){
+                $this->error('角色名称不能为空！');
+            }
+            $data = array(
+                "title" => $requset['authName'],
+                "content" => $requset['content'],
+                "rules" => implode(',', $requset['rules_id']),
+            );
+            $boole = $this->AuthGroup->editData(array('id'=>$requset['gid']), $data);
+            if ($boole){
+                $this->success('编辑成功', U("System/role_manage"));
+            }else{
+                $this->error('编辑失败');
+            }
+        }
 
         $data['rows'] = $this->AuthGroup->role_save();
         $data['auths'] = $this->AuthRule->authTree();
 
         $this->assign($data);
         $this->display();
+    }
+
+    /**
+     * 角色删除
+     */
+    public function role_del(){
+        $requset = I('get.');
+        $boole = $this->AuthGroup->deleteData(array('id'=>$requset['id']));
+        if ($boole){
+            $this->AuthGroupAccess->deleteData(array('group_id'=>$requset['id']));
+            $this->success('删除成功', U("System/role_manage"));
+        }else{
+            $this->error('删除失败');
+        }
     }
 
 
@@ -189,7 +220,7 @@ class SystemController extends BaseController
      * 网站图片
      */
     public function website_image(){
-
+        
         $this->display();
     }
 
