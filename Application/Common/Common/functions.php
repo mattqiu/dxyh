@@ -81,8 +81,16 @@ function parentCheckboxTell($rule="", $tell=array()){
 
 function array_column_cube($list=array(), $keys=""){
     if ($list){
+        $arr = array();
         foreach ($list as $key=>$item){
-
+            if ($key == $keys){
+                if (is_array($item)){
+                    array_column_cube($item, $keys);
+                }else{
+                    $arr[] = $item;
+                }
+            }
         }
+        return $arr;
     }
 }
