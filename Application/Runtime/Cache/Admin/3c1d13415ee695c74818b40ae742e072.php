@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>空白 - 达晓医护</title>
+    <title>网站图片 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -338,20 +338,65 @@
                         <a href="<?php echo U('Index/index');?>">首页</a>
                     </li>
 
-                    <li>
-                        <a href="#">其他页面</a>
-                    </li>
-                    <li class="active">空白页面</li>
+                    <li class="active">网站图片</li>
                 </ul>
             </div>
 
             <div class="page-content">
+                <div class="page-header">
+                    <span>图片类别</span>
+                    <select name="typeId" form="form1">
+                        <option value="">请选择</option>
+                        <option value="1" <?php echo (Judgement($typeId,1,"selected")); ?>>首页轮播</option>
+                        <option value="2" <?php echo (Judgement($typeId,2,"selected")); ?>>家庭护理</option>
+                    </select>
+                    <input type="submit" name="" value="搜索" form="form1">
+                    <a href="<?php echo U('System/website_add');?>" class="btn btn-xs btn-info">添加</a>
+                    <form action="" method="get" id="form1"></form>
+
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+                            <thead>
+                            <tr>
+                                <th class="center" width="5%">序号</th>
+                                <th class="center" width="10%">图片类别</th>
+                                <th class="center" width="35%">图片</th>
+                                <th class="center" width="30%">链接</th>
+                                <th class="center" width="10%">状态</th>
+                                <th class="center" width="10%">操作</th>
+                            </tr>
+                            </thead>
 
+                            <tbody>
+                            <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                    <td class="center">
+                                        <?php echo ($vo["id"]); ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo ($vo["type"]); ?>
+                                    </td>
+                                    <td><img src="<?php echo ($vo["image"]); ?>" style="width: 200px;height: 100px;" /></td>
+                                    <td><?php echo ($vo["img_link"]); ?></td>
+                                    <td class="hidden-480"><?php echo ($vo["status"]); ?></td>
+                                    <td class="center">
+                                        <a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('System/website_edit',array('id'=>$vo['id']));?>">
+                                            <i class="icon-edit bigger-120"></i>
+                                        </a>
+
+                                        <a class="btn btn-xs btn-danger" title="删除" href="<?php echo U('System/website_del',array('id'=>$vo['id']));?>">
+                                            <i class="icon-trash bigger-120"></i>
+                                        </a>
+                                    </td>
+                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </tbody>
+                        </table>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
+                    <?php echo ($page); ?>
                 </div>
             </div>
         </div>

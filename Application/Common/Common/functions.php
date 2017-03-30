@@ -6,12 +6,19 @@
  * Time: 10:07
  */
 
-
+/**
+ * Thinkphp的ajaxReturn函数简化只返回json数据
+ * @param int $status   状态
+ * @param $message 提示信息
+ * @param string $jumpUrl 页面跳转地址
+ */
 function message($status=1, $message, $jumpUrl=''){
     $data['info']   =   $message;
     $data['status'] =   $status;
     $data['url']    =   $jumpUrl;
-    $this->ajaxReturn($data);
+    // 返回JSON数据格式到客户端 包含状态信息
+    header('Content-Type:application/json; charset=utf-8');
+    exit(json_encode($data,0));
 }
 
 function dateTime($dateTime, $status = 0){
@@ -24,6 +31,10 @@ function dateTime($dateTime, $status = 0){
             return date("Y-m-d", $dateTime);
         case 3:
             return date("Y-m-d", strtotime($dateTime));
+        case 4:
+            return date("Ymd", $dateTime);
+        case 5:
+            return date("Ymd", strtotime($dateTime));
     }
 }
 
@@ -104,4 +115,13 @@ function array_column_cube($list=array(), $keys=""){
         }
         return $arr;
     }
+}
+
+
+
+function upload($file=array(), $file_url=""){
+    if (!isset($file['fileImage']['tmp_name'])){
+        return "文件不存在";
+    }
+
 }

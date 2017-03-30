@@ -179,14 +179,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Coptic/copticType');?>">
+                    <a href="<?php echo U('Coptic/copticType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Coptic/index');?>">
+                    <a href="<?php echo U('Coptic/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普文章管理
                     </a>
@@ -204,14 +204,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Activity/index');?>">
+                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Activity/activityType');?>">
+                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动管理
                     </a>
@@ -229,7 +229,7 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('HomeCare/index');?>">
+                    <a href="<?php echo U('HomeCare/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         家庭护理
                     </a>
@@ -248,28 +248,28 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('UserManage/user_list');?>">
+                    <a href="<?php echo U('UserManage/user_list');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/integral');?>">
+                    <a href="<?php echo U('UserManage/integral');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         积分明细
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/collection');?>">
+                    <a href="<?php echo U('UserManage/collection');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户收藏列表
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/user_activity');?>">
+                    <a href="<?php echo U('UserManage/user_activity');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户参加活动列表
                     </a>
@@ -287,35 +287,35 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('System/role_manage');?>">
+                    <a href="<?php echo U('System/role_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         角色管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/account_manage');?>">
+                    <a href="<?php echo U('System/account_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         账户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/website_image');?>">
+                    <a href="<?php echo U('System/website_image');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         网站图片
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>">
+                    <a href="<?php echo U('System/link_mangae');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/about_us');?>">
+                    <a href="<?php echo U('System/about_us');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         关于我们
                     </a>

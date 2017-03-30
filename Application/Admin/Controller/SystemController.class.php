@@ -11,24 +11,16 @@ namespace Admin\Controller;
 use Think\Controller;
 class SystemController extends BaseController
 {
-    public $AuthGroup;
-    public $Admin;
-    public $AuthGroupAccess;
-    public $AuthRule;
     public function __construct()
     {
         parent::__construct();
-        $this->AuthGroup = D("AuthGroup");
-        $this->Admin = D("Admin");
-        $this->AuthGroupAccess = D("AuthGroupAccess");
-        $this->AuthRule = D("AuthRule");
     }
 
     /**
      * 角色管理
      */
     public function role_manage(){
-        $data['rows'] = $this->AuthGroup->getRoleManage();
+        $data['rows'] = D("AuthGroup")->getRoleManage();
 
         $this->assign($data);
         $this->display();
@@ -50,14 +42,14 @@ class SystemController extends BaseController
                 "content" => $requet['content'],
             );
 
-            $boole = $this->AuthGroup->addData($data);
+            $boole = D("AuthGroup")->addData($data);
             if ($boole){
                 $this->success('新增成功', U("System/role_manage"));
             }else{
                 $this->error('新增失败');
             }
         }
-        $data['auths'] = $this->AuthRule->authTree();
+        $data['auths'] = D("AuthRule")->authTree();
 
         $this->assign($data);
         $this->display();
@@ -77,7 +69,7 @@ class SystemController extends BaseController
                 "content" => $requset['content'],
                 "rules" => implode(',', $requset['rules_id']),
             );
-            $boole = $this->AuthGroup->editData(array('id'=>$requset['gid']), $data);
+            $boole = D("AuthGroup")->editData(array('id'=>$requset['gid']), $data);
             if ($boole){
                 $this->success('编辑成功', U("System/role_manage"));
             }else{
@@ -85,8 +77,8 @@ class SystemController extends BaseController
             }
         }
 
-        $data['rows'] = $this->AuthGroup->role_save();
-        $data['auths'] = $this->AuthRule->authTree();
+        $data['rows'] = D("AuthGroup")->role_save();
+        $data['auths'] = D("AuthRule")->authTree();
 
         $this->assign($data);
         $this->display();
@@ -97,9 +89,9 @@ class SystemController extends BaseController
      */
     public function role_del(){
         $requset = I('get.');
-        $boole = $this->AuthGroup->deleteData(array('id'=>$requset['id']));
+        $boole = D("AuthGroup")->deleteData(array('id'=>$requset['id']));
         if ($boole){
-            $this->AuthGroupAccess->deleteData(array('group_id'=>$requset['id']));
+            D("AuthGroupAccess")->deleteData(array('group_id'=>$requset['id']));
             $this->success('删除成功', U("System/role_manage"));
         }else{
             $this->error('删除失败');
@@ -111,8 +103,8 @@ class SystemController extends BaseController
      * 账户管理
      */
     public function account_manage(){
-        $data['rows'] = $this->Admin->getAdminList();
-        $data['auth'] = $this->AuthGroup->getAuthGroupSelect();
+        $data['rows'] = D("Admin")->getAdminList();
+        $data['auth'] = D("AuthGroup")->getAuthGroupSelect();
         $data['authId'] = $_GET['authId'];
         $data['keyword'] = $_GET['keyword'];
         $data['page'] = $data['rows']['page'];
@@ -147,19 +139,19 @@ class SystemController extends BaseController
                 "passwd" => md5($request['passwd']),
                 "create_time" => time(),
             );
-            $boole = $this->Admin->addData($data);
+            $boole = D("Admin")->addData($data);
             if ($boole){
                 $data = array(
                     "aid" => $boole,
                     "group_id" => $request['authId'],
                 );
-                $this->AuthGroupAccess->addData($data);
+                D("AuthGroupAccess")->addData($data);
                 $this->success("新增成功", U("System/account_manage"));
             }else{
                 $this->error("新增失败");
             }
         }
-        $data['auth'] = $this->AuthGroup->getAuthGroupSelect();
+        $data['auth'] = D("AuthGroup")->getAuthGroupSelect();
 
         $this->assign($data);
         $this->display();
@@ -188,16 +180,16 @@ class SystemController extends BaseController
             if (!isset($request['authId']) || empty($request['authId'])){
                 $this->error("请选择管理员所属角色！");
             }
-            $boole = $this->Admin->editData(array('aid'=>$request['aid']), $resutl);
+            $boole = D("Admin")->editData(array('aid'=>$request['aid']), $resutl);
             if ($boole !== false){
-                $this->AuthGroupAccess->editData(array('aid'=>$request['aid']), array('group_id'=>$request['authId']));
+                D("AuthGroupAccess")->editData(array('aid'=>$request['aid']), array('group_id'=>$request['authId']));
                 $this->success('编辑成功', U("System/account_manage"));
             }else{
                 $this->error('编辑失败');
             }
         }
-        $data['auth'] = $this->AuthGroup->getAuthGroupSelect();
-        $data['rows'] = $this->Admin->getAdminSave();
+        $data['auth'] = D("AuthGroup")->getAuthGroupSelect();
+        $data['rows'] = D("Admin")->getAdminSave();
 
         $this->assign($data);
         $this->display();
@@ -207,9 +199,9 @@ class SystemController extends BaseController
      * 账户删除
      */
     public function account_del(){
-        $boole = $this->Admin->deleteAdmin();
+        $boole = D("Admin")->deleteAdmin();
         if ($boole){
-            $this->AuthGroupAccess->deleteData(array('aid'=>$_GET['id']));
+            D("AuthGroupAccess")->deleteData(array('aid'=>$_GET['id']));
             $this->success('删除成功', U("System/account_manage"));
         }else{
             $this->error('删除失败');
@@ -220,16 +212,83 @@ class SystemController extends BaseController
      * 网站图片
      */
     public function website_image(){
-        
+        $data['rows'] = D("WebsiteImage")->getWebsiteList();
+        $data['page'] = $data['rows']['page'];
+        unset($data['rows']['page']);
+        $data['typeId'] = $_GET['typeId'];
+        $this->assign($data);
         $this->display();
+    }
+
+    /**
+     * 网站图片添加
+     */
+    public function website_add(){
+        D("WebsiteImage")->website();
+
+
+        $data['title'] = "新增图片";
+        $data['Url'] = U('System/website_add');
+        $this->assign($data);
+        $this->display('website');
+    }
+
+    /**
+     * 网站图片修改
+     */
+    public function website_edit(){
+        D("WebsiteImage")->website();
+        $data['rows'] = D("WebsiteImage")->getWebsiteinfo();
+        $data['title'] = "编辑图片";
+        $data['Url'] = U('System/website_edit');
+        $this->assign($data);
+        $this->display('website');
+    }
+
+    /**
+     * 网站图片删除
+     */
+    public function website_del(){
+        D("WebsiteImage")->website_del();
     }
 
     /**
      * 友情链接
      */
     public function link_mangae(){
-
+        $data['rows'] = D("FriendshipLink")->getList();
+        $this->assign($data);
         $this->display();
+    }
+
+    /**
+     * 友情链接添加
+     */
+    public function link_add(){
+        D("FriendshipLink")->linkSave();
+        $data['title'] = "新增友情链接";
+        $data['Url'] = U("System/link_add");
+        $this->assign($data);
+        $this->display("link_view");
+    }
+
+    /**
+     * 友情链接编辑
+     */
+    public function link_edit(){
+        D("FriendshipLink")->linkSave();
+        $data['rows'] = D("FriendshipLink")->getInfo();
+        $data['title'] = "编辑友情链接";
+        $data['Url'] = U("System/link_edit");
+        $this->assign($data);
+        $this->display("link_view");
+    }
+
+    /**
+     * 友情链接删除
+     */
+    public function link_del(){
+        D("FriendshipLink")->link_del();
     }
 
     /**
@@ -238,6 +297,13 @@ class SystemController extends BaseController
     public function about_us(){
 
         $this->display();
+    }
+
+    /**
+     * 关于我们编辑
+     */
+    public function about_save(){
+
     }
 
     /**
