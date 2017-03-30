@@ -20,7 +20,7 @@ class BaseController extends Controller
         $auth = new Auth();
         $check = $auth->check(CONTROLLER_NAME . '_' . ACTION_NAME,'1');
         if (!$check){
-            $this->error("您没有该操作权限");
+            //$this->error("您没有该操作权限");
         }
     }
 }
