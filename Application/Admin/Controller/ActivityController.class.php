@@ -25,7 +25,7 @@ class ActivityController extends BaseController
     }
 
     public function add(){
-
+        D("Activity")->saveActivity();
         $data['title'] = "新增活动";
         $data['Url'] = U("Activity/add");
         $this->assign($data);
@@ -33,7 +33,8 @@ class ActivityController extends BaseController
     }
 
     public function edit(){
-
+        D("Activity")->saveActivity();
+        $data['rows'] = D("Activity")->getDataInfo(array('id'=>$_GET['id']));
         $data['title'] = "编辑活动";
         $data['Url'] = U("Activity/edit");
         $this->assign($data);
@@ -54,7 +55,7 @@ class ActivityController extends BaseController
 
 
     public function activityType_add(){
-
+        D("ActivityType")->saveActivityType();
         $data['title'] = "新增活动类别";
         $data['Url'] = U("Activity/activityType_add");
         $this->assign($data);
@@ -62,7 +63,8 @@ class ActivityController extends BaseController
     }
 
     public function activityType_edit(){
-
+        D("ActivityType")->saveActivityType();
+        $data['rows'] = D("ActivityType")->getDataInfo(array('id'=>$_GET['id']));
         $data['title'] = "编辑活动类别";
         $data['Url'] = U("Activity/activityType_edit");
         $this->assign($data);
@@ -70,7 +72,15 @@ class ActivityController extends BaseController
     }
 
     public function activityType_del(){
+        D("ActivityType")->remove();
+    }
 
+    /**
+     * 报名人员
+     */
+    public function signUp(){
+
+        $this->display();
     }
 
 }

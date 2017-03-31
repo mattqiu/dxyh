@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>科普文章 - 达晓医护</title>
+    <title>活动管理 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -339,9 +339,9 @@
                     </li>
 
                     <li>
-                        <a href="#">科普中心</a>
+                        <a href="#">活动中心</a>
                     </li>
-                    <li class="active">科普文章</li>
+                    <li class="active">活动管理</li>
                 </ul>
             </div>
 

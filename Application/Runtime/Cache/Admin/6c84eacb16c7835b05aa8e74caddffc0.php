@@ -339,10 +339,10 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo U('Coptic/index');?>">科普中心</a>
+                        <a href="<?php echo U('Activity/activityType');?>">活动中心</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('Coptic/index');?>">科普文章</a>
+                        <a href="<?php echo U('Activity/activityType');?>">活动分类管理</a>
                     </li>
                     <li class="active"><?php echo ($title); ?></li>
                 </ul>
@@ -357,7 +357,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别名称 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="activityTypeName" value="<?php echo ($rows["sort"]); ?>" />
                                 </div>
                             </div>
 
