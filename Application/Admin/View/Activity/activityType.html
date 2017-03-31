@@ -1,4 +1,4 @@
-<include file="Public/header" title="空白 - 达晓医护"/>
+<include file="Public/header" title="活动类别 - 达晓医护"/>
 </head>
 <body>
 <include file="Public/top"/>
@@ -22,21 +22,62 @@
                         <i class="icon-home home-icon"></i>
                         <a href="{:U('Index/index')}">首页</a>
                     </li>
-
                     <li>
-                        <a href="#">其他页面</a>
+                        <a href="#">活动中心</a>
                     </li>
-                    <li class="active">空白页面</li>
+                    <li class="active">活动类别</li>
                 </ul>
             </div>
 
             <div class="page-content">
+                <div class="page-header">
+                    <span>类别名称</span>
+                    <input type="text" name="keyword" form="form1" value="{$keyword}" />
+                    <input type="submit" name="" value="搜索" form="form1">
+                    <a href="{:U('Activity/activityType_add')}" class="btn btn-xs btn-info">添加</a>
+                    <form action="" method="get" id="form1"></form>
+
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+                            <thead>
+                            <tr>
+                                <th class="center">序号</th>
+                                <th class="center">类别</th>
+                                <th class="center">操作</th>
+                            </tr>
+                            </thead>
 
+                            <tbody>
+                            <volist name="rows" id="vo">
+                                <tr>
+                                    <td class="center">
+                                        {$vo.id}
+                                    </td>
+
+                                    <td>
+                                        {$vo.category_name}
+                                    </td>
+                                    <td><img src="{$vo.category_image}" style="width: 100px;height: 125px;" /> </td>
+                                    <td class="hidden-480">{$vo.editor}</td>
+                                    <td class="center">
+                                        <a class="btn btn-xs btn-info" title="编辑" href="{:U('Activity/activityType_edit',array('id'=>$vo['id']))}">
+                                            <i class="icon-edit bigger-120"></i>
+                                        </a>
+
+                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="{:U('Activity/activityType_del',array('id'=>$vo['id']))}">
+                                            <i class="icon-trash bigger-120"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
+                    {$page}
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@ class WebsiteImageModel extends BaseModel
                 }
                 $boole = $this->editData(array('id'=>$requst['id']), $data);
                 if ($boole !== false){
-                    message(1, "编辑成功");
+                    message(1, "编辑成功", U("System/website_image"));
                 }else{
                     message(0, "编辑失败");
                 }
@@ -61,7 +61,7 @@ class WebsiteImageModel extends BaseModel
                 );
                 $boole = $this->addData($data);
                 if ($boole){
-                    message(1, "新增成功");
+                    message(1, "新增成功", U("System/website_image"));
                 }else{
                     message(0, "新增失败");
                 }
@@ -104,7 +104,7 @@ class WebsiteImageModel extends BaseModel
         $id = I('get.id');
         $boole = $this->deleteData(array('id'=>$id));
         if ($boole){
-            message(1, "删除成功");
+            message(1, "删除成功", U("System/website_image"));
         }else{
             message(0, "删除失败");
         }

@@ -48,4 +48,57 @@ class AdminModel extends BaseModel
         $request = I('get.');
         return $this->deleteData(array('aid'=>$request['id']));
     }
+
+    public function modifyPassword(){
+        if (IS_POST){
+            $requert = I("post.");
+            if (!isset($requert['originalPasswd']) || empty($requert['originalPasswd'])){
+                message(0, "原密码不能为空");
+            }
+            if (!isset($requert['newPasswd']) || empty($requert['newPasswd'])){
+                message(0, "新密码不能为空");
+            }
+            if (!isset($requert['confirmPasswd']) || empty($requert['confirmPasswd'])){
+                message(0, "确认密码不能为空");
+            }
+            if ($requert['confirmPasswd'] !== $requert['newPasswd']){
+                message(0, "新密码与确认密码不一致<br>请重新输入");
+            }
+            $chack_password = $this->getDataInfo(array('aid'=>session('aid')), "passwd");
+            if ($chack_password['passwd'] !== md5($requert['originalPasswd'])){
+                message(0, "原密码不正确");
+            }
+            $boole = $this->editData(array('aid'=>session('aid')), md5($requert['newPasswd']));
+            if ($boole !== false){
+                session("aid", " ");
+                message(1, "修改密码成功", U("Public/login"));
+            }else{
+                message(0, "修改密码失败");
+            }
+        }
+    }
+
+    public function userLogin(){
+        if (IS_POST){
+            $request_data = I("post.");
+            if (!isset($request_data['userName']) || empty($request_data['userName'])){
+                message(0, "用户名不能为空！");
+            }
+            if (!isset($request_data['passWord']) || empty($request_data['passWord'])){
+                message(0, "密码不能为空！");
+            }
+            $info = $this->getDataInfo(array("aname"=>$request_data['userName']));
+            if ($info){
+                if ($info['passwd'] === md5($request_data['passWord'])){
+                    session("aid", $info['aid']);
+                    session("aname", $info['aname']);
+                    message(1, "登录成功", U("Index/index"));
+                }else{
+                    message(0, "密码错误!");
+                }
+            }else{
+                message(0, "用户不存在");
+            }
+        }
+    }
 }

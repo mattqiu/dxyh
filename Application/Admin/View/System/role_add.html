@@ -41,7 +41,7 @@
                     <li>
                         <a href="{:U('System/role_manage')}">角色管理</a>
                     </li>
-                    <li class="active">添加角色</li>
+                    <li class="active">新增角色</li>
                 </ul>
             </div>
 
@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 10rem;" action="{:U('System/role_add')}" method="post">
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="{:U('System/role_add')}" method="post">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
                                 <div class="col-sm-9">
@@ -92,7 +92,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" type="submit">
+                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>

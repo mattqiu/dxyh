@@ -24,6 +24,26 @@ class ActivityController extends BaseController
         $this->display();
     }
 
+    public function add(){
+
+        $data['title'] = "新增活动";
+        $data['Url'] = U("Activity/add");
+        $this->assign($data);
+        $this->display("view");
+    }
+
+    public function edit(){
+
+        $data['title'] = "编辑活动";
+        $data['Url'] = U("Activity/edit");
+        $this->assign($data);
+        $this->display("view");
+    }
+
+    public function del(){
+
+    }
+
     /**
      * 活动分类
      */
@@ -31,4 +51,26 @@ class ActivityController extends BaseController
 
         $this->display();
     }
+
+
+    public function activityType_add(){
+
+        $data['title'] = "新增活动类别";
+        $data['Url'] = U("Activity/activityType_add");
+        $this->assign($data);
+        $this->display("activityType_view");
+    }
+
+    public function activityType_edit(){
+
+        $data['title'] = "编辑活动类别";
+        $data['Url'] = U("Activity/activityType_edit");
+        $this->assign($data);
+        $this->display("activityType_view");
+    }
+
+    public function activityType_del(){
+
+    }
+
 }

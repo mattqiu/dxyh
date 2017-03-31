@@ -70,7 +70,7 @@ class SystemController extends BaseController
                 "rules" => implode(',', $requset['rules_id']),
             );
             $boole = D("AuthGroup")->editData(array('id'=>$requset['gid']), $data);
-            if ($boole){
+            if ($boole !== false){
                 $this->success('编辑成功', U("System/role_manage"));
             }else{
                 $this->error('编辑失败');
@@ -255,7 +255,7 @@ class SystemController extends BaseController
     /**
      * 友情链接
      */
-    public function link_mangae(){
+    public function link_manage(){
         $data['rows'] = D("FriendshipLink")->getList();
         $this->assign($data);
         $this->display();
@@ -295,7 +295,8 @@ class SystemController extends BaseController
      * 关于我们
      */
     public function about_us(){
-
+        $about = htmlspecialchars_decode(file_get_contents("about.text"));
+        $this->assign("content", $about);
         $this->display();
     }
 
@@ -303,16 +304,18 @@ class SystemController extends BaseController
      * 关于我们编辑
      */
     public function about_save(){
+        //  var_dump(I('post.about'));
 
+        $about = I('post.about');
+        $boole = file_put_contents("about.text", $about);
+        if ($boole){
+            $this->success("编辑成功", U("System/about_us"));
+        }else{
+            $this->error("编辑失败");
+        }
     }
 
-    /**
-     * 修改密码
-     */
-    public function modify_password(){
 
-        $this->display();
-    }
 
 
     

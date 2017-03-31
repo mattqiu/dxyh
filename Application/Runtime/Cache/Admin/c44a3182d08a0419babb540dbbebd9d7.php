@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>空白 - 达晓医护</title>
+    <title>科普分类 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,7 +70,7 @@
                         <img class="nav-user-photo" src="/Public/admin/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
-									超级管理员
+									<?php echo (session('aname')); ?>
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -94,7 +94,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
                                 <i class="icon-off"></i>
                                 退 出
                             </a>
@@ -167,14 +167,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Coptic/copticType');?>">
+                    <a href="<?php echo U('Coptic/copticType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Coptic/index');?>">
+                    <a href="<?php echo U('Coptic/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普文章管理
                     </a>
@@ -192,14 +192,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Activity/index');?>">
+                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Activity/activityType');?>">
+                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动管理
                     </a>
@@ -217,7 +217,7 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('HomeCare/index');?>">
+                    <a href="<?php echo U('HomeCare/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         家庭护理
                     </a>
@@ -236,28 +236,28 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('UserManage/user_list');?>">
+                    <a href="<?php echo U('UserManage/user_list');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/integral');?>">
+                    <a href="<?php echo U('UserManage/integral');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         积分明细
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/collection');?>">
+                    <a href="<?php echo U('UserManage/collection');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户收藏列表
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/user_activity');?>">
+                    <a href="<?php echo U('UserManage/user_activity');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户参加活动列表
                     </a>
@@ -275,42 +275,42 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('System/role_manage');?>">
+                    <a href="<?php echo U('System/role_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         角色管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/account_manage');?>">
+                    <a href="<?php echo U('System/account_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         账户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/website_image');?>">
+                    <a href="<?php echo U('System/website_image');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         网站图片
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>">
+                    <a href="<?php echo U('System/link_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/about_us');?>">
+                    <a href="<?php echo U('System/about_us');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         关于我们
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/modify_password');?>">
+                    <a href="<?php echo U('Public/modify_password');?>">
                         <i class="icon-double-angle-right"></i>
                         修改密码
                     </a>
@@ -337,21 +337,62 @@
 						<i class="icon-home home-icon"></i>
 						<a href="<?php echo U('Index/index');?>">首页</a>
 					</li>
-
 					<li>
-						<a href="#">其他页面</a>
+						<a href="#">科普中心</a>
 					</li>
-					<li class="active">空白页面</li>
+					<li class="active">科普分类</li>
 				</ul>
 			</div>
 
 			<div class="page-content">
+				<div class="page-header">
+					<span>关键字</span>
+					<input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
+					<input type="submit" name="" value="搜索" form="form1">
+					<a href="<?php echo U('Coptic/copticType_add');?>" class="btn btn-xs btn-info">添加</a>
+					<form action="" method="get" id="form1"></form>
+
+				</div>
 				<div class="row">
 					<div class="col-xs-12">
 						<!-- PAGE CONTENT BEGINS 网页内容开始 -->
+						<table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+							<thead>
+							<tr>
+								<th class="center">序号</th>
+								<th class="center">分类名</th>
+								<th class="center">分类图片</th>
+								<th class="center">主编</th>
+								<th class="center">操作</th>
+							</tr>
+							</thead>
 
+							<tbody>
+							<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+									<td class="center">
+										<?php echo ($vo["id"]); ?>
+									</td>
+
+									<td>
+										<?php echo ($vo["category_name"]); ?>
+									</td>
+									<td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
+									<td class="hidden-480"><?php echo ($vo["editor"]); ?></td>
+									<td class="center">
+										<a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('Coptic/copticType_edit',array('id'=>$vo['id']));?>">
+											<i class="icon-edit bigger-120"></i>
+										</a>
+
+										<a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="<?php echo U('Coptic/copticType_del',array('id'=>$vo['id']));?>">
+											<i class="icon-trash bigger-120"></i>
+										</a>
+									</td>
+								</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+							</tbody>
+						</table>
 						<!-- PAGE CONTENT ENDS 网页内容结束 -->
 					</div>
+					<?php echo ($page); ?>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-<include file="Public/header" title="空白 - 达晓医护"/>
+<include file="Public/header" title="科普文章 - 达晓医护"/>
 </head>
 <body>
 <include file="Public/top"/>
@@ -24,19 +24,103 @@
                     </li>
 
                     <li>
-                        <a href="#">其他页面</a>
+                        <a href="#">科普中心</a>
                     </li>
-                    <li class="active">空白页面</li>
+                    <li class="active">科普文章</li>
                 </ul>
             </div>
 
             <div class="page-content">
+                <div class="page-header">
+                    <span>活动类别</span>
+                    <select name="authId" form="form1">
+                        <option value="0">请选择</option>
+                        <volist name="auth" id="vo">
+                            <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>{$vo.title}</option>
+                        </volist>
+                    </select>
+                    <span>活动名称</span>
+                    <input type="text" name="keyword" form="form1" value="{$keyword}" />
+                    <span>活动状态</span>
+                    <select name="authId" form="form1">
+                        <option value="0">请选择</option>
+                        <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>未开始</option>
+                        <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>进行中</option>
+                        <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>已结束</option>
+                    </select>
+
+                    <input type="submit" name="" value="搜索" form="form1">
+                    <a href="{:U('Activity/add')}" class="btn btn-xs btn-info">添加</a>
+                    <form action="" method="get" id="form1"></form>
+
+                </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <table id="sample-table-1" class="table table-striped table-bordered table-hover center">
+                            <thead>
+                            <tr>
+                                <th class="center">序号</th>
+                                <th class="center">活动类别</th>
+                                <th class="center">活动名称</th>
+                                <th class="center">积分</th>
+                                <th class="center">活动时间</th>
+                                <th class="center">活动人数</th>
+                                <th class="center">浏览量</th>
+                                <th class="center">状态</th>
+                                <th class="center">操作</th>
+                            </tr>
+                            </thead>
 
+                            <tbody>
+                            <volist name="rows" id="vo">
+                                <tr>
+                                    <td class="center">
+                                        {$vo.id}
+                                    </td>
+
+                                    <td>
+                                        {$vo.category_name}
+                                    </td>
+                                    <td>
+                                        {$vo.category_name}
+                                    </td>
+                                    <td>
+                                        {$vo.category_name}
+                                    </td>
+                                    <td>
+                                        {$vo.category_name}
+                                    </td>
+                                    <td>
+                                        {$vo.category_name}
+                                    </td>
+                                    <td>
+                                        {$vo.category_name}
+                                    </td>
+                                    <td><img src="{$vo.category_image}" style="width: 100px;height: 125px;" /> </td>
+                                    <td class="hidden-480">{$vo.editor}</td>
+                                    <td class="center">
+                                        <a class="btn btn-xs btn-info" title="详情" href="{:U('Coptic/coptic_edit',array('id'=>$vo['id']))}">报名人员
+                                            <i class="icon-zoom-in bigger-130"></i>
+                                        </a>
+                                        <a class="btn btn-xs btn-info" title="详情" href="{:U('Coptic/coptic_edit',array('id'=>$vo['id']))}">
+                                            <i class="icon-zoom-in bigger-130"></i>
+                                        </a>
+                                        <a class="btn btn-xs btn-info" title="编辑" href="{:U('Coptic/edit',array('id'=>$vo['id']))}">
+                                            <i class="icon-edit bigger-120"></i>
+                                        </a>
+
+                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="{:U('Coptic/del',array('id'=>$vo['id']))}">
+                                            <i class="icon-trash bigger-120"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </volist>
+                            </tbody>
+                        </table>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
+                    {$page}
                 </div>
             </div>
         </div>

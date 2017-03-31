@@ -24,11 +24,67 @@ class CopticController extends BaseController
         $this->display();
     }
 
+    public function add(){
+
+        $data['title'] = "新增科普文章";
+        $data['Url'] = U("Coptic/add");
+        $this->assign($data);
+        $this->display("view");
+    }
+
+    public function edit(){
+
+        $data['title'] = "编辑科普文章";
+        $data['Url'] = U("Coptic/add");
+        $this->assign($data);
+        $this->display("view");
+    }
+
+    public function del(){
+
+    }
+
     /**
      * 科普分类
      */
     public function copticType(){
 
+        $data['rows'] = D("CopticType")->showView();
+        $data['page'] = $data['rows']['page'];
+        unset($data['rows']['page']);
+        $data['keyword'] = $_GET['keyword'];
+        $this->assign($data);
         $this->display();
+    }
+
+    /**
+     * 添加科普分类
+     */
+    public function copticType_add(){
+        D("CopticType")->coptiTypeSave();
+        $data['title'] = "新增科普类别";
+        $data['Url'] = U("Coptic/copticType_add");
+        $this->assign($data);
+        $this->display("copticType_view");
+    }
+
+    /**
+     * 编辑科普分类
+     */
+    public function copticType_edit(){
+        D("CopticType")->coptiTypeSave();
+
+        $data['rows'] = D("CopticType")->copticEdit();
+        $data['title'] = "编辑科普类别";
+        $data['Url'] = U("Coptic/copticType_edit");
+        $this->assign($data);
+        $this->display("copticType_view");
+    }
+
+    /**
+     * 删除科普分类
+     */
+    public function copticType_del(){
+        D("CopticType")->copticDel();
     }
 }

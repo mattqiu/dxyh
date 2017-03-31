@@ -70,7 +70,7 @@
                         <img class="nav-user-photo" src="/Public/admin/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
-									超级管理员
+									<?php echo (session('aname')); ?>
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -94,7 +94,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
                                 <i class="icon-off"></i>
                                 退 出
                             </a>
@@ -296,7 +296,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>" class="ajax-get">
+                    <a href="<?php echo U('System/link_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
@@ -310,7 +310,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/modify_password');?>">
+                    <a href="<?php echo U('Public/modify_password');?>">
                         <i class="icon-double-angle-right"></i>
                         修改密码
                     </a>
@@ -339,10 +339,10 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo U('System/link_mangae');?>">系统设置</a>
+                        <a href="<?php echo U('System/link_manage');?>">系统设置</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('System/link_mangae');?>">友情链接</a>
+                        <a href="<?php echo U('System/link_manage');?>">友情链接</a>
                     </li>
                     <li class="active"><?php echo ($title); ?></li>
                 </ul>
@@ -352,7 +352,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 10px;" action="<?php echo ($Url); ?>" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10px;" action="<?php echo ($Url); ?>" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?php echo ($rows["id"]); ?>" />
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right"> 名称 </label>
@@ -376,8 +376,8 @@
                                 <div class="col-sm-9"><!--/upload/images/1230445787101_mthumb.jpg-->
                                     <input type="file" id="fileupload" onchange="showPreview(this)" class="col-xs-10 col-sm-5" name="fileImage" style="display: none;" />
                                     <div class="showImage" style="width:520px;">
-                                        <img src="<?php echo ($rows["link_logo"]); ?>" style="width: 520px;height: 200px;" />
-                                        <p style="position: absolute;top: 70px;left: 140px;font-size: xx-large;">点击此处上传图片</p>
+                                        <img src="<?php echo ($rows["link_logo"]); ?>" style="width: 520px;height: 200px;background-color: darkgrey;" />
+                                        <p style="position: absolute;top: 70px;left: 140px;font-size: xx-large;font-family: cursive;color: aliceblue;">点击此处上传图片</p>
                                     </div>
                                     <br>
                                     <button type="button" class="unImage" onclick="unsetImage()" style="display: none;">清除上传图片</button>
@@ -388,7 +388,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" type="submit">
+                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>

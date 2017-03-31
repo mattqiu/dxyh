@@ -82,7 +82,7 @@
                         <img class="nav-user-photo" src="/Public/admin/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
-									超级管理员
+									<?php echo (session('aname')); ?>
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -106,7 +106,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
                                 <i class="icon-off"></i>
                                 退 出
                             </a>
@@ -204,14 +204,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
+                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
+                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动管理
                     </a>
@@ -308,7 +308,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>" class="ajax-get">
+                    <a href="<?php echo U('System/link_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
@@ -322,7 +322,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/modify_password');?>">
+                    <a href="<?php echo U('Public/modify_password');?>">
                         <i class="icon-double-angle-right"></i>
                         修改密码
                     </a>
@@ -364,7 +364,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 20px;" action="<?php echo U('System/role_edit');?>" method="post">
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 20px;" action="<?php echo U('System/role_edit');?>" method="post">
                             <input type="hidden" name="gid" value="<?php echo ($rows["id"]); ?>"/>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
@@ -402,7 +402,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info ajax-post" type="submit" target-form="form-horizontal">
+                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>

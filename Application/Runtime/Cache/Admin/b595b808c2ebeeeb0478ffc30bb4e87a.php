@@ -70,7 +70,7 @@
                         <img class="nav-user-photo" src="/Public/admin/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
-									超级管理员
+									<?php echo (session('aname')); ?>
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -94,7 +94,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
                                 <i class="icon-off"></i>
                                 退 出
                             </a>
@@ -310,7 +310,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/modify_password');?>">
+                    <a href="<?php echo U('Public/modify_password');?>">
                         <i class="icon-double-angle-right"></i>
                         修改密码
                     </a>
@@ -409,10 +409,6 @@
 <script src="/Public/admin/think/think.js"></script>
 
 <!-- inline scripts related to this page -->
-<script type="text/javascript">
-	function callback(data) {
-		alert(data);
-	}
-</script>
+
 </body>
 </html>

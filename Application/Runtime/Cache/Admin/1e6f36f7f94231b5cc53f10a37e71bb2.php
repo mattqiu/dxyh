@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>空白 - 达晓医护</title>
+    <title>关于我们 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,7 +71,7 @@
                         <img class="nav-user-photo" src="/Public/admin/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
-									超级管理员
+									<?php echo (session('aname')); ?>
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -95,7 +95,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
                                 <i class="icon-off"></i>
                                 退 出
                             </a>
@@ -311,7 +311,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/modify_password');?>">
+                    <a href="<?php echo U('Public/modify_password');?>">
                         <i class="icon-double-angle-right"></i>
                         修改密码
                     </a>
@@ -339,10 +339,7 @@
                         <a href="<?php echo U('Index/index');?>">首页</a>
                     </li>
 
-                    <li>
-                        <a href="#">其他页面</a>
-                    </li>
-                    <li class="active">空白页面</li>
+                    <li class="active">关于我们</li>
                 </ul>
             </div>
 
@@ -350,8 +347,11 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
-                        <div id="btns">
+                        <form id="form-submit" action="<?php echo U('System/about_save');?>">
+                            <script id="editor" name="about" type="text/plain" style="width:1024px;height:500px;"><?php echo ($content); ?></script>
+                            <button class="btn btn-info ajax-post" type="button" target-form="form-submit" style="margin-left: 38rem;margin-top: 1rem;">保存</button>
+                        </form>
+                        <!--<div id="btns">
                             <div>
                                 <button onclick="getAllHtml()">获得整个html的内容</button>
                                 <button onclick="getContent()">获得内容</button>
@@ -386,7 +386,7 @@
                                 创建编辑器</button>
                             <button onclick="deleteEditor()">
                                 删除编辑器</button>
-                        </div>
+                        </div>-->
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
                 </div>
@@ -453,13 +453,13 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
-
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.parse.js"></script>
 <script type="text/javascript">
 
     //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
     var ue = UE.getEditor('editor');
-
+    uParse('#editor',{rootPath:'./'});
 
     function isFocus(e){
         alert(UE.getEditor('editor').isFocus());

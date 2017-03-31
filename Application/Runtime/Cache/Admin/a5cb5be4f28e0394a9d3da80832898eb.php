@@ -70,7 +70,7 @@
                         <img class="nav-user-photo" src="/Public/admin/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
-									超级管理员
+									<?php echo (session('aname')); ?>
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -94,7 +94,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
                                 <i class="icon-off"></i>
                                 退 出
                             </a>
@@ -167,14 +167,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Coptic/copticType');?>">
+                    <a href="<?php echo U('Coptic/copticType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Coptic/index');?>">
+                    <a href="<?php echo U('Coptic/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         科普文章管理
                     </a>
@@ -192,14 +192,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Activity/index');?>">
+                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Activity/activityType');?>">
+                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动管理
                     </a>
@@ -217,7 +217,7 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('HomeCare/index');?>">
+                    <a href="<?php echo U('HomeCare/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         家庭护理
                     </a>
@@ -236,28 +236,28 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('UserManage/user_list');?>">
+                    <a href="<?php echo U('UserManage/user_list');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/integral');?>">
+                    <a href="<?php echo U('UserManage/integral');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         积分明细
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/collection');?>">
+                    <a href="<?php echo U('UserManage/collection');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户收藏列表
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('UserManage/user_activity');?>">
+                    <a href="<?php echo U('UserManage/user_activity');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         用户参加活动列表
                     </a>
@@ -275,42 +275,42 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('System/role_manage');?>">
+                    <a href="<?php echo U('System/role_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         角色管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/account_manage');?>">
+                    <a href="<?php echo U('System/account_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         账户管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/website_image');?>">
+                    <a href="<?php echo U('System/website_image');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         网站图片
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>">
+                    <a href="<?php echo U('System/link_mangae');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/about_us');?>">
+                    <a href="<?php echo U('System/about_us');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         关于我们
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/modify_password');?>">
+                    <a href="<?php echo U('Public/modify_password');?>">
                         <i class="icon-double-angle-right"></i>
                         修改密码
                     </a>
@@ -344,7 +344,7 @@
                     <li>
                         <a href="<?php echo U('System/account_manage');?>">账户管理</a>
                     </li>
-                    <li class="active">添加账户</li>
+                    <li class="active">新增账户</li>
                 </ul>
             </div>
 
@@ -352,7 +352,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 10rem;" action="<?php echo U('System/account_add');?>" method="post">
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="<?php echo U('System/account_add');?>" method="post">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 账号 </label>
                                 <div class="col-sm-9">
@@ -394,7 +394,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info" type="submit">
+                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>

@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS 网页内容开始 -->
-                        <form class="form-horizontal" role="form" style="padding-top: 20px;" action="{:U('System/role_edit')}" method="post">
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 20px;" action="{:U('System/role_edit')}" method="post">
                             <input type="hidden" name="gid" value="{$rows.id}"/>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 角色名称 </label>
@@ -93,7 +93,7 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info ajax-post" type="submit" target-form="form-horizontal">
+                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
                                         <i class="icon-ok bigger-110"></i>
                                         提交
                                     </button>

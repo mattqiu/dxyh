@@ -70,7 +70,7 @@
                         <img class="nav-user-photo" src="/Public/admin/avatars/user.jpg" alt="Jason's Photo" />
                         <span class="user-info">
 									<small>欢迎,</small>
-									超级管理员
+									<?php echo (session('aname')); ?>
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -94,7 +94,7 @@
                         <li class="divider"></li>
 
                         <li>
-                            <a href="#">
+                            <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
                                 <i class="icon-off"></i>
                                 退 出
                             </a>
@@ -192,14 +192,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
+                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
+                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动管理
                     </a>
@@ -296,7 +296,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>" class="ajax-get">
+                    <a href="<?php echo U('System/link_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
@@ -310,7 +310,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/modify_password');?>">
+                    <a href="<?php echo U('Public/modify_password');?>">
                         <i class="icon-double-angle-right"></i>
                         修改密码
                     </a>

@@ -73,11 +73,11 @@
                                     <td>{$vo.title}</td>
                                     <td class="hidden-480">{$vo.create_time}</td>
                                     <td class="center">
-                                        <a class="btn btn-xs btn-info" title="编辑" href="{:U('System/account_edit',array('id'=>$vo['aid']))}">
+                                        <a class="btn btn-xs btn-info" title="编辑" href="{:U('System/account_edit',array('id'=>$vo['id']))}">
                                             <i class="icon-edit bigger-120"></i>
                                         </a>
 
-                                        <a class="btn btn-xs btn-danger" title="删除" href="{:U('System/account_del',array('id'=>$vo['aid']))}">
+                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="{:U('System/account_del',array('id'=>$vo['id']))}">
                                             <i class="icon-trash bigger-120"></i>
                                         </a>
                                     </td>

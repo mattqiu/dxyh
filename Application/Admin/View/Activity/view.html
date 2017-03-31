@@ -1,0 +1,237 @@
+<include file="Public/header" title="{$title} - 达晓医护"/>
+</head>
+<body>
+<include file="Public/top"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <include file="Public/left"/>
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Index/index')}">首页</a>
+                    </li>
+
+                    <li>
+                        <a href="{:U('Coptic/index')}">科普中心</a>
+                    </li>
+                    <li>
+                        <a href="{:U('Coptic/index')}">科普文章</a>
+                    </li>
+                    <li class="active">{$title}</li>
+                </ul>
+            </div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="{$Url}">
+                            <input type="hidden" name="id" value="{$rows.id}">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 活动类别 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-sm-5" name="">
+                                        <option value="">请选择类别</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动名称 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动图片 </label>
+                                <div class="col-sm-9">
+                                    <input type="file" id="fileupload" name="categoryImage" onchange="showPreview(this)" style="display: none;" />
+                                    <div class="showImage" style="width: 170px;height: 200px;">
+                                        <img src="{$rows.category_image}" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                        <p style="position: absolute;top: 84px;left: 33px;font-size: initial;font-family: cursive;color: aliceblue;">点击此处上传图片</p>
+                                    </div>
+                                    <br>
+                                    <button type="button" class="unImage" onclick="unsetImage()" style="display: none;">清除上传图片</button>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动开始时间 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动结束时间 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名开始时间 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名结束时间 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动人数 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动积分 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动地点 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动内容 </label>
+                                <div class="col-sm-9">
+                                    <script id="editor" name="about" type="text/plain" style="width:500px;height:400px;">{$content}</script>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="sort" value="{$rows.sort}" checked />否
+                                    <input type="radio" name="sort" value="{$rows.sort}" />是
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否需要审核报名人员 </label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="shenhe" value="{$rows.sort}" checked />否
+                                    <input type="radio" name="shenhe" value="{$rows.sort}" />是
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
+                                        <i class="icon-ok bigger-110"></i>
+                                        提交
+                                    </button>
+
+                                    &nbsp; &nbsp; &nbsp;
+                                    <button class="btn" type="reset">
+                                        <i class="icon-undo bigger-110"></i>
+                                        重置
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS 网页内容结束 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <include file="Public/bottom"/>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div>
+<include file="Public/footer"/>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    var ue = UE.getEditor('editor',{autoFloatEnabled:false});
+
+    $(function () {
+        var title = "{$title}";
+        if (title == "编辑科普类别"){
+            $("p").css('display','none');
+        }
+    });
+    $(".showImage").click(function () {
+        $("#fileupload").click();
+    });
+    function showPreview(source) {
+        var file = source.files[0];
+        if(window.FileReader) {
+            var fr = new FileReader();
+            fr.onloadend = function(e) {
+                //document.getElementById("portrait").src = e.target.result;
+                $(".showImage img").attr("src",e.target.result);
+            };
+            fr.readAsDataURL(file);
+        }
+        $("p").css('display','none');
+        $(".unImage").css('display','block');
+    };
+
+    function unsetImage() {
+        $(".showImage img").attr("src", "");
+        $("p").css('display','block');
+        var obj = document.getElementById('fileupload') ;
+        obj.outerHTML = obj.outerHTML;
+        $(".unImage").css('display','none');
+    }
+
+</script>
+</body>
+</html>

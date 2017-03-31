@@ -46,11 +46,58 @@ $(function(){
     });
     //ajax post submit请求
     $('.ajax-post').click(function(){
-        var target,query,form;
-        var target_form = $(this).attr('target-form');
-        var that = this;
-        var nead_confirm=false;
-        if( ($(this).attr('type')=='submit') || (target = $(this).attr('href')) || (target = $(this).attr('url')) ){
+        var that = $(this);
+        //var target,query,form;
+        var target_form = that.attr('target-form');
+        var target = $("#"+target_form).attr('action');
+        //var nead_confirm=false;
+        var formData = new FormData($( "#"+target_form )[0]);
+        //alert(target);
+
+        $.ajax({
+            url: target ,
+            type: 'POST',
+            data: formData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                if (data.status==1) {
+                    if (data.url) {
+                        updateAlert(data.info + ' 页面即将自动跳转~','alert-success');
+                    }else{
+                        updateAlert(data.info ,'alert-success');
+                    }
+                    setTimeout(function(){
+                        $(that).removeClass('disabled').prop('disabled',false);
+                        if (data.url) {
+                            location.href=data.url;
+                        }else if( $(that).hasClass('no-refresh')){
+                            $('#top-alert').find('button').click();
+                        }else{
+                            location.reload();
+                        }
+                    },1500);
+                }else{
+                    updateAlert(data.info);
+                    setTimeout(function(){
+                        $(that).removeClass('disabled').prop('disabled',false);
+                        if (data.url) {
+                            location.href=data.url;
+                        }else{
+                            $('#top-alert').find('button').click();
+                        }
+                    },200);
+                }
+            },
+            error: function (returndata) {
+                alert(returndata);
+            }
+        });
+
+
+        /*if( ($(this).attr('type')=='submit') || (target = $(this).attr('href')) || (target = $(this).attr('url')) ){
             form = $('.'+target_form);
             if ($(this).attr('hide-data') === 'true'){//无数据时也可以使用的功能
                 form = $('.hide-data');
@@ -122,7 +169,7 @@ $(function(){
                 }
             });
         }
-        return false;
+        return false;*/
     });
     msgClose = function (o){
         o.remove();
