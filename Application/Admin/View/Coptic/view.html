@@ -44,6 +44,9 @@
                                 <div class="col-sm-9">
                                     <select class="col-sm-5" name="">
                                         <option value="">请选择类别</option>
+                                        <volist name="copticType" id="vo">
+                                            <option value="{$vo.id}">{$vo.category_name}</option>
+                                        </volist>
                                     </select>
                                 </div>
                             </div>

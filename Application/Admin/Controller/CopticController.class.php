@@ -26,6 +26,7 @@ class CopticController extends BaseController
 
     public function add(){
 
+        $data['copticType'] = D("CopticType")->getDataList(null, "id,category_name");
         $data['title'] = "新增科普文章";
         $data['Url'] = U("Coptic/add");
         $this->assign($data);
@@ -34,6 +35,7 @@ class CopticController extends BaseController
 
     public function edit(){
 
+        $data['copticType'] = D("CopticType")->getDataList(null, "id,category_name");
         $data['title'] = "编辑科普文章";
         $data['Url'] = U("Coptic/add");
         $this->assign($data);
