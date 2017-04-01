@@ -23,4 +23,18 @@ class HomeCareController extends BaseController
 
         $this->display();
     }
+
+    public function add(){
+
+        $this->display("view");
+    }
+
+    public function edit(){
+
+        $this->display("view");
+    }
+
+    public function del(){
+
+    }
 }

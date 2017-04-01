@@ -347,7 +347,7 @@
 
             <div class="page-content">
                 <div class="page-header">
-                    <a href="<?php echo U('Coptic/add');?>" class="btn btn-xs btn-info">添加</a>
+                    <a href="<?php echo U('HomeCare/add');?>" class="btn btn-xs btn-info">添加</a>
 
                 </div>
                 <div class="row">
