@@ -372,12 +372,10 @@
                                     </td>
 
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["type_name"]); ?>
                                     </td>
-                                    <td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
-                                    <td class="hidden-480"><?php echo ($vo["editor"]); ?></td>
                                     <td class="center">
-                                        <a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('Activity/activityType_edit',array('id'=>$vo['id']));?>">
+                                        <a class="btn btn-xs btn-info ajax-get" title="编辑" href="<?php echo U('Activity/activityType_edit',array('id'=>$vo['id']));?>">
                                             <i class="icon-edit bigger-120"></i>
                                         </a>
 

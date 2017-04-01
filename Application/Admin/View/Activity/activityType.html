@@ -58,12 +58,10 @@
                                     </td>
 
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.type_name}
                                     </td>
-                                    <td><img src="{$vo.category_image}" style="width: 100px;height: 125px;" /> </td>
-                                    <td class="hidden-480">{$vo.editor}</td>
                                     <td class="center">
-                                        <a class="btn btn-xs btn-info" title="编辑" href="{:U('Activity/activityType_edit',array('id'=>$vo['id']))}">
+                                        <a class="btn btn-xs btn-info ajax-get" title="编辑" href="{:U('Activity/activityType_edit',array('id'=>$vo['id']))}">
                                             <i class="icon-edit bigger-120"></i>
                                         </a>
 

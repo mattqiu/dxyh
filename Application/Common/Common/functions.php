@@ -35,6 +35,10 @@ function dateTime($dateTime, $status = 0){
             return date("Ymd", $dateTime);
         case 5:
             return date("Ymd", strtotime($dateTime));
+        case 6:
+            return date("Y-m-d H:i", $dateTime);
+        case 7:
+            return date("Y-m-d H:i", strtotime($dateTime));
     }
 }
 
@@ -124,4 +128,40 @@ function upload($file=array(), $file_url=""){
         return "文件不存在";
     }
 
+}
+
+
+function export($title="", $column=array(), $data=array()){
+    $num = count($column);
+    $html = "";
+    $html .= "<table border=1 cellpadding=0 cellspacing=0 width=\"100%\" >";
+    //标题
+    $html .= "<tr><td colspan=\"$num\" align=\"center\"><h2>$title</h2></td></tr>";
+    //列标题
+    $html .= "<tr>";
+    foreach ($column as $key=>$item){
+        $html .= "<td style='width:54pt' align=\"center\">$item</td>";
+    }
+
+    $html .= "</tr>";
+
+    //数据
+    /*$html .= "<tr>";*/
+    foreach ($data as $key=>$item){
+        $html .= "<tr>";
+        foreach ($item as $k=>$val){
+            $html .= "<td align=\"center\">$val</td>";
+        }
+        $html .= "</tr>";
+    }
+
+    $html .= "</table>";
+
+    $file_name   = $title."-".date("Y-m-d",time());
+    $file_suffix = "xls";
+    header("Content-Type: application/vnd.ms-excel");
+    header("Content-Disposition: attachment; filename=$file_name.$file_suffix");
+    header('Cache-Control: max-age=0');
+    echo "\xEF\xBB\xBF"; // UTF-8 BOM  设置csv文件的编码方式
+    echo $html;
 }

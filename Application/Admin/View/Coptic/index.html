@@ -33,17 +33,17 @@
 			<div class="page-content">
 				<div class="page-header">
 					<span>科普类别</span>
-					<select name="authId" form="form1">
+					<select name="copticType" form="form1">
 						<option value="0">请选择类别</option>
-						<volist name="auth" id="vo">
-							<option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>{$vo.title}</option>
+						<volist name="copticType" id="vo">
+							<option value="{$vo.id}" {$typeId|Judgement=###,$vo['id'],"selected"}>{$vo.category_name}</option>
 						</volist>
 					</select>
 					<span>是否推荐</span>
-					<select name="authId" form="form1">
+					<select name="nominate" form="form1">
 						<option value="0">全部</option>
-						<option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>推荐</option>
-						<option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>不推荐</option>
+						<option value="1" {$nominate|Judgement=###,1,"selected"}>推荐</option>
+						<option value="2" {$nominate|Judgement=###,2,"selected"}>不推荐</option>
 					</select>
 					<span>关键字</span>
 					<input type="text" name="keyword" form="form1" value="{$keyword}" />
@@ -81,27 +81,24 @@
 										{$vo.category_name}
 									</td>
 									<td>
-										{$vo.category_name}
+										{$vo.coptic_title}
 									</td>
 									<td>
-										{$vo.category_name}
+										{$vo.author}
 									</td>
 									<td>
-										{$vo.category_name}
+										{$vo.likes_num}
 									</td>
 									<td>
-										{$vo.category_name}
+										{$vo.collection}
 									</td>
-									<td>
-										{$vo.category_name}
-									</td>
-									<td><img src="{$vo.category_image}" style="width: 100px;height: 125px;" /> </td>
-									<td class="hidden-480">{$vo.editor}</td>
+									<td>{$vo.referral} </td>
+									<td class="hidden-480">{$vo.create_time}</td>
 									<td class="center">
-										<a class="btn btn-xs btn-info" title="详情" href="{:U('Coptic/coptic_edit',array('id'=>$vo['id']))}">
+										<a class="btn btn-xs btn-info ajax-get" title="详情" href="{:U('Coptic/details',array('id'=>$vo['id']))}">
 											<i class="icon-zoom-in bigger-130"></i>
 										</a>
-										<a class="btn btn-xs btn-info" title="编辑" href="{:U('Coptic/edit',array('id'=>$vo['id']))}">
+										<a class="btn btn-xs btn-info ajax-get" title="编辑" href="{:U('Coptic/edit',array('id'=>$vo['id']))}">
 											<i class="icon-edit bigger-120"></i>
 										</a>
 

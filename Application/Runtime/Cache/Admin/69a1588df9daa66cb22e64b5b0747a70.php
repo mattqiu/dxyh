@@ -348,15 +348,15 @@
 			<div class="page-content">
 				<div class="page-header">
 					<span>科普类别</span>
-					<select name="authId" form="form1">
+					<select name="copticType" form="form1">
 						<option value="0">请选择类别</option>
-						<?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($typeId,$vo['id'],"selected")); ?>><?php echo ($vo["category_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 					</select>
 					<span>是否推荐</span>
-					<select name="authId" form="form1">
+					<select name="nominate" form="form1">
 						<option value="0">全部</option>
-						<option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>>推荐</option>
-						<option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>>不推荐</option>
+						<option value="1" <?php echo (Judgement($nominate,1,"selected")); ?>>推荐</option>
+						<option value="2" <?php echo (Judgement($nominate,2,"selected")); ?>>不推荐</option>
 					</select>
 					<span>关键字</span>
 					<input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
@@ -393,27 +393,24 @@
 										<?php echo ($vo["category_name"]); ?>
 									</td>
 									<td>
-										<?php echo ($vo["category_name"]); ?>
+										<?php echo ($vo["coptic_title"]); ?>
 									</td>
 									<td>
-										<?php echo ($vo["category_name"]); ?>
+										<?php echo ($vo["author"]); ?>
 									</td>
 									<td>
-										<?php echo ($vo["category_name"]); ?>
+										<?php echo ($vo["likes_num"]); ?>
 									</td>
 									<td>
-										<?php echo ($vo["category_name"]); ?>
+										<?php echo ($vo["collection"]); ?>
 									</td>
-									<td>
-										<?php echo ($vo["category_name"]); ?>
-									</td>
-									<td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
-									<td class="hidden-480"><?php echo ($vo["editor"]); ?></td>
+									<td><?php echo ($vo["referral"]); ?> </td>
+									<td class="hidden-480"><?php echo ($vo["create_time"]); ?></td>
 									<td class="center">
-										<a class="btn btn-xs btn-info" title="详情" href="<?php echo U('Coptic/coptic_edit',array('id'=>$vo['id']));?>">
+										<a class="btn btn-xs btn-info ajax-get" title="详情" href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
 											<i class="icon-zoom-in bigger-130"></i>
 										</a>
-										<a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('Coptic/edit',array('id'=>$vo['id']));?>">
+										<a class="btn btn-xs btn-info ajax-get" title="编辑" href="<?php echo U('Coptic/edit',array('id'=>$vo['id']));?>">
 											<i class="icon-edit bigger-120"></i>
 										</a>
 

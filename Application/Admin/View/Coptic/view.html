@@ -42,10 +42,10 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别 </label>
                                 <div class="col-sm-9">
-                                    <select class="col-sm-5" name="">
+                                    <select class="col-sm-5" name="copticType">
                                         <option value="">请选择类别</option>
                                         <volist name="copticType" id="vo">
-                                            <option value="{$vo.id}">{$vo.category_name}</option>
+                                            <option value="{$vo.id}" {$rows.coptic_type_id|Judgement=###,$vo['id'],"selected"}>{$vo.category_name}</option>
                                         </volist>
                                     </select>
                                 </div>
@@ -56,7 +56,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 标题 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="copticTitle" value="{$rows.coptic_title}" />
                                 </div>
                             </div>
 
@@ -65,9 +65,9 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 </label>
                                 <div class="col-sm-9">
-                                    <input type="file" id="fileupload" name="categoryImage" onchange="showPreview(this)" style="display: none;" />
+                                    <input type="file" id="fileupload" name="copticCover" onchange="showPreview(this)" style="display: none;" />
                                     <div class="showImage" style="width: 170px;height: 200px;">
-                                        <img src="{$rows.category_image}" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                        <img src="{$rows.coptic_cover}" style="width: 170px;height: 200px;background-color: darkgrey;" />
                                         <p style="position: absolute;top: 84px;left: 33px;font-size: initial;font-family: cursive;color: aliceblue;">点击此处上传图片</p>
                                     </div>
                                     <br>
@@ -80,7 +80,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 摘要 </label>
                                 <div class="col-sm-9">
-                                    <textarea id="form-field-11" class="autosize-transition form-control" name="editor" style="width: 41.6666%">{$rows.editor}</textarea>
+                                    <textarea id="form-field-11" class="autosize-transition form-control" name="abstract" style="width: 41.6666%">{$rows.abstract}</textarea>
                                 </div>
                             </div>
 
@@ -89,7 +89,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 </label>
                                 <div class="col-sm-9">
-                                    <script id="editor" name="about" type="text/plain" style="width:1024px;height:500px;">{$content}</script>
+                                    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;">{$rows.content|htmlspecialchars_decode=###}</script>
                                 </div>
                             </div>
 
@@ -98,7 +98,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 作者 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="author" value="{$rows.author}" />
                                 </div>
                             </div>
 
@@ -107,7 +107,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 来源 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="source" value="{$rows.source}" />
                                 </div>
                             </div>
 
@@ -116,7 +116,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 关键词 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="keyword" value="{$rows.keyword}" />
                                 </div>
                             </div>
 
@@ -125,7 +125,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 原文链接 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="original_link" value="{$rows.original_link|urldecode=###}" />
                                 </div>
                             </div>
 
@@ -134,8 +134,8 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
                                 <div class="col-sm-9">
-                                    <input type="radio" name="sort" value="{$rows.sort}" checked />否
-                                    <input type="radio" name="sort" value="{$rows.sort}" />是
+                                    <input type="radio" name="referral" value="2" {$rows.referral|Judgement=###,2,"checked"} {$title|Judgement=###,"新增科普文章","checked"} />否
+                                    <input type="radio" name="referral" value="1" {$rows.referral|Judgement=###,1,"checked"}/>是
                                 </div>
                             </div>
 
@@ -178,7 +178,7 @@
 
     $(function () {
         var title = "{$title}";
-        if (title == "编辑科普类别"){
+        if (title == "编辑科普文章"){
             $("p").css('display','none');
         }
     });

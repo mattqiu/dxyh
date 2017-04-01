@@ -20,12 +20,19 @@ class CopticController extends BaseController
      * 科普文章
      */
     public function index(){
-
+        $data['rows'] = D("Coptic")->getList();
+        $data['page'] = $data['rows']['page'];
+        unset($data['rows']['page']);
+        $data['copticType'] = M("CopticType")->select();
+        $data['typeId'] = $_GET['copticType'];
+        $data['nominate'] = $_GET['nominate'];
+        $data['keyword'] = $_GET['keyword'];
+        $this->assign($data);
         $this->display();
     }
 
     public function add(){
-
+        D("Coptic")->modify();
         $data['copticType'] = D("CopticType")->getDataList(null, "id,category_name");
         $data['title'] = "新增科普文章";
         $data['Url'] = U("Coptic/add");
@@ -34,15 +41,20 @@ class CopticController extends BaseController
     }
 
     public function edit(){
-
+        D("Coptic")->modify();
         $data['copticType'] = D("CopticType")->getDataList(null, "id,category_name");
+        $data['rows'] = D("Coptic")->getDataInfo();
         $data['title'] = "编辑科普文章";
-        $data['Url'] = U("Coptic/add");
+        $data['Url'] = U("Coptic/edit");
         $this->assign($data);
         $this->display("view");
     }
 
     public function del(){
+        D("Coptic")->remove();
+    }
+
+    public function details(){
 
     }
 

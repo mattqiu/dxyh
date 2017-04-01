@@ -8,7 +8,7 @@
 
 namespace Admin\Model;
 
-
+use Think\Page;
 class ActivityTypeModel extends BaseModel
 {
     public $addressUrl;
@@ -19,7 +19,18 @@ class ActivityTypeModel extends BaseModel
     }
 
     public function getActivityType(){
+        $keyword = I("get.keyword");
+        $keyword = trim($keyword);
 
+        $where = null;
+        if ($keyword){
+            $where["type_name"] = array("like", "%".$keyword."%");
+        }
+        $count = $this->countData($where);
+        $page = new Page($count, C("PAGE_NUM"));
+        $list = $this->getDataList($where, null, null, $page->firstRow, $page->listRows);
+        $list['page'] = $page->show();
+        return $list;
     }
 
     public function saveActivityType(){

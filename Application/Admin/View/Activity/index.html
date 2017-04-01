@@ -33,20 +33,20 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>活动类别</span>
-                    <select name="authId" form="form1">
+                    <select name="typeId" form="form1">
                         <option value="0">请选择</option>
-                        <volist name="auth" id="vo">
-                            <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>{$vo.title}</option>
+                        <volist name="activityType" id="vo">
+                            <option value="{$vo.id}" {$typeId|Judgement=###,$vo['id'],"selected"}>{$vo.type_name}</option>
                         </volist>
                     </select>
                     <span>活动名称</span>
                     <input type="text" name="keyword" form="form1" value="{$keyword}" />
                     <span>活动状态</span>
-                    <select name="authId" form="form1">
+                    <select name="status" form="form1">
                         <option value="0">请选择</option>
-                        <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>未开始</option>
-                        <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>进行中</option>
-                        <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>已结束</option>
+                        <option value="2" {$status|Judgement=###,2,"selected"}>未开始</option>
+                        <option value="1" {$status|Judgement=###,1,"selected"}>进行中</option>
+                        <option value="3" {$status|Judgement=###,3,"selected"}>已结束</option>
                     </select>
 
                     <input type="submit" name="" value="搜索" form="form1">
@@ -80,37 +80,36 @@
                                     </td>
 
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.type_name}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.activity_name}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.activity_integral}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.activity_start_time}&nbsp;至&nbsp;{$vo.activity_end_time}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.activity_number}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.browse_volume}
                                     </td>
-                                    <td><img src="{$vo.category_image}" style="width: 100px;height: 125px;" /> </td>
-                                    <td class="hidden-480">{$vo.editor}</td>
+                                    <td class="hidden-480">{$vo.status}</td>
                                     <td class="center">
-                                        <a class="btn btn-xs btn-info" title="详情" href="{:U('Coptic/coptic_edit',array('id'=>$vo['id']))}">报名人员
+                                        <a class="btn btn-xs btn-info ajax-get" title="查看报名人员" href="{:U('Activity/signUp',array('id'=>$vo['id'],'whetherAudit'=>$vo['whether_audit']))}">
+                                            <i class="icon-zoom-in bigger-130"></i>报名人员
+                                        </a>
+                                        <a class="btn btn-xs btn-info" title="活动详情" href="{:U('Activity/edit',array('id'=>$vo['id']))}">
                                             <i class="icon-zoom-in bigger-130"></i>
                                         </a>
-                                        <a class="btn btn-xs btn-info" title="详情" href="{:U('Coptic/coptic_edit',array('id'=>$vo['id']))}">
-                                            <i class="icon-zoom-in bigger-130"></i>
-                                        </a>
-                                        <a class="btn btn-xs btn-info" title="编辑" href="{:U('Coptic/edit',array('id'=>$vo['id']))}">
+                                        <a class="btn btn-xs btn-info ajax-get" title="编辑" href="{:U('Activity/edit',array('id'=>$vo['id']))}">
                                             <i class="icon-edit bigger-120"></i>
                                         </a>
 
-                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="{:U('Coptic/del',array('id'=>$vo['id']))}">
+                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="{:U('Activity/del',array('id'=>$vo['id']))}">
                                             <i class="icon-trash bigger-120"></i>
                                         </a>
                                     </td>

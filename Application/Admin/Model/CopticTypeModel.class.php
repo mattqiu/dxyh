@@ -19,7 +19,7 @@ class CopticTypeModel extends BaseModel
 
         $where = null;
         if ($keyword){
-            $where = array("category_name"=>$keyword);
+            $where["category_name"] = array("like", "%".$keyword."%");
         }
         $count = $this->countData($where);
         $page = new Page($count, C("PAGE_NUM"));

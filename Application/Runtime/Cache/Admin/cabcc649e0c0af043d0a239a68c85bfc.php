@@ -45,6 +45,7 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" href="/Public/admin/datetimepicker/css/bootstrap-datetimepicker.css" />
 </head>
 <body>
 <!--顶部导航-->
@@ -339,10 +340,10 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo U('Coptic/index');?>">科普中心</a>
+                        <a href="<?php echo U('Activity/index');?>">活动中心</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('Coptic/index');?>">科普文章</a>
+                        <a href="<?php echo U('Activity/index');?>">活动管理</a>
                     </li>
                     <li class="active"><?php echo ($title); ?></li>
                 </ul>
@@ -357,8 +358,9 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 活动类别 </label>
                                 <div class="col-sm-9">
-                                    <select class="col-sm-5" name="">
+                                    <select class="col-sm-5" name="activityType">
                                         <option value="">请选择类别</option>
+                                        <?php if(is_array($activityType)): $i = 0; $__LIST__ = $activityType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($rows["activity_type_id"],$vo['id'],"selected")); ?>><?php echo ($vo["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                     </select>
                                 </div>
                             </div>
@@ -368,7 +370,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动名称 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="activityName" value="<?php echo ($rows["activity_name"]); ?>" />
                                 </div>
                             </div>
 
@@ -377,9 +379,9 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动图片 </label>
                                 <div class="col-sm-9">
-                                    <input type="file" id="fileupload" name="categoryImage" onchange="showPreview(this)" style="display: none;" />
+                                    <input type="file" id="fileupload" name="activityCover" onchange="showPreview(this)" style="display: none;" />
                                     <div class="showImage" style="width: 170px;height: 200px;">
-                                        <img src="<?php echo ($rows["category_image"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                        <img src="<?php echo ($rows["activity_cover"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
                                         <p style="position: absolute;top: 84px;left: 33px;font-size: initial;font-family: cursive;color: aliceblue;">点击此处上传图片</p>
                                     </div>
                                     <br>
@@ -392,7 +394,10 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动开始时间 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
+                                        <span class="add-on"><i class="icon-calendar"></i></span>
+                                        <input size="68" type="text" name="activityStartTime" value="<?php echo (dateTime($rows["activity_start_time"],6)); ?>" readonly>
+                                    </div>
                                 </div>
                             </div>
 
@@ -401,7 +406,10 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动结束时间 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
+                                        <span class="add-on"><i class="icon-calendar"></i></span>
+                                        <input size="68" type="text" name="activityEndTime" value="<?php echo (dateTime($rows["activity_end_time"],6)); ?>" readonly>
+                                    </div>
                                 </div>
                             </div>
 
@@ -410,7 +418,10 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名开始时间 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
+                                        <span class="add-on"><i class="icon-calendar"></i></span>
+                                        <input size="68" type="text" name="enrollStartTime" value="<?php echo (dateTime($rows["enroll_start_time"],6)); ?>" readonly>
+                                    </div>
                                 </div>
                             </div>
 
@@ -419,7 +430,10 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名结束时间 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
+                                        <span class="add-on"><i class="icon-calendar"></i></span>
+                                        <input size="68" type="text" name="enrollEndTime" value="<?php echo (dateTime($rows["enroll_end_time"],6)); ?>" readonly>
+                                    </div>
                                 </div>
                             </div>
 
@@ -428,7 +442,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动人数 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="activityNumber" value="<?php echo ($rows["activity_number"]); ?>" />
                                 </div>
                             </div>
 
@@ -437,7 +451,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动积分 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="activityIntegral" value="<?php echo ($rows["activity_integral"]); ?>" />
                                 </div>
                             </div>
 
@@ -446,7 +460,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动地点 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="address" value="<?php echo ($rows["address"]); ?>" />
                                 </div>
                             </div>
 
@@ -455,7 +469,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动内容 </label>
                                 <div class="col-sm-9">
-                                    <script id="editor" name="about" type="text/plain" style="width:500px;height:400px;"><?php echo ($content); ?></script>
+                                    <script id="editor" name="content" type="text/plain" style="width:500px;height:400px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
                                 </div>
                             </div>
 
@@ -464,8 +478,8 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
                                 <div class="col-sm-9">
-                                    <input type="radio" name="sort" value="<?php echo ($rows["sort"]); ?>" checked />否
-                                    <input type="radio" name="sort" value="<?php echo ($rows["sort"]); ?>" />是
+                                    <input type="radio" name="referral" value="2" <?php echo (Judgement($rows["referral"],2,"checked")); ?> <?php echo (Judgement($title,"新增活动","checked")); ?> />否
+                                    <input type="radio" name="referral" value="1" <?php echo (Judgement($rows["referral"],1,"checked")); ?>/>是
                                 </div>
                             </div>
 
@@ -474,8 +488,8 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否需要审核报名人员 </label>
                                 <div class="col-sm-9">
-                                    <input type="radio" name="shenhe" value="<?php echo ($rows["sort"]); ?>" checked />否
-                                    <input type="radio" name="shenhe" value="<?php echo ($rows["sort"]); ?>" />是
+                                    <input type="radio" name="whetherAudit" value="2" <?php echo (Judgement($rows["whether_audit"],2,"checked")); ?> <?php echo (Judgement($title,"新增活动","checked")); ?> />否
+                                    <input type="radio" name="whetherAudit" value="1" <?php echo (Judgement($rows["whether_audit"],1,"checked")); ?> />是
                                 </div>
                             </div>
 
@@ -560,13 +574,15 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="/Public/admin/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="/Public/admin/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
     var ue = UE.getEditor('editor',{autoFloatEnabled:false});
 
     $(function () {
         var title = "<?php echo ($title); ?>";
-        if (title == "编辑科普类别"){
+        if (title == "编辑活动"){
             $("p").css('display','none');
         }
     });
@@ -595,6 +611,16 @@
         $(".unImage").css('display','none');
     }
 
+
+    /*$('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
+        $(this).prev().focus();
+    });*/
+    $(".form_datetime").datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        autoclose:true,
+        startDate: new Date(),
+        language: "zh-CN",
+    });
 </script>
 </body>
 </html>

@@ -357,9 +357,9 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别 </label>
                                 <div class="col-sm-9">
-                                    <select class="col-sm-5" name="">
+                                    <select class="col-sm-5" name="copticType">
                                         <option value="">请选择类别</option>
-                                        <?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>"><?php echo ($vo["category_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        <?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($rows["coptic_type_id"],$vo['id'],"selected")); ?>><?php echo ($vo["category_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                                     </select>
                                 </div>
                             </div>
@@ -369,7 +369,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 标题 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="copticTitle" value="<?php echo ($rows["coptic_title"]); ?>" />
                                 </div>
                             </div>
 
@@ -378,9 +378,9 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 </label>
                                 <div class="col-sm-9">
-                                    <input type="file" id="fileupload" name="categoryImage" onchange="showPreview(this)" style="display: none;" />
+                                    <input type="file" id="fileupload" name="copticCover" onchange="showPreview(this)" style="display: none;" />
                                     <div class="showImage" style="width: 170px;height: 200px;">
-                                        <img src="<?php echo ($rows["category_image"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                        <img src="<?php echo ($rows["coptic_cover"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
                                         <p style="position: absolute;top: 84px;left: 33px;font-size: initial;font-family: cursive;color: aliceblue;">点击此处上传图片</p>
                                     </div>
                                     <br>
@@ -393,7 +393,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 摘要 </label>
                                 <div class="col-sm-9">
-                                    <textarea id="form-field-11" class="autosize-transition form-control" name="editor" style="width: 41.6666%"><?php echo ($rows["editor"]); ?></textarea>
+                                    <textarea id="form-field-11" class="autosize-transition form-control" name="abstract" style="width: 41.6666%"><?php echo ($rows["abstract"]); ?></textarea>
                                 </div>
                             </div>
 
@@ -402,7 +402,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 </label>
                                 <div class="col-sm-9">
-                                    <script id="editor" name="about" type="text/plain" style="width:1024px;height:500px;"><?php echo ($content); ?></script>
+                                    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
                                 </div>
                             </div>
 
@@ -411,7 +411,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 作者 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="author" value="<?php echo ($rows["author"]); ?>" />
                                 </div>
                             </div>
 
@@ -420,7 +420,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 来源 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="source" value="<?php echo ($rows["source"]); ?>" />
                                 </div>
                             </div>
 
@@ -429,7 +429,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 关键词 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="keyword" value="<?php echo ($rows["keyword"]); ?>" />
                                 </div>
                             </div>
 
@@ -438,7 +438,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 原文链接 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="original_link" value="<?php echo (urldecode($rows["original_link"])); ?>" />
                                 </div>
                             </div>
 
@@ -447,8 +447,8 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
                                 <div class="col-sm-9">
-                                    <input type="radio" name="sort" value="<?php echo ($rows["sort"]); ?>" checked />否
-                                    <input type="radio" name="sort" value="<?php echo ($rows["sort"]); ?>" />是
+                                    <input type="radio" name="referral" value="2" <?php echo (Judgement($rows["referral"],2,"checked")); ?> <?php echo (Judgement($title,"新增科普文章","checked")); ?> />否
+                                    <input type="radio" name="referral" value="1" <?php echo (Judgement($rows["referral"],1,"checked")); ?>/>是
                                 </div>
                             </div>
 
@@ -539,7 +539,7 @@
 
     $(function () {
         var title = "<?php echo ($title); ?>";
-        if (title == "编辑科普类别"){
+        if (title == "编辑科普文章"){
             $("p").css('display','none');
         }
     });

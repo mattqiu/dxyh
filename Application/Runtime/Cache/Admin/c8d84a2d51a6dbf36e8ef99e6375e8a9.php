@@ -348,18 +348,18 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>活动类别</span>
-                    <select name="authId" form="form1">
+                    <select name="typeId" form="form1">
                         <option value="0">请选择</option>
-                        <?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($activityType)): $i = 0; $__LIST__ = $activityType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($typeId,$vo['id'],"selected")); ?>><?php echo ($vo["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                     <span>活动名称</span>
                     <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
                     <span>活动状态</span>
-                    <select name="authId" form="form1">
+                    <select name="status" form="form1">
                         <option value="0">请选择</option>
-                        <option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>>未开始</option>
-                        <option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>>进行中</option>
-                        <option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>>已结束</option>
+                        <option value="2" <?php echo (Judgement($status,2,"selected")); ?>>未开始</option>
+                        <option value="1" <?php echo (Judgement($status,1,"selected")); ?>>进行中</option>
+                        <option value="3" <?php echo (Judgement($status,3,"selected")); ?>>已结束</option>
                     </select>
 
                     <input type="submit" name="" value="搜索" form="form1">
@@ -392,37 +392,36 @@
                                     </td>
 
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["type_name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["activity_name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["activity_integral"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["activity_start_time"]); ?>&nbsp;至&nbsp;<?php echo ($vo["activity_end_time"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["activity_number"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["browse_volume"]); ?>
                                     </td>
-                                    <td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
-                                    <td class="hidden-480"><?php echo ($vo["editor"]); ?></td>
+                                    <td class="hidden-480"><?php echo ($vo["status"]); ?></td>
                                     <td class="center">
-                                        <a class="btn btn-xs btn-info" title="详情" href="<?php echo U('Coptic/coptic_edit',array('id'=>$vo['id']));?>">报名人员
+                                        <a class="btn btn-xs btn-info ajax-get" title="查看报名人员" href="<?php echo U('Activity/signUp',array('id'=>$vo['id'],'whetherAudit'=>$vo['whether_audit']));?>">
+                                            <i class="icon-zoom-in bigger-130"></i>报名人员
+                                        </a>
+                                        <a class="btn btn-xs btn-info" title="活动详情" href="<?php echo U('Activity/edit',array('id'=>$vo['id']));?>">
                                             <i class="icon-zoom-in bigger-130"></i>
                                         </a>
-                                        <a class="btn btn-xs btn-info" title="详情" href="<?php echo U('Coptic/coptic_edit',array('id'=>$vo['id']));?>">
-                                            <i class="icon-zoom-in bigger-130"></i>
-                                        </a>
-                                        <a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('Coptic/edit',array('id'=>$vo['id']));?>">
+                                        <a class="btn btn-xs btn-info ajax-get" title="编辑" href="<?php echo U('Activity/edit',array('id'=>$vo['id']));?>">
                                             <i class="icon-edit bigger-120"></i>
                                         </a>
 
-                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="<?php echo U('Coptic/del',array('id'=>$vo['id']));?>">
+                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="<?php echo U('Activity/del',array('id'=>$vo['id']));?>">
                                             <i class="icon-trash bigger-120"></i>
                                         </a>
                                     </td>
