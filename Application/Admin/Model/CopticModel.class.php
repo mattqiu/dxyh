@@ -132,4 +132,36 @@ class CopticModel extends BaseModel
     }
 
 
+    public function copticDetails(){
+        $id = I('get.id');
+        $list = $this->getDataInfo(array('id'=>$id));
+        $list['coptic_type_id'] = M("CopticType")->where(array("id"=>$list['coptic_type_id']))->field('category_name')->find()['category_name'];
+
+        $join = array('INNER JOIN dxyh_user as u ON u.uid=c.uid');
+        $field = "c.id,c.parent_id,u.nickname,c.content,c.create_time";
+        $where = array(
+            "status" => 1,
+            "coptic_id" => $id
+        );
+        $comment = M("Comment")->alias('c')->join($join)->where($where)->field($field)->select();
+        foreach ($comment as $key=>$value){
+            if ($value['parent_id'] != 0){
+                $comment[$key]['parent_name'] = $this->array_search_value($value['parent_id'], $comment);
+            }else{
+                $comment[$key]['parent_name'] = $value['nickname'];
+            }
+        }
+        $list['comment'] = $comment;
+        return $list;
+    }
+
+    function array_search_value($keysID=0, $array=array()){
+        foreach ($array as $key=>$value){
+            if ($value['id'] = $keysID){
+                return $value['nickname'];
+            }
+        }
+        return false;
+    }
+
 }

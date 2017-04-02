@@ -193,14 +193,14 @@
 
             <ul class="submenu">
                 <li>
-                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
+                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动分类管理
                     </a>
                 </li>
 
                 <li>
-                    <a href="<?php echo U('Activity/activityType');?>" class="ajax-get">
+                    <a href="<?php echo U('Activity/index');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         活动管理
                     </a>
@@ -297,7 +297,7 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo U('System/link_mangae');?>" class="ajax-get">
+                    <a href="<?php echo U('System/link_manage');?>" class="ajax-get">
                         <i class="icon-double-angle-right"></i>
                         友情链接
                     </a>
@@ -351,7 +351,7 @@
                             <script id="editor" name="about" type="text/plain" style="width:1024px;height:500px;"><?php echo ($content); ?></script>
                             <button class="btn btn-info ajax-post" type="button" target-form="form-submit" style="margin-left: 38rem;margin-top: 1rem;">保存</button>
                         </form>
-                        <!--<div id="btns">
+                        <div id="btns">
                             <div>
                                 <button onclick="getAllHtml()">获得整个html的内容</button>
                                 <button onclick="getContent()">获得内容</button>
@@ -386,7 +386,7 @@
                                 创建编辑器</button>
                             <button onclick="deleteEditor()">
                                 删除编辑器</button>
-                        </div>-->
+                        </div>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
                 </div>
@@ -458,7 +458,7 @@
 
     //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
-    var ue = UE.getEditor('editor');
+    var ue = UE.getEditor('editor',{autoFloatEnabled:false});
     uParse('#editor',{rootPath:'./'});
 
     function isFocus(e){

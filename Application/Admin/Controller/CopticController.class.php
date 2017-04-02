@@ -43,7 +43,7 @@ class CopticController extends BaseController
     public function edit(){
         D("Coptic")->modify();
         $data['copticType'] = D("CopticType")->getDataList(null, "id,category_name");
-        $data['rows'] = D("Coptic")->getDataInfo();
+        $data['rows'] = D("Coptic")->getDataInfo(array('id'=>$_GET['id']));
         $data['title'] = "编辑科普文章";
         $data['Url'] = U("Coptic/edit");
         $this->assign($data);

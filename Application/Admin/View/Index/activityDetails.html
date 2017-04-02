@@ -1,0 +1,204 @@
+<include file="Public/header" title="{$title} - 达晓医护"/>
+<link rel="stylesheet" href="__PUBLIC__/admin/datetimepicker/css/bootstrap-datetimepicker.css" />
+<style type="text/css">
+    .col-sm-9 {
+        padding-top: 6px;
+    }
+</style>
+</head>
+<body>
+<include file="Public/top"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <include file="Public/left"/>
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Index/index')}">首页</a>
+                    </li>
+
+                    <li>
+                        <a href="{:U('Activity/index')}">活动中心</a>
+                    </li>
+                    <li>
+                        <a href="{:U('Activity/index')}">活动管理</a>
+                    </li>
+                    <li class="active">活动详情</li>
+                </ul>
+            </div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="{$Url}">
+                            <input type="hidden" name="id" value="{$rows.id}">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 活动类别 </label>
+                                <div class="col-sm-9">
+                                    {$rows.activity_type_id}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动名称 </label>
+                                <div class="col-sm-9">
+                                    {$rows.activity_name}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动图片 </label>
+                                <div class="col-sm-9">
+                                    <img src="{$rows.activity_cover}" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动开始时间 </label>
+                                <div class="col-sm-9">
+                                    {$rows.activity_start_time|dateTime=###,6}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动结束时间 </label>
+                                <div class="col-sm-9">
+                                    {$rows.activity_end_time|dateTime=###,6}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名开始时间 </label>
+                                <div class="col-sm-9">
+                                    {$rows.enroll_start_time|dateTime=###,6}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名结束时间 </label>
+                                <div class="col-sm-9">
+                                    {$rows.enroll_end_time|dateTime=###,6}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动人数 </label>
+                                <div class="col-sm-9">
+                                    {$rows.activity_number}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动积分 </label>
+                                <div class="col-sm-9">
+                                    {$rows.activity_integral}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动地点 </label>
+                                <div class="col-sm-9">
+                                    {$rows.address}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动内容 </label>
+                                <div class="col-sm-9">
+                                    <script id="editor" name="content" type="text/plain" style="width:800px;height:400px;">{$rows.content|htmlspecialchars_decode=###}</script>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
+                                <div class="col-sm-9">
+                                    <if condition="$rows.referral eq 2">
+                                        否
+                                        <else/>
+                                        是
+                                    </if>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否需要审核报名人员 </label>
+                                <div class="col-sm-9">
+                                    <if condition="$rows.whether_audit eq 2">
+                                        否
+                                        <else/>
+                                        是
+                                    </if>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button class="btn" type="reset">
+                                        <a href="{:U('Activity/index')}" >返回</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS 网页内容结束 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <include file="Public/bottom"/>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div>
+<include file="Public/footer"/>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="__PUBLIC__/admin/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="__PUBLIC__/admin/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    var ue = UE.getEditor('editor',{autoFloatEnabled:false,readonly:true});
+</script>
+</body>
+</html>

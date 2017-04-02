@@ -46,7 +46,12 @@ class Page{
         $this->listRows   = $listRows;  //设置每页显示行数
         $this->parameter  = empty($parameter) ? $_GET : $parameter;
         $this->nowPage    = empty($_GET[$this->p]) ? 1 : intval($_GET[$this->p]);
-        $this->firstRow   = $this->listRows * ($this->nowPage - 1);
+        /* 计算分页信息 */
+        $this->totalPages = ceil($this->totalRows / $this->listRows); //总页数
+        if(!empty($this->totalPages) && $this->nowPage > $this->totalPages) {
+            $this->nowPage = 1;
+        }
+        $this->firstRow   = $this->listRows * ($this->nowPage - 1); //须重新计算分页数后，再计算当前页数，不然条件分页有bug
     }
 
     /**
@@ -80,10 +85,10 @@ class Page{
         $this->parameter[$this->p] = '[PAGE]';
         $this->url = U(ACTION_NAME, $this->parameter);
         /* 计算分页信息 */
-        $this->totalPages = ceil($this->totalRows / $this->listRows); //总页数
+        /*$this->totalPages = ceil($this->totalRows / $this->listRows); //总页数
         if(!empty($this->totalPages) && $this->nowPage > $this->totalPages) {
             $this->nowPage = $this->totalPages;
-        }
+        }*/
 
         /* 计算分页零时变量 */
         $now_cool_page      = $this->rollPage/2;
@@ -140,6 +145,6 @@ class Page{
             array('%HEADER%', '%NOW_PAGE%', '%UP_PAGE%', '%DOWN_PAGE%', '%FIRST%', '%LINK_PAGE%', '%END%', '%TOTAL_ROW%', '%TOTAL_PAGE%'),
             array($this->config['header'], $this->nowPage, $up_page, $down_page, $the_first, $link_page, $the_end, $this->totalRows, $this->totalPages),
             $this->config['theme']);
-        return "\<nav aria-label=\"Page navigation\" style=\"padding-left: 12px;padding-right: 12px;\"><ul class=\"pagination\" style=\"margin-top: 1px\">{$page_str}</ul></nav>";
+        return "<nav aria-label=\"Page navigation\" style=\"padding-left: 12px;padding-right: 12px;\"><ul class=\"pagination\" style=\"margin-top: 1px\">{$page_str}</ul></nav>";
     }
 }

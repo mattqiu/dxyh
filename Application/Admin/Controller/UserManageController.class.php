@@ -20,7 +20,11 @@ class UserManageController extends BaseController
      * 用户列表
      */
     public function user_list(){
-
+        $data['rows'] = D("User")->getList();
+        $data['page'] = $data['rows']['page'];
+        unset($data['rows']['page']);
+        $data['keyword'] = $_GET['keyword'];
+        $this->assign($data);
         $this->display();
     }
 
@@ -28,7 +32,11 @@ class UserManageController extends BaseController
      * 积分明细
      */
     public function integral(){
-
+        $data['rows'] =D("IntegralDetail")->getList();
+        $data['page'] = $data['rows']['page'];
+        unset($data['rows']['page']);
+        $data['createTime'] = $_GET['create_time'];
+        $this->assign($data);
         $this->display();
     }
 
@@ -36,7 +44,13 @@ class UserManageController extends BaseController
      * 用户收藏列表
      */
     public function collection(){
-
+        $data['rows'] = D("Collection")->getList();
+        $data['page'] = $data['rows']['page'];
+        unset($data['rows']['page']);
+        $data['CopticType'] = M("CopticType")->select();
+        $data['keyword'] = $_GET['keyword'];
+        $data['typeId'] = $_GET['typeId'];
+        $this->assign($data);
         $this->display();
     }
 
@@ -44,7 +58,13 @@ class UserManageController extends BaseController
      * 用户参加活动列表
      */
     public function user_activity(){
-
+        $data['rows'] = D("AttendActivity")->UserActivity();
+        $data['page'] = $data['rows']['page'];
+        unset($data['rows']['page']);
+        $data['activityType'] = M("ActivityType")->select();
+        $data['keyword'] = $_GET['keyword'];
+        $data['typeId'] = $_GET['typeId'];
+        $this->assign($data);
         $this->display();
     }
 }

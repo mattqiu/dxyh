@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title><?php echo ($title); ?> - 达晓医护</title>
+    <title>科普文章详情 - 达晓医护</title>
 
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,6 +45,28 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+<style type="text/css">
+    .col-sm-9 {
+        padding-top: 6px;
+    }
+    table {
+        width: 70%;
+    }
+    table tr {
+        border: 1px solid #e4e6e9;
+    }
+    .comment {
+        background-color: #e4e6e9;
+        margin: 0;
+        height: 30px;
+        width: 70%;
+        border-radius: 4px;
+        padding-top: 7px;
+        padding-left: 8px;
+        font-weight: bold;
+        font-family: monospace;
+    }
+</style>
 </head>
 <body>
 <!--顶部导航-->
@@ -339,12 +361,12 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
+                        <a href="<?php echo U('Coptic/index');?>">科普中心</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
+                        <a href="<?php echo U('Coptic/index');?>">科普文章</a>
                     </li>
-                    <li class="active"><?php echo ($title); ?></li>
+                    <li class="active">科普文章详情</li>
                 </ul>
             </div>
 
@@ -355,41 +377,92 @@
                         <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="<?php echo ($Url); ?>">
                             <input type="hidden" name="id" value="<?php echo ($rows["id"]); ?>">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 目录 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别 </label>
                                 <div class="col-sm-9">
-                                    <select class="col-sm-5" name="chapter">
-                                        <option value="0">请选择章</option>
-                                        <?php if(is_array($chapter)): $i = 0; $__LIST__ = $chapter;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($vo["id"],$id,"selected")); ?> <?php echo (Judgement($vo["id"],$rows['chapter'],"selected")); ?>><?php echo ($vo["chapter_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                                    </select>
-                                    <label style="margin-left: 10px;color: red;">注意：新增目录时无需选择，新增节时选择对应的目录</label>
+                                    <?php echo ($rows["coptic_type_id"]); ?>
                                 </div>
                             </div>
 
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 章节名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 标题 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="chapter_name" value="<?php echo ($rows["chapter_name"]); ?>" placeholder="请输入章节名称，格式：第一章或第一节" />
-                                </div>
-                            </div>
-
-
-                            <div class="space-4"></div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 章节标题 </label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="title" value="<?php echo ($rows["title"]); ?>" placeholder="请输入章节标题，格式：基本家庭护理操作" />
+                                    <?php echo ($rows["coptic_title"]); ?>
                                 </div>
                             </div>
 
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 内容 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 </label>
                                 <div class="col-sm-9">
-                                    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
+                                    <img src="<?php echo ($rows["coptic_cover"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 摘要 </label>
+                                <div class="col-sm-9">
+                                    <?php echo ($rows["abstract"]); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 </label>
+                                <div class="col-sm-9">
+                                    <script id="editor" name="content" type="text/plain" style="width:824px;height:500px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 作者 </label>
+                                <div class="col-sm-9">
+                                    <?php echo ($rows["author"]); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 来源 </label>
+                                <div class="col-sm-9">
+                                    <?php echo ($rows["source"]); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 关键词 </label>
+                                <div class="col-sm-9">
+                                    <?php echo ($rows["keyword"]); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 原文链接 </label>
+                                <div class="col-sm-9">
+                                    <?php echo (urldecode($rows["original_link"])); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
+                                <div class="col-sm-9">
+                                    <?php if($rows["referral"] == 2): ?>否
+                                        <?php else: ?>
+                                        是<?php endif; ?>
                                 </div>
                             </div>
 
@@ -397,19 +470,28 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
-                                        <i class="icon-ok bigger-110"></i>
-                                        提交
-                                    </button>
-
-                                    &nbsp; &nbsp; &nbsp;
                                     <button class="btn" type="reset">
-                                        <i class="icon-undo bigger-110"></i>
-                                        重置
+                                        <a href="<?php echo U('Coptic/index');?>" >返回</a>
                                     </button>
                                 </div>
                             </div>
                         </form>
+                        <div style="width: 70%;margin-left: 22%;">
+                            <h4 class="comment">评论</h4>
+                            <table>
+                                <?php if(is_array($rows["comment"])): $i = 0; $__LIST__ = $rows["comment"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                    <td style="padding-left: 12px;">
+                                        <p>
+                                            <?php if($vo["parent_id"] == 0): echo ($vo["nickname"]); ?>&nbsp;<lable style="margin: 0 8px;"><?php echo (dateTime($vo["create_time"])); ?></lable>
+                                                <?php else: ?>
+                                                <?php echo ($vo["nickname"]); ?><lable style="margin: 0 4px;">回复</lable><?php echo ($vo["parent_name"]); ?>&nbsp;<lable style="margin: 0 8px;"><?php echo (dateTime($vo["create_time"])); ?></lable><?php endif; ?>
+                                            <button><a href="<?php echo U('Index/shieldComment',array('id'=>$vo['id']));?>" class="ajax-get">屏蔽此评论</a></button>
+                                        </p>
+                                        <?php echo ($vo["content"]); ?>
+                                    </td>
+                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </table>
+                        </div>
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
                 </div>
@@ -476,38 +558,7 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
-    var ue = UE.getEditor('editor',{autoFloatEnabled:false});
-
-    $(function () {
-        var title = "<?php echo ($title); ?>";
-        if (title == "编辑科普类别"){
-            $("p").css('display','none');
-        }
-    });
-    $(".showImage").click(function () {
-        $("#fileupload").click();
-    });
-    function showPreview(source) {
-        var file = source.files[0];
-        if(window.FileReader) {
-            var fr = new FileReader();
-            fr.onloadend = function(e) {
-                //document.getElementById("portrait").src = e.target.result;
-                $(".showImage img").attr("src",e.target.result);
-            };
-            fr.readAsDataURL(file);
-        }
-        $("p").css('display','none');
-        $(".unImage").css('display','block');
-    };
-
-    function unsetImage() {
-        $(".showImage img").attr("src", "");
-        $("p").css('display','block');
-        var obj = document.getElementById('fileupload') ;
-        obj.outerHTML = obj.outerHTML;
-        $(".unImage").css('display','none');
-    }
+    var ue = UE.getEditor('editor',{autoFloatEnabled:false,readonly:true});
 
 </script>
 </body>

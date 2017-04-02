@@ -414,7 +414,7 @@
                                         <a class="btn btn-xs btn-info ajax-get" title="查看报名人员" href="<?php echo U('Activity/signUp',array('id'=>$vo['id'],'whetherAudit'=>$vo['whether_audit']));?>">
                                             <i class="icon-zoom-in bigger-130"></i>报名人员
                                         </a>
-                                        <a class="btn btn-xs btn-info" title="活动详情" href="<?php echo U('Activity/edit',array('id'=>$vo['id']));?>">
+                                        <a class="btn btn-xs btn-info" title="活动详情" href="<?php echo U('index/activityDetails',array('id'=>$vo['id']));?>">
                                             <i class="icon-zoom-in bigger-130"></i>
                                         </a>
                                         <a class="btn btn-xs btn-info ajax-get" title="编辑" href="<?php echo U('Activity/edit',array('id'=>$vo['id']));?>">

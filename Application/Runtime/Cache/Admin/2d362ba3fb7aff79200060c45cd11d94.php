@@ -348,14 +348,13 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
+                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" placeholder="请输入用户名称/活动名称" style="width: 200px;" />
                     <span>活动类别</span>
-                    <select name="authId" form="form1">
+                    <select name="typeId" form="form1">
                         <option value="0">请选择</option>
-                        <?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($activityType)): $i = 0; $__LIST__ = $activityType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($typeId,$vo['id'],"selected")); ?>><?php echo ($vo["type_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                     <input type="submit" name="" value="搜索" form="form1">
-                    <a href="<?php echo U('Coptic/add');?>" class="btn btn-xs btn-info">添加</a>
                     <form action="" method="get" id="form1"></form>
 
                 </div>
@@ -383,25 +382,24 @@
                                     </td>
 
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["mobile"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["nickname"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["type_name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["activity_name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["create_time"]); ?>
                                     </td>
-                                    <td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
-                                    <td class="hidden-480"><?php echo ($vo["editor"]); ?></td>
+                                    <td class="hidden-480"><?php echo ($vo["sign_time"]); ?></td>
                                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                             </tbody>
                         </table>

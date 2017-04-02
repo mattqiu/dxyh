@@ -359,7 +359,7 @@
                                 <th class="center">序号</th>
                                 <th class="center">章节</th>
                                 <th class="center">章节名称</th>
-                                <th class="center">操作</th>
+                                <th class="center" width="20%">操作</th>
                             </tr>
                             </thead>
 
@@ -369,23 +369,22 @@
                                         <?php echo ($vo["id"]); ?>
                                     </td>
 
-                                    <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                    <td <?php echo (Judgement($vo["chapter"],0,'style="padding-left: 40px;"','neq')); ?>>
+                                        <?php echo ($vo["chapter_name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["title"]); ?>
                                     </td>
-                                    <td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
-                                    <td class="hidden-480"><?php echo ($vo["editor"]); ?></td>
                                     <td class="center">
-                                        <a class="btn btn-xs btn-info" title="详情" href="<?php echo U('Coptic/coptic_edit',array('id'=>$vo['id']));?>">
-                                            <i class="icon-zoom-in bigger-130"></i>
-                                        </a>
-                                        <a class="btn btn-xs btn-info" title="编辑" href="<?php echo U('Coptic/edit',array('id'=>$vo['id']));?>">
+                                        <?php if(($vo["chapter"] == 0) AND ($vo["chapter_name"] != '序言') AND ($vo["chapter_name"] != '尾言')): ?><a class="btn btn-xs btn-info ajax-get" title="详情" href="<?php echo U('HomeCare/add',array('id'=>$vo['id']));?>">
+                                                <i class="icon-plus bigger-130"></i>添加子章节
+                                            </a><?php endif; ?>
+
+                                        <a class="btn btn-xs btn-info ajax-get" title="编辑" href="<?php echo U('HomeCare/edit',array('id'=>$vo['id']));?>">
                                             <i class="icon-edit bigger-120"></i>
                                         </a>
 
-                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="<?php echo U('Coptic/del',array('id'=>$vo['id']));?>">
+                                        <a class="btn btn-xs btn-danger ajax-get confirm" title="删除" href="<?php echo U('HomeCare/del',array('id'=>$vo['id']));?>">
                                             <i class="icon-trash bigger-120"></i>
                                         </a>
                                     </td>
