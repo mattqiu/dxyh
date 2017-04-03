@@ -63,7 +63,7 @@
                                     </td>
                                     <td class="center">
                                         <if condition="($vo.chapter eq 0) AND ($vo.chapter_name neq '序言') AND ($vo.chapter_name neq '尾言')">
-                                            <a class="btn btn-xs btn-info ajax-get" title="详情" href="{:U('HomeCare/add',array('id'=>$vo['id']))}">
+                                            <a class="btn btn-xs btn-info ajax-get" title="添加子章节" href="{:U('HomeCare/add',array('id'=>$vo['id']))}">
                                                 <i class="icon-plus bigger-130"></i>添加子章节
                                             </a>
                                         </if>
