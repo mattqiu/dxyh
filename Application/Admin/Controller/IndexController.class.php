@@ -11,6 +11,23 @@ class IndexController extends Controller {
     }
 
     public function index(){
+        $startTime = "00:00:01";
+        $endTime = "23:59:59";
+        $dateStart = strtotime(dateTime(time(), 2) . $startTime);
+        $dateEnd = strtotime(dateTime(time(), 2) . $endTime);
+        $sevenDayTime = array();
+        $sevenDayString = "";
+        for ($i=1;$i<=7;$i++){
+            $sevenDayTime[] = dateTime("-" . $i . " day", 3);
+        }
+        var_dump(json_encode($sevenDayTime));
+
+        $data['commentToday'] = M("Comment")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
+        $data['addUserToday'] = M("User")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
+        $data['visitToday'] = M("Visit")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
+        $data['sevenDay'] = json_encode($sevenDayTime);
+
+        $this->assign($data);
         $this->display();
     }
 
