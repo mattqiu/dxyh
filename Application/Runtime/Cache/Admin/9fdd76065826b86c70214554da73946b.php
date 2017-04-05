@@ -45,6 +45,12 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" href="/Public/admin/datetimepicker/css/bootstrap-datetimepicker.css" />
+<style type="text/css">
+    .col-sm-9 {
+        padding-top: 6px;
+    }
+</style>
 </head>
 <body>
 <!--顶部导航-->
@@ -339,12 +345,12 @@
                     </li>
 
                     <li>
-                        <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
+                        <a href="<?php echo U('Activity/index');?>">活动中心</a>
                     </li>
                     <li>
-                        <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
+                        <a href="<?php echo U('Activity/index');?>">活动管理</a>
                     </li>
-                    <li class="active"><?php echo ($title); ?></li>
+                    <li class="active">活动详情</li>
                 </ul>
             </div>
 
@@ -355,41 +361,121 @@
                         <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="<?php echo ($Url); ?>">
                             <input type="hidden" name="id" value="<?php echo ($rows["id"]); ?>">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 目录 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 活动类别 </label>
                                 <div class="col-sm-9">
-                                    <select class="col-sm-5" name="chapter">
-                                        <option value="0">请选择章</option>
-                                        <?php if(is_array($chapter)): $i = 0; $__LIST__ = $chapter;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($vo["id"],$id,"selected")); ?> <?php echo (Judgement($vo["id"],$rows['chapter'],"selected")); ?>><?php echo ($vo["chapter_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                                    </select>
-                                    <label style="margin-left: 10px;color: red;">注意：新增目录时无需选择，新增节时选择对应的目录</label>
+                                    <?php echo ($rows["activity_type_id"]); ?>
                                 </div>
                             </div>
 
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 章节名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动名称 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="chapter_name" value="<?php echo ($rows["chapter_name"]); ?>" placeholder="请输入章节名称，格式：第一章或第一节" />
-                                </div>
-                            </div>
-
-
-                            <div class="space-4"></div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 章节标题 </label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="title" value="<?php echo ($rows["title"]); ?>" placeholder="请输入章节标题，格式：基本家庭护理操作" />
+                                    <?php echo ($rows["activity_name"]); ?>
                                 </div>
                             </div>
 
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 内容 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动图片 </label>
                                 <div class="col-sm-9">
-                                    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
+                                    <img src="<?php echo ($rows["activity_cover"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动开始时间 </label>
+                                <div class="col-sm-9">
+                                    <?php echo (dateTime($rows["activity_start_time"],6)); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动结束时间 </label>
+                                <div class="col-sm-9">
+                                    <?php echo (dateTime($rows["activity_end_time"],6)); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名开始时间 </label>
+                                <div class="col-sm-9">
+                                    <?php echo (dateTime($rows["enroll_start_time"],6)); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名结束时间 </label>
+                                <div class="col-sm-9">
+                                    <?php echo (dateTime($rows["enroll_end_time"],6)); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动人数 </label>
+                                <div class="col-sm-9">
+                                    <?php echo ($rows["activity_number"]); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动积分 </label>
+                                <div class="col-sm-9">
+                                    <?php echo ($rows["activity_integral"]); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动地点 </label>
+                                <div class="col-sm-9">
+                                    <?php echo ($rows["address"]); ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动内容 </label>
+                                <div class="col-sm-9">
+                                    <script id="editor" name="content" type="text/plain" style="width:800px;height:400px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
+                                <div class="col-sm-9">
+                                    <?php if($rows["referral"] == 2): ?>否
+                                        <?php else: ?>
+                                        是<?php endif; ?>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否需要审核报名人员 </label>
+                                <div class="col-sm-9">
+                                    <?php if($rows["whether_audit"] == 2): ?>否
+                                        <?php else: ?>
+                                        是<?php endif; ?>
                                 </div>
                             </div>
 
@@ -397,15 +483,8 @@
 
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button class="btn btn-info ajax-post" type="button" target-form="form-submit">
-                                        <i class="icon-ok bigger-110"></i>
-                                        提交
-                                    </button>
-
-                                    &nbsp; &nbsp; &nbsp;
                                     <button class="btn" type="reset">
-                                        <i class="icon-undo bigger-110"></i>
-                                        重置
+                                        <a href="<?php echo U('Activity/index');?>" >返回</a>
                                     </button>
                                 </div>
                             </div>
@@ -474,41 +553,11 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="/Public/admin/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="/Public/admin/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
-    var ue = UE.getEditor('editor',{autoFloatEnabled:false});
-
-    $(function () {
-        var title = "<?php echo ($title); ?>";
-        if (title == "编辑科普类别"){
-            $("p").css('display','none');
-        }
-    });
-    $(".showImage").click(function () {
-        $("#fileupload").click();
-    });
-    function showPreview(source) {
-        var file = source.files[0];
-        if(window.FileReader) {
-            var fr = new FileReader();
-            fr.onloadend = function(e) {
-                //document.getElementById("portrait").src = e.target.result;
-                $(".showImage img").attr("src",e.target.result);
-            };
-            fr.readAsDataURL(file);
-        }
-        $("p").css('display','none');
-        $(".unImage").css('display','block');
-    };
-
-    function unsetImage() {
-        $(".showImage img").attr("src", "");
-        $("p").css('display','block');
-        var obj = document.getElementById('fileupload') ;
-        obj.outerHTML = obj.outerHTML;
-        $(".unImage").css('display','none');
-    }
-
+    var ue = UE.getEditor('editor',{autoFloatEnabled:false,readonly:true});
 </script>
 </body>
 </html>

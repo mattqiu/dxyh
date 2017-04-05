@@ -348,7 +348,7 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
+                    <input type="text" name="keyword" style="width: 210px;" form="form1" value="<?php echo ($keyword); ?>" placeholder="请输入用户姓名/手机号/昵称" />
                     <input type="submit" name="" value="搜索" form="form1">
                     <form action="" method="get" id="form1"></form>
 
@@ -373,28 +373,29 @@
                             <tbody>
                             <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                                     <td class="center">
-                                        <?php echo ($vo["id"]); ?>
+                                        <?php echo ($vo["uid"]); ?>
                                     </td>
 
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["mobile"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["nickname"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <img src="<?php echo ($vo["avatar"]); ?>" style="width: 50px;height: 50px;" />
+
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["sex"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["integral"]); ?>
                                     </td>
-                                    <td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
+                                    <td><?php echo ($vo["create_time"]); ?></td>
                                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                             </tbody>
                         </table>

@@ -407,7 +407,7 @@
 									<td><?php echo ($vo["referral"]); ?> </td>
 									<td class="hidden-480"><?php echo ($vo["create_time"]); ?></td>
 									<td class="center">
-										<a class="btn btn-xs btn-info ajax-get" title="详情" href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
+										<a class="btn btn-xs btn-info" title="查看详情" href="<?php echo U('index/copticDetails',array('id'=>$vo['id']));?>">
 											<i class="icon-zoom-in bigger-130"></i>
 										</a>
 										<a class="btn btn-xs btn-info ajax-get" title="编辑" href="<?php echo U('Coptic/edit',array('id'=>$vo['id']));?>">

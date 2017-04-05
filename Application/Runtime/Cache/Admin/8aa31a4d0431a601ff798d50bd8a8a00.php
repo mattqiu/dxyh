@@ -348,11 +348,11 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
+                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" placeholder="请输入用户昵称/姓名/科普文章标题" style="width: 250px;" />
                     <span>科普类别</span>
-                    <select name="authId" form="form1">
+                    <select name="typeId" form="form1">
                         <option value="0">请选择</option>
-                        <?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                        <?php if(is_array($CopticType)): $i = 0; $__LIST__ = $CopticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($typeId,$vo['id'],"selected")); ?>><?php echo ($vo["category_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                     <input type="submit" name="" value="搜索" form="form1">
                     <form action="" method="get" id="form1"></form>
@@ -381,24 +381,23 @@
                                     </td>
 
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["mobile"]); ?>
+                                    </td>
+                                    <td>
+                                        <?php echo ($vo["nickname"]); ?>
+                                    </td>
+                                    <td>
+                                        <?php echo ($vo["name"]); ?>
                                     </td>
                                     <td>
                                         <?php echo ($vo["category_name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["coptic_title"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["create_time"]); ?>
                                     </td>
-                                    <td>
-                                        <?php echo ($vo["category_name"]); ?>
-                                    </td>
-                                    <td>
-                                        <?php echo ($vo["category_name"]); ?>
-                                    </td>
-                                    <td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
                                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                             </tbody>
                         </table>

@@ -33,12 +33,12 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" value="{$keyword}" />
+                    <input type="text" name="keyword" form="form1" value="{$keyword}" placeholder="请输入用户名称/活动名称" style="width: 200px;" />
                     <span>活动类别</span>
-                    <select name="authId" form="form1">
+                    <select name="typeId" form="form1">
                         <option value="0">请选择</option>
-                        <volist name="auth" id="vo">
-                            <option value="{$vo.id}" {$authId|Judgement=###,$vo['id'],"selected"}>{$vo.title}</option>
+                        <volist name="activityType" id="vo">
+                            <option value="{$vo.id}" {$typeId|Judgement=###,$vo['id'],"selected"}>{$vo.type_name}</option>
                         </volist>
                     </select>
                     <input type="submit" name="" value="搜索" form="form1">
@@ -70,25 +70,24 @@
                                     </td>
 
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.mobile}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.nickname}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.name}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.type_name}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.activity_name}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.create_time}
                                     </td>
-                                    <td><img src="{$vo.category_image}" style="width: 100px;height: 125px;" /> </td>
-                                    <td class="hidden-480">{$vo.editor}</td>
+                                    <td class="hidden-480">{$vo.sign_time}</td>
                                 </tr>
                             </volist>
                             </tbody>

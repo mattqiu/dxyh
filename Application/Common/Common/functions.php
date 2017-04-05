@@ -70,6 +70,12 @@ function Judgement($data="", $value=0, $result="", $type='eq'){
             }else{
                 return false;
             }
+        case 'neq':
+            if ($data != $value){
+                return $result;
+            }else{
+                return false;
+            }
     }
 }
 
@@ -164,4 +170,15 @@ function export($title="", $column=array(), $data=array()){
     header('Cache-Control: max-age=0');
     echo "\xEF\xBB\xBF"; // UTF-8 BOM  设置csv文件的编码方式
     echo $html;
+}
+
+
+
+
+
+
+
+
+function RecursionCommentsAry(){
+
 }

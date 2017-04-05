@@ -42,8 +42,11 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 目录 </label>
                                 <div class="col-sm-9">
-                                    <select class="col-sm-5" name="">
-                                        <option value="">请选择章</option>
+                                    <select class="col-sm-5" name="chapter">
+                                        <option value="0">请选择章</option>
+                                        <volist name="chapter" id="vo">
+                                            <option value="{$vo.id}" {$vo.id|Judgement=###,$id,"selected"} {$vo.id|Judgement=###,$rows['chapter'],"selected"}>{$vo.chapter_name}</option>
+                                        </volist>
                                     </select>
                                     <label style="margin-left: 10px;color: red;">注意：新增目录时无需选择，新增节时选择对应的目录</label>
                                 </div>
@@ -54,7 +57,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 章节名称 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" placeholder="请输入章节名称，格式：第一章或第一节" />
+                                    <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="chapter_name" value="{$rows.chapter_name}" placeholder="请输入章节名称，格式：第一章或第一节" />
                                 </div>
                             </div>
 
@@ -64,7 +67,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 章节标题 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" placeholder="请输入章节标题，格式：基本家庭护理操作" />
+                                    <input type="text" class="col-xs-10 col-sm-5" name="title" value="{$rows.title}" placeholder="请输入章节标题，格式：基本家庭护理操作" />
                                 </div>
                             </div>
 
@@ -73,7 +76,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 内容 </label>
                                 <div class="col-sm-9">
-                                    <script id="editor" name="about" type="text/plain" style="width:1024px;height:500px;">{$content}</script>
+                                    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;">{$rows.content|htmlspecialchars_decode=###}</script>
                                 </div>
                             </div>
 

@@ -45,6 +45,9 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" href="/Public/admin/css/datepicker.css" />
+<link rel="stylesheet" href="/Public/admin/css/bootstrap-timepicker.css" />
+<link rel="stylesheet" href="/Public/admin/css/daterangepicker.css" />
 </head>
 <body>
 <!--顶部导航-->
@@ -348,9 +351,15 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>获取时间</span>
-                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
+                    <!--<input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />-->
+                    <div class="input-group" style="width: 350px;display: inline-table;">
+                        <span class="input-group-addon">
+                            <i class="icon-calendar bigger-110"></i>
+                        </span>
+                        <input class="form-control" form="form1" type="text" name="create_time" id="id-date-range-picker-1" value="<?php echo ($createTime); ?>"/>
+                    </div>
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
+                    <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" style="height: 34px;width: 200px;" placeholder="请输入用户姓名/手机号/昵称" />
                     <input type="submit" name="" value="搜索" form="form1">
                     <form action="" method="get" id="form1"></form>
 
@@ -378,24 +387,23 @@
                                     </td>
 
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["mobile"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["nickname"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["name"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["integral_num"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["reason"]); ?>
                                     </td>
                                     <td>
-                                        <?php echo ($vo["category_name"]); ?>
+                                        <?php echo ($vo["create_time"]); ?>
                                     </td>
-                                    <td><img src="<?php echo ($vo["category_image"]); ?>" style="width: 100px;height: 125px;" /> </td>
                                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                             </tbody>
                         </table>
@@ -463,5 +471,17 @@
 
 
 <!-- inline scripts related to this page -->
+<script src="/Public/admin/js/date-time/bootstrap-datepicker.min.js"></script>
+<script src="/Public/admin/js/date-time/bootstrap-timepicker.min.js"></script>
+<script src="/Public/admin/js/date-time/moment.js"></script>
+<script src="/Public/admin/js/date-time/daterangepicker.min.js"></script>
+<script type="text/javascript">
+    $('input[name=create_time]').daterangepicker({
+        format: 'YYYY/MM/DD'
+    }).prev().on(ace.click_event, function(){
+        $(this).next().focus();
+    });
+
+</script>
 </body>
 </html>

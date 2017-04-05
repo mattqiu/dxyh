@@ -1,0 +1,208 @@
+<include file="Public/header" title="科普文章详情 - 达晓医护"/>
+<style type="text/css">
+    .col-sm-9 {
+        padding-top: 6px;
+    }
+    table {
+        width: 70%;
+    }
+    table tr {
+        border: 1px solid #e4e6e9;
+    }
+    .comment {
+        background-color: #e4e6e9;
+        margin: 0;
+        height: 30px;
+        width: 70%;
+        border-radius: 4px;
+        padding-top: 7px;
+        padding-left: 8px;
+        font-weight: bold;
+        font-family: monospace;
+    }
+</style>
+</head>
+<body>
+<include file="Public/top"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <include file="Public/left"/>
+        <div class="main-content">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+                </script>
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home home-icon"></i>
+                        <a href="{:U('Index/index')}">首页</a>
+                    </li>
+
+                    <li>
+                        <a href="{:U('Coptic/index')}">科普中心</a>
+                    </li>
+                    <li>
+                        <a href="{:U('Coptic/index')}">科普文章</a>
+                    </li>
+                    <li class="active">科普文章详情</li>
+                </ul>
+            </div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS 网页内容开始 -->
+                        <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="{$Url}">
+                            <input type="hidden" name="id" value="{$rows.id}">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别 </label>
+                                <div class="col-sm-9">
+                                    {$rows.coptic_type_id}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 标题 </label>
+                                <div class="col-sm-9">
+                                    {$rows.coptic_title}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 </label>
+                                <div class="col-sm-9">
+                                    <img src="{$rows.coptic_cover}" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 摘要 </label>
+                                <div class="col-sm-9">
+                                    {$rows.abstract}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 </label>
+                                <div class="col-sm-9">
+                                    <script id="editor" name="content" type="text/plain" style="width:824px;height:500px;">{$rows.content|htmlspecialchars_decode=###}</script>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 作者 </label>
+                                <div class="col-sm-9">
+                                    {$rows.author}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 来源 </label>
+                                <div class="col-sm-9">
+                                    {$rows.source}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 关键词 </label>
+                                <div class="col-sm-9">
+                                    {$rows.keyword}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 原文链接 </label>
+                                <div class="col-sm-9">
+                                    {$rows.original_link|urldecode=###}
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否推荐 </label>
+                                <div class="col-sm-9">
+                                    <if condition="$rows.referral eq 2">
+                                        否
+                                        <else/>
+                                        是
+                                    </if>
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button class="btn" type="reset">
+                                        <a href="{:U('Coptic/index')}" >返回</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <div style="width: 70%;margin-left: 22%;">
+                            <h4 class="comment">评论</h4>
+                            <table>
+                                <volist name="rows.comment" id="vo">
+                                <tr>
+                                    <td style="padding-left: 12px;">
+                                        <p>
+                                            <if condition="$vo.parent_id eq 0">
+                                                {$vo.nickname}&nbsp;<lable style="margin: 0 8px;">{$vo.create_time|dateTime=###}</lable>
+                                                <else/>
+                                                {$vo.nickname}<lable style="margin: 0 4px;">回复</lable>{$vo.parent_name}&nbsp;<lable style="margin: 0 8px;">{$vo.create_time|dateTime=###}</lable>
+                                            </if>
+                                            <button><a href="{:U('Index/shieldComment',array('id'=>$vo['id']))}" class="ajax-get">屏蔽此评论</a></button>
+                                        </p>
+                                        {$vo.content}
+                                    </td>
+                                </tr>
+                                </volist>
+                            </table>
+                        </div>
+                        <!-- PAGE CONTENT ENDS 网页内容结束 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <include file="Public/bottom"/>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+</div>
+<include file="Public/footer"/>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    var ue = UE.getEditor('editor',{autoFloatEnabled:false,readonly:true});
+
+</script>
+</body>
+</html>

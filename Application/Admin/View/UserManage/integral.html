@@ -1,4 +1,7 @@
 <include file="Public/header" title="积分明细 - 达晓医护"/>
+<link rel="stylesheet" href="__PUBLIC__/admin/css/datepicker.css" />
+<link rel="stylesheet" href="__PUBLIC__/admin/css/bootstrap-timepicker.css" />
+<link rel="stylesheet" href="__PUBLIC__/admin/css/daterangepicker.css" />
 </head>
 <body>
 <include file="Public/top"/>
@@ -33,9 +36,15 @@
             <div class="page-content">
                 <div class="page-header">
                     <span>获取时间</span>
-                    <input type="text" name="keyword" form="form1" value="{$keyword}" />
+                    <!--<input type="text" name="keyword" form="form1" value="{$keyword}" />-->
+                    <div class="input-group" style="width: 350px;display: inline-table;">
+                        <span class="input-group-addon">
+                            <i class="icon-calendar bigger-110"></i>
+                        </span>
+                        <input class="form-control" form="form1" type="text" name="create_time" id="id-date-range-picker-1" value="{$createTime}"/>
+                    </div>
                     <span>关键字</span>
-                    <input type="text" name="keyword" form="form1" value="{$keyword}" />
+                    <input type="text" name="keyword" form="form1" value="{$keyword}" style="height: 34px;width: 200px;" placeholder="请输入用户姓名/手机号/昵称" />
                     <input type="submit" name="" value="搜索" form="form1">
                     <form action="" method="get" id="form1"></form>
 
@@ -64,24 +73,23 @@
                                     </td>
 
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.mobile}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.nickname}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.name}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.integral_num}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.reason}
                                     </td>
                                     <td>
-                                        {$vo.category_name}
+                                        {$vo.create_time}
                                     </td>
-                                    <td><img src="{$vo.category_image}" style="width: 100px;height: 125px;" /> </td>
                                 </tr>
                             </volist>
                             </tbody>
@@ -102,5 +110,17 @@
 <include file="Public/footer"/>
 
 <!-- inline scripts related to this page -->
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-datepicker.min.js"></script>
+<script src="__PUBLIC__/admin/js/date-time/bootstrap-timepicker.min.js"></script>
+<script src="__PUBLIC__/admin/js/date-time/moment.js"></script>
+<script src="__PUBLIC__/admin/js/date-time/daterangepicker.min.js"></script>
+<script type="text/javascript">
+    $('input[name=create_time]').daterangepicker({
+        format: 'YYYY/MM/DD'
+    }).prev().on(ace.click_event, function(){
+        $(this).next().focus();
+    });
+
+</script>
 </body>
 </html>

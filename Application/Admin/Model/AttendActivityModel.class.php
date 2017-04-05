@@ -111,4 +111,51 @@ class AttendActivityModel extends BaseModel
 
         return $list;
     }
+
+    public function UserActivity(){
+        $qustData = I("get.");
+        $where = null;
+        if (!empty($qustData['keyword'])) {
+            $where['_string'] = ' (u.nickname like "%'.trim($qustData['keyword']).'%") OR (da.activity_name like "%'.trim($qustData['keyword']).'%") ';
+        }
+        if (!empty($qustData['typeId'])){
+            $where['dat.id'] = $qustData['typeId'];
+        }
+
+        $join = array("INNER JOIN dxyh_user as u ON aa.uid=u.uid","INNER JOIN dxyh_activity as da ON da.id=aa.activity_id","INNER JOIN dxyh_activity_type as dat ON dat.id=aa.activity_type_id");
+
+        $count = $this->alias("aa")->getJoinCount($join, $where);
+        $page = new Page($count, C("PAGE_NUM"));
+        $field = "aa.id,aa.create_time,aa.sign_time,aa.audit,u.mobile,u.nickname,u.name,u.sex,da.activity_name,dat.type_name";
+        $list = $this->alias("aa")->getJoinDataList($join, $where, $field, null, $page->firstRow, $page->listRows);
+        //var_dump($this->getLastSql());
+        foreach ($list as $key=>$item){
+            $list[$key]['create_time'] = dateTime($item['create_time']);
+            $list[$key]['sign_time'] = dateTime($item['sign_time']);
+            switch ($item['audit']){
+                case 3:
+                    $list[$key]['audit'] = "未审核";
+                    break;
+                case 1:
+                    $list[$key]['audit'] = "已通过";
+                    break;
+                case 2:
+                    $list[$key]['audit'] = "未通过";
+                    break;
+            }
+            switch ($item['sex']){
+                case 0:
+                    $list[$key]['sex'] = "保密";
+                    break;
+                case 1:
+                    $list[$key]['sex'] = "男";
+                    break;
+                case 2:
+                    $list[$key]['sex'] = "女";
+                    break;
+            }
+        }
+        $list['page'] = $page->show();
+        return $list;
+    }
 }

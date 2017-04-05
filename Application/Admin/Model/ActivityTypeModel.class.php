@@ -1,6 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
+ * 活动分类
  * User: DarkVisitor
  * Date: 2017/3/31
  * Time: 21:34

@@ -15,7 +15,7 @@ class AdminModel extends BaseModel
 {
     public function getAdminList(){
         $request = I('get.');
-        $where = array();
+        $where = null;
         if (isset($request['authId']) && !empty($request['authId'])){
             $where['g.id'] = $request['authId'];
         }
@@ -28,11 +28,11 @@ class AdminModel extends BaseModel
         $page = new Page($count, C('PAGE_NUM'));
 
         $list = $this->alias('a')->getJoinDataList($join, $where, $field, "a.create_time DESC", $page->firstRow, $page->listRows);
-        $list['page'] = $page->show();
         foreach ($list as $key=>$item){
             $list[$key]['create_time'] = empty($item['create_time'])?'':dateTime($item['create_time']);
         }
 
+        $list['page'] = $page->show();
         return $list;
     }
 
