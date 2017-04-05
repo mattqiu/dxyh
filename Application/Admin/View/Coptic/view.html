@@ -40,7 +40,7 @@
                         <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="{$Url}">
                             <input type="hidden" name="id" value="{$rows.id}">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <select class="col-sm-5" name="copticType">
                                         <option value="">请选择类别</option>
@@ -54,7 +54,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 标题 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 标题 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="copticTitle" value="{$rows.coptic_title}" />
                                 </div>
@@ -63,7 +63,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="file" id="fileupload" name="copticCover" onchange="showPreview(this)" style="display: none;" />
                                     <div class="showImage" style="width: 170px;height: 200px;">
@@ -87,7 +87,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;">{$rows.content|htmlspecialchars_decode=###}</script>
                                 </div>
@@ -96,7 +96,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 作者 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 作者 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="text" class="col-xs-10 col-sm-5" name="author" value="{$rows.author}" />
                                 </div>

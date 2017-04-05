@@ -45,6 +45,12 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        #sample-table-1 tr td {
+            vertical-align: middle;
+        }
+    </style>
 <link rel="stylesheet" href="/Public/admin/datetimepicker/css/bootstrap-datetimepicker.css" />
 </head>
 <body>
@@ -58,8 +64,9 @@
         <div class="navbar-header pull-left">
             <a href="#" class="navbar-brand">
                 <small>
-                    <i class="icon-leaf"></i>
-                    达晓医护
+                    <!--<i class="icon-leaf"></i>-->
+                    <img src="/Public/img/logo.png" style="width: 50px;">
+                    达医晓护
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -78,7 +85,7 @@
                     </a>
 
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                        <li>
+                        <!--<li>
                             <a href="#">
                                 <i class="icon-cog"></i>
                                 设 置
@@ -92,7 +99,7 @@
                             </a>
                         </li>
 
-                        <li class="divider"></li>
+                        <li class="divider"></li>-->
 
                         <li>
                             <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
@@ -120,7 +127,7 @@
         try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
     </script>
 
-    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+    <!--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
             <button class="btn btn-success">
                 <i class="icon-signal"></i>
@@ -148,7 +155,7 @@
 
             <span class="btn btn-danger"></span>
         </div>
-    </div><!-- #sidebar-shortcuts -->
+    </div>--><!-- #sidebar-shortcuts -->
 
     <ul class="nav nav-list">
         <li>
@@ -356,7 +363,7 @@
                         <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="<?php echo ($Url); ?>">
                             <input type="hidden" name="id" value="<?php echo ($rows["id"]); ?>">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 活动类别 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 活动类别 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <select class="col-sm-5" name="activityType">
                                         <option value="">请选择类别</option>
@@ -368,7 +375,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动名称 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="text" id="form-field-2" class="col-xs-10 col-sm-5" name="activityName" value="<?php echo ($rows["activity_name"]); ?>" />
                                 </div>
@@ -377,7 +384,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动图片 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动图片 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="file" id="fileupload" name="activityCover" onchange="showPreview(this)" style="display: none;" />
                                     <div class="showImage" style="width: 170px;height: 200px;">
@@ -392,7 +399,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动开始时间 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动开始时间 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
                                         <span class="add-on"><i class="icon-calendar"></i></span>
@@ -404,7 +411,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动结束时间 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动结束时间 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
                                         <span class="add-on"><i class="icon-calendar"></i></span>
@@ -416,7 +423,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名开始时间 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名开始时间 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
                                         <span class="add-on"><i class="icon-calendar"></i></span>
@@ -428,7 +435,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名结束时间 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 报名结束时间 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <div class="input-append date form_datetime" data-date="2013-02-21T15:25:00Z" style="border: 1px solid #d5d5d5;width: 520px;padding-left: 5px;">
                                         <span class="add-on"><i class="icon-calendar"></i></span>
@@ -458,7 +465,7 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动地点 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动地点 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="text" class="col-xs-10 col-sm-5" name="address" value="<?php echo ($rows["address"]); ?>" />
                                 </div>
@@ -467,9 +474,9 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动内容 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 活动内容 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
-                                    <script id="editor" name="content" type="text/plain" style="width:500px;height:400px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
+                                    <script id="editor" name="content" type="text/plain" style="width:550px;height:400px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
                                 </div>
                             </div>
 

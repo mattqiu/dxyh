@@ -83,7 +83,7 @@ class WebsiteImageModel extends BaseModel
         }
         $count = $this->countData($where);
         $page =new Page($count, C('PAGE_NUM'));
-        $list = $this->getDataList($where, null, null, $page->firstRow, $page->listRows);
+        $list = $this->getDataList($where, null, array("id"=>"desc"), $page->firstRow, $page->listRows);
         foreach ($list as $key=>$item){
             if ($item['type'] == 1){
                 $list[$key]['type'] = "首页轮播";

@@ -40,7 +40,7 @@
                         <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="{$Url}">
                             <input type="hidden" name="id" value="{$rows.id}">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别名称 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" name="categoryName" value="{$rows.category_name}" />
                                 </div>
@@ -75,7 +75,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 排序 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-3" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                    <input type="text" id="form-field-3" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" placeholder="数字越大，排名越靠前" />
                                 </div>
                             </div>
 

@@ -28,7 +28,7 @@ class ActivityTypeModel extends BaseModel
         }
         $count = $this->countData($where);
         $page = new Page($count, C("PAGE_NUM"));
-        $list = $this->getDataList($where, null, null, $page->firstRow, $page->listRows);
+        $list = $this->getDataList($where, null, array("sort"=>"desc","id"=>"desc"), $page->firstRow, $page->listRows);
         $list['page'] = $page->show();
         return $list;
     }
@@ -39,9 +39,9 @@ class ActivityTypeModel extends BaseModel
             if (!isset($requst['activityTypeName']) || empty($requst['activityTypeName'])){
                 message(0, "请输入类别名称！");
             }
-            if (!isset($requst['sort']) || empty($requst['sort'])){
+            /*if (!isset($requst['sort']) || empty($requst['sort'])){
                 message(0, "请输入排序！");
-            }
+            }*/
             $data = array(
                 "type_name" => $requst['activityTypeName'],
                 "sort" => $requst['sort'],

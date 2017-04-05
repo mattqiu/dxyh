@@ -27,7 +27,7 @@ class AdminModel extends BaseModel
         $count = $this->alias('a')->getJoinCount($join, $where);
         $page = new Page($count, C('PAGE_NUM'));
 
-        $list = $this->alias('a')->getJoinDataList($join, $where, $field, "a.create_time DESC", $page->firstRow, $page->listRows);
+        $list = $this->alias('a')->getJoinDataList($join, $where, $field, "a.aid DESC", $page->firstRow, $page->listRows);
         foreach ($list as $key=>$item){
             $list[$key]['create_time'] = empty($item['create_time'])?'':dateTime($item['create_time']);
         }

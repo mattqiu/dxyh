@@ -45,6 +45,12 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        #sample-table-1 tr td {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 <!--顶部导航-->
@@ -57,8 +63,9 @@
         <div class="navbar-header pull-left">
             <a href="#" class="navbar-brand">
                 <small>
-                    <i class="icon-leaf"></i>
-                    达晓医护
+                    <!--<i class="icon-leaf"></i>-->
+                    <img src="/Public/img/logo.png" style="width: 50px;">
+                    达医晓护
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -77,7 +84,7 @@
                     </a>
 
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                        <li>
+                        <!--<li>
                             <a href="#">
                                 <i class="icon-cog"></i>
                                 设 置
@@ -91,7 +98,7 @@
                             </a>
                         </li>
 
-                        <li class="divider"></li>
+                        <li class="divider"></li>-->
 
                         <li>
                             <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
@@ -119,7 +126,7 @@
         try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
     </script>
 
-    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+    <!--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
             <button class="btn btn-success">
                 <i class="icon-signal"></i>
@@ -147,7 +154,7 @@
 
             <span class="btn btn-danger"></span>
         </div>
-    </div><!-- #sidebar-shortcuts -->
+    </div>--><!-- #sidebar-shortcuts -->
 
     <ul class="nav nav-list">
         <li>
@@ -355,7 +362,7 @@
                         <form class="form-horizontal" id="form-submit" role="form" style="padding-top: 10rem;" action="<?php echo ($Url); ?>">
                             <input type="hidden" name="id" value="<?php echo ($rows["id"]); ?>">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别名称 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 类别名称 <i style="color: red;">*</i></label>
                                 <div class="col-sm-9">
                                     <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" name="categoryName" value="<?php echo ($rows["category_name"]); ?>" />
                                 </div>
@@ -390,7 +397,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 排序 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" id="form-field-3" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                    <input type="text" id="form-field-3" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" placeholder="数字越大，排名越靠前" />
                                 </div>
                             </div>
 

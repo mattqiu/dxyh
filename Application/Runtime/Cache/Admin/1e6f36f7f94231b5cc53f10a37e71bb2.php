@@ -45,6 +45,12 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        #sample-table-1 tr td {
+            vertical-align: middle;
+        }
+    </style>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 </head>
 <body>
@@ -58,8 +64,9 @@
         <div class="navbar-header pull-left">
             <a href="#" class="navbar-brand">
                 <small>
-                    <i class="icon-leaf"></i>
-                    达晓医护
+                    <!--<i class="icon-leaf"></i>-->
+                    <img src="/Public/img/logo.png" style="width: 50px;">
+                    达医晓护
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -78,7 +85,7 @@
                     </a>
 
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                        <li>
+                        <!--<li>
                             <a href="#">
                                 <i class="icon-cog"></i>
                                 设 置
@@ -92,7 +99,7 @@
                             </a>
                         </li>
 
-                        <li class="divider"></li>
+                        <li class="divider"></li>-->
 
                         <li>
                             <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
@@ -120,7 +127,7 @@
         try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
     </script>
 
-    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+    <!--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
             <button class="btn btn-success">
                 <i class="icon-signal"></i>
@@ -148,7 +155,7 @@
 
             <span class="btn btn-danger"></span>
         </div>
-    </div><!-- #sidebar-shortcuts -->
+    </div>--><!-- #sidebar-shortcuts -->
 
     <ul class="nav nav-list">
         <li>
@@ -351,7 +358,7 @@
                             <script id="editor" name="about" type="text/plain" style="width:1024px;height:500px;"><?php echo ($content); ?></script>
                             <button class="btn btn-info ajax-post" type="button" target-form="form-submit" style="margin-left: 38rem;margin-top: 1rem;">保存</button>
                         </form>
-                        <div id="btns">
+                        <!--<div id="btns">
                             <div>
                                 <button onclick="getAllHtml()">获得整个html的内容</button>
                                 <button onclick="getContent()">获得内容</button>
@@ -386,7 +393,7 @@
                                 创建编辑器</button>
                             <button onclick="deleteEditor()">
                                 删除编辑器</button>
-                        </div>
+                        </div>-->
                         <!-- PAGE CONTENT ENDS 网页内容结束 -->
                     </div>
                 </div>

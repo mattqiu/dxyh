@@ -45,6 +45,12 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        #sample-table-1 tr td {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 <!--顶部导航-->
@@ -57,8 +63,9 @@
         <div class="navbar-header pull-left">
             <a href="#" class="navbar-brand">
                 <small>
-                    <i class="icon-leaf"></i>
-                    达晓医护
+                    <!--<i class="icon-leaf"></i>-->
+                    <img src="/Public/img/logo.png" style="width: 50px;">
+                    达医晓护
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -77,7 +84,7 @@
                     </a>
 
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                        <li>
+                        <!--<li>
                             <a href="#">
                                 <i class="icon-cog"></i>
                                 设 置
@@ -91,7 +98,7 @@
                             </a>
                         </li>
 
-                        <li class="divider"></li>
+                        <li class="divider"></li>-->
 
                         <li>
                             <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
@@ -119,7 +126,7 @@
         try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
     </script>
 
-    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+    <!--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
             <button class="btn btn-success">
                 <i class="icon-signal"></i>
@@ -147,7 +154,7 @@
 
             <span class="btn btn-danger"></span>
         </div>
-    </div><!-- #sidebar-shortcuts -->
+    </div>--><!-- #sidebar-shortcuts -->
 
     <ul class="nav nav-list">
         <li>
@@ -376,7 +383,7 @@
                                         <?php echo ($vo["title"]); ?>
                                     </td>
                                     <td class="center">
-                                        <?php if(($vo["chapter"] == 0) AND ($vo["chapter_name"] != '序言') AND ($vo["chapter_name"] != '尾言')): ?><a class="btn btn-xs btn-info ajax-get" title="详情" href="<?php echo U('HomeCare/add',array('id'=>$vo['id']));?>">
+                                        <?php if(($vo["chapter"] == 0) AND ($vo["chapter_name"] != '序言') AND ($vo["chapter_name"] != '尾言')): ?><a class="btn btn-xs btn-info ajax-get" title="添加子章节" href="<?php echo U('HomeCare/add',array('id'=>$vo['id']));?>">
                                                 <i class="icon-plus bigger-130"></i>添加子章节
                                             </a><?php endif; ?>
 

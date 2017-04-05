@@ -17,6 +17,6 @@ return array(
     'TMPL_ACTION_SUCCESS' => 'Public:success',  //默认成功跳转对应的模板文件
     'MEMBER'            => 'admin',
     'LOAD_EXT_FILE'     => 'functions',
-    'PAGE_NUM'          => 2,  //分页：每页条数
+    'PAGE_NUM'          => 10,  //分页：每页条数
 
 );

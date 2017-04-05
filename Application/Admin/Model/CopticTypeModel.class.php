@@ -23,7 +23,7 @@ class CopticTypeModel extends BaseModel
         }
         $count = $this->countData($where);
         $page = new Page($count, C("PAGE_NUM"));
-        $list = $this->getDataList($where, null, null, $page->firstRow, $page->listRows);
+        $list = $this->getDataList($where, null, array("id"=>"desc"), $page->firstRow, $page->listRows);
         $list['page'] = $page->show();
         return $list;
     }
@@ -34,12 +34,12 @@ class CopticTypeModel extends BaseModel
             if (!isset($qusets['categoryName']) || empty($qusets['categoryName'])){
                 message(0, "类别名称不能为空！");
             }
-            if (!isset($qusets['editor']) || empty($qusets['editor'])){
+            /*if (!isset($qusets['editor']) || empty($qusets['editor'])){
                 message(0, "主编不能为空！");
             }
             if (!isset($qusets['sort']) || empty($qusets['sort'])){
                 message(0, "排序不能为空！");
-            }
+            }*/
             $data = array(
                 "category_name" => trim($qusets['categoryName']),
                 "editor" => trim($qusets['editor']),

@@ -31,15 +31,17 @@ class CopticModel extends BaseModel
             $where['referral'] = $qustData['nominate'];
         }
         $join = "INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id";
-        $field = "c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time";
+        $field = "c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time,c.browse_volume";
+        $order = array('c.id'=>'desc');
         $count = $this->alias("c")->getJoinCount($join, $where);
         $page = new Page($count, C("PAGE_NUM"));
-        $list = $this->alias("c")->getJoinDataList($join, $where, $field, null, $page->firstRow, $page->listRows);
+        $list = $this->alias("c")->getJoinDataList($join, $where, $field, $order, $page->firstRow, $page->listRows);
         foreach ($list as $key=>$item) {
             $list[$key]['create_time'] = dateTime($item['create_time']);
             $list[$key]['likes_num'] = M("Likes")->where(array('coptic_id'=>$item['id']))->count();
             $list[$key]['collection'] = M("Collection")->where(array('coptic_id'=>$item['id']))->count();
             $list[$key]['referral'] = $item['referral'] == 2?"否":"是";
+            $list[$key]['comment_num'] = M("Comment")->where(array('coptic_id'=>$item['id']))->count();
         }
         $list['page'] = $page->show();
         return $list;
@@ -54,16 +56,16 @@ class CopticModel extends BaseModel
             if (!isset($request['copticTitle']) || empty($request['copticTitle'])){
                 message(0, "请输入标题");
             }
-            if (!isset($request['abstract']) || empty($request['abstract'])){
+            /*if (!isset($request['abstract']) || empty($request['abstract'])){
                 message(0, "请输入摘要");
-            }
+            }*/
             if (!isset($request['content']) || empty($request['content'])){
                 message(0, "请输入正文");
             }
             if (!isset($request['author']) || empty($request['author'])){
                 message(0, "请输入作者");
             }
-            if (!isset($request['source']) || empty($request['source'])){
+            /*if (!isset($request['source']) || empty($request['source'])){
                 message(0, "请输入来源");
             }
             if (!isset($request['keyword']) || empty($request['keyword'])){
@@ -71,7 +73,7 @@ class CopticModel extends BaseModel
             }
             if (!isset($request['original_link']) || empty($request['original_link'])){
                 message(0, "请输入原文链接");
-            }
+            }*/
             $fileUrl = "./upload/copticimag/" . dateTime(time(), 4) . "/";
             import('Org.Net.FileUpload');
             $fileUp = new \FileUpload(array('filepath'=>$fileUrl));

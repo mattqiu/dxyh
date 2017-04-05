@@ -26,7 +26,7 @@ class AttendActivityModel extends BaseModel
         $count = $this->alias("aa")->getJoinCount($join, $where);
         $page = new Page($count, C("PAGE_NUM"));
         $field = "aa.id,aa.create_time,aa.sign_time,aa.audit,u.mobile,u.nickname,u.name,u.sex";
-        $list = $this->alias("aa")->getJoinDataList($join, $where, $field, null, $page->firstRow, $page->listRows);
+        $list = $this->alias("aa")->getJoinDataList($join, $where, $field, array("aa.id"=>"desc"), $page->firstRow, $page->listRows);
         foreach ($list as $key=>$item){
             $list[$key]['create_time'] = dateTime($item['create_time']);
             $list[$key]['sign_time'] = dateTime($item['sign_time']);
@@ -81,7 +81,7 @@ class AttendActivityModel extends BaseModel
         $where = array('aa.activity_id'=>$qustData['id']);
         $join = array("INNER JOIN dxyh_user as u ON aa.uid=u.uid");
         $field = "u.mobile,u.nickname,u.name,u.sex,aa.create_time,aa.sign_time";
-        $list = $this->alias("aa")->getJoinDataList($join, $where, $field);
+        $list = $this->alias("aa")->getJoinDataList($join, $where, $field, array("aa.id"=>"desc"));
         foreach ($list as $key=>$item){
             $list[$key]['create_time'] = dateTime($item['create_time']);
             $list[$key]['sign_time'] = dateTime($item['sign_time']);
@@ -127,7 +127,7 @@ class AttendActivityModel extends BaseModel
         $count = $this->alias("aa")->getJoinCount($join, $where);
         $page = new Page($count, C("PAGE_NUM"));
         $field = "aa.id,aa.create_time,aa.sign_time,aa.audit,u.mobile,u.nickname,u.name,u.sex,da.activity_name,dat.type_name";
-        $list = $this->alias("aa")->getJoinDataList($join, $where, $field, null, $page->firstRow, $page->listRows);
+        $list = $this->alias("aa")->getJoinDataList($join, $where, $field, array("aa.id"=>"desc"), $page->firstRow, $page->listRows);
         //var_dump($this->getLastSql());
         foreach ($list as $key=>$item){
             $list[$key]['create_time'] = dateTime($item['create_time']);

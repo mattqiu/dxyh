@@ -45,6 +45,12 @@
     <script src="/Public/admin/js/html5shiv.js"></script>
     <script src="/Public/admin/js/respond.min.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+        #sample-table-1 tr td {
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 <!--顶部导航-->
@@ -57,8 +63,9 @@
         <div class="navbar-header pull-left">
             <a href="#" class="navbar-brand">
                 <small>
-                    <i class="icon-leaf"></i>
-                    达晓医护
+                    <!--<i class="icon-leaf"></i>-->
+                    <img src="/Public/img/logo.png" style="width: 50px;">
+                    达医晓护
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -77,7 +84,7 @@
                     </a>
 
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                        <li>
+                        <!--<li>
                             <a href="#">
                                 <i class="icon-cog"></i>
                                 设 置
@@ -91,7 +98,7 @@
                             </a>
                         </li>
 
-                        <li class="divider"></li>
+                        <li class="divider"></li>-->
 
                         <li>
                             <a href="<?php echo U('Public/logout');?>" class="ajax-get confirm">
@@ -119,7 +126,7 @@
         try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
     </script>
 
-    <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+    <!--<div class="sidebar-shortcuts" id="sidebar-shortcuts">
         <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
             <button class="btn btn-success">
                 <i class="icon-signal"></i>
@@ -147,7 +154,7 @@
 
             <span class="btn btn-danger"></span>
         </div>
-    </div><!-- #sidebar-shortcuts -->
+    </div>--><!-- #sidebar-shortcuts -->
 
     <ul class="nav nav-list">
         <li>
@@ -346,7 +353,55 @@
 				<div class="row">
 					<div class="col-xs-12">
 						<!-- PAGE CONTENT BEGINS 网页内容开始 -->
-						<a href="<?php echo U('System/role_manage');?>" class="ajax-get">点击测试</a>
+						<div class="col-sm-7 infobox-container" style="margin-top: 140px;">
+							<div class="infobox infobox-green  ">
+								<div class="infobox-icon">
+									<i class="icon-comments"></i>
+								</div>
+
+								<div class="infobox-data">
+									<span class="infobox-data-number">32</span>
+									<div class="infobox-content">评论 + 2 reviews</div>
+								</div>
+								<div class="stat stat-success">8%</div>
+							</div>
+
+							<div class="infobox infobox-blue  ">
+								<div class="infobox-icon">
+									<i class="icon-eye-open"></i>
+								</div>
+
+								<div class="infobox-data">
+									<span class="infobox-data-number">11</span>
+									<div class="infobox-content">访问记录</div>
+								</div>
+
+								<div class="badge badge-success">
+									+32%
+									<i class="icon-arrow-up"></i>
+								</div>
+							</div>
+
+							<div class="infobox infobox-pink  ">
+								<div class="infobox-icon">
+									<i class="icon-user"></i>
+								</div>
+
+								<div class="infobox-data">
+									<span class="infobox-data-number">8</span>
+									<div class="infobox-content">新注册用户</div>
+								</div>
+								<div class="stat stat-important">4%</div>
+							</div>
+
+							<div class="vspace-sm"></div>
+
+							<div class="col-sm-5" style="margin-top: 50px;">
+								<div id="main" style="width: 80rem;height:400px;">
+
+								</div>
+							</div>
+						</div>
 						<!-- PAGE CONTENT ENDS 网页内容结束 -->
 					</div>
 				</div>
@@ -409,6 +464,60 @@
 <script src="/Public/admin/think/think.js"></script>
 
 <!-- inline scripts related to this page -->
+<script type="text/javascript" src="/Public/admin/js/echarts.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
 
+    // 指定图表的配置项和数据
+    option = {
+        title: {
+            text: '网站运行数据'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['用户评论','新用户','浏览量']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一','周二','周三','周四','周五','周六','周日']
+        },
+        yAxis: {
+            type: 'value',
+            min: 0,
+			max: 1000
+        },
+        series: [
+            {
+                name:'用户评论',
+                type:'line',
+                data:[0, 132, 101, 134, 90, 230, 210]
+            },
+            {
+                name:'新用户',
+                type:'line',
+                data:[220, 182, 191, 234, 290, 330, 310]
+            },
+            {
+                name:'浏览量',
+                type:'line',
+                data:[0, 232, 201, 154, 190, 330, 410]
+            },
+        ]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
 </body>
 </html>

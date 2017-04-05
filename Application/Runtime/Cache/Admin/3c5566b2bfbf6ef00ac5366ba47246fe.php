@@ -63,9 +63,8 @@
 						<div class="login-container">
 							<div class="center">
 								<h1>
-									<i class="icon-leaf green"></i>
-									<span class="red">Ace</span>
-									<span class="white">达晓医护</span>
+									<img src="/Public/img/logo.png" style="width: 50px;">
+									<span class="white">达医晓护</span>
 								</h1>
 								<h4 class="blue">&copy; 公司名称</h4>
 							</div>

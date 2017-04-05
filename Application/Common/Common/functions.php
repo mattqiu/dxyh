@@ -22,6 +22,7 @@ function message($status=1, $message, $jumpUrl=''){
 }
 
 function dateTime($dateTime, $status = 0){
+    if (empty($dateTime)) return false;
     switch ($status){
         case 0:
             return date("Y-m-d H:i:s", $dateTime);

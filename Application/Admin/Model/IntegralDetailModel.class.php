@@ -27,7 +27,7 @@ class IntegralDetailModel extends BaseModel
         $count = $this->alias("ig")->getJoinCount($join, $where);
         $page = new Page($count, C("PAGE_NUM"));
         $field = "ig.id,ig.create_time,ig.integral_num,ig.reason,u.mobile,u.nickname,u.name";
-        $list = $this->alias("ig")->getJoinDataList($join, $where, $field, null, $page->firstRow, $page->listRows);
+        $list = $this->alias("ig")->getJoinDataList($join, $where, $field, array("ig.id"=>"desc"), $page->firstRow, $page->listRows);
         foreach ($list as $key=>$item){
             $list[$key]['create_time'] = dateTime($item['create_time']);
         }

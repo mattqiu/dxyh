@@ -20,7 +20,7 @@ class UserModel extends BaseModel
         }
         $count = $this->countData($where);
         $page = new Page($count, C("PAGE_NUM"));
-        $list = $this->getDataList($where, null, null, $page->firstRow, $page->listRows);
+        $list = $this->getDataList($where, null, array("uid"=>"desc"), $page->firstRow, $page->listRows);
         foreach ($list as $key=>$item) {
             $list[$key]['create_time'] = dateTime($item['create_time']);
             switch ($item['sex']){

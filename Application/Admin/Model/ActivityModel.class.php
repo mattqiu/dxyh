@@ -32,9 +32,10 @@ class ActivityModel extends BaseModel
         }
         $join = "INNER JOIN dxyh_activity_type as at ON a.activity_type_id = at.id";
         $field = "a.id,at.type_name,a.activity_name,a.activity_start_time,a.activity_end_time,a.activity_number,a.activity_integral,a.browse_volume,a.status,a.whether_audit";
+        $order = array("a.id"=>"desc");
         $count = $this->alias("a")->getJoinCount($join, $where);
         $page = new Page($count, C("PAGE_NUM"));
-        $list = $this->alias("a")->getJoinDataList($join, $where, $field, null, $page->firstRow, $page->listRows);
+        $list = $this->alias("a")->getJoinDataList($join, $where, $field, $order, $page->firstRow, $page->listRows);
         foreach ($list as $key=>$item) {
             $list[$key]['activity_start_time'] = dateTime($item['activity_start_time'], 6);
             $list[$key]['activity_end_time'] = dateTime($item['activity_end_time'], 6);
@@ -49,6 +50,7 @@ class ActivityModel extends BaseModel
                     $list[$key]['status'] = "已结束";
                     break;
             }
+            $list[$key]['attend_count'] = M("AttendActivity")->where(array('activity_type_id'=>$item['id']))->count();
         }
         $list['page'] = $page->show();
         return $list;
@@ -69,27 +71,28 @@ class ActivityModel extends BaseModel
             if (!isset($request['activityEndTime']) || empty($request['activityEndTime'])){
                 message(0, "请选择活动结束时间");
             }
+            if (strtotime($request['activityStartTime']) > strtotime($request['activityEndTime'])){
+                message(0, "活动结束时间不能小于活动开始时间<br>请重新选择");
+            }
             if (!isset($request['enrollStartTime']) || empty($request['enrollStartTime'])){
                 message(0, "请选择报名开始时间");
             }
             if (!isset($request['enrollEndTime']) || empty($request['enrollEndTime'])){
                 message(0, "请选择报名结束时间");
             }
-            if (!isset($request['activityIntegral']) || empty($request['activityIntegral'])){
-                message(0, "请输入活动积分");
+            if (strtotime($request['enrollStartTime']) > strtotime($request['enrollEndTime'])){
+                message(0, "报名结束时间不能小于报名开始时间<br>请重新选择");
             }
+            /*if (!isset($request['activityIntegral']) || empty($request['activityIntegral'])){
+                message(0, "请输入活动积分");
+            }*/
             if (!isset($request['address']) || empty($request['address'])){
                 message(0, "请输入活动地址");
             }
             if (!isset($request['content']) || empty($request['content'])){
                 message(0, "请输入活动内容");
             }
-            if (strtotime($request['activityStartTime']) > strtotime($request['activityEndTime'])){
-                message(0, "活动结束时间不能小于活动开始时间<br>请重新选择");
-            }
-            if (strtotime($request['enrollStartTime']) > strtotime($request['enrollEndTime'])){
-                message(0, "报名结束时间不能小于报名开始时间<br>请重新选择");
-            }
+
             $fileUrl = "./upload/activityimag/" . dateTime(time(), 4) . "/";
             import('Org.Net.FileUpload');
             $fileUp = new \FileUpload(array('filepath'=>$fileUrl));

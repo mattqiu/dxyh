@@ -65,7 +65,11 @@
                                     <td>
                                         {$vo.type}
                                     </td>
-                                    <td><img src="{$vo.image}" style="width: 200px;height: 100px;" /></td>
+                                    <td>
+                                        <notempty name="vo.image">
+                                            <img src="{$vo.image}" style="width: 60px;height: 60px;" />
+                                        </notempty>
+                                    </td>
                                     <td>{$vo.img_link}</td>
                                     <td class="hidden-480">{$vo.status}</td>
                                     <td class="center">
