@@ -355,7 +355,6 @@
                         <?php if(is_array($auth)): $i = 0; $__LIST__ = $auth;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php echo (Judgement($authId,$vo['id'],"selected")); ?>><?php echo ($vo["title"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
                     </select>
                     <input type="submit" name="" value="搜索" form="form1">
-                    <a href="<?php echo U('Coptic/add');?>" class="btn btn-xs btn-info">添加</a>
                     <form action="" method="get" id="form1"></form>
 
                 </div>

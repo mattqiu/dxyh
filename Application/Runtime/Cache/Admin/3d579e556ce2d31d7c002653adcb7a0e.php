@@ -352,7 +352,6 @@
                     <span>关键字</span>
                     <input type="text" name="keyword" form="form1" value="<?php echo ($keyword); ?>" />
                     <input type="submit" name="" value="搜索" form="form1">
-                    <a href="<?php echo U('Coptic/add');?>" class="btn btn-xs btn-info">添加</a>
                     <form action="" method="get" id="form1"></form>
 
                 </div>

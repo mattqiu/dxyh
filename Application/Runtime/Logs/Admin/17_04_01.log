@@ -13947,3 +13947,911 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-04-01T18:44:29+08:00 ] 127.0.0.1 /index.php/Admin/Activity/signUp/id/1/whetherAudit/1.html?keyword=132123456&status=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_attend_activity aa INNER JOIN dxyh_user as u ON aa.uid=u.uid  WHERE aa.activity_id = '1' AND (  (u.mobile like "%132123456%")  OR (u.nickname like "%132123456%") OR (u.name like "%132123456%")  ) AND `audit` = '2' LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT aa.id,aa.create_time,aa.sign_time,aa.audit,u.mobile,u.nickname,u.name,u.sex FROM dxyh_attend_activity aa INNER JOIN dxyh_user as u ON aa.uid=u.uid  WHERE aa.activity_id = '1' AND (  (u.mobile like "%132123456%")  OR (u.nickname like "%132123456%") OR (u.name like "%132123456%")  ) AND `audit` = '2' LIMIT 0,2   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:34+08:00 ] 127.0.0.1 /index.php/Admin/Coptic/copticType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_coptic_type` LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `dxyh_coptic_type` LIMIT 0,2   [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:35+08:00 ] 127.0.0.1 /index.php/Admin/Coptic/copticType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.2250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_coptic_type` LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT * FROM `dxyh_coptic_type` LIMIT 0,2   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-01T18:44:38+08:00 ] 127.0.0.1 /index.php/Admin/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  LIMIT 0,2   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `dxyh_coptic_type`  [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: copticType D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: nominate D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:39+08:00 ] 127.0.0.1 /index.php/Admin/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.2270s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  LIMIT 0,2   [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dxyh_coptic_type`  [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: copticType D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: nominate D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:41+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activityType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_activity_type` LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `dxyh_activity_type` LIMIT 0,2   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:41+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activityType.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0170s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_activity_type` LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT * FROM `dxyh_activity_type` LIMIT 0,2   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 73 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-01T18:44:44+08:00 ] 127.0.0.1 /index.php/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0200s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_activity a INNER JOIN dxyh_activity_type as at ON a.activity_type_id = at.id  LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT a.id,at.type_name,a.activity_name,a.activity_start_time,a.activity_end_time,a.activity_number,a.activity_integral,a.browse_volume,a.status,a.whether_audit FROM dxyh_activity a INNER JOIN dxyh_activity_type as at ON a.activity_type_id = at.id  LIMIT 0,2   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`type_name` FROM `dxyh_activity_type` LIMIT 0,15   [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 28 行.
+NOTIC: [8] Undefined index: status D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:44+08:00 ] 127.0.0.1 /index.php/Admin/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_activity a INNER JOIN dxyh_activity_type as at ON a.activity_type_id = at.id  LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT a.id,at.type_name,a.activity_name,a.activity_start_time,a.activity_end_time,a.activity_number,a.activity_integral,a.browse_volume,a.status,a.whether_audit FROM dxyh_activity a INNER JOIN dxyh_activity_type as at ON a.activity_type_id = at.id  LIMIT 0,2   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`type_name` FROM `dxyh_activity_type` LIMIT 0,15   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 28 行.
+NOTIC: [8] Undefined index: status D:\WWW\daxiaoyihu\Application\Admin\Controller\ActivityController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:46+08:00 ] 127.0.0.1 /index.php/Admin/HomeCare/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\9c08d174102263b4e7cac17e077461c7.php 第 367 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\9c08d174102263b4e7cac17e077461c7.php 第 397 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:46+08:00 ] 127.0.0.1 /index.php/Admin/HomeCare/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\9c08d174102263b4e7cac17e077461c7.php 第 367 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\9c08d174102263b4e7cac17e077461c7.php 第 397 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:48+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\82d6abe5c84aa9ae7151d9904d1e3483.php 第 351 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\82d6abe5c84aa9ae7151d9904d1e3483.php 第 374 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\82d6abe5c84aa9ae7151d9904d1e3483.php 第 403 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:48+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/user_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0200s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\82d6abe5c84aa9ae7151d9904d1e3483.php 第 351 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\82d6abe5c84aa9ae7151d9904d1e3483.php 第 374 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\82d6abe5c84aa9ae7151d9904d1e3483.php 第 403 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:50+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/integral.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 351 行.
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 353 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 375 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 404 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-01T18:44:50+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/integral.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0190s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 351 行.
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 353 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 375 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\3d579e556ce2d31d7c002653adcb7a0e.php 第 404 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:53+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 351 行.
+NOTIC: [8] Undefined variable: auth D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 355 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 378 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 407 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:53+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/collection.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 351 行.
+NOTIC: [8] Undefined variable: auth D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 355 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 378 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\8aa31a4d0431a601ff798d50bd8a8a00.php 第 407 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:55+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/user_activity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 351 行.
+NOTIC: [8] Undefined variable: auth D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 355 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 379 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 409 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:55+08:00 ] 127.0.0.1 /index.php/Admin/UserManage/user_activity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: keyword D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 351 行.
+NOTIC: [8] Undefined variable: auth D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 355 行.
+NOTIC: [8] Undefined variable: rows D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 379 行.
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\2d362ba3fb7aff79200060c45cd11d94.php 第 409 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:44:58+08:00 ] 127.0.0.1 /index.php/Admin/System/role_manage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `dxyh_auth_group` LIMIT 0,15   [ RunTime:0.4190s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\c3323698d08fc15a94ad90a5e3506c6a.php 第 386 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:44:58+08:00 ] 127.0.0.1 /index.php/Admin/System/role_manage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `dxyh_auth_group` LIMIT 0,15   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\c3323698d08fc15a94ad90a5e3506c6a.php 第 386 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:45:01+08:00 ] 127.0.0.1 /index.php/Admin/System/account_manage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_admin` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_admin a INNER JOIN dxyh_auth_group_access as ag ON a.aid=ag.aid INNER JOIN dxyh_auth_group as g ON ag.group_id=g.id  LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT a.aid,a.aname,a.create_time,g.title FROM dxyh_admin a INNER JOIN dxyh_auth_group_access as ag ON a.aid=ag.aid INNER JOIN dxyh_auth_group as g ON ag.group_id=g.id  ORDER BY a.create_time DESC LIMIT 0,2   [ RunTime:0.0110s ]
+NOTIC: [2] Illegal string offset 'create_time' D:\WWW\daxiaoyihu\Application\Admin\Model\AdminModel.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `dxyh_auth_group` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`title` FROM `dxyh_auth_group` LIMIT 0,15   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: authId D:\WWW\daxiaoyihu\Application\Admin\Controller\SystemController.class.php 第 108 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\SystemController.class.php 第 109 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:45:01+08:00 ] 127.0.0.1 /index.php/Admin/System/account_manage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_admin` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_admin a INNER JOIN dxyh_auth_group_access as ag ON a.aid=ag.aid INNER JOIN dxyh_auth_group as g ON ag.group_id=g.id  LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT a.aid,a.aname,a.create_time,g.title FROM dxyh_admin a INNER JOIN dxyh_auth_group_access as ag ON a.aid=ag.aid INNER JOIN dxyh_auth_group as g ON ag.group_id=g.id  ORDER BY a.create_time DESC LIMIT 0,2   [ RunTime:0.0130s ]
+NOTIC: [2] Illegal string offset 'create_time' D:\WWW\daxiaoyihu\Application\Admin\Model\AdminModel.class.php 第 33 行.
+SQL: SHOW COLUMNS FROM `dxyh_auth_group` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`title` FROM `dxyh_auth_group` LIMIT 0,15   [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: authId D:\WWW\daxiaoyihu\Application\Admin\Controller\SystemController.class.php 第 108 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\SystemController.class.php 第 109 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:45:04+08:00 ] 127.0.0.1 /index.php/Admin/System/website_image.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_website_image` LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dxyh_website_image` LIMIT 0,2   [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Admin\Controller\SystemController.class.php 第 218 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-01T18:45:04+08:00 ] 127.0.0.1 /index.php/Admin/System/website_image.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_website_image` LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `dxyh_website_image` LIMIT 0,2   [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Admin\Controller\SystemController.class.php 第 218 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:45:08+08:00 ] 127.0.0.1 /index.php/Admin/System/link_manage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\d39d9b45fabd110cae9f55ab1f476637.php 第 383 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:45:08+08:00 ] 127.0.0.1 /index.php/Admin/System/link_manage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: page D:\WWW\daxiaoyihu\Application\Runtime\Cache\Admin\d39d9b45fabd110cae9f55ab1f476637.php 第 383 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:45:11+08:00 ] 127.0.0.1 /index.php/Admin/System/about_us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0120s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.099005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:45:11+08:00 ] 127.0.0.1 /index.php/Admin/System/about_us.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-01T18:45:25+08:00 ] 127.0.0.1 /index.php/Admin/Public/modify_password.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_admin` [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:45:31+08:00 ] 127.0.0.1 /index.php/Admin/Public/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-01T18:45:31+08:00 ] 127.0.0.1 /index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_admin` [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-01T18:45:31+08:00 ] 127.0.0.1 /index.php/Admin/Public/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-01T18:45:31+08:00 ] 127.0.0.1 /index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_admin` [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
