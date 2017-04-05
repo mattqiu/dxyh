@@ -10079,3 +10079,289 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
+[ 2017-04-05T20:10:31+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0186s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0133s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0168s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0168s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0155s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-04-05T20:14:31+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0175s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.3136s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0253s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0159s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0201s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2017-04-05T20:14:48+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000908s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0163s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0149s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0183s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0138s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0168s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0144s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000406s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001221s ]
+
+[ 2017-04-05T20:16:52+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0148s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0136s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0132s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0149s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0129s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000190s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001365s ]
+
+[ 2017-04-05T20:18:28+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0168s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0177s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0139s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2017-04-05T20:22:09+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0148s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0129s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0119s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2017-04-05T20:23:24+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001231s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0133s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0155s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0154s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0138s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2017-04-05T20:24:37+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0137s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0143s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0135s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0125s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008325s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2017-04-05T20:26:09+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0159s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0269s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0181s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0125s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0115s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000774s ]
+
+[ 2017-04-05T20:27:08+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0133s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0136s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000284s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000409s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2017-04-05T20:28:22+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0152s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0139s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0145s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0132s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1491321601 AND create_time <= 1491407999 ) LIMIT 1   [ RunTime:0.0153s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000328s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001915s ]
+
