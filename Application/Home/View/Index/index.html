@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>登录 - 达晓医护</title>
+
+    <meta name="description" content="User login page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- basic styles -->
+
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/font-awesome.min.css" />
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+
+    <!-- page specific plugin styles -->
+
+    <!-- fonts -->
+
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/ace-fonts.css" />
+
+    <!-- ace styles -->
+
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/ace.min.css" />
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/ace-rtl.min.css" />
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="__PUBLIC__/admin/css/ace-ie.min.css" />
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+    <link rel="stylesheet" href="__PUBLIC__/admin/think/think.css" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="__PUBLIC__/admin/js/html5shiv.js"></script>
+    <script src="__PUBLIC__/admin/js/respond.min.js"></script>
+
+
+    <![endif]-->
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery-2.0.3.min.js"></script>
+
+    <style type="text/css">
+        body {
+            background-image: url("__PUBLIC__/admin/images/admin-login-bg.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #login-box, #forgot-box, #signup-box {
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body class="login-layout">
+<div class="main-container">
+    <div class="main-content">
+        <div class="row">
+            <a href="{:U('Index/login')}" ><button>登录</button></a>
+        </div><!-- /.row -->
+    </div>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+
+<!--<script type="text/javascript">
+    window.jQuery || document.write("<script src='__PUBLIC__/admin/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+</script>-->
+
+<script type="text/javascript" src="__PUBLIC__/admin/think/think.js"></script>
+<!-- <![endif]-->
+
+<!--[if IE]>
+
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='__PUBLIC__/admin/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    if("ontouchend" in document) document.write("<script src='__PUBLIC__/admin/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+
+<!-- inline scripts related to this page -->
+
+<script type="text/javascript">
+    function show_box(id) {
+        jQuery('.widget-box.visible').removeClass('visible');
+        jQuery('#'+id).addClass('visible');
+    }
+
+</script>
+</body>
+</html>

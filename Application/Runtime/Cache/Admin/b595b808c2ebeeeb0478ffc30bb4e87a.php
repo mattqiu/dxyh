@@ -361,7 +361,7 @@
 
 								<div class="infobox-data">
 									<span class="infobox-data-number"><?php echo ($commentToday); ?></span>
-									<div class="infobox-content">新增评论</div>
+									<div class="infobox-content">今日新增评论</div>
 								</div>
 							</div>
 
@@ -372,7 +372,7 @@
 
 								<div class="infobox-data">
 									<span class="infobox-data-number"><?php echo ($addUserToday); ?></span>
-									<div class="infobox-content">新注册用户</div>
+									<div class="infobox-content">今日新注册用户</div>
 								</div>
 							</div>
 
@@ -383,7 +383,7 @@
 
 								<div class="infobox-data">
 									<span class="infobox-data-number"><?php echo ($visitToday); ?></span>
-									<div class="infobox-content">访问记录</div>
+									<div class="infobox-content">今日访问记录</div>
 								</div>
 							</div>
 
@@ -459,15 +459,6 @@
 <!-- inline scripts related to this page -->
 <script type="text/javascript" src="/Public/admin/js/echarts.js"></script>
 <script type="text/javascript">
-	var sevenDay = '<?php echo ($sevenDay); ?>';
-    if(sevenDay.substring(0)=="\'")
-    {
-        sevenDay=cstring.substr(1,sevenDay.length-1)
-    }
-    if(sevenDay.substring(sevenDay.length-1)=="\'")
-    {
-        sevenDay=cstring.substr(0,sevenDay.length-2)
-    }
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
 
@@ -480,7 +471,7 @@
             trigger: 'axis'
         },
         legend: {
-            data:['用户评论','新用户','浏览量']
+            data:['用户评论','新用户','访问量']
         },
         grid: {
             left: '3%',
@@ -496,7 +487,7 @@
         yAxis: {
             type: 'value',
             min: 0,
-			max: 1000
+			max: 50
         },
         series: [
             {
@@ -510,7 +501,7 @@
                 data:[]
             },
             {
-                name:'浏览量',
+                name:'访问量',
                 type:'line',
                 data:[]
             },
@@ -520,25 +511,31 @@
 
     // 使用刚指定的配置项和数据显示图表。
 	myChart.setOption(option);
-    myChart.setOption({
-		xAxis: {
-			data: sevenDay
-		},
-		series:[
-			{
-				name: '用户评论',
-				data: [120, 132, 101, 134, 90, 230, 210]
-			},
-			{
-				name: '新用户',
-				data: [220, 182, 191, 234, 290, 330, 310]
-			},
-			{
-				name: '浏览量',
-				data: [150, 232, 201, 154, 190, 330, 410]
-			}
-		]
-	});
+
+	$(function () {
+		$.get('<?php echo U("Index/sevenDay");?>').done(function (data) {
+            data = eval("("+data+")");
+            myChart.setOption({
+                xAxis: {
+                    data: data.sevenDay
+                },
+                series:[
+                    {
+                        name: '用户评论',
+                        data: data.commentSevenAry
+                    },
+                    {
+                        name: '新用户',
+                        data: data.addUserSevenAry
+                    },
+                    {
+                        name: '访问量',
+                        data: data.visiSevenAry
+                    }
+                ]
+            });
+        });
+    });
 </script>
 </body>
 </html>

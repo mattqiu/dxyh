@@ -15,20 +15,38 @@ class IndexController extends Controller {
         $endTime = "23:59:59";
         $dateStart = strtotime(dateTime(time(), 2) . $startTime);
         $dateEnd = strtotime(dateTime(time(), 2) . $endTime);
-        $sevenDayTime = array();
-        $sevenDayString = "";
-        for ($i=1;$i<=7;$i++){
-            $sevenDayTime[] = dateTime("-" . $i . " day", 3);
-        }
-        var_dump(json_encode($sevenDayTime));
+
 
         $data['commentToday'] = M("Comment")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
         $data['addUserToday'] = M("User")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
         $data['visitToday'] = M("Visit")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
-        $data['sevenDay'] = json_encode($sevenDayTime);
+
 
         $this->assign($data);
         $this->display();
+    }
+
+    public function sevenDay(){
+        $startTime = "00:00:01";
+        $endTime = "23:59:59";
+        $sevenDayTime = array();
+        for ($i=7;$i>=1;$i--){
+            $sevenDayTime[] = dateTime("-" . $i . " day", 3);
+        }
+        $sevenDay = $sevenDayTime;
+        $commentSevenAry = array();
+        $addUserSevenAry = array();
+        $visiSevenAry = array();
+
+        foreach ($sevenDayTime as $key=>$value){
+            $dateStart = strtotime($value . $startTime);
+            $dateEnd = strtotime($value . $endTime);
+            $commentSevenAry[] = M("Comment")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
+            $addUserSevenAry[] = M("User")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
+            $visiSevenAry[] = M("Visit")->where("create_time >= $dateStart AND create_time <= $dateEnd")->count();
+        }
+
+        echo json_encode(array("sevenDay"=>$sevenDay,"commentSevenAry"=>$commentSevenAry,"addUserSevenAry"=>$addUserSevenAry,"visiSevenAry"=>$visiSevenAry));
     }
 
     public function blank(){

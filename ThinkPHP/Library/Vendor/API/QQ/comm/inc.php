@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"123456","appkey":"1234655666","callback":"http://www.dxyh.com/","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}
