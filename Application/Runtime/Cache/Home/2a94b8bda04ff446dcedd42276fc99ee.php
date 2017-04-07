@@ -60,7 +60,9 @@
 <div class="main-container">
     <div class="main-content">
         <div class="row">
-            <a href="<?php echo U('Index/login');?>" ><button>登录</button></a>
+            <a href="<?php echo U('Index/thirdPartyLogin');?>" ><button>qq登录</button></a>
+            <a href="<?php echo ($weixin_url); ?>"><button>微信登录</button></a>
+            <a href="<?php echo ($weibo_url); ?>"><button>微博登录</button></a>
         </div><!-- /.row -->
     </div>
 </div><!-- /.main-container -->

@@ -16,7 +16,7 @@ class Oauth{
     const GET_ACCESS_TOKEN_URL = "https://graph.qq.com/oauth2.0/token";
     const GET_OPENID_URL = "https://graph.qq.com/oauth2.0/me";
 
-    protected $recorder;
+    public $recorder;
     public $urlUtils;
     protected $error;
     
