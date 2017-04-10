@@ -34,6 +34,6 @@ class CopticModel extends CommonModel
         $id = I("get.id");
         $info = $this->getDataInfo(array('id'=>$id));
 
-
+        return $info;
     }
 }

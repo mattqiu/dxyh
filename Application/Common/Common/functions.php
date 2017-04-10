@@ -43,6 +43,14 @@ function dateTime($dateTime, $status = 0){
     }
 }
 
+/**
+ * 比较函数
+ * @param string $data 比较值
+ * @param int $value 被比较值
+ * @param string $result    返回值
+ * @param string $type  比较类型
+ * @return bool|string  返回bool或给定的返回值
+ */
 function Judgement($data="", $value=0, $result="", $type='eq'){
     if (empty($data)){
         return false;
@@ -137,7 +145,12 @@ function upload($file=array(), $file_url=""){
 
 }
 
-
+/**
+ * 导出excel
+ * @param string $title 标题
+ * @param array $column 列标题
+ * @param array $data 数据
+ */
 function export($title="", $column=array(), $data=array()){
     $num = count($column);
     $html = "";
@@ -173,13 +186,25 @@ function export($title="", $column=array(), $data=array()){
     echo $html;
 }
 
+/**
+ * 递归返回所有子孙
+ * @param $parentId 父id
+ * @param array $array 所以子集数组
+ * @return array 返回祖先的所有子孙，子与孙在同一级
+ */
+function RecursionCommentsAry($parentId, $array=array()){
+    $subAry = array();
+    foreach ($array as $key=>$value){
+        if ($value['parent_id'] == $parentId){
+            $arr = RecursionCommentsAry($value['id'], $array);
+            if ($arr){
+                foreach ($arr as $k=>$v){
+                    $subAry[] = $v;
+                }
+            }
+            $subAry[] = $value;
 
-
-
-
-
-
-
-function RecursionCommentsAry(){
-
+        }
+    }
+    return $subAry;
 }

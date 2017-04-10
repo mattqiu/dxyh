@@ -53,6 +53,7 @@
         #login-box, #forgot-box, #signup-box {
             padding: 0;
         }
+
     </style>
 </head>
 
@@ -65,6 +66,15 @@
             <a href="<?php echo ($weibo_url); ?>"><button>微博登录</button></a>
         </div><!-- /.row -->
     </div>
+    <div class="bshare-custom">
+        <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+        <a title="分享到QQ空间" class="bshare-qzone"></a>
+        <a title="分享到QQ好友" class="bshare-qqim"></a>
+        <a title="分享到微信" class="bshare-weixin"></a>
+        <a title="分享到LinkedIn" class="bshare-linkedin"></a>
+        <!--<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>-->
+    </div>
+
 </div><!-- /.main-container -->
 
 <!-- basic scripts -->
@@ -98,5 +108,7 @@
     }
 
 </script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 </body>
 </html>

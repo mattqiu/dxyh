@@ -34,10 +34,10 @@ class CommentModel extends CommonModel
                 }
             }
             foreach ($listAry as $key=>$value){
-                $listAry[$key]['subData'] = array_reverse($this->lookup($value['id'], $list));
+                $listAry[$key]['subData'] = array_reverse(RecursionCommentsAry($value['id'], $list));
             }
             $listAry = $this->bubbleSort($listAry);
-var_dump($listAry);
+            return $listAry;
         }
     }
 
@@ -49,29 +49,6 @@ var_dump($listAry);
                 return $value['nickname'];
             }
         }
-    }
-
-    /**
-     * 递归返回所有子孙
-     * @param $parentId 父id
-     * @param array $array 所以子集数组
-     * @return array 返回祖先的所有子孙，子与孙在同一级
-     */
-    function lookup($parentId, $array=array()){
-        $subAry = array();
-        foreach ($array as $key=>$value){
-            if ($value['parent_id'] == $parentId){
-                $arr = $this->lookup($value['id'], $array);
-                if ($arr){
-                    foreach ($arr as $k=>$v){
-                        $subAry[] = $v;
-                    }
-                }
-                $subAry[] = $value;
-
-            }
-        }
-        return $subAry;
     }
 
     /**
