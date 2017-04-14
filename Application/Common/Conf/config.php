@@ -18,5 +18,6 @@ return array(
     'MEMBER'            => 'admin',
     'LOAD_EXT_FILE'     => 'functions',
     'PAGE_NUM'          => 10,  //分页：每页条数
+    'URL_MODEL' => 2,
 
 );
