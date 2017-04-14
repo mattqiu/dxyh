@@ -15,7 +15,7 @@ class FileUpload
     private $fileSize;		//文件大小
     private $newFileName; 	//新文件名
     private $errorNum=0; 	//错误号
-    private $errorMsg=''; 	//错误消息
+    public $errorMsg=''; 	//错误消息
 
     //初始化文件上传
     //1.指定上传路径 2.限制类型 3.限制大小 4.是否使用随机文件名

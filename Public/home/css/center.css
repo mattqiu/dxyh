@@ -1,0 +1,345 @@
+/*
+* @Author: Administrator
+* @Date:   2017-04-10 14:11:05
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-04-13 11:58:18
+*/
+
+/* 左侧导航 */
+.left{
+	background: #fff;
+	border: 1px solid #e0e0e0;
+}
+.left a{
+	display: block;
+	color: #666666;
+	padding-left: 10px;
+	line-height: 50px;
+}
+.leftActive{
+	background: #E7EDEE;
+}
+.left a img{
+	margin-right: 10px;
+}
+.leftTitle{
+	color: #000000;
+	font-size: 18px;
+	padding-left: 25px;
+	padding-top: 35px;
+	padding-bottom: 20px;
+}
+@media (min-width: 1200px) {
+	.box{
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+	.left{
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	padding-bottom: 50px;
+	min-height: 800px;
+}
+.left a{
+	display: block;
+	color: #666666;
+	font-size: 16px;
+	padding-left: 25px;
+	line-height: 60px;
+	margin-bottom: 10px;
+}
+.leftActive{
+	background: #E7EDEE;
+}
+.left a img{
+	margin-right: 10px;
+}
+}
+
+/* 右侧信息 */
+.right{
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	margin-top: 10px;
+	padding-bottom: 20px;
+}
+
+.rightTitle{
+	color: #000000;
+	font-size: 18px;
+	padding-top: 35px;
+	padding-bottom: 20px;
+	border-bottom: 4px solid #E8F3F9;
+	margin-bottom: 30px;
+}
+.userMessage{
+	padding: 5px;
+}
+.userMessage p{
+	padding-left: 100px;
+}
+.userMessage p img{
+	width: 20px;
+	height: auto;
+	margin-right: 5px;
+}
+.userImg{
+	width: 80px;
+	height: 80px;
+	float: left;
+}
+.username{
+	color: #656464;
+	padding-top: 10px;
+}
+.username img{
+	margin-left: 10px;
+}
+.change{
+	display: block;
+	background:#FFA02F;
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 4px;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+@media (min-width: 1200px) {
+	.userMessage{
+	padding: 0;
+}
+	.userImg{
+	width: 160px;
+	height: 160px;
+	float: left;
+}
+.userMessage p img{
+	margin-right: 10px;
+}
+.userMessage p{
+	padding-left: 190px;
+	margin-bottom: 20px;
+}
+.username{
+	color: #656464;
+	font-size: 18px;
+	padding-top: 10px;
+}
+	.right{
+	background: #fff;
+	margin-left: 20px;
+	border: 1px solid #e0e0e0;
+	padding-left: 30px;
+	min-height: 800px;
+	margin-top: 0;
+}
+.change{
+	margin-left: 0;
+}
+
+}
+
+
+/* 我的活动特有样式 */
+.avtiveList{
+	padding:0 13px;
+	margin-bottom: 20px;
+}
+.activeImg img{
+	height: 200px;
+	width: 100%;
+}
+.activeImg{
+	position: relative;
+}
+.mengceng{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	height: 35px;
+}
+.activeImg p{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;/*多余的文字省略号展示*/
+}
+.activeMessage{
+	border: 1px solid #e0e0e0;
+	line-height: 2;
+	color: #8E8B8B;
+	padding:10px;
+}
+.activeMessage a{
+	background: #00CD99;
+	display: inline-block;
+	width: 85px;
+	color: #fff;
+	text-align: center;
+	margin-left: 20px;
+}
+/* 我的积分特有样式 */
+.Jamount{
+	padding-left: 25px;
+}
+.Jamount span{
+	color: #72C312;
+	margin-right: 2px;
+}
+.Jamount span:nth-child(1){
+	font-size: 25px;
+}
+@media (min-width: 1200px) {
+	.Jamount{
+	padding-left: 25px;
+	margin-bottom: 50px;
+}
+.Jtable tr td:nth-child(2){
+	width: 50%;
+}
+ }
+.Jtable{
+	width: 100%;
+	text-align: center;
+}
+.Jtable th{
+	background: #F5F5F5;
+}
+.Jjian{
+	color: #FF5900;
+}
+.Jjia{
+	color: #42B035;
+}
+.Jtable tr:not(.t1){
+	border-bottom: 1px solid #e0e0e0;
+}
+.Jtable tr th{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.Jtable tr td{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* 我的收藏 */
+.sstyle{
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+.sstyle span{
+	color: #FB890A;
+}
+.scancel{
+	float: right;
+}
+.sbox1{
+	background: #FAFAFA;
+}
+/* 修改密码 */
+.cpTips{
+	color: #999999;
+	margin-bottom: 10px;
+}
+.cpTable{
+	width: 100%;
+}
+@media (max-width: 1200px) {
+	.cpright{
+	padding: 10px;
+}
+}
+
+.cpTable input{
+	height: 40px;
+	padding-left: 8px;
+	width: 100%;
+	font-size: 16px;
+	border: 1px solid #e0e0e0;
+}
+.cpTable tr td:nth-child(1){
+	text-align: right;
+	padding-right: 20px;
+	color: #4D4D4D;
+}
+.cpTable tr td{
+	padding-bottom: 20px;
+}
+.cpSubmit{
+	width: 45%;
+	height: 40px;
+	border: none;
+	color: #fff;
+	text-align: center;
+	background: #2D9E12;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.cpCancle{
+	float: right;
+	width: 45%;
+	height: 40px;
+	border: none;
+	color: #fff;
+	text-align: center;
+	background: #B3B3B3;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+@media (min-width: 1200px) {
+	.cpTable{
+	width: 400px;
+}
+.cpTips{
+	margin-bottom: 30px;
+}
+}
+/* 修改资料 */
+.sexbox input{
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.sexbox input:nth-child(2){
+	margin-left: 20px;
+}
+.cmImgLabel{
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	width: 100%;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+@media (min-width: 1200px) {
+	.cmImgLabel{
+	float: right;
+	display: inline-block;
+	border: 1px solid #e0e0e0;
+	width: 160px;
+	height: 160px;
+	padding-top: 50px;
+	text-align: center;
+	margin-right: 100px;
+}
+.cmForm{
+	display: inline-block;
+}
+}

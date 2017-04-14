@@ -53,15 +53,28 @@
                             <div class="space-4"></div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label no-padding-right" for="fileupload"> 图片 </label>
+                                <label class="col-sm-3 control-label no-padding-right" for="fileupload"> pc端图片 </label>
                                 <div class="col-sm-9"><!--/upload/images/1230445787101_mthumb.jpg-->
                                     <input type="file" id="fileupload" onchange="showPreview(this)" class="col-xs-10 col-sm-5" name="fileImage" style="display: none;" />
                                     <div class="showImage" style="width:520px;">
-                                        <img src="{$rows.image}" style="width: 520px;height: 200px;background-color: darkgrey;" />
-                                        <p style="position: absolute;top: 70px;left: 140px;font-size: xx-large;font-family: cursive;color: aliceblue;">点击此处上传图片</p>
+                                        <img src="{$rows.image}" style="width: 523px;height: 200px;background-color: darkgrey;" />
+                                        <p class="message_p1" style="position: absolute;top: 70px;left: 28px;font-size: xx-large;font-family: cursive;color: aliceblue;">点击此处上传图片,尺寸:1920x460</p>
                                     </div>
                                     <br>
                                     <button type="button" class="unImage" onclick="unsetImage()" style="display: none;">清除上传图片</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group image2">
+                                <label class="col-sm-3 control-label no-padding-right" for="fileupload"> 移动端图片 </label>
+                                <div class="col-sm-9"><!--/upload/images/1230445787101_mthumb.jpg-->
+                                    <input type="file" id="fileupload2" onchange="showPreview2(this)" class="col-xs-10 col-sm-5" name="fileImage2" style="display: none;" />
+                                    <div class="showImage2" style="width:270px;">
+                                        <img src="{$rows.app_image}" style="width: 270px;height: 200px;background-color: darkgrey;" />
+                                        <p style="position: absolute;top: 70px;left: 50px;font-size: x-large;font-family: cursive;color: aliceblue;">点击此处上传图片<br>&nbsp;&nbsp;尺寸:640x320</p>
+                                    </div>
+                                    <br>
+                                    <button type="button" class="unImage2" onclick="unsetImage2()" style="display: none;">清除上传图片</button>
                                 </div>
                             </div>
 
@@ -126,10 +139,28 @@
 <!-- inline scripts related to this page -->
 <script type="text/javascript">
     $(function () {
-        var title = "{$title}";
+        /*var title = "{$title}";
         if (title == "编辑图片"){
             $("p").css('display','none');
+        }*/
+        var image1 = "{$rows.image}";
+        var image2 = "{$rows.app_image}";
+        if (image1 == ""){
+            $(".showImage p").css('display','block');
+        }else{
+            $(".showImage p").css('display','none');
         }
+        if (image2 == ""){
+            $(".showImage2 p").css('display','block');
+        }else{
+            $(".showImage2 p").css('display','none');
+        }
+        var imageType = "{$rows.type}";
+        if (imageType == 2){
+            $(".image2").css("display","none");
+        }
+
+
     });
     $(".showImage").click(function () {
         $("[name='fileImage']").click();
@@ -144,17 +175,55 @@
             };
             fr.readAsDataURL(file);
         }
-        $("p").css('display','none');
+        $(".showImage p").css('display','none');
         $(".unImage").css('display','block');
     };
 
     function unsetImage() {
         $(".showImage img").attr("src", "");
-        $("p").css('display','block');
+        $(".showImage p").css('display','block');
         var obj = document.getElementById('fileupload') ;
         obj.outerHTML = obj.outerHTML;
         $(".unImage").css('display','none');
     }
+
+    //移动端图片
+    $(".showImage2").click(function () {
+        $("[name='fileImage2']").click();
+    });
+    function showPreview2(source) {
+        var file = source.files[0];
+        if(window.FileReader) {
+            var fr = new FileReader();
+            fr.onloadend = function(e) {
+                //document.getElementById("portrait").src = e.target.result;
+                $(".showImage2 img").attr("src",e.target.result);
+            };
+            fr.readAsDataURL(file);
+        }
+        $(".showImage2 p").css('display','none');
+        $(".unImage2").css('display','block');
+    };
+
+    function unsetImage2() {
+        $(".showImage2 img").attr("src", "");
+        $(".showImage2 p").css('display','block');
+        var obj = document.getElementById('fileupload') ;
+        obj.outerHTML = obj.outerHTML;
+        $(".unImage2").css('display','none');
+    }
+
+    $("select[name='imageType']").change(function () {
+        var item = $("select[name='imageType']").val();
+        if (item == 2){
+            $(".image2").css("display","none");
+            $(".message_p1").html("点击此处上传图片,尺寸:208x294");
+        }else {
+            $(".image2").css("display","block");
+            $(".message_p1").html("点击此处上传图片,尺寸:1920x460");
+            $(".showImage2 p").css('display','block');
+        }
+    });
 
 </script>
 </body>

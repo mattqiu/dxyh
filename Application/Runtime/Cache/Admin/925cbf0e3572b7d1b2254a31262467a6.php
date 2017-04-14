@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- basic styles -->
-
+    <link rel="shortcut icon" type="image/x-icon" href="/Public/img/dyxh.ico">
     <link href="/Public/admin/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Public/admin/css/font-awesome.min.css" />
 
@@ -388,7 +388,7 @@
                                     <input type="file" id="fileupload" name="copticCover" onchange="showPreview(this)" style="display: none;" />
                                     <div class="showImage" style="width: 170px;height: 200px;">
                                         <img src="<?php echo ($rows["coptic_cover"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
-                                        <p style="position: absolute;top: 84px;left: 33px;font-size: initial;font-family: cursive;color: aliceblue;">点击此处上传图片</p>
+                                        <p style="position: absolute;top: 84px;left: 33px;font-size: initial;font-family: cursive;color: aliceblue;">点击此处上传图片<br>&nbsp;&nbsp;尺寸:&nbsp;4:3</p>
                                     </div>
                                     <br>
                                     <button type="button" class="unImage" onclick="unsetImage()" style="display: none;">清除上传图片</button>

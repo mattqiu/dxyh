@@ -1,0 +1,127 @@
+/*
+* @Author: Administrator
+* @Date:   2017-04-08 15:06:21
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-04-12 13:20:23
+*/
+.swiper2 {
+  width: 100%;
+  height: 150px;
+}
+.box3{
+  position: relative;
+}
+@media (min-width: 1200px) {
+	.swiper2 {
+  height: 300px;
+}
+.box3{
+  margin-top: 20px;
+  width: 1220px;
+}
+.menu{
+	margin-top: 20px;
+	font-size: 18px;
+}
+}
+.swiper2 img{
+  width: 100%;
+  height: 100%;
+}
+.swiper2 a{
+  display: block;
+  height: 100%;
+  padding: 10px;
+}
+.plateStyleListBox{
+}
+.plateStyleList{
+  padding:20px 10px;
+  height: 100%;
+}
+.swiper-wrapper img {
+  width: 100%;
+  height: 100%;
+  border: 10px solid #A6D7FA;
+  box-shadow: 0 8px 8px #D9D8D8;
+}
+.pre2{
+  width: auto!important;
+  height: auto!important;
+  position: absolute;
+  top: 50%;
+  margin-top: -21px;
+  left:30px;
+  z-index: 999;
+  cursor: pointer;
+}
+.next2{
+  width: auto!important;
+  height: auto!important;
+  position: absolute;
+  top: 50%;
+  margin-top: -21px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* 目录开始 */
+.menu{
+	background: #FFFFFF;
+	font-size: 16px;
+	padding: 5px;
+}
+.menu h1{
+	text-align: center;
+	background-image: url('../img/f1.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	color: #23AEAA;
+	padding-bottom: 10px;
+	font-size: 22px;
+	margin-bottom: 30px;
+}
+.menu a{
+	color: #B4B4B4;
+}
+.menu p span{
+	min-width: 80px;
+	display: inline-block;
+}
+.menu p{
+	border-bottom: 1px solid #E9E9E9;
+	line-height: 40px;
+}
+.title{
+	padding-left: 0!important;
+}
+.newTitle a{
+color: #161818;
+font-weight: bold;
+}
+.new{
+	color: #575858!important;
+}
+.newTip{
+	background: #01CDCD;
+	display: inline-block;
+	padding: 8px 20px;
+	line-height: 1;
+	border-radius: 5px;
+	color: #fff;
+	margin-left: 20px;
+}
+@media (min-width: 1200px) {
+	.menu{
+	padding: 30px;
+}
+.menu p{
+	padding-left: 120px;
+	line-height: 55px;
+}
+.menu p span{
+	min-width: 120px;
+	display: inline-block;
+}
+}

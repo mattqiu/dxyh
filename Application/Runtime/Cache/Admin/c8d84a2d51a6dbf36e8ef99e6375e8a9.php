@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- basic styles -->
-
+    <link rel="shortcut icon" type="image/x-icon" href="/Public/img/dyxh.ico">
     <link href="/Public/admin/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Public/admin/css/font-awesome.min.css" />
 

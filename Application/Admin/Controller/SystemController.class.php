@@ -239,6 +239,7 @@ class SystemController extends BaseController
     public function website_edit(){
         D("WebsiteImage")->website();
         $data['rows'] = D("WebsiteImage")->getWebsiteinfo();
+        $data['rows']['img_link'] = urldecode($data['rows']['img_link']);
         $data['title'] = "编辑图片";
         $data['Url'] = U('System/website_edit');
         $this->assign($data);

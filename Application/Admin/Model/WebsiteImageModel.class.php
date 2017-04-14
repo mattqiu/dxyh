@@ -27,16 +27,23 @@ class WebsiteImageModel extends BaseModel
             if ($requst['id'] > 0){
                 $data = array(
                     "type" => $requst['imageType'],
-                    "img_link" => $requst['imgLink'],
+                    "img_link" => urlencode($requst['imgLink']),
                     "sort" => $requst['sort'],
                     "status" => $requst['status'],
                 );
                 if ($_FILES['fileImage']['tmp_name']){
                     $fileUrl = $fileUp->UploadFile('fileImage');
                     if (!$fileUrl){
-                        message(0, '上传图片失败');
+                        message(0, $fileUp->errorMsg);
                     }
                     $data['image'] = $fileUrl;
+                }
+                if ($_FILES['fileImage2']['tmp_name']){
+                    $appFileUrl = $fileUp->UploadFile('fileImage2');
+                    if (!$appFileUrl){
+                        message(0, $fileUp->errorMsg);
+                    }
+                    $data['app_image'] = $appFileUrl;
                 }
                 $boole = $this->editData(array('id'=>$requst['id']), $data);
                 if ($boole !== false){
@@ -45,17 +52,22 @@ class WebsiteImageModel extends BaseModel
                     message(0, "编辑失败");
                 }
             }else{
-                if (empty($_FILES['fileImage']['tmp_name'])){
+                /*if (empty($_FILES['fileImage']['tmp_name'])){
                     message(0, "请选择上传图片");
-                }
+                }*/
                 $fileUrl = $fileUp->UploadFile('fileImage');
                 if (!$fileUrl){
-                    message(0, '上传图片失败');
+                    message(0, $fileUp->errorMsg);
+                }
+                $appFileUrl = $fileUp->UploadFile('fileImage2');
+                if (!$fileUrl){
+                    message(0, $fileUp->errorMsg);
                 }
                 $data = array(
                     "type" => $requst['imageType'],
                     "image" => $fileUrl,
-                    "img_link" => $requst['imgLink'],
+                    "app_image" => $appFileUrl,
+                    "img_link" => urlencode($requst['imgLink']),
                     "sort" => $requst['sort'],
                     "status" => $requst['status'],
                 );
@@ -95,6 +107,7 @@ class WebsiteImageModel extends BaseModel
             }else{
                 $list[$key]['status'] = "<lable style=\"color: #00B83F;\">显示</lable>";
             }
+            $list[$key]['img_link'] = urldecode($item['img_link']);
         }
         $list['page'] = $page->show();
         return $list;

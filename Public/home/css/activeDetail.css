@@ -1,0 +1,332 @@
+/*
+* @Author: Administrator
+* @Date:   2017-04-05 22:06:29
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-04-13 11:52:52
+*/
+
+/* 左边活动详情 */
+.activeDetailL{
+	background-color: #fff;
+	padding: 5px;
+}
+@media (min-width: 1200px) {
+	.activeDetailL{
+	padding: 10px 80px 40px 40px;
+}
+.activeDetail{
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+}
+.code{
+	margin-left: 50px;
+	cursor:pointer;
+}
+.code img{
+	margin-right: 10px;
+}
+.activeTitle{
+	text-align: center;
+	color: #161818;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.content img{
+	width: 100%;
+	height: auto;
+}
+.content p{
+	text-indent: 2em;
+	line-height: 1.8;
+	margin-bottom: 40px;
+}
+.tips{
+	margin-top: 30px;
+	margin-bottom: 30px;	
+}
+.activeCode{
+	width: 140px!important;
+	height: 140px!important;
+}
+.scanTip{
+	width: auto!important;
+	height: auto!important;
+	margin-left: 20px;
+}
+/* 右边热门活动 */
+/* 热门活动回顾 */
+.history{
+	margin-top: 20px;
+}
+.history h2{
+	color: #333333;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 30px;
+	border-bottom: 2px solid #E0E0E0;
+	padding-bottom: 10px;
+}
+.historyList li{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	margin-bottom: 15px;
+}
+.historyList li img{
+	width: 100%;
+	height: 100%;
+}
+.mengceng{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #000;
+	opacity: 0.5;
+	height: 45px;
+}
+.historyTitle{
+	color: #fff;
+	font-size: 16px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-left: 20px;
+	height: 45px;
+	line-height: 45px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;/*多余的文字省略号展示*/
+}
+/* 加入和分享 */
+.joinBox{
+	background-color: #fff;
+	padding: 10px;
+	font-size: 12px;
+	margin-bottom: 20px;
+	line-height: 1.8;
+}
+.share{
+	text-align: right;
+	margin-bottom: 10px;
+}
+.joinBtn{
+	background-color: #26AF60;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	display: block;
+	border-radius: 4px;
+	margin-top: 15px;
+}
+
+@media (min-width: 1200px) {
+	.history{
+	padding-left: 20px;
+}
+.history{
+	margin-top: 0;
+}
+}
+
+/* 科普详情独立样式 */
+.author{
+	font-size: 16px;
+	text-align: center;
+	margin-top: -20px;
+	margin-bottom: 10px;
+}
+.keyWord{
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.keyWord span{
+color: #3FAFE3;
+margin-left: 10px;
+}
+.keyWord strong{
+	vertical-align: middle;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.keyWord strong img{
+	margin-right: 8px;
+	margin-top: -4px;
+}
+@media (min-width: 1200px) {
+	.keyWord strong{
+	float: right;
+	margin-left:20px ;
+}
+.keyWord strong img{
+	margin-right: 8px;
+}
+}
+
+.content h4{
+	color: #141516;
+	font-weight: bold;
+}
+.from{
+	font-size: 16px;
+}
+.fromA{
+	font-size: 16px;
+	margin-top: 20px;
+}
+.fromA a{color: #3E91E6;}
+/* 发表评论 */
+.publishBtn{
+	display: inline-block;
+	background: #66CCFF;
+	padding: 8px 20px;
+	color: #fff;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.filter{
+	border-bottom: 1px solid #F0F0F0;
+	padding-bottom: 20px;
+	color: #BBBBBB;
+	font-size: 16px;
+}
+.filterActive{
+	color: #333333!important;
+}
+.discussBox p{
+	margin-bottom: 0;
+	text-indent: 0;
+}
+
+.discussList{
+	border-bottom: 1px solid #F0F0F0;
+	padding: 30px 0;
+}
+.discussBox .discussList:last-child{
+	border-bottom: none;
+}
+.user{
+	margin-bottom: 20px!important;
+}
+.user img{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 20px;
+}
+.discussTime{
+	text-align: right;
+	margin-top: 25px;
+	color: #BBBBBB;
+}
+.dianPing{
+	margin-right: 20px;
+	cursor: pointer;
+}
+.discusstime{
+	float: left;
+}
+.discussTime img{
+width: auto;
+height: auto;
+margin-top: -4px;
+cursor: pointer;
+}
+.reBox{
+	background: #F6F6F6;
+	margin-top: 20px;
+	padding: 20px;
+	position: relative;
+}
+.sanjiao{
+	position: absolute;
+	top: -15px;
+	left: 20px;
+	width: auto!important;
+	height: auto!important;
+}
+.reTitle{
+	border-bottom: 1px solid #F0F0F0;
+}
+.reTitle span{
+	border-bottom: 3px solid #F63756;
+	color: #333333;
+	font-weight: bold;
+	font-size: 16px;
+	padding-bottom: 4px;
+}
+.username{
+	color: #BBBBBB;
+}
+.scienceHistory{
+	margin-top: 0;
+}
+.scienceHistory h2{
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+.username img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+.discussContent{
+	margin-top: 20px;
+}
+.discussContentR{
+	padding-top:5px;
+	padding-left: 60px;
+}
+@media (min-width: 1200px) {
+	.discussContentR{
+	margin-left: -40px;
+	padding-left: 0;
+}
+}
+
+.r1{
+	padding-left: 60px;
+	color: #BBBBBB;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.content1{
+	resize: none;
+	width: 100%;
+	height: 100px;
+	padding: 8px;
+	font-size: 14px;
+}
+.reForm{
+	padding-left: 60px;
+	padding-top: 20px;
+	display: none;
+}
+.reForm2{
+	padding-top: 20px;
+	display: none;
+}
+.reForm3{
+	display: block;
+	margin-top: 50px;
+}
+.reForm textarea,.reForm2 textarea,.reForm3 textarea{
+	border: 1px solid #e0e0e0;
+}
+.reFormBtn{
+	background: #3CA5F6;
+	border: none;
+	padding: 12px 60px;
+	color: #fff;
+	font-size: 18px;
+	margin-top: 10px;
+	cursor: pointer;
+}
