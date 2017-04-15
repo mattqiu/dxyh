@@ -2,13 +2,17 @@
 * @Author: Administrator
 * @Date:   2017-04-05 22:06:29
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-13 11:52:52
+* @Last Modified time: 2017-04-14 20:00:24
 */
-
+/* 分享按钮 */
+.bshare-custom{
+	text-align: right;
+	margin-bottom: 10px;
+}
 /* 左边活动详情 */
 .activeDetailL{
 	background-color: #fff;
-	padding: 5px;
+	padding: 10px;
 }
 @media (min-width: 1200px) {
 	.activeDetailL{
@@ -31,18 +35,27 @@
 	color: #161818;
 	font-size: 18px;
 	font-weight: bold;
-	margin-top: 30px;
+	margin-top: 10px;
 	margin-bottom: 30px;
+}
+.content p{
+	text-indent: 2em;
+	line-height: 1.4;
+	margin-bottom: 40px;
+}
+@media (min-width: 1200px) {
+	.activeTitle{
+		margin-top: 30px;
+	}
+	.content p{
+	line-height: 1.8;
+}
 }
 .content img{
 	width: 100%;
 	height: auto;
 }
-.content p{
-	text-indent: 2em;
-	line-height: 1.8;
-	margin-bottom: 40px;
-}
+
 .tips{
 	margin-top: 30px;
 	margin-bottom: 30px;	
@@ -58,9 +71,6 @@
 }
 /* 右边热门活动 */
 /* 热门活动回顾 */
-.history{
-	margin-top: 20px;
-}
 .history h2{
 	color: #333333;
 	font-size: 16px;
@@ -104,13 +114,20 @@
 .joinBox{
 	background-color: #fff;
 	padding: 10px;
-	font-size: 12px;
+	font-size: 14px;
 	margin-bottom: 20px;
 	line-height: 1.8;
 }
-.share{
-	text-align: right;
-	margin-bottom: 10px;
+.joinBtnBox{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index:999;
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	background: #fff;
 }
 .joinBtn{
 	background-color: #26AF60;
@@ -121,9 +138,14 @@
 	display: block;
 	border-radius: 4px;
 	margin-top: 15px;
+	font-size: 18px;
 }
 
 @media (min-width: 1200px) {
+	.joinBtnBox{
+		position: static;
+		padding: 0;
+	}
 	.history{
 	padding-left: 20px;
 }
@@ -207,13 +229,13 @@ margin-left: 10px;
 
 .discussList{
 	border-bottom: 1px solid #F0F0F0;
-	padding: 30px 0;
+	padding: 10px 0;
 }
 .discussBox .discussList:last-child{
 	border-bottom: none;
 }
 .user{
-	margin-bottom: 20px!important;
+	margin-bottom: 10px!important;
 }
 .user img{
 width: 50px;
@@ -223,7 +245,7 @@ margin-right: 20px;
 }
 .discussTime{
 	text-align: right;
-	margin-top: 25px;
+	margin-top: 5px;
 	color: #BBBBBB;
 }
 .dianPing{
@@ -239,12 +261,7 @@ height: auto;
 margin-top: -4px;
 cursor: pointer;
 }
-.reBox{
-	background: #F6F6F6;
-	margin-top: 20px;
-	padding: 20px;
-	position: relative;
-}
+
 .sanjiao{
 	position: absolute;
 	top: -15px;
@@ -285,10 +302,40 @@ cursor: pointer;
 	padding-top:5px;
 	padding-left: 60px;
 }
+.reForm{
+	padding-left: 60px;
+	display: none;
+}
+.reForm2{
+	display: none;
+	margin-top: 5px;
+}
+.reBox{
+	background: #F6F6F6;
+	margin-top: 20px;
+	padding: 20px;
+	padding-bottom: 5px;
+	position: relative;
+}
 @media (min-width: 1200px) {
+	.reBox{
+		padding-bottom: 20px;
+}
+	.user{
+	margin-bottom: 20px!important;
+}
 	.discussContentR{
 	margin-left: -40px;
 	padding-left: 0;
+}
+.reForm{
+	padding-left: 60px;
+	padding-top: 20px;
+	display: none;
+}
+.reForm2{
+	display: none;
+	margin-top: 10px;
 }
 }
 
@@ -305,18 +352,10 @@ cursor: pointer;
 	padding: 8px;
 	font-size: 14px;
 }
-.reForm{
-	padding-left: 60px;
-	padding-top: 20px;
-	display: none;
-}
-.reForm2{
-	padding-top: 20px;
-	display: none;
-}
+
+
 .reForm3{
 	display: block;
-	margin-top: 50px;
 }
 .reForm textarea,.reForm2 textarea,.reForm3 textarea{
 	border: 1px solid #e0e0e0;

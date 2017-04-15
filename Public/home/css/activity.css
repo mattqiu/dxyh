@@ -2,15 +2,20 @@
 * @Author: Administrator
 * @Date:   2017-04-04 13:41:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-12 17:13:44
+* @Last Modified time: 2017-04-14 19:46:45
 */
 body{
 	background: #fff;
 }
 /* 活动分类 */
 .activeStyle{
-	margin-top: 20px;
-	margin-bottom: 30px;
+	display: none;
+	position: absolute;
+	top: 119px;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	border-top: 1px solid #eee;
 }
 .activeStyle a{
 	color: #333333;
@@ -19,13 +24,86 @@ body{
 	font-size: 14px;
 	line-height: 35px;
 	color: #999999;
+	background: #F5F5F5;
+	padding-left: 10px;
+	color: #2D9E12;
 }
 .activeStyleR{
 	font-size: 14px;
+	padding: 10px;
+	background: #F5F5F5;
+}
+.activeStyleR a{
+	display: inline-block;
+	margin-right: 15px;
+	border: 1px solid #e0e0e0;
+	text-align: center;
+	padding: 2px 4px;
+	border-radius: 2px;
+	margin-bottom: 10px;
+}
+.activeStyleActive{
+	color: #FB890A!important;
+}
+
+/* 搜索开始 */
+.searchBox{
+		margin-bottom: -20px;
+		background: #F7F7F7;
+		padding: 10px;
+	}
+	.input{
+	width: 87%;
+	  height: 30px;
+	float: left;
+	font-size: 16px;
+	padding-left: 5px;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #e0e0e0;
+	background: #E3E3E5;
+}
+.submit{
+	width: 13%;
+	height: 30px;
+	line-height: 30px;
+	outline: none;
+	border: none;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	font-size: 16px;
+	background: #F7F7F7;
+	color: #2D9E12;
+}
+@media (min-width: 1200px) {
+	.activeStyle{
+		display: block;
+		position: static;
+		width: 1200px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	border-top: none;
+}
+	.activeStyleL{
+	font-size: 14px;
+	line-height: 35px;
+	color: #999999;
+	background: none;
+	padding-left: 0;
+}
+	.activeStyleR{
+	font-size: 14px;
+	background: none;
+	padding: 0;
+
 }
 .activeStyleR a{
 	display: inline-block;
 	margin-right: 34px;
+	border: none;
+	padding: 0;
 }
 .activeStyleActive{
 	color: #FB890A!important;
@@ -34,32 +112,17 @@ body{
 	border-bottom: 1px dashed #DEDEDE;
 	line-height: 35px;
 }
-
-/* 搜索开始 */
-.searchBox{
-		margin-top: 5px;
-		margin-bottom: -20px;
-	}
-@media (min-width: 1200px) {
 .searchBox{
 	margin-top: 0;
 		margin-bottom: 0;
+		background: none;
+		padding: 0;
 	}
-}
-.searchBoxL{
-	font-size: 14px;
-	color: #999999;
-	height: 40px;
-	line-height: 40px;
-}
-.input{
-	width: 87%;
-	  height: 40px;
-	float: left;
-	font-size: 16px;
-	padding-left: 5px;
+	.input{
 	border: 2px solid #2D9E12;
-	outline: none;
+	background: none;
+	border-radius: 0;
+	height: 40px;
 }
 .submit{
 	width: 13%;
@@ -74,15 +137,29 @@ body{
 	float: left;
 	font-size: 16px;
 }
+}
+.searchBoxL{
+	font-size: 14px;
+	color: #999999;
+	height: 40px;
+	line-height: 40px;
+}
+
+
 /* 左边活动列表开始 */
 .activeBox{
+	margin-top: 20px;
+}
+@media (min-width: 1200px) {
+	.activeBox{
 	margin-top: 40px;
+}
 }
 .activeListBox a{
 	color: #919191;
 }
 .activeListBox h1{
-	font-size: 18px;
+	font-size: 14px;
 	color: #282828;
 	font-weight: bold;
 	overflow: hidden;
@@ -93,33 +170,41 @@ body{
 	position: relative;
 	background-color: #fff;
 	padding: 10px;
+	padding-top: 0;
 	margin-bottom: 15px;
 	border-bottom: 1px dashed #e0e0e0;
-	padding-bottom: 20px;
 }
 .activeList img{
 	float: left;
 	width: 100%;
-	height: 162px;
+	height: 100px;
 }
 .activeList p{
-	font-size: 16px;
-	margin-top: 5px;
+	font-size: 14px;
 }
 .activeListR .number{
 	display: block;
 }
+.activeListR{
+		padding-left: 20px;
+	}
 @media (min-width: 1200px) {
+	.activeListBox h1{
+	font-size: 18px;
+}
 	.activeListR .number{
 		margin-left: 30px;
 		display: inline;
 	}
 	.activeList p{
-		margin-top: 15px;
+		font-size: 16px;
+		margin-top: 8px;
 	}
-	.activeListR{
-		padding-left: 20px;
-	}
+	.activeList img{
+	float: left;
+	width: 100%;
+	height: 135px;
+}
 	.activeList{
 		padding-left: 0;
 	}
@@ -186,7 +271,7 @@ body{
 	padding: 10px;
 	background-color: #fff;
 	width: 100%;
-	height: 190px;
+	height: 185px;
 	margin-bottom: 15px;
 	padding-left: 0;
 }
@@ -232,7 +317,7 @@ body{
 	float: right;
 }
 .figcaption {
-  height: 5.6em!important;
+  height: 4.2em!important;
 }
 
 .figcaption p {
@@ -273,4 +358,13 @@ body{
 
 .titleLogoR p:last-child {
   color: #666;
+}
+@media (min-width: 1200px) {
+	.figcaption {
+  height: 5.6em!important;
+}
+
+.figcaption p {
+  line-height: 1.4em!important;
+}
 }

@@ -21,6 +21,7 @@ class CopticController extends CommonController
         $data['rows'] = D("Coptic")->getList();
 
         $data['copticType'] = M("CopticType")->order(array("sort"=>"desc","create_time"=>"desc"))->select();
+        $this->display("science");
     }
 
     public function details(){
@@ -28,6 +29,7 @@ class CopticController extends CommonController
         $data['checkLikes'] = M("Comment")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id'], "status"=>1))->find();
         $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->find();
         $data['comment'] = D("Comment")->getCopticComment();
+        $this->details("scienceDetail");
     }
 
 

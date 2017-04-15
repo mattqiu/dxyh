@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
+		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+		<style>
+		.main { background: #fff; border: 1px solid #e0e0e0; margin-top: 50px; margin-bottom: 120px; padding-top: 60px; padding-bottom: 50px; width: 1000px; }
+		.main h1 { font-size: 20px; color: #000000; padding-left: 114px; font-weight: bold; margin-bottom: 40px; }
+		.form1 { display: inline-block; margin-left: 160px; border-right: 1px solid #e0e0e0; padding-right: 90px; }
+		.left h2 { color: #333333; font-size: 16px; }
+		.left input { width: 310px; height: 40px; font-size: 16px; padding-left: 8px; margin-top: 10px; margin-bottom: 10px;border: 1px solid #e0e0e0; }
+		.others { float: right; width: 320px; font-size: 16px; }
+		.others a { color: #4D4D4D; }
+		.others p { margin-bottom: 30px; }
+		.others p img { margin-right: 10px; }
+		.p1 a { color: #F55351; }
+		.p2 { color: #999999; margin-top: 40px; margin-bottom: 20px; }
+		.checkBox input { width: 20px !important; height: 20px !important; vertical-align: middle; margin-right: 10px; }
+		.submit { border: none; background: #2D9E12; color: #fff; cursor: pointer; }
+		@media (min-width:1400px) {
+			body { padding-bottom: 280px; }
+			.commonBottom { position: fixed; bottom: 0; left: 0; width: 100%; }
+		}
+		</style>
+	</head>
+	<body>
+		<!-- 公共头部开始 -->
+		<include file="header"/>
+		<!-- 公共头部结束 -->
+		<div class="wrap main container">
+			<h1>登录</h1>
+			<div class="col-lg-6 left">
+				<!-- 表单开始 -->
+				<form action="" class="form1">
+					<h2>昵称</h2>
+					<input type="text" placeholder="请输入昵称">
+					<h2>密码</h2>
+					<input type="password" placeholder="请输入密码">
+					<div class="checkBox">
+						<input type="checkbox">记住用户名
+					</div>
+					<input class="submit" type="submit" value="立即登录">
+				</form>
+				<!-- 表单结束 -->
+			</div>
+			<div class="col-lg-6">
+				<!-- 其他登录方式开始 -->
+				<div class="others">
+					<p class="p1">还没有账号？<a href="regist.html">立即注册</a></p>
+					<p class="p2">可使用以下账号直接登录</p>
+					<p><a href="#"><img src="__PUBLIC__/home/img/wexin2.png" alt="">微信登录</a></p>
+					<p><a href="#"><img src="__PUBLIC__/home/img/qq2.png" alt="">QQ登录</a></p>
+					<p><a href="#"><img src="__PUBLIC__/home/img/weibo2.png" alt="">微博登录</a></p>
+				</div>
+				<!-- 其他登录方式结束 -->
+			</div>
+		</div>
+		<!-- 公共底部模块开始 -->
+		<include file="Public/footer"/>
+		<!-- 公共底部模块结束 -->
+		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript">
+								// 小屏幕展开导航效果
+			$(function() {
+				$(".cmtMenuLogo").click(function() {
+					$(".commonTop nav").toggle();
+					$(".commonTop").toggleClass('t6');
+				}
+				)
+			}
+			)
+		</script>
+	</body>
+</html>

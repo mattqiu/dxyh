@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-06 10:35:04
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-12 13:40:59
+* @Last Modified time: 2017-04-14 22:00:33
 */
 body{
   background: #fff;
@@ -13,13 +13,14 @@ body{
 /* 轮播图 */
 .swiper1 {
   width: 100%;
-  height: 150px;
+  height: auto;
   top: -1px;
+  margin-bottom: 10px;
 }
 /* 板块风采轮播 */
 .swiper2 {
   width: 100%;
-  height: 150px;
+  height: 170px;
 }
 .swiper2 img{
   width: 100%;
@@ -28,7 +29,7 @@ body{
 .swiper2 a{
   display: block;
   height: 100%;
-  padding: 15px;
+  /* padding: 15px; */
 }
 .plateStyleListBox{
   background: #fff;
@@ -62,9 +63,16 @@ body{
 }
 .box3{
   position: relative;
+  padding-left: 8px;
+  padding-right:8px;
 }
-.pagination {
-  display: block;
+@media (min-width: 1200px) {
+  .box3{
+  padding-left: 0;
+  padding-right:0;
+}
+}
+.swiper-pagination {
   position: absolute;
   z-index: 20;
   text-align: center;
@@ -76,7 +84,7 @@ body{
   border-radius: 15px;
 }
 
-.swiper-pagination-switch {
+.swiper-pagination-bullet {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -87,25 +95,31 @@ body{
   cursor: pointer;
 }
 
-.swiper-active-switch {
+.swiper-pagination-bullet-active {
   background: #FB890A;
 }
-
+.bankuai{
+  padding-bottom: 20px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
 @media (min-width:1200px) {
   .swiper1 {
-    height: 520px;
+    height: 460px;
+    margin-bottom: 0;
   }
+  .bankuai{
+ border: none;
+}
 .swiper2 {
-  height: 270px;
+  height: 250px;
 }
-.w1230{
-  width: 1230px;
-}
-  .pagination {
+  .swiper-pagination {
+    width: auto!important;
     background: #418431;
-    left: 50%;
+    left: 50%!important;
     margin-left: -60px;
-    bottom: 30px;
+    bottom: 30px!important;
     height: 30px;
     padding-top: 6px;
     padding-right: 8px;
@@ -113,13 +127,13 @@ body{
     border-radius: 15px;
   }
 
-  .swiper-pagination-switch {
+  .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     border-radius: 15px
   }
 
-  .swiper-active-switch {
+  .swiper-pagination-bullet-active {
     width: 35px;
     background: #BAD1B4;
   }
@@ -132,6 +146,7 @@ body{
   color: #333;
   font-size: 16px;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .titleLogo {
@@ -170,30 +185,38 @@ body{
 .titleLogoR p:last-child {
   color: #666;
 }
-@media (min-width:1200px) {
-  .article1List {
-    margin-left: -8px;
-    margin-right: -8px;
-  }
-
-}
-
 .article1 {
-  padding-left: 8px;
-  padding-right: 8px;
   margin-bottom: 15px;
+  padding: 0 8px;
 }
-
-.article1 a {
-  display: block;
-  background: #FAFAFA;
-  padding: 15px;
-}
-
 .article1 img {
   width: 100%;
   height: auto;
 }
+@media (min-width:1200px) {
+  .article1List {
+   width: 1214px;
+  }
+  .article1 {
+    padding-left: 0;
+  padding-right: 14px;
+  margin-bottom: 15px;
+}
+.article1 img {
+  width: 100%;
+  height: 170px;
+}
+
+}
+
+
+
+.article1 a {
+  display: block;
+  background: #FAFAFA;
+}
+
+
 
 .article1 p {
   color: #B7B8B8;
@@ -205,12 +228,23 @@ body{
   white-space: nowrap;
   text-overflow: ellipsis;/*多余的文字省略号展示*/
   color: #113F6A;
-  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 14px;
   margin-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
 }
-
+@media (min-width: 1200px) {
+  .article1 h3 {
+    padding-bottom: 0;
+    padding-left: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.article1 a{
+  padding: 15px;
+}
+}
 .figcaption {
   height: 4.5em;
 }
@@ -221,7 +255,8 @@ body{
 .more{
   color: #FB890A;
   text-align: right;
-  display: block;
+  float: right;
+  display: inline-block;
   padding-right: 16px;
   margin-bottom: 10px;
 }
@@ -231,33 +266,16 @@ body{
   padding-bottom: 24px;
 }
 .newActivity1{
-  padding: 24px 12px;
+  padding: 24px 8px;
   position: relative;
   padding-bottom: 0;
-}
-.newActivity1 a{
-  display: block;
-  border: 1px solid #E0E0E0;
-}
-.newActivity1 a img{
-  width: 100%;
-  height: 210px;
-}
-.newActivity1 h3{
-  position: absolute;
-  top: 184px;
-  left: 13px;
-  right: 13px;
-  height: 50px;
-  background: #000;
-  opacity: 0.5;
 }
 .newActivityP{
   padding-left: 10px;
   position: absolute;
-  top: 184px;
-  left: 13px;
-  right: 13px;
+  bottom: 50px;
+  left: 8px;
+  right: 8px;
   height: 50px;
   line-height: 50px;
   overflow: hidden;
@@ -267,6 +285,49 @@ body{
   font-size: 16px;
   font-weight: bold;
 }
+.newActivity1 h3{
+  position: absolute;
+  bottom: 50px;
+  left: 8px;
+  right: 8px;
+  height: 50px;
+  background: #000;
+  opacity: 0.5;
+}
+.newActivity1 a img{
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .newActivity1 h3{
+  left: 13px;
+  right: 13px;
+  bottom: 74px;
+}
+.newActivity1 a img{
+  width: 100%;
+  height: 250px;
+}
+  .newActivityP{
+  left: 13px;
+  right: 13px;
+  bottom: 74px;
+}
+  .newActivity1{
+    padding: 24px 12px;
+  }
+  .wnewActivity{
+    width: 1224px;
+  }
+}
+.newActivity1 a{
+  display: block;
+  border: 1px solid #E0E0E0;
+}
+
+
+
+
 .activeMessage{
   color: #8E8B8B;
   line-height: 50px;

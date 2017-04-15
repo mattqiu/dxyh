@@ -18,6 +18,21 @@ class UserController extends CommonController
 
     public function index(){
 
+        $this->display("memberCenter");
+    }
+
+    public function myActivity(){
+
+        $this->display();
+    }
+
+    public function myIntegral(){
+
+        $this->display();
+    }
+
+    public function myKeep(){
+
         $this->display();
     }
 }

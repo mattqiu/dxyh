@@ -2,9 +2,31 @@
 * @Author: Administrator
 * @Date:   2017-04-10 14:11:05
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-13 11:58:18
+* @Last Modified time: 2017-04-14 19:47:55
 */
+/* 分页 */
+.pages{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.pages a{
+	display: inline-block;
+	color: #979797;
+	text-align: center;
+	float: left;
+	margin-left: 12px;
+	margin-bottom: 10px;
+	border: 1px solid #e0e0e0;
+	padding:8px 15px;
+}
+.home{
+	margin-left: 0!important;
+}
 
+.pageActive{
+	background-color: #2D9E12!important;
+	color: #fff!important;
+}
 /* 左侧导航 */
 .left{
 	background: #fff;
@@ -71,12 +93,14 @@
 	padding-bottom: 20px;
 	border-bottom: 4px solid #E8F3F9;
 	margin-bottom: 30px;
+	margin-right: 24px;
 }
 .userMessage{
 	padding: 5px;
 }
 .userMessage p{
 	padding-left: 100px;
+	margin-bottom: 8px;
 }
 .userMessage p img{
 	width: 20px;
@@ -90,7 +114,6 @@
 }
 .username{
 	color: #656464;
-	padding-top: 10px;
 }
 .username img{
 	margin-left: 10px;
@@ -104,7 +127,7 @@
 	font-size: 16px;
 	text-align: center;
 	border-radius: 4px;
-	margin-top: 30px;
+	margin-top: 10px;
 	margin-left: 10px;
 }
 @media (min-width: 1200px) {
@@ -133,11 +156,13 @@
 	margin-left: 20px;
 	border: 1px solid #e0e0e0;
 	padding-left: 30px;
+	padding-right: 6px;
 	min-height: 800px;
 	margin-top: 0;
 }
 .change{
 	margin-left: 0;
+	margin-top: 30px;
 }
 
 }
@@ -145,13 +170,34 @@
 
 /* 我的活动特有样式 */
 .avtiveList{
-	padding:0 13px;
 	margin-bottom: 20px;
+	padding-right: 12px;
+	padding-left: 12px;
+}
+.c2p{
+	font-size: 16px;
+	margin-bottom: 5px;
 }
 .activeImg img{
-	height: 200px;
+	height: auto;
 	width: 100%;
 }
+@media (min-width: 1200px) {
+	.activeImg img{
+	height: 185px;
+	width: 100%;
+}
+	.avtiveList{
+		padding-left: 0;
+	margin-bottom: 20px;
+	padding-right: 24px;
+}
+/* .avtiveList:nth-child(3n+1){
+	padding-right: 0;
+} */
+}
+
+
 .activeImg{
 	position: relative;
 }
@@ -201,7 +247,14 @@ text-overflow: ellipsis;/*多余的文字省略号展示*/
 .Jamount span:nth-child(1){
 	font-size: 25px;
 }
+.Jtable{
+	width: 100%;
+	text-align: center;
+}
 @media (min-width: 1200px) {
+	.Jtable{
+		width: 97.4%;
+}
 	.Jamount{
 	padding-left: 25px;
 	margin-bottom: 50px;
@@ -210,10 +263,7 @@ text-overflow: ellipsis;/*多余的文字省略号展示*/
 	width: 50%;
 }
  }
-.Jtable{
-	width: 100%;
-	text-align: center;
-}
+
 .Jtable th{
 	background: #F5F5F5;
 }
@@ -274,6 +324,7 @@ text-overflow: ellipsis;/*多余的文字省略号展示*/
 	text-align: right;
 	padding-right: 20px;
 	color: #4D4D4D;
+	width: 22%;
 }
 .cpTable tr td{
 	padding-bottom: 20px;
@@ -326,6 +377,7 @@ text-overflow: ellipsis;/*多余的文字省略号展示*/
 	text-align: center;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	margin-bottom: 20px;
 }
 
 @media (min-width: 1200px) {
@@ -338,6 +390,7 @@ text-overflow: ellipsis;/*多余的文字省略号展示*/
 	padding-top: 50px;
 	text-align: center;
 	margin-right: 100px;
+	margin-bottom: 0;
 }
 .cmForm{
 	display: inline-block;

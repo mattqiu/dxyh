@@ -18,6 +18,6 @@ class AboutusController extends CommonController
 
     public function index(){
 
-        $this->display();
+        $this->display("Public/aboutUs");
     }
 }

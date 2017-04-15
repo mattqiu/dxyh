@@ -1,0 +1,9 @@
+<script>
+    //js控制导航选中效果
+    $("#sidebar-menu").find("a").on("click",function (ev) {
+        if ($(this).parent().is(".active")){
+            $(this).parent().removeClass("active");
+        }
+        $(this).addClass("active");
+    });
+</script>

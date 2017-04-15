@@ -18,6 +18,11 @@ class HomeCareController extends CommonController
 
     public function index(){
 
-        $this->display();
+        $this->display("family");
+    }
+
+    public function detail(){
+
+        $this->display("familyDetail");
     }
 }

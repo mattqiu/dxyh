@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>家庭护理</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/idangerous.swiper.css">
+		<link rel="stylesheet" href="__PUBLIC__/home/css/family.css">
+		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+	</head>
+	<body>
+		<!-- 公共头部开始 -->
+		<include file="Public/header"/>
+		<!-- 公共头部结束 -->
+		<div class="container wrap box3">
+			<!-- 轮播开始 -->
+			<div class="swiper-container swiper2 visible-lg">
+				<!-- 图片开始 -->
+				<div class="swiper-wrapper">
+					<!-- 一个轮播页开始 -->
+					<div class="swiper-slide container plateStyleListBox">
+						<a href="#">
+							<img src="__PUBLIC__/home/img/img1.png" alt="">
+						</a>
+					</div>
+					<!-- 一个轮播页结束 -->
+					<!-- 一个轮播页开始 -->
+					<div class="swiper-slide container plateStyleListBox">
+						<a href="#">
+							<img src="__PUBLIC__/home/img/i1.png" alt="">
+						</a>
+					</div>
+					<!-- 一个轮播页结束 -->
+					<!-- 一个轮播页开始 -->
+					<div class="swiper-slide container plateStyleListBox">
+						<a href="#">
+							<img src="__PUBLIC__/home/img/img1.png" alt="">
+						</a>
+					</div>
+					<!-- 一个轮播页结束 -->
+					<!-- 一个轮播页开始 -->
+					<div class="swiper-slide container plateStyleListBox">
+						<a href="#">
+							<img src="__PUBLIC__/home/img/img1.png" alt="">
+						</a>
+					</div>
+					<!-- 一个轮播页结束 -->
+					<!-- 一个轮播页开始 -->
+					<div class="swiper-slide container plateStyleListBox">
+						<a href="#">
+							<img src="__PUBLIC__/home/img/img1.png" alt="">
+						</a>
+					</div>
+					<!-- 一个轮播页结束 -->
+				</div>
+				<!-- 图片结束 -->
+			</div>
+			<!-- 轮播结束 -->
+			<!-- 上一页，下一页控制按钮开始 -->
+			<img class="pre2 visible-lg" src="__PUBLIC__/home/img/f3.png" alt="">
+			<img class="next2 visible-lg" src="__PUBLIC__/home/img/f2.png" alt="">
+			<!-- 上一页，下一页控制按钮结束 -->
+		</div>
+		<!-- 目录开始 -->
+		<div class="wrap menu">
+			<h1>目录</h1>
+			<p class="title newTitle"><a href="familyDetail.html">序言</a></p>
+			<p class="title newTitle"><a href="familyDetail.html"><span>第一章</span>基本家庭护理操作</a></p>
+			<p><a class="new" href="familyDetail.html">第一节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a class="new" href="familyDetail.html">第二节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a class="new" href="familyDetail.html">第三节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a class="new" href="#">第四节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a class="new" href="#">第五节&nbsp;&nbsp;基本清洁<strong class="newTip">最新</strong></a></p>
+			<p><a href="#">第一节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a href="#">第二节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a href="#">第三节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a href="#">第四节&nbsp;&nbsp;基本清洁</a></p>
+			<p><a href="#">第五节&nbsp;&nbsp;基本清洁</a></p>
+			<p class="title"><a href="#"><span>第二章</span>基本家庭护理操作</a></p>
+		</div>
+		<!-- 目录结束 -->
+		<!-- 公共底部模块开始 -->
+		<include file="Public/footer"/>
+		<!-- 公共底部模块结束 -->
+		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/home/js/idangerous.swiper.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var clientWidth = document.documentElement && document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+				var n=5;//轮播图显示个数
+				if (clientWidth<1200) {
+					n=1;//小屏幕小，显示一个轮播页
+				}
+				var mySwiper2 = $('.swiper2').swiper({
+			autoplay: 5000,
+			loop: true,
+			slidesPerView :n,
+			spaceBetween:20,
+		});
+		// 上一页
+		$(".pre2").click(function(){
+			mySwiper2.slidePrev();
+		})
+		// 下一页
+		$(".next2").click(function(){
+			mySwiper2.slideNext();
+		})
+			})
+		</script>
+			<script type="text/javascript">
+								// 小屏幕展开导航效果
+			$(function() {
+				$(".cmtMenuLogo").click(function() {
+					$(".commonTop nav").toggle();
+					$(".commonTop").toggleClass('t6');
+				}
+				)
+			}
+			)
+		</script>
+	</body>
+</html>

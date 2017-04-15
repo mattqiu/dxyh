@@ -8,7 +8,7 @@ $(function() {
 	var mySwiper1 = $('.swiper1').swiper({
 		autoplay: 5000,
 		loop: true,
-		pagination: '.pagination',
+		pagination: '.swiper-pagination',
 		paginationClickable: true
 	});
 	// 板块风采轮播图
@@ -16,14 +16,15 @@ $(function() {
 		autoplay: 5000,
 		loop: true,
 		slidesPerView: n,
+		spaceBetween:25,
 	});
 	// 上一页
 	$(".pre2").click(function() {
-			mySwiper2.swipePrev();
+			mySwiper2.slidePrev();
 		})
 		// 下一页
 	$(".next2").click(function() {
-		mySwiper2.swipeNext();
+		mySwiper2.slideNext();
 	})
 })
 
@@ -36,3 +37,11 @@ $(".figcaption").each(function(i) {
 		};
 	})
 	//			多行文本省略...结束
+$(function(){
+	// 调节轮播图比例
+	var clientWidth = document.documentElement && document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+	if (clientWidth < 1200) {
+		$(".swiper1").height(clientWidth/2);
+		$(".swiper2").height(clientWidth/2);
+	}
+})

@@ -2,12 +2,12 @@
 * @Author: Administrator
 * @Date:   2017-04-08 21:55:47
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-09 11:23:29
+* @Last Modified time: 2017-04-14 11:17:42
 */
 .main{
 	background: #fff;
 	position: relative;
-	padding:5px;
+	padding:10px;
 }
 /* 左侧目录 */
 .leftMenu{
@@ -82,20 +82,16 @@ background-position: top;
 }
 /* 底部控制区域开始 */
 .bottomMenu{
-	position: fixed;
 	width: 100%;
-	bottom: 0;
-	left: 0;
 	background: #fff;
 	padding-bottom: 10px;
 	padding-left: 5px;
-	display: none;
 	text-align: center;
 }
 .bottomMenu a{
 	display: inline-block;
 	color: #080808;
-	padding: 2px;
+	padding: 2px 6px;
 	border: 1px solid #e0e0e0;
 	margin-right: 10px;
 }
