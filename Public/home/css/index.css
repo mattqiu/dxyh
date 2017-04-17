@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-06 10:35:04
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-14 22:00:33
+* @Last Modified time: 2017-04-17 14:33:16
 */
 body{
   background: #fff;
@@ -83,7 +83,21 @@ body{
   padding-left: 8px;
   border-radius: 15px;
 }
-
+.swiper-pagination2 {
+  position: absolute;
+  z-index: 20;
+  text-align: center;
+  bottom:0;
+  height: 30px;
+  padding-top: 6px;
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 15px;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
 .swiper-pagination-bullet {
   display: inline-block;
   width: 8px;
@@ -266,9 +280,9 @@ body{
   padding-bottom: 24px;
 }
 .newActivity1{
-  padding: 24px 8px;
+  padding:0 8px;
   position: relative;
-  padding-bottom: 0;
+  margin-bottom: 20px;
 }
 .newActivityP{
   padding-left: 10px;
@@ -302,7 +316,7 @@ body{
   .newActivity1 h3{
   left: 13px;
   right: 13px;
-  bottom: 74px;
+  bottom: 50px;
 }
 .newActivity1 a img{
   width: 100%;
@@ -311,10 +325,11 @@ body{
   .newActivityP{
   left: 13px;
   right: 13px;
-  bottom: 74px;
+  bottom: 50px;
 }
   .newActivity1{
-    padding: 24px 12px;
+    padding: 0 12px;
+    margin-bottom: 0;
   }
   .wnewActivity{
     width: 1224px;

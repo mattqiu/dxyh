@@ -6,9 +6,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="stylesheet" href="/Public/home/css/center.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
+		<link rel="stylesheet" href="/dxyh/Public/home/css/center.css">
+		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -16,10 +16,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <img src="/dxyh/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -46,11 +46,11 @@
 			<!-- 左边导航开始 -->
 			<div class="col-lg-2 left" id="memberCenter">
     <p class="leftTitle visible-lg">会员中心</p>
-    <a href="<?php echo U('User/index');?>"><img src="/Public/home/img/c2.png" alt="">个人信息</a>
-    <a href="<?php echo U('User/myKeep');?>"><img src="/Public/home/img/c3.png" alt="">我的收藏</a>
-    <a href="<?php echo U('User/myActivity');?>"><img src="/Public/home/img/c4.png" alt="">我的活动</a>
-    <a href="<?php echo U('User/myIntegral');?>"><img src="/Public/home/img/c9.png" alt="">我的积分</a>
-    <a href="<?php echo U('User/modifyPasswd');?>"><img src="/Public/home/img/c5.png" alt="">修改密码</a>
+    <a href="<?php echo U('User/index');?>"><img src="/dxyh/Public/home/img/c2.png" alt="">个人信息</a>
+    <a href="<?php echo U('User/myKeep');?>"><img src="/dxyh/Public/home/img/c3.png" alt="">我的收藏</a>
+    <a href="<?php echo U('User/myActivity');?>"><img src="/dxyh/Public/home/img/c4.png" alt="">我的活动</a>
+    <a href="<?php echo U('User/myIntegral');?>"><img src="/dxyh/Public/home/img/c9.png" alt="">我的积分</a>
+    <a href="<?php echo U('User/modifyPasswd');?>"><img src="/dxyh/Public/home/img/c5.png" alt="">修改密码</a>
 </div>
 			<!-- 左边导航结束 -->
 			<!-- 右侧信息模块开始 -->
@@ -59,11 +59,11 @@
 					<p class="rightTitle visible-lg">我的信息</p>
 					<div class="clearfix userMessage">
 						<!-- 头像开始 -->
-						<img class="userImg" src="/Public/home/img/img1.png" alt="">
+						<img class="userImg" src="/dxyh/Public/home/img/img1.png" alt="">
 						<!-- 头像结束 -->
-						<p class="username">花香四溢<img src="/Public/home/img/c1.png" alt=""></p><!-- 昵称 -->
-						<p><img src="/Public/home/img/c6.png" alt="">董小姐</p>
-						<p><img src="/Public/home/img/c7.png" alt="">18063754734</p>
+						<p class="username">花香四溢<img src="/dxyh/Public/home/img/c1.png" alt=""></p><!-- 昵称 -->
+						<p><img src="/dxyh/Public/home/img/c6.png" alt="">董小姐</p>
+						<p><img src="/dxyh/Public/home/img/c7.png" alt="">18063754734</p>
 					</div>
 					<a href="<?php echo U('User/changeMeaage');?>" class="change">修改资料</a>
 				</div>
@@ -96,7 +96,7 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
 			<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {

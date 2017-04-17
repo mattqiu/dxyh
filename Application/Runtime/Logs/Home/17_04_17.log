@@ -6591,3 +6591,620 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
 
+[ 2017-04-17T13:06:04+08:00 ] ::1 /dxyh/Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T13:06:25+08:00 ] ::1 /dxyh/Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-17T13:06:25+08:00 ] ::1 /dxyh/Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-17T13:06:46+08:00 ] ::1 /dxyh/Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-17T13:07:10+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0540s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0510s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492405629') [ RunTime:0.1900s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0530s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0530s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0530s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0880s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0690s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0650s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:08:43+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T13:09:06+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T13:09:19+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.5928s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.1716s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.1704s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492405757') [ RunTime:0.3040s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.1670s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.1740s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.1688s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.1670s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.1594s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.1756s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.1716s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.1716s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-17T13:52:41+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0300s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0350s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492408360') [ RunTime:0.1690s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0300s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0310s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0310s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:52:47+08:00 ] ::1 /dxyh/Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0510s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:52:50+08:00 ] ::1 /dxyh/Home/User/changeMeaage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0520s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:52:50+08:00 ] ::1 /dxyh/Home/img/cm2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:53:32+08:00 ] ::1 /dxyh/Home/User/changeMeaage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0320s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-17T13:53:56+08:00 ] ::1 /dxyh/Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T13:57:03+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0410s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0300s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492408623') [ RunTime:0.1770s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0350s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0370s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0320s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:58:09+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0510s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0570s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492408688') [ RunTime:0.1880s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0650s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0580s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0560s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0940s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-17T13:58:38+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.1780s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.1670s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.1650s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492408716') [ RunTime:0.4590s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.2560s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.2320s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.1750s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.2450s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.6340s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.1790s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.2010s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.1770s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:58:53+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.1370s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.1430s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.1400s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492408731') [ RunTime:0.2680s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.1590s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.1600s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.1380s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.1390s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.1380s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.1550s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.1500s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.1450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T13:59:14+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T13:59:35+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T14:20:44+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T14:21:11+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T14:21:17+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0340s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0320s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492410077') [ RunTime:0.1680s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0290s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0320s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0300s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-17T14:22:26+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T14:22:44+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0280s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0300s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492410163') [ RunTime:0.1800s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0280s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.2890s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0320s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T14:24:58+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T14:36:52+08:00 ] ::1 /dxyh/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0550s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0530s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('0','1492411012') [ RunTime:0.1620s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0310s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0410s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0280s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0950s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-17T14:37:04+08:00 ] ::1 /dxyh/Home/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0310s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0310s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 550 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 596 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 597 Ë°å.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\dxyh\ThinkPHP\Library\Think\Db\Driver.class.php Á¨¨ 600 Ë°å.
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE ( `status` = null  ) ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `dxyh_activity_type` ORDER BY `sort` desc  [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-17T14:37:28+08:00 ] ::1 /dxyh/Home/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] ”…”⁄¡¨Ω”∑Ω‘⁄“ª∂Œ ±º‰∫Û√ª”–’˝»∑¥∏¥ªÚ¡¨Ω”µƒ÷˜ª˙√ª”–∑¥”¶£¨¡¨Ω”≥¢ ‘ ß∞‹°£
+
+
+[ 2017-04-17T14:37:49+08:00 ] ::1 /dxyh/Home/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-17T14:37:49+08:00 ] ::1 /dxyh/Home/Aboutus/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+

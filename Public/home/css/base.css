@@ -19,22 +19,22 @@
  }
 /* 公共头部开始 */
 .commonTop{background-color: #FFFFFF;text-align: center;position: relative;border-bottom: 1px solid #e0e0e0;}
-.commonTop nav{display: none;background: #fff;}
-.commonTop nav a{width:60%;margin:0 auto;line-height: 40px;border-bottom: 1px solid #e0e0e0;color:#666666;display:block;font-size: 16px;}
-.commonTop .logoImg img{width: 60px;height: 60px;margin:4px 5px 4px 10px;}
-.commonTop .logoImg{display: block;text-align: left;border-bottom: 1px solid #e0e0e0;}
-.commonTop .active{color: #2D9E12;}
+.commonTop nav{display: none;background: #fff;padding-top: 30px;}
+.commonTop nav a{width:60%;margin:0 auto;line-height: 50px;border-bottom: 1px solid #e0e0e0;color:#666666;display:block;font-size: 16px;}
+.commonTop .logoImg img{width: 30px;height: 30px;margin:4px 5px 4px 10px;}
+.commonTop .logoImg{display: block;border-bottom: 1px solid #e0e0e0;}
+.commonTop .active{color: #F55351;}
 .commonTop .loginBox{text-align: right;position: absolute;top: 0;right:100px;display: inline-block;float: right;color: #666666;}
 .commonTop .loginBox a{color:#666666;margin-left: 10px;margin-right: 10px;font-size: 14px;}
 .commonTop .loginBox a:nth-child(2){color:#F55351;}
-.cmtMenuLogo{float: right;width: 30px!important;height: 30px!important;margin-right: 10px!important;margin-top: 20px!important;}
+.cmtMenuLogo{float: right;width: 20px!important;height: 20px!important;margin-right: 10px!important;margin-top: 10px!important;}
 .t6{position: fixed;top: 0;width: 100%;bottom: 0;z-index: 999;}
 /* 公共头部结束 */
 @media (min-width: 1200px) {
   /* 公共头部开始 */
 .commonTop{background-color: #FFFFFF;height: 70px;line-height: 70px;text-align: center;position: relative;border-bottom: 1px solid #e0e0e0;}
-.commonTop nav{display: inline-block;margin:0 auto;height: 69px;}
-.commonTop nav a{border-bottom: none;color:#666666;display: inline-block;width: 120px;height: 100%;text-align: center;font-size: 16px;}
+.commonTop nav{display: inline-block;margin:0 auto;height: 69px;padding-top: 0;}
+.commonTop nav a{border-bottom: none;line-height: 40px;color:#666666;display: inline-block;width: 120px;height: 100%;text-align: center;font-size: 16px;}
 .commonTop .wrap{height: 70px;}
 .commonTop .logoImg img{margin-bottom: 4px;width: 60px;height: 60px;}
 .commonTop .logoImg{float: left;border-bottom: none;}
@@ -62,7 +62,6 @@
 }
 .commonBottom .links a{
   display: inline-block;
-  border-right: 1px solid #B6B6B6;
   line-height: 1;
   padding-left: 10px;
   padding-right: 10px;

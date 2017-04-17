@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-10 14:11:05
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-14 19:47:55
+* @Last Modified time: 2017-04-17 13:52:14
 */
 /* 分页 */
 .pages{
@@ -372,17 +372,13 @@ text-overflow: ellipsis;/*多余的文字省略号展示*/
 }
 .cmImgLabel{
 	display: inline-block;
-	border: 1px solid #e0e0e0;
-	width: 100%;
 	text-align: center;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	margin-bottom: 20px;
 }
 
 @media (min-width: 1200px) {
 	.cmImgLabel{
-	float: right;
 	display: inline-block;
 	border: 1px solid #e0e0e0;
 	width: 160px;
