@@ -19,10 +19,9 @@
 		<div class="swiper-container swiper1">
 			<!-- 图片开始 -->
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="__PUBLIC__/home/img/i1.png" alt=""></div>
-				<div class="swiper-slide"><img src="__PUBLIC__/home/img/i1.png" alt=""></div>
-				<div class="swiper-slide"><img src="__PUBLIC__/home/img/i1.png" alt=""></div>
-				<div class="swiper-slide"><img src="__PUBLIC__/home/img/i1.png" alt=""></div>
+				<volist name="websiteImage" id="vo">
+					<div class="swiper-slide"><a href="{$vo.img_link}"> <img src="{$vo.image}" alt=""></a></div>
+				</volist>
 			</div>
 			<!-- 图片结束 -->
 			<!-- 轮播分页开始 -->
@@ -41,95 +40,20 @@
 		</div>
 		<!-- 大屏幕下标题结束 -->
 		<div class="wrap">
-			<p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more" href="#">more>></a></p>
+			<p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more" href="{:U('Coptic/index')}">more>></a></p>
 			<div class="container wrap article1List">
 				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
+				<volist name="coptic" id="vo">
+					<div class="col-lg-3 col-xs-6 article1">
+						<a href="{:U('Coptic/details',array('id'=>$vo['id']))}">
+							<img src="{$vo.coptic_cover}" alt="">
+							<h3>{$vo.coptic_title}</h3>
+							<div class="figcaption visible-lg">
+								<p>{$vo.abstract}</p>
+							</div>
+						</a>
+					</div>
+				</volist>
 				<!-- 一个文章结束 -->
 			</div>
 		</div>
@@ -152,25 +76,13 @@
 					<!-- 图片开始 -->
 					<div class="swiper-wrapper">
 						<!-- 一个轮播页开始 -->
-						<div class="swiper-slide container plateStyleListBox">
-							<a href="#">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-							</a>
-						</div>
-						<!-- 一个轮播页结束 -->
-						<!-- 一个轮播页开始 -->
-						<div class="swiper-slide container plateStyleListBox">
-							<a href="#">
-								<img src="__PUBLIC__/home/img/i1.png" alt="">
-							</a>
-						</div>
-						<!-- 一个轮播页结束 -->
-						<!-- 一个轮播页开始 -->
-						<div class="swiper-slide container plateStyleListBox">
-							<a href="#">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-							</a>
-						</div>
+                        <volist name="copticType" id="vo">
+                            <div class="swiper-slide container plateStyleListBox">
+                                <a href="#">
+                                    <img src="{$vo.category_image}" alt="">
+                                </a>
+                            </div>
+                        </volist>
 						<!-- 一个轮播页结束 -->
 					</div>
 					<!-- 图片结束 -->
@@ -194,46 +106,22 @@
 		</div>
 		<!-- 大屏幕下标题结束 -->
 		<div class="wrap wnewActivity">
-			<p class="clearfix hidden-lg" style="margin-bottom: -20px;margin-top: 10px;"><span class=" min-title">最近活动</span><a class="more" href="#">more>></a></p>
+			<p class="clearfix hidden-lg" style="margin-bottom: -20px;margin-top: 10px;"><span class=" min-title">最近活动</span><a class="more" href="{:U('Activity/index')}">more>></a></p>
 			<div class="container  newActivity">
 				<!-- 一个活动开始 -->
-				<div class="col-lg-4 newActivity1">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
-						<div class="activeMessage">
-							截止：2017-3-27 周五 14:00
-							<span class="joinActive">我要报名</span>
-						</div>
-					</a>
-				</div>
-				<!-- 一个活动结束 -->
-				<!-- 一个活动开始 -->
-				<div class="col-lg-4 newActivity1">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
-						<div class="activeMessage">
-							截止：2017-3-27 周五 14:00
-							<span class="joinActive">我要报名</span>
-						</div>
-					</a>
-				</div>
-				<!-- 一个活动结束 -->
-				<!-- 一个活动开始 -->
-				<div class="col-lg-4 newActivity1">
-					<a href="#">
-						<img src="__PUBLIC__/home/img/img1.png" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
-						<div class="activeMessage">
-							截止：2017-3-27 周五 14:00
-							<span class="joinActive">我要报名</span>
-						</div>
-					</a>
-				</div>
+                <volist name="activity" id="vo">
+                    <div class="col-lg-4 newActivity1">
+                        <a href="{:U('Activity/detail',array('id'=>$vo['id']))}">
+                            <img src="{$vo.activity_cover}" alt="">
+                            <h3></h3><!-- 蒙层 -->
+                            <p class="newActivityP">{$vo.activity_name}</p>
+                            <div class="activeMessage">
+                                截止：{$vo.enroll_end_time} {$vo.week} {$vo.time}
+                                <span class="joinActive">我要报名</span>
+                            </div>
+                        </a>
+                    </div>
+                </volist>
 				<!-- 一个活动结束 -->
 			</div>
 		</div>

@@ -12,6 +12,6 @@ namespace Home\Model;
 class CopticTypeModel extends CommonModel
 {
     public function getHomeList(){
-        return $this->getDataList(null, null, array("sort"=>"desc","create_time"=>"desc"));
+        return $this->getDataList(null, "id,category_name", array("sort"=>"desc","create_time"=>"desc"));
     }
 }

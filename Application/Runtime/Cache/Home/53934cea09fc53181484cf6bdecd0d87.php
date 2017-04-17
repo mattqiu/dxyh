@@ -58,17 +58,7 @@
 			<div class="col-lg-1 activeStyleL">栏目分类</div>
 			<div class="col-lg-11 activeStyleR">
 				<p>
-					<a href="#">6e药师</a>
-					<a class="activeStyleActive" href="#">社区卫生</a>
-					<a href="#">踏雪无痕</a>
-					<a href="#">肾入人心</a>
-					<a href="#">金牌阿姨</a>
-					<a href="#">科教电影</a>
-					<a href="#">打开眼界</a>
-					<a href="#">6e药师</a>
-					<a href="#">社区卫生</a>
-					<a href="#">踏雪无痕</a>
-					<a href="#">社区卫生</a>
+					<?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Coptic/index',array('copticType'=>$vo['id']));?>"><?php echo ($vo["category_name"]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?>
 				</p>
 				<p>
 					<a href="#">6e药师</a>
@@ -257,24 +247,7 @@
 		<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <a href="#">中路成员企业</a>
-        <a href="#">星火钱包</a>
-        <a href="#">贷出去多赚</a>
-        <a href="#">网贷天眼</a>
-        <a href="#">网贷之家</a>
-        <a href="#">网贷专家</a>
-        <a href="#">二手车之家</a>
-        <a href="#">车300</a>
-        <a href="#">车虫网</a>
-        <a href="#">车8度</a>
-        <a href="#">车蚂蚁</a><br>
-        <a href="#">车讯商城</a>
-        <a href="#">易车二手车</a>
-        <a href="#">移动汽车网</a>
-        <a href="#">汽车改装店</a>
-        <a href="#">丝路汽车网</a>
-        <a href="#">一起网贷</a>
-        <a href="#">融途网</a>
+        <?php echo ($link); ?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>
@@ -314,5 +287,21 @@
 
 
 </script>
+		<script type="text/javascript">
+			$(function () {
+				Coptic(1, 'test测试');
+            })
+
+			function Coptic(type, keyword) {
+				var data = {};
+			    if (type){
+			        data['type'] = type;
+				}
+				if (keyword){
+			        data['keyword'] = keyword;
+				}
+				console.log(data);
+            }
+		</script>
 	</body>
 </html>

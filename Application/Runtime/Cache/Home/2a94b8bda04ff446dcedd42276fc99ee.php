@@ -47,10 +47,7 @@
 		<div class="swiper-container swiper1">
 			<!-- 图片开始 -->
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img src="/Public/home/img/i1.png" alt=""></div>
-				<div class="swiper-slide"><img src="/Public/home/img/i1.png" alt=""></div>
-				<div class="swiper-slide"><img src="/Public/home/img/i1.png" alt=""></div>
-				<div class="swiper-slide"><img src="/Public/home/img/i1.png" alt=""></div>
+				<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo ($vo["image"]); ?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
 			</div>
 			<!-- 图片结束 -->
 			<!-- 轮播分页开始 -->
@@ -69,95 +66,18 @@
 		</div>
 		<!-- 大屏幕下标题结束 -->
 		<div class="wrap">
-			<p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more" href="#">more>></a></p>
+			<p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more" href="<?php echo U('Coptic/index');?>">more>></a></p>
 			<div class="container wrap article1List">
 				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
-				<!-- 一个文章结束 -->
-				<!-- 一个文章开始 -->
-				<div class="col-lg-3 article1 visible-lg">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3>文章标题，文章标题,文章标题，文章标题</h3>
-						<div class="figcaption visible-lg">
-							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-						</div>
-					</a>
-				</div>
+				<?php if(is_array($coptic)): $i = 0; $__LIST__ = $coptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-3 col-xs-6 article1">
+						<a href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
+							<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+							<h3><?php echo ($vo["coptic_title"]); ?></h3>
+							<div class="figcaption visible-lg">
+								<p><?php echo ($vo["abstract"]); ?></p>
+							</div>
+						</a>
+					</div><?php endforeach; endif; else: echo "" ;endif; ?>
 				<!-- 一个文章结束 -->
 			</div>
 		</div>
@@ -180,25 +100,11 @@
 					<!-- 图片开始 -->
 					<div class="swiper-wrapper">
 						<!-- 一个轮播页开始 -->
-						<div class="swiper-slide container plateStyleListBox">
-							<a href="#">
-								<img src="/Public/home/img/img1.png" alt="">
-							</a>
-						</div>
-						<!-- 一个轮播页结束 -->
-						<!-- 一个轮播页开始 -->
-						<div class="swiper-slide container plateStyleListBox">
-							<a href="#">
-								<img src="/Public/home/img/i1.png" alt="">
-							</a>
-						</div>
-						<!-- 一个轮播页结束 -->
-						<!-- 一个轮播页开始 -->
-						<div class="swiper-slide container plateStyleListBox">
-							<a href="#">
-								<img src="/Public/home/img/img1.png" alt="">
-							</a>
-						</div>
+                        <?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide container plateStyleListBox">
+                                <a href="#">
+                                    <img src="<?php echo ($vo["category_image"]); ?>" alt="">
+                                </a>
+                            </div><?php endforeach; endif; else: echo "" ;endif; ?>
 						<!-- 一个轮播页结束 -->
 					</div>
 					<!-- 图片结束 -->
@@ -222,46 +128,20 @@
 		</div>
 		<!-- 大屏幕下标题结束 -->
 		<div class="wrap wnewActivity">
-			<p class="clearfix hidden-lg" style="margin-bottom: -20px;margin-top: 10px;"><span class=" min-title">最近活动</span><a class="more" href="#">more>></a></p>
+			<p class="clearfix hidden-lg" style="margin-bottom: -20px;margin-top: 10px;"><span class=" min-title">最近活动</span><a class="more" href="<?php echo U('Activity/index');?>">more>></a></p>
 			<div class="container  newActivity">
 				<!-- 一个活动开始 -->
-				<div class="col-lg-4 newActivity1">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
-						<div class="activeMessage">
-							截止：2017-3-27 周五 14:00
-							<span class="joinActive">我要报名</span>
-						</div>
-					</a>
-				</div>
-				<!-- 一个活动结束 -->
-				<!-- 一个活动开始 -->
-				<div class="col-lg-4 newActivity1">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
-						<div class="activeMessage">
-							截止：2017-3-27 周五 14:00
-							<span class="joinActive">我要报名</span>
-						</div>
-					</a>
-				</div>
-				<!-- 一个活动结束 -->
-				<!-- 一个活动开始 -->
-				<div class="col-lg-4 newActivity1">
-					<a href="#">
-						<img src="/Public/home/img/img1.png" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
-						<div class="activeMessage">
-							截止：2017-3-27 周五 14:00
-							<span class="joinActive">我要报名</span>
-						</div>
-					</a>
-				</div>
+                <?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 newActivity1">
+                        <a href="<?php echo U('Activity/detail',array('id'=>$vo['id']));?>">
+                            <img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
+                            <h3></h3><!-- 蒙层 -->
+                            <p class="newActivityP"><?php echo ($vo["activity_name"]); ?></p>
+                            <div class="activeMessage">
+                                截止：<?php echo ($vo["enroll_end_time"]); ?> <?php echo ($vo["week"]); ?> <?php echo ($vo["time"]); ?>
+                                <span class="joinActive">我要报名</span>
+                            </div>
+                        </a>
+                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
 				<!-- 一个活动结束 -->
 			</div>
 		</div>
@@ -270,24 +150,7 @@
 		<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <a href="#">中路成员企业</a>
-        <a href="#">星火钱包</a>
-        <a href="#">贷出去多赚</a>
-        <a href="#">网贷天眼</a>
-        <a href="#">网贷之家</a>
-        <a href="#">网贷专家</a>
-        <a href="#">二手车之家</a>
-        <a href="#">车300</a>
-        <a href="#">车虫网</a>
-        <a href="#">车8度</a>
-        <a href="#">车蚂蚁</a><br>
-        <a href="#">车讯商城</a>
-        <a href="#">易车二手车</a>
-        <a href="#">移动汽车网</a>
-        <a href="#">汽车改装店</a>
-        <a href="#">丝路汽车网</a>
-        <a href="#">一起网贷</a>
-        <a href="#">融途网</a>
+        <?php echo ($link); ?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>

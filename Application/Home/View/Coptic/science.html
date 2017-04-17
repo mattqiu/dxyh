@@ -30,17 +30,9 @@
 			<div class="col-lg-1 activeStyleL">栏目分类</div>
 			<div class="col-lg-11 activeStyleR">
 				<p>
-					<a href="#">6e药师</a>
-					<a class="activeStyleActive" href="#">社区卫生</a>
-					<a href="#">踏雪无痕</a>
-					<a href="#">肾入人心</a>
-					<a href="#">金牌阿姨</a>
-					<a href="#">科教电影</a>
-					<a href="#">打开眼界</a>
-					<a href="#">6e药师</a>
-					<a href="#">社区卫生</a>
-					<a href="#">踏雪无痕</a>
-					<a href="#">社区卫生</a>
+					<volist name="copticType" id="vo">
+						<a href="{:U('Coptic/index',array('copticType'=>$vo['id']))}">{$vo.category_name}</a>
+					</volist>
 				</p>
 				<p>
 					<a href="#">6e药师</a>
@@ -243,5 +235,25 @@
 			)
 		</script>
 		<include file="Public/bottom"/>
+		<script type="text/javascript">
+			$(function () {
+				Coptic(1, 'test测试');
+            })
+
+			function Coptic(type, keyword) {
+				var data = {};
+			    if (type){
+			        data['type'] = type;
+				}
+				if (keyword){
+			        data['keyword'] = keyword;
+				}
+				console.log(data);
+
+				$.ajax({
+					url: '{:U("Coptic/copticJsonData")}',
+				});
+            }
+		</script>
 	</body>
 </html>

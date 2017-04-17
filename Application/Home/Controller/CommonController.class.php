@@ -16,6 +16,6 @@ class CommonController extends Controller
         parent::__construct();
 
         $link = D("FriendshipLink")->getHomeList();
-        //var_dump($link);
+        $this->assign('link',$link);
     }
 }

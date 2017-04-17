@@ -26,7 +26,12 @@ class PublicController extends Controller
         $qc = new \QC();
         $qc->qq_login();
 
+        /*$data['weixin_url'] = "https://open.weixin.qq.com/connect/qrconnect?appid=1111&redirect_uri=".urlencode("http://www.dxyh.com")."&response_type=code&scope=SCOPE&state=STATE#wechat_redirect";
+        vendor("API.Weibo.WeiBoAPI");
+        $o = new \SaeTOAuthV2( WB_AKEY , WB_SKEY );
 
+        $code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );
+        $data['weibo_url'] = $code_url;*/
 
     }
 
