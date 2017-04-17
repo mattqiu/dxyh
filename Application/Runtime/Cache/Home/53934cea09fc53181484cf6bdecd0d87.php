@@ -82,7 +82,7 @@
 			<div class="col-lg-11 searchBoxR">
 				<form action="">
 					<input type="text" class="input" name="keyword">
-					<input type="submit" class="submit visible-lg" value="查询">
+					<input type="button" class="submit visible-lg" onclick="subKeyWord()" value="查询">
 					<span class="submit visible-xs">查询</span><!-- 小屏幕下的查询 -->
 				</form>
 			</div>
@@ -354,7 +354,9 @@
                                     pages += '<a class="pre" href="javascript:;" onclick="js_method(this)" data-value="' + totalPages + '">尾页</a>';
                                 }
                                 $(".pages").html(pages);
-                            }
+                            }else{
+								$(".pages").html('');
+							}
                         }else {
                             $(".activeListBox").html("暂无数据");
                         }
@@ -382,7 +384,18 @@
                     var keyword = $("input[name='keyword']").val();
                     Coptic(typeId, keyword);
                 });
-            })
+            });
+			
+			function subKeyWord() {
+				var typeId = '';
+				$(".activeStyle").find("a").each(function () {
+					if ($(this).hasClass("activeStyleActive")){
+						typeId = $(this).val();
+					}
+				});
+				var keyword = $("input[name='keyword']").val();
+				Coptic(typeId, keyword);
+			}
 		</script>
 	</body>
 </html>
