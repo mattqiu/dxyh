@@ -35,7 +35,8 @@ class CopticController extends CommonController
     }
 
     public function copticJsonData(){
-
+        $row = D("Coptic")->getList();
+        echo json_encode($row);
     }
 
 

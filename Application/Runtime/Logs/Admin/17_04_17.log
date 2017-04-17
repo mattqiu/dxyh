@@ -310,3 +310,91 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-04-17T15:29:53+08:00 ] 127.0.0.1 /Admin/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0300s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time,c.browse_volume FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  ORDER BY c.id desc LIMIT 0,10   [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 3 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 3 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE `coptic_id` = 3 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `dxyh_coptic_type`  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: copticType D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: nominate D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-17T15:29:53+08:00 ] 127.0.0.1 /Admin/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0150s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time,c.browse_volume FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  ORDER BY c.id desc LIMIT 0,10   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 3 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 3 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE `coptic_id` = 3 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE `coptic_id` = 2 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE `coptic_id` = 1 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `dxyh_coptic_type`  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: copticType D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: nominate D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

@@ -80,24 +80,7 @@
 		<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <a href="#">中路成员企业</a>
-        <a href="#">星火钱包</a>
-        <a href="#">贷出去多赚</a>
-        <a href="#">网贷天眼</a>
-        <a href="#">网贷之家</a>
-        <a href="#">网贷专家</a>
-        <a href="#">二手车之家</a>
-        <a href="#">车300</a>
-        <a href="#">车虫网</a>
-        <a href="#">车8度</a>
-        <a href="#">车蚂蚁</a><br>
-        <a href="#">车讯商城</a>
-        <a href="#">易车二手车</a>
-        <a href="#">移动汽车网</a>
-        <a href="#">汽车改装店</a>
-        <a href="#">丝路汽车网</a>
-        <a href="#">一起网贷</a>
-        <a href="#">融途网</a>
+        <?php echo ($link); ?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>
