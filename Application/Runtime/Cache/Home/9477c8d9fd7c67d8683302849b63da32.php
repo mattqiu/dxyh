@@ -25,8 +25,8 @@
         </a>
         <!-- logo -->
         <!-- 导航开始 -->
-        <nav>
-            <a href="<?php echo U('Index/index');?>" class="active">首页</a>
+        <nav id="sidebar-menu">
+            <a href="<?php echo U('Index/index');?>">首页</a>
             <a href="<?php echo U('Coptic/index');?>">科普中心</a>
             <a href="<?php echo U('Activity/index');?>">活动中心</a>
             <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
@@ -36,7 +36,7 @@
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox visible-lg">
-            <a href="login.html">登录</a>|<a href="regist.html">注册</a>
+            <a href="<?php echo U('Public/login');?>">登录</a>|<a href="<?php echo U('Public/regist');?>">注册</a>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -163,5 +163,26 @@
 			}
 			)
 		</script>
+		<script>
+    //js控制导航选中效果
+    (function(){
+        var tDiv = document.getElementById("sidebar-menu"),
+        links = tDiv.getElementsByTagName("a"),
+        index = 0,//默认第一个菜单项
+        url = location.href.split('?')[0].split('/');//取当前URL最后一个 / 后面的文件名，pop方法是删除最后一个元素并返回最后一个元素
+        if(url[3] && url[4]){    //如果有取到, 则进行匹配, 否则默认为首页(即index的值所指向的那个)
+            url = url[3]+'/'+url[4];
+            for (var i=links.length; i--;) {    //遍历 menu 的中连接地址
+                if(links[i].href.indexOf(url) !== -1){
+                    index = i;
+                    break;
+                }
+            }
+        }
+        links[index].className = 'active';
+    })();
+
+
+</script>
 	</body>
 </html>

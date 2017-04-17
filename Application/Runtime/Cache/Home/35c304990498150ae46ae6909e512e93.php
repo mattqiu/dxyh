@@ -116,12 +116,24 @@
 		</script>
 	<script>
     //js控制导航选中效果
-    $("#sidebar-menu").find("a").on("click",function (ev) {alert($(this).parent().is(".active"))
-        if ($(this).parent().is(".active")){
-            $(this).parent().removeClass("active");
+    (function(){
+        var tDiv = document.getElementById("sidebar-menu"),
+        links = tDiv.getElementsByTagName("a"),
+        index = 0,//默认第一个菜单项
+        url = location.href.split('?')[0].split('/');//取当前URL最后一个 / 后面的文件名，pop方法是删除最后一个元素并返回最后一个元素
+        if(url[3] && url[4]){    //如果有取到, 则进行匹配, 否则默认为首页(即index的值所指向的那个)
+            url = url[3]+'/'+url[4];
+            for (var i=links.length; i--;) {    //遍历 menu 的中连接地址
+                if(links[i].href.indexOf(url) !== -1){
+                    index = i;
+                    break;
+                }
+            }
         }
-        $(this).addClass("active");
-    });
+        links[index].className = 'active';
+    })();
+
+
 </script>
 	</body>
 </html>
