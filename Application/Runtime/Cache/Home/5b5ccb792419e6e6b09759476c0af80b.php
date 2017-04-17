@@ -6,9 +6,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="stylesheet" href="/Public/home/css/center.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
+		<link rel="stylesheet" href="/dxyh/Public/home/css/center.css">
+		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -16,10 +16,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <img src="/dxyh/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -46,20 +46,23 @@
 			<!-- 左边导航开始 -->
 			<div class="col-lg-2 left" id="memberCenter">
     <p class="leftTitle visible-lg">会员中心</p>
-    <a href="<?php echo U('User/index');?>"><img src="/Public/home/img/c2.png" alt="">个人信息</a>
-    <a href="<?php echo U('User/myKeep');?>"><img src="/Public/home/img/c3.png" alt="">我的收藏</a>
-    <a href="<?php echo U('User/myActivity');?>"><img src="/Public/home/img/c4.png" alt="">我的活动</a>
-    <a href="<?php echo U('User/myIntegral');?>"><img src="/Public/home/img/c9.png" alt="">我的积分</a>
-    <a href="<?php echo U('User/modifyPasswd');?>"><img src="/Public/home/img/c5.png" alt="">修改密码</a>
+    <a href="<?php echo U('User/index');?>"><img src="/dxyh/Public/home/img/c2.png" alt="">个人信息</a>
+    <a href="<?php echo U('User/myKeep');?>"><img src="/dxyh/Public/home/img/c3.png" alt="">我的收藏</a>
+    <a href="<?php echo U('User/myActivity');?>"><img src="/dxyh/Public/home/img/c4.png" alt="">我的活动</a>
+    <a href="<?php echo U('User/myIntegral');?>"><img src="/dxyh/Public/home/img/c9.png" alt="">我的积分</a>
+    <a href="<?php echo U('User/modifyPasswd');?>"><img src="/dxyh/Public/home/img/c5.png" alt="">修改密码</a>
 </div>
 			<!-- 左边导航结束 -->
 			<!-- 右侧信息模块开始 -->
 			<div class="col-lg-10">
 				<div class="right cpright clearfix">
 					<p class="rightTitle visible-lg">修改资料</p>
-					<label class="cmImgLabel" for="cmIMG"><img src="/Public/home/img/cm2.png" alt=""><p>上传头像</p></label>
 					<form action="" class="cmForm">
 						<table class="cpTable">
+							<tr>
+								<td>头像</td>
+								<td><label class="cmImgLabel" for="cmIMG"><img src="/dxyh/Public/home/img/cm2.png" alt=""><p>上传头像</p></label></td>
+							</tr>
 							<tr>
 								<td>昵称</td>
 								<td><input type="text" value="花香四溢"></td>
@@ -72,8 +75,8 @@
 								<td>性别</td>
 								<td class="sexbox">
 									<input checked="checked" name="sex" type="radio">保密
-									<input name="sex" type="radio"><img src="/Public/home/img/cm1.png" alt="">
-									<input style="margin-left: 20px" name="sex" type="radio"><img src="/Public/home/img/c1.png" alt="">
+									<input name="sex" type="radio"><img src="/dxyh/Public/home/img/cm1.png" alt="">
+									<input style="margin-left: 20px" name="sex" type="radio"><img src="/dxyh/Public/home/img/c1.png" alt="">
 								</td>
 							</tr>
 							<tr>
@@ -122,17 +125,17 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
-			<script type="text/javascript">
-								// 小屏幕展开导航效果
-			$(function() {
-				$(".cmtMenuLogo").click(function() {
-					$(".commonTop nav").toggle();
-					$(".commonTop").toggleClass('t6');
-				}
-				)
+		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript">
+							// 小屏幕展开导航效果
+		$(function() {
+			$(".cmtMenuLogo").click(function() {
+				$(".commonTop nav").toggle();
+				$(".commonTop").toggleClass('t6');
 			}
 			)
+		}
+		)
 		</script>
 		<script>
     //js控制导航选中效果
@@ -155,21 +158,21 @@
 
 
 </script>
-        <script type="text/javascript">
-            var mcenter = document.getElementById("memberCenter"),
-                alinks = mcenter.getElementsByTagName("a"),
-                indexes = 0,//默认第一个菜单项
-                aurl = location.href.split('?')[0].split('/');//取当前URL最后一个 / 后面的文件名，pop方法是删除最后一个元素并返回最后一个元素
-            if(aurl[5]){    //如果有取到, 则进行匹配, 否则默认为首页(即index的值所指向的那个)
-                aurl = aurl[5];
-                for (var j=alinks.length; j--;) {    //遍历 menu 的中连接地址
-                    if(alinks[j].href.indexOf(aurl) !== -1){
-                        indexes = j;
-                        break;
-                    }
-                }
-            }
-            alinks[indexes].className = 'leftActive';
-        </script>
+		<script type="text/javascript">
+		var mcenter = document.getElementById("memberCenter"),
+		alinks = mcenter.getElementsByTagName("a"),
+		indexes = 0,//默认第一个菜单项
+		aurl = location.href.split('?')[0].split('/');//取当前URL最后一个 / 后面的文件名，pop方法是删除最后一个元素并返回最后一个元素
+		if(aurl[5]){    //如果有取到, 则进行匹配, 否则默认为首页(即index的值所指向的那个)
+		aurl = aurl[5];
+		for (var j=alinks.length; j--;) {    //遍历 menu 的中连接地址
+		if(alinks[j].href.indexOf(aurl) !== -1){
+		indexes = j;
+		break;
+		}
+		}
+		}
+		alinks[indexes].className = 'leftActive';
+		</script>
 	</body>
 </html>

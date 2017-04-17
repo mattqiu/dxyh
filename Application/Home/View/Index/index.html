@@ -86,6 +86,9 @@
 						<!-- 一个轮播页结束 -->
 					</div>
 					<!-- 图片结束 -->
+					<!-- 轮播分页开始 -->
+					<div class="swiper-pagination2 hidden-lg"></div>
+					<!-- 轮播分页结束 -->
 				</div>
 				<!-- 轮播结束 -->
 				<!-- 上一页，下一页控制按钮开始 -->
@@ -106,7 +109,7 @@
 		</div>
 		<!-- 大屏幕下标题结束 -->
 		<div class="wrap wnewActivity">
-			<p class="clearfix hidden-lg" style="margin-bottom: -20px;margin-top: 10px;"><span class=" min-title">最近活动</span><a class="more" href="{:U('Activity/index')}">more>></a></p>
+			<p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more" href="{:U('Activity/index')}">more>></a></p>
 			<div class="container  newActivity">
 				<!-- 一个活动开始 -->
                 <volist name="activity" id="vo">
@@ -143,6 +146,6 @@
 			}
 			)
 		</script>
-	<include file="Public/bottom"/>
+		<include file="Public/bottom"/>
 	</body>
 </html>

@@ -16,6 +16,8 @@ $(function() {
 		autoplay: 5000,
 		loop: true,
 		slidesPerView: n,
+		pagination: '.swiper-pagination2',
+		paginationClickable: true,
 		spaceBetween:25,
 	});
 	// 上一页

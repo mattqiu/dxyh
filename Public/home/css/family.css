@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-08 15:06:21
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-14 16:51:08
+* @Last Modified time: 2017-04-17 13:42:55
 */
 body{
 	background: #fff;
@@ -86,7 +86,6 @@ body{
 	color: #23AEAA;
 	padding-bottom: 10px;
 	font-size: 22px;
-	margin-bottom: 30px;
 }
 .menu a{
 	color: #B4B4B4;
@@ -129,5 +128,8 @@ font-weight: bold;
 .menu p span{
 	min-width: 120px;
 	display: inline-block;
+}
+.menu h1{
+	margin-bottom: 30px;
 }
 }

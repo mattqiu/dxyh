@@ -6,10 +6,10 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/Public/home/css/idangerous.swiper.css">
-		<link rel="stylesheet" href="/Public/home/css/index.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/dxyh/Public/home/css/idangerous.swiper.css">
+		<link rel="stylesheet" href="/dxyh/Public/home/css/index.css">
+		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -17,10 +17,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <img src="/dxyh/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -47,7 +47,14 @@
 		<div class="swiper-container swiper1">
 			<!-- 图片开始 -->
 			<div class="swiper-wrapper">
+<<<<<<< HEAD
 				<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo ($vo["image"]); ?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+=======
+				<div class="swiper-slide"><img src="/dxyh/Public/home/img/i1.png" alt=""></div>
+				<div class="swiper-slide"><img src="/dxyh/Public/home/img/i1.png" alt=""></div>
+				<div class="swiper-slide"><img src="/dxyh/Public/home/img/i1.png" alt=""></div>
+				<div class="swiper-slide"><img src="/dxyh/Public/home/img/i1.png" alt=""></div>
+>>>>>>> c6a6b076248a71e9174867ac1aae3cec23a03afd
 			</div>
 			<!-- 图片结束 -->
 			<!-- 轮播分页开始 -->
@@ -69,6 +76,7 @@
 			<p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more" href="<?php echo U('Coptic/index');?>">more>></a></p>
 			<div class="container wrap article1List">
 				<!-- 一个文章开始 -->
+<<<<<<< HEAD
 				<?php if(is_array($coptic)): $i = 0; $__LIST__ = $coptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-3 col-xs-6 article1">
 						<a href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
 							<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
@@ -78,6 +86,94 @@
 							</div>
 						</a>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>
+=======
+				<div class="col-lg-3 col-xs-6 article1">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+				<!-- 一个文章结束 -->
+				<!-- 一个文章开始 -->
+				<div class="col-lg-3 col-xs-6 article1">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+				<!-- 一个文章结束 -->
+				<!-- 一个文章开始 -->
+				<div class="col-lg-3 col-xs-6 article1">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+				<!-- 一个文章结束 -->
+				<!-- 一个文章开始 -->
+				<div class="col-lg-3 col-xs-6 article1">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+				<!-- 一个文章结束 -->
+				<!-- 一个文章开始 -->
+				<div class="col-lg-3 article1 visible-lg">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+				<!-- 一个文章结束 -->
+				<!-- 一个文章开始 -->
+				<div class="col-lg-3 article1 visible-lg">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+				<!-- 一个文章结束 -->
+				<!-- 一个文章开始 -->
+				<div class="col-lg-3 article1 visible-lg">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+				<!-- 一个文章结束 -->
+				<!-- 一个文章开始 -->
+				<div class="col-lg-3 article1 visible-lg">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3>文章标题，文章标题,文章标题，文章标题</h3>
+						<div class="figcaption visible-lg">
+							<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
+						</div>
+					</a>
+				</div>
+>>>>>>> c6a6b076248a71e9174867ac1aae3cec23a03afd
 				<!-- 一个文章结束 -->
 			</div>
 		</div>
@@ -100,19 +196,44 @@
 					<!-- 图片开始 -->
 					<div class="swiper-wrapper">
 						<!-- 一个轮播页开始 -->
+<<<<<<< HEAD
                         <?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide container plateStyleListBox">
                                 <a href="#">
                                     <img src="<?php echo ($vo["category_image"]); ?>" alt="">
                                 </a>
                             </div><?php endforeach; endif; else: echo "" ;endif; ?>
+=======
+						<div class="swiper-slide container plateStyleListBox">
+							<a href="#">
+								<img src="/dxyh/Public/home/img/img1.png" alt="">
+							</a>
+						</div>
+						<!-- 一个轮播页结束 -->
+						<!-- 一个轮播页开始 -->
+						<div class="swiper-slide container plateStyleListBox">
+							<a href="#">
+								<img src="/dxyh/Public/home/img/i1.png" alt="">
+							</a>
+						</div>
+						<!-- 一个轮播页结束 -->
+						<!-- 一个轮播页开始 -->
+						<div class="swiper-slide container plateStyleListBox">
+							<a href="#">
+								<img src="/dxyh/Public/home/img/img1.png" alt="">
+							</a>
+						</div>
+>>>>>>> c6a6b076248a71e9174867ac1aae3cec23a03afd
 						<!-- 一个轮播页结束 -->
 					</div>
 					<!-- 图片结束 -->
+					<!-- 轮播分页开始 -->
+					<div class="swiper-pagination2 hidden-lg"></div>
+					<!-- 轮播分页结束 -->
 				</div>
 				<!-- 轮播结束 -->
 				<!-- 上一页，下一页控制按钮开始 -->
-				<img class="pre2 visible-lg" src="/Public/home/img/pre2.png" alt="">
-				<img class="next2 visible-lg" src="/Public/home/img/next2.png" alt="">
+				<img class="pre2 visible-lg" src="/dxyh/Public/home/img/pre2.png" alt="">
+				<img class="next2 visible-lg" src="/dxyh/Public/home/img/next2.png" alt="">
 				<!-- 上一页，下一页控制按钮结束 -->
 			</div>
 		</div>
@@ -128,6 +249,7 @@
 		</div>
 		<!-- 大屏幕下标题结束 -->
 		<div class="wrap wnewActivity">
+<<<<<<< HEAD
 			<p class="clearfix hidden-lg" style="margin-bottom: -20px;margin-top: 10px;"><span class=" min-title">最近活动</span><a class="more" href="<?php echo U('Activity/index');?>">more>></a></p>
 			<div class="container  newActivity">
 				<!-- 一个活动开始 -->
@@ -142,6 +264,48 @@
                             </div>
                         </a>
                     </div><?php endforeach; endif; else: echo "" ;endif; ?>
+=======
+			<p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more" href="#">more>></a></p>
+			<div class="container  newActivity">
+				<!-- 一个活动开始 -->
+				<div class="col-lg-4 newActivity1">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3></h3><!-- 蒙层 -->
+						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
+						<div class="activeMessage">
+							截止：2017-3-27 周五 14:00
+							<span class="joinActive">我要报名</span>
+						</div>
+					</a>
+				</div>
+				<!-- 一个活动结束 -->
+				<!-- 一个活动开始 -->
+				<div class="col-lg-4 newActivity1">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3></h3><!-- 蒙层 -->
+						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
+						<div class="activeMessage">
+							截止：2017-3-27 周五 14:00
+							<span class="joinActive">我要报名</span>
+						</div>
+					</a>
+				</div>
+				<!-- 一个活动结束 -->
+				<!-- 一个活动开始 -->
+				<div class="col-lg-4 newActivity1">
+					<a href="#">
+						<img src="/dxyh/Public/home/img/img1.png" alt="">
+						<h3></h3><!-- 蒙层 -->
+						<p class="newActivityP">最新活动标题最新活动标题最新最新活动标题最新活动标题最新活动标题最新活动标题活动标题最新活动标题</p>
+						<div class="activeMessage">
+							截止：2017-3-27 周五 14:00
+							<span class="joinActive">我要报名</span>
+						</div>
+					</a>
+				</div>
+>>>>>>> c6a6b076248a71e9174867ac1aae3cec23a03afd
 				<!-- 一个活动结束 -->
 			</div>
 		</div>
@@ -155,9 +319,9 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
-		<script type="text/javascript" src="/Public/home/js/idangerous.swiper.min.js"></script>
-		<script type="text/javascript" src="/Public/home/js/index.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/idangerous.swiper.min.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/index.js"></script>
 		<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
@@ -169,7 +333,7 @@
 			}
 			)
 		</script>
-	<script>
+		<script>
     //js控制导航选中效果
     (function(){
         var tDiv = document.getElementById("sidebar-menu"),
