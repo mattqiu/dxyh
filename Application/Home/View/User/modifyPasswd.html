@@ -66,5 +66,21 @@
 			)
 		</script>
 		<include file="Public/bottom"/>
+        <script type="text/javascript">
+            var mcenter = document.getElementById("memberCenter"),
+                alinks = mcenter.getElementsByTagName("a"),
+                indexes = 0,//默认第一个菜单项
+                aurl = location.href.split('?')[0].split('/');//取当前URL最后一个 / 后面的文件名，pop方法是删除最后一个元素并返回最后一个元素
+            if(aurl[5]){    //如果有取到, 则进行匹配, 否则默认为首页(即index的值所指向的那个)
+                aurl = aurl[5];
+                for (var j=alinks.length; j--;) {    //遍历 menu 的中连接地址
+                    if(alinks[j].href.indexOf(aurl) !== -1){
+                        indexes = j;
+                        break;
+                    }
+                }
+            }
+            alinks[indexes].className = 'leftActive';
+        </script>
 	</body>
 </html>

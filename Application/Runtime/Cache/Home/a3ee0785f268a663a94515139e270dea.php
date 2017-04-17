@@ -44,10 +44,10 @@
 		<!-- 公共头部结束 -->
 		<div class="container wrap box">
 			<!-- 左边导航开始 -->
-			<div class="col-lg-2 left">
+			<div class="col-lg-2 left" id="memberCenter">
     <p class="leftTitle visible-lg">会员中心</p>
     <a href="<?php echo U('User/index');?>"><img src="/Public/home/img/c2.png" alt="">个人信息</a>
-    <a href="<?php echo U('User/myKeep');?>"  class="leftActive"><img src="/Public/home/img/c3.png" alt="">我的收藏</a>
+    <a href="<?php echo U('User/myKeep');?>"><img src="/Public/home/img/c3.png" alt="">我的收藏</a>
     <a href="<?php echo U('User/myActivity');?>"><img src="/Public/home/img/c4.png" alt="">我的活动</a>
     <a href="<?php echo U('User/myIntegral');?>"><img src="/Public/home/img/c9.png" alt="">我的积分</a>
     <a href="<?php echo U('User/modifyPasswd');?>"><img src="/Public/home/img/c5.png" alt="">修改密码</a>
@@ -129,5 +129,21 @@
 
 
 </script>
+        <script type="text/javascript">
+            var mcenter = document.getElementById("memberCenter"),
+                alinks = mcenter.getElementsByTagName("a"),
+                indexes = 0,//默认第一个菜单项
+                aurl = location.href.split('?')[0].split('/');//取当前URL最后一个 / 后面的文件名，pop方法是删除最后一个元素并返回最后一个元素
+            if(aurl[5]){    //如果有取到, 则进行匹配, 否则默认为首页(即index的值所指向的那个)
+                aurl = aurl[5];
+                for (var j=alinks.length; j--;) {    //遍历 menu 的中连接地址
+                    if(alinks[j].href.indexOf(aurl) !== -1){
+                        indexes = j;
+                        break;
+                    }
+                }
+            }
+            alinks[indexes].className = 'leftActive';
+        </script>
 	</body>
 </html>

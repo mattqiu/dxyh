@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>个人中心-我的收藏</title>
+		<title>个人中心-修改资料</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,98 +55,43 @@
 			<!-- 左边导航结束 -->
 			<!-- 右侧信息模块开始 -->
 			<div class="col-lg-10">
-				<div class="right">
-					<p class="rightTitle visible-lg">我的收藏</p>
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
+				<div class="right cpright clearfix">
+					<p class="rightTitle visible-lg">修改资料</p>
+					<label class="cmImgLabel" for="cmIMG"><img src="/Public/home/img/cm2.png" alt=""><p>上传头像</p></label>
+					<form action="" class="cmForm">
+						<table class="cpTable">
+							<tr>
+								<td>昵称</td>
+								<td><input type="text" value="花香四溢"></td>
+							</tr>
+							<tr>
+								<td>真实姓名</td>
+								<td><input type="text" value="董小姐"></td>
+							</tr>
+							<tr>
+								<td>性别</td>
+								<td class="sexbox">
+									<input checked="checked" name="sex" type="radio">保密
+									<input name="sex" type="radio"><img src="/Public/home/img/cm1.png" alt="">
+									<input style="margin-left: 20px" name="sex" type="radio"><img src="/Public/home/img/c1.png" alt="">
+								</td>
+							</tr>
+							<tr>
+								<td>手机号</td>
+								<td><input type="text" value="1842524266"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<button type="submit" class="cpSubmit">确认</button>
+									<button type="button" class="cpCancle">取消</button>
+								</td>
+							</tr>
+							<!-- 头像 -->
+							<input id="cmIMG" style="display: none;" type="file">
+						</table>
+					</form>
+					
 				</div>
 			</div>
 			<!-- 右侧信息模块结束 -->
@@ -178,7 +123,7 @@
 </div>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
-		<script type="text/javascript">
+			<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
 				$(".cmtMenuLogo").click(function() {
