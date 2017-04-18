@@ -215,10 +215,10 @@ discussContent">
                 var checkLikes = "<?php echo ($checkLikes); ?>";
 				var checkStoreUp = "<?php echo ($checkStoreUp); ?>";
 				if (checkLikes > 0){
-					$("#likes").siblings('img').toggle();
+					$("#likes img").siblings('img').toggle();
 				}
 				if (checkStoreUp > 0){
-                    $("#keep").siblings('img').toggle();
+                    $("#keep img").siblings('img').toggle();
 				}
 			})
 		</script>

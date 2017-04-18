@@ -6,10 +6,10 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/dxyh/Public/home/css/idangerous.swiper.css">
-		<link rel="stylesheet" href="/dxyh/Public/home/css/index.css">
-		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/Public/home/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/Public/home/css/idangerous.swiper.css">
+		<link rel="stylesheet" href="/Public/home/css/index.css">
+		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -17,10 +17,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/dxyh/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
+            <img src="/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -114,8 +114,8 @@
 				</div>
 				<!-- 轮播结束 -->
 				<!-- 上一页，下一页控制按钮开始 -->
-				<img class="pre2 visible-lg" src="/dxyh/Public/home/img/pre2.png" alt="">
-				<img class="next2 visible-lg" src="/dxyh/Public/home/img/next2.png" alt="">
+				<img class="pre2 visible-lg" src="/Public/home/img/pre2.png" alt="">
+				<img class="next2 visible-lg" src="/Public/home/img/next2.png" alt="">
 				<!-- 上一页，下一页控制按钮结束 -->
 			</div>
 		</div>
@@ -158,9 +158,9 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
-		<script type="text/javascript" src="/dxyh/Public/home/js/idangerous.swiper.min.js"></script>
-		<script type="text/javascript" src="/dxyh/Public/home/js/index.js"></script>
+		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/Public/home/js/idangerous.swiper.min.js"></script>
+		<script type="text/javascript" src="/Public/home/js/index.js"></script>
 		<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
