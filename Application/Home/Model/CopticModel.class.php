@@ -33,15 +33,6 @@ class CopticModel extends CommonModel
         foreach ($data['rows'] as $key=>$item){
             $data['rows'][$key]['create_time'] = dateTime($item['create_time'], 2);
         }
-        /*$data['totalPages'] = $pageCount;
-        $data['p'] = $p + 1;
-        $data['typeId'] = $quesData['typeId'];
-        $data['keyword'] = $quesData['keyword'];
-        if ($data['list']){
-            return array('code'=>'0', 'data'=>$data);
-        }else{
-            return array('code'=>'1', 'data'=>$data);
-        }*/
         $data['page'] = $page->show();
         return $data;
     }
@@ -49,7 +40,9 @@ class CopticModel extends CommonModel
     public function getCopticDetails(){
         $id = I("get.id");
         $info = $this->getDataInfo(array('id'=>$id));
-
+        $info['content'] = html_entity_decode($info['content']);
+        $info['create_time'] = dateTime($info['create_time'], 2);
+        $info['original_link'] = urldecode($info['original_link']);
         return $info;
     }
 }

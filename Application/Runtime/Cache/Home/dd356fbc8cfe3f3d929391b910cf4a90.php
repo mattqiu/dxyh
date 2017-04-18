@@ -48,9 +48,9 @@
 				<!-- 标题开始 -->
 				<h1 class="activeTitle">科技部公布2016优秀科普作品名单</h1>
 				<!-- 标题结束 -->
-				<p class="author">作者：张三&nbsp;&nbsp;&nbsp;&nbsp;2017-03-20</p>
+				<p class="author">作者：<?php echo ($rows["author"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($rows["create_time"]); ?></p>
 				<div class="container">
-					<div class="col-lg-8 keyWord">关键词：<span>XXXX</span><span>XXXX</span></div>
+					<div class="col-lg-8 keyWord">关键词：<span><?php echo ($rows["keyword"]); ?></span></div>
 					<div class="col-lg-4 keyWord">
 						<strong><img src="/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/Public/home/img/ss1.png" alt="">收藏</strong>
 						<strong><img src="/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/Public/home/img/zz1.png" alt="">赞</strong>
@@ -59,13 +59,10 @@
 				
 				<!-- 活动内容开始 -->
 				<div class="content">
-					<img src="/Public/home/img/img1.png" alt="">
-					<p><h4>基因库正式运行</h4>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
-					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B, Club,nce等不同风格都能完美呈现。</p>
-					<p><h4>基因库正式运行</h4>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
+					<?php echo ($rows["content"]); ?>
 					<!-- 活动时间等信息开始 -->
-					<div class="from">来源：百度</div>
-					<div class="fromA">原文链接：<a href="www.baidu.com">www.baidu.com</a></div>
+					<div class="from">来源：<?php echo ($rows["source"]); ?></div>
+					<div class="fromA">原文链接：<a href="<?php echo ($rows["original_link"]); ?>"><?php echo ($rows["original_link"]); ?></a></div>
 					<!-- 发表评论开始 -->
 					<a href="#publish" class="publishBtn">发表评论</a>
 					<!-- 评论列表开始 -->
@@ -161,34 +158,14 @@
 				<h2 class="visible-lg">热门科普推荐</h2>
 				<ul class="historyList visible-lg">
 					<!-- 一个热门科普推荐开始 -->
-					<li>
-						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门科普推荐结束 -->
-					<!-- 一个热门科普推荐开始 -->
-					<li>
-						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门科普推荐结束 -->
-					<!-- 一个热门科普推荐开始 -->
-					<li>
-						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
+					<?php if(is_array($hotCoptic)): $i = 0; $__LIST__ = $hotCoptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+							<a href="<?php echo U('Coptic/details', array('id'=>$vo['id']));?>">
+								<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+								<!-- 标题 -->
+								<div class="mengceng"></div><!-- 蒙层 -->
+								<p class="historyTitle"><?php echo ($vo["coptic_title"]); ?></p>
+							</a>
+						</li><?php endforeach; endif; else: echo "" ;endif; ?>
 					<!-- 一个热门科普推荐结束 -->
 				</ul>
 			</div>

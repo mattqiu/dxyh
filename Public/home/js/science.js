@@ -30,8 +30,8 @@ $(function() {
 		$(".activeStyle").show();
 	})
 	$(".input").blur(function() {
-		$(".activeStyle").hide();
-	})
+        $(".activeStyle").hide();
+    })
 })
 
 
@@ -43,9 +43,12 @@ $(function() {
 		 //小屏幕小，显示一个轮播页
 	
 	// 页数
-	var page = 0;
+	var page = 1;
 	// 每页展示5个
 	var size = 5;
+    var url = 'http://www.dxyh.com/Home/Coptic/details?id=';
+	var typeId = $(".activeStyleActive").attr("data-value");
+	var keyword = $("input[name='keyword']").val();
 
 	// dropload
 	$('.activeListWrap').dropload({
@@ -57,14 +60,25 @@ $(function() {
 			var result = '';
 			$.ajax({
 				type: 'GET',
-				url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
+				url: 'http://www.dxyh.com/Home/Coptic/copticJsonData',
+                data: {'p':page,'typeId':typeId,'keyword':keyword},
 				dataType: 'json',
-				success: function(data) {
-					var arrLen = data.length;
-					if (arrLen > 0) {
-						for (var i = 0; i < arrLen; i++) {
-							result += '<!-- 一个文章开始 --><div class="activeList clearfix"><a href="scienceDetail.html"><div class="col-xs-4 col-lg-3"><img src="../img/img1.png"alt=""></div><div class="col-xs-8 col-lg-9 activeListR"><h1>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h1><p>作者：XXXX&nbsp;&nbsp;&nbsp;&nbsp;2017-02-15 <span class="author visible-lg">踏雪无痕</span></p><div class="figcaption"><p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p></div></div></a></div><!-- 一个文章结束 -->';
-						}
+				success: function(json) {
+					var arrLen = json.data;
+                    console.log(arrLen);
+					if (json.code == 0) {
+                        var rows = [];
+                        $.each(arrLen, function (key, item) {
+                            rows[key] = '<div class="activeList clearfix">';
+                            rows[key] += '<a href="'+url+item.id+'"><div class="col-xs-4 col-lg-3">';
+                            rows[key] += '<img src="'+item.coptic_cover+'"alt=""></div>';
+                            rows[key] += '<div class="col-xs-8 col-lg-9 activeListR">';
+                            rows[key] += '<h1>'+item.coptic_title+'</h1>';
+                            rows[key] += '<p>作者：'+item.author+'&nbsp;&nbsp;&nbsp;&nbsp;'+item.create_time;
+                            rows[key] += '<span class="author visible-lg">'+item.category_name+'</span></p>';
+                            rows[key] += '<div class="figcaption"><p>'+item.abstract+'</p></div></div></a></div>';
+                        });
+                        rows = rows.join('');
 						// 如果没有数据
 					} else {
 						// 锁定
@@ -72,17 +86,18 @@ $(function() {
 						// 无数据
 						me.noData();
 					}
+                    console.log(rows);
 					// 为了测试，延迟1秒加载
 					setTimeout(function() {
 						// 插入数据到页面，放到最后面
-						$('.activeListBox').append(result);
+						$('.activeListBox').append(rows);
 						adjustF();
 						// 每次数据插入，必须重置
 						me.resetload();
 					}, 1000);
 				},
 				error: function(xhr, type) {
-					alert('Ajax error!');
+                    alert('Ajax error!');
 					// 即使加载出错，也得重置
 					me.resetload();
 				}

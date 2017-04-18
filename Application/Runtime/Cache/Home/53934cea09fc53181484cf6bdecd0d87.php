@@ -82,9 +82,10 @@
 			<div class="col-lg-1 searchBoxL visible-lg">关键词</div>
 			<div class="col-lg-11 searchBoxR">
 				<form action="<?php echo U('Coptic/index');?>" method="get" id="form1">
-					<input type="text" class="input" name="keyword">
-					<input type="submit" class="submit visible-lg" onclick="subKeyWord()" value="查询">
-					<span class="submit visible-xs">查询</span><!-- 小屏幕下的查询 -->
+					<input type="text" class="input" name="keyword" value="<?php echo ($keyword); ?>">
+					<input type="button" class="submit visible-lg" onclick="subKeyWord()" value="查询">
+					<span class="submit visible-xs" onclick="subKeyWord()">查询</span><!-- 小屏幕下的查询 -->
+                    <input name="typeId" type="hidden" value=""/>
 				</form>
 			</div>
 		</div>
@@ -99,7 +100,7 @@
 				<div class="activeListBox">
 					<!-- 一个文章开始 -->
                     <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="activeList clearfix">
-                            <a href="<?php echo U('Coptic/scienceDetail',array('id'=>$vo['id']));?>">
+                            <a href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
                                 <div class="col-xs-4 col-lg-3">
                                     <img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
                                 </div>
@@ -127,34 +128,14 @@
 				<h2>热门科普推荐</h2>
 				<ul class="historyList">
 					<!-- 一个热门科普推荐开始 -->
-					<li>
-						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门科普推荐结束 -->
-					<!-- 一个热门科普推荐开始 -->
-					<li>
-						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门科普推荐结束 -->
-					<!-- 一个热门科普推荐开始 -->
-					<li>
-						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
+                    <?php if(is_array($hotCoptic)): $i = 0; $__LIST__ = $hotCoptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                            <a href="<?php echo U('Coptic/details', array('id'=>$vo['id']));?>">
+                                <img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+                                <!-- 标题 -->
+                                <div class="mengceng"></div><!-- 蒙层 -->
+                                <p class="historyTitle"><?php echo ($vo["coptic_title"]); ?></p>
+                            </a>
+                        </li><?php endforeach; endif; else: echo "" ;endif; ?>
 					<!-- 一个热门科普推荐结束 -->
 				</ul>
 			</div>
@@ -209,16 +190,30 @@
 		<script type="text/javascript">
             $(function () {
                 $('.activeStyle a:first').addClass("activeStyleActive");
+
+                var id = "<?php echo ($id); ?>";
+                if (id){
+                    $(".activeStyle").find('a').removeClass('activeStyleActive');
+                    $(".activeStyle").find('a').each(function () {
+                        if ($(this).attr("data-value") == id){
+                            $(this).addClass('activeStyleActive');
+                        }
+                    })
+                }
             });
-            
+
             $(".activeStyle").find('a').each(function () {
                 $(this).on('click', function () {
-                    alert('ss');
                     var typeId = $(this).attr('data-value');
+                    $("input[name='typeId']").val(typeId);
                     $("#form1").submit();
                 });
             });
 
+            function subKeyWord() {
+                $("input[name='typeId']").val($(".activeStyleActive").attr("data-value"));
+                $("#form1").submit();
+            }
 
 
             /*if (browserRedirect() == "pc") {
