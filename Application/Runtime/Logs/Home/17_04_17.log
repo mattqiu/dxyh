@@ -23597,3 +23597,49 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
 
+[ 2017-04-17T22:49:47+08:00 ] 127.0.0.1 /Home/Coptic/scienceDetail.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0148s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0174s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0209s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2017-04-17T22:49:53+08:00 ] 127.0.0.1 /Home/Coptic/copticJsonData.html?p=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0154s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0151s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0241s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0271s ]
+NOTIC: [8] Undefined index: typeId D:\www\dxyh\Application\Home\Model\CopticModel.class.php 第 21 行.
+NOTIC: [8] Undefined index: keyword D:\www\dxyh\Application\Home\Model\CopticModel.class.php 第 24 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  LIMIT 1   [ RunTime:0.0167s ]
+SQL: SELECT ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  ORDER BY ct1.create_time desc LIMIT 0,1   [ RunTime:0.0133s ]
+NOTIC: [8] Undefined index: typeId D:\www\dxyh\Application\Home\Model\CopticModel.class.php 第 45 行.
+NOTIC: [8] Undefined index: keyword D:\www\dxyh\Application\Home\Model\CopticModel.class.php 第 46 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+
