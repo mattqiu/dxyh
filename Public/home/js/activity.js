@@ -2,9 +2,12 @@
  * @Author: Administrator
  * @Date:   2017-04-13 23:37:58
  * @Last Modified by:   Administrator
- * @Last Modified time: 2017-04-14 00:07:28
+ * @Last Modified time: 2017-04-18 12:31:28
  */
 $(function() {
+	var clientWidth = document.documentElement && document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+	var n = 3; //轮播图显示个数
+	if (clientWidth < 1200) {	
 	// 搜索框展示栏目分类
 	$(".input").focus(function() {
 		$(".activeStyle").show();
@@ -12,6 +15,7 @@ $(function() {
 	$(".input").blur(function() {
 		$(".activeStyle").hide();
 	})
+}
 })
 
 //1. 下拉刷新功能开始

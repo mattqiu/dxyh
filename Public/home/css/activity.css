@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-04 13:41:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-14 19:46:45
+* @Last Modified time: 2017-04-18 12:33:01
 */
 body{
 	background: #fff;
@@ -11,7 +11,7 @@ body{
 .activeStyle{
 	display: none;
 	position: absolute;
-	top: 119px;
+	top: 89px;
 	left: 0;
 	width: 100%;
 	z-index: 999;
