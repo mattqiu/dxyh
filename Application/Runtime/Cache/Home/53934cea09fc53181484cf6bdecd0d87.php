@@ -6,10 +6,10 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="stylesheet" href="/Public/home/css/dropload.css">
-		<link rel="stylesheet" href="/Public/home/css/activity.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
+		<link rel="stylesheet" href="/dxyh/Public/home/css/dropload.css">
+		<link rel="stylesheet" href="/dxyh/Public/home/css/activity.css">
+		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -17,10 +17,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <img src="/dxyh/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -43,7 +43,7 @@
     </div>
 </div>
 		<!-- 公共头部结束 -->
-		<img class="visible-lg" style="width: 100%;height: 460px;" src="/Public/home/img/s1.png" alt="">
+		<img class="visible-lg" style="width: 100%;height: 460px;" src="/dxyh/Public/home/img/s1.png" alt="">
 		<!-- 活动分类开始 -->
 		<!-- 大屏幕下标题开始 -->
 		<div class="titleLogo container visible-lg">
@@ -81,17 +81,24 @@
 		<div class="container wrap searchBox">
 			<div class="col-lg-1 searchBoxL visible-lg">关键词</div>
 			<div class="col-lg-11 searchBoxR">
+<<<<<<< HEAD
 				<form action="<?php echo U('Coptic/index');?>" method="get" id="form1">
 					<input type="text" class="input" name="keyword" value="<?php echo ($keyword); ?>">
 					<input type="button" class="submit visible-lg" onclick="subKeyWord()" value="查询">
 					<span class="submit visible-xs" onclick="subKeyWord()">查询</span><!-- 小屏幕下的查询 -->
                     <input name="typeId" type="hidden" value=""/>
+=======
+				<form action="<?php echo U('Coptic/index');?>" method="get" id="form1">    <span class="hidden-lg styleBtn" >分类</span>
+					<input type="text" class="input" name="keyword">
+					<input type="submit" class="submit visible-lg" onclick="subKeyWord()" value="查询">
+					<span class="submit hidden-lg">查询</span><!-- 小屏幕下的查询 -->
+>>>>>>> 2abea64c0e592eab4f3b05b008ad6a7093158fe2
 				</form>
 			</div>
 		</div>
 		<!-- 搜索结束 -->
 		<!-- 小屏幕下显示的图片开始 -->
-		<img class="visible-xs" style="width: 100%;height: auto;margin-top: 20px;" src="/Public/home/img/s1.png" alt="">
+		<img class="visible-xs" style="width: 100%;height: auto;margin-top: 20px;" src="/dxyh/Public/home/img/s1.png" alt="">
 		<!-- 小屏幕下显示的图片结束 -->
 		<!-- 活动开始 -->
 		<div class="container wrap activeBox">
@@ -128,6 +135,7 @@
 				<h2>热门科普推荐</h2>
 				<ul class="historyList">
 					<!-- 一个热门科普推荐开始 -->
+<<<<<<< HEAD
                     <?php if(is_array($hotCoptic)): $i = 0; $__LIST__ = $hotCoptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
                             <a href="<?php echo U('Coptic/details', array('id'=>$vo['id']));?>">
                                 <img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
@@ -136,6 +144,36 @@
                                 <p class="historyTitle"><?php echo ($vo["coptic_title"]); ?></p>
                             </a>
                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
+=======
+					<li>
+						<a href="#">
+							<img src="/dxyh/Public/home/img/img1.png" alt="">
+							<!-- 标题 -->
+							<div class="mengceng"></div><!-- 蒙层 -->
+							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
+						</a>
+					</li>
+					<!-- 一个热门科普推荐结束 -->
+					<!-- 一个热门科普推荐开始 -->
+					<li>
+						<a href="#">
+							<img src="/dxyh/Public/home/img/img1.png" alt="">
+							<!-- 标题 -->
+							<div class="mengceng"></div><!-- 蒙层 -->
+							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
+						</a>
+					</li>
+					<!-- 一个热门科普推荐结束 -->
+					<!-- 一个热门科普推荐开始 -->
+					<li>
+						<a href="#">
+							<img src="/dxyh/Public/home/img/img1.png" alt="">
+							<!-- 标题 -->
+							<div class="mengceng"></div><!-- 蒙层 -->
+							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
+						</a>
+					</li>
+>>>>>>> 2abea64c0e592eab4f3b05b008ad6a7093158fe2
 					<!-- 一个热门科普推荐结束 -->
 				</ul>
 			</div>
@@ -151,10 +189,10 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
-		<script type="text/javascript" src="/Public/home/js/dropload.min.js"></script>
-		<script type="text/javascript" src="/Public/home/js/science.js"></script>
-        <script type="text/javascript" src="/Public/home/js/common.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/dropload.min.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/science.js"></script>
+        <script type="text/javascript" src="/dxyh/Public/home/js/common.js"></script>
 		<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {

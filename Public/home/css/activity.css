@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-04 13:41:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-18 12:33:01
+* @Last Modified time: 2017-04-18 15:08:15
 */
 body{
 	background: #fff;
@@ -11,10 +11,10 @@ body{
 .activeStyle{
 	display: none;
 	position: absolute;
-	top: 89px;
+	top: 94px;
 	left: 0;
 	width: 100%;
-	z-index: 999;
+	z-index:10;
 	border-top: 1px solid #eee;
 }
 .activeStyle a{
@@ -52,8 +52,17 @@ body{
 		background: #F7F7F7;
 		padding: 10px;
 	}
+	.styleBtn{
+		display: inline-block;
+		width: 7%;
+		line-height: 1.6;
+		float: left;
+		padding-top: 3px;
+		color: #2D9E12;
+		font-size: 16px;
+	}
 	.input{
-	width: 87%;
+	width: 83%;
 	  height: 30px;
 	float: left;
 	font-size: 16px;
@@ -64,7 +73,7 @@ body{
 	background: #E3E3E5;
 }
 .submit{
-	width: 13%;
+	width: 10%;
 	height: 30px;
 	line-height: 30px;
 	outline: none;
