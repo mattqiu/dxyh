@@ -52,8 +52,8 @@
 				<div class="container">
 					<div class="col-lg-8 keyWord">关键词：<span><?php echo ($rows["keyword"]); ?></span></div>
 					<div class="col-lg-4 keyWord">
-						<strong><img src="/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/Public/home/img/ss1.png" alt="">收藏</strong>
-						<strong><img src="/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/Public/home/img/zz1.png" alt="">赞</strong>
+						<strong id="keep"><img src="/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/Public/home/img/ss1.png" alt="">收藏</strong>
+						<strong id="likes"><img src="/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/Public/home/img/zz1.png" alt="">赞</strong>
 					</div>
 				</div>
 				
@@ -70,49 +70,66 @@
 						<div class="filter">
 							<span class="filterActive">最热</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>最新</span>
 						</div>
-						<!-- 一个评论开始 -->
-						<div class="discussList">
-							<p class="user">
-								<img src="/Public/home/img/img1.png" alt=""><!-- 头像 -->
-								<span>二十</span><!-- 用户名 -->
-							</p>
-							<!-- 评论内容开始 -->
-							<p>要说套路，要说套路，要说套路，要说套路，要说套路要说套路，要说套路，要说套路，要说套路</p>
-							<!-- 评论内容结束 -->
-							<!-- 对评论的点评内容开始 -->
-							<div class="reBox">
-								<img class="sanjiao" src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
-								<p class="reTitle"><span>点评</span></p>
-								<div class="container discussContent">
-									<div class="col-lg-3 username">
-										<img src="/Public/home/img/img1.png" alt="">
-										辣条不辣 ：
-									</div>
-									<div class="col-lg-9 discussContentR">我差点就信了</div>
+						<?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个评论开始 -->
+							<div class="discussList">
+								<p class="user">
+									<img src="<?php echo ($vo["avatar"]); ?>"
+										 alt=""><!-- 头像 -->
+									<span><?php echo ($vo["nickname"]); ?>
+</span><!-- 用户名 -->
+								</p>
+								<!-- 评论内容开始 -->
+								<p><?php echo ($vo["content"]); ?></p>
+								<!-- 评论内容结束 -->
+								<!-- 对评论的点评内容开始 -->
+								<div class="reBox">
+									<img class="sanjiao"
+										 src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
+									<p class="reTitle"><span>点评
+</span></p>
+									<?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><div class="container
+discussContent">
+											<div
+													class="col-lg-3 username">
+												<img
+														src="<?php echo ($item["avatar"]); ?>" alt="">
+
+												<?php echo ($item["nickname"]); ?> ：
+											</div>
+											<div
+													class="col-lg-9 discussContentR"><?php echo ($item["content"]); ?></div>
+										</div>
+										<p class="r1">回复</p>
+										<form action=""
+											  class="reForm">
+											<textarea
+													class="content1" placeholder="回复 <?php echo ($item["nickname"]); ?>："></textarea>
+											<button
+													class="reFormBtn">发表</button>
+										</form><?php endforeach; endif; else: echo "" ;endif; ?>
 								</div>
-								<p class="r1">回复</p>
-								<form action="" class="reForm">
-									<textarea class="content1" placeholder="回复 辣条不辣："></textarea>
-									<button class="reFormBtn">发表</button>
+								<!-- 对评论的点评内容结束 -->
+								<!-- 评论时间开始 -->
+								<p class="discussTime">
+									<span class="discusstime">
+<?php echo ($vo["create_time"]); ?></span>
+									<span class="dianPing">我要点评
+</span>
+									<img
+											src="/Public/home/img/zz0.png" alt="">
+									<span>8</span>
+								</p>
+								<!-- 评论时间结束 -->
+								<!-- 发表点评表单开始 -->
+								<form action="" class="reForm2">
+									<textarea
+											class="content1"></textarea>
+									<button class="reFormBtn">发表
+									</button>
 								</form>
+								<!-- 发表点评表单结束 -->
 							</div>
-							<!-- 对评论的点评内容结束 -->
-							<!-- 评论时间开始 -->
-							<p class="discussTime">
-								<span class="discusstime">2017-04-01 09:10</span>
-								<span class="dianPing">我要点评</span>
-								<img src="/Public/home/img/zz0.png" alt="">
-								<span>8</span>
-							</p>
-							<!-- 评论时间结束 -->
-							<!-- 发表点评表单开始 -->
-							<form action="" class="reForm2">
-								<textarea class="content1"></textarea>
-								<button class="reFormBtn">发表</button>
-							</form>
-							<!-- 发表点评表单结束 -->
-						</div>
-						<!-- 一个评论结束 -->
+							<!-- 一个评论结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
 						<!-- 一个评论开始 -->
 						<div class="discussList">
 							<p class="user">
@@ -185,7 +202,7 @@
 			$(function(){
 				// 点击回复，展开回复框
 				$(".r1").click(function(){
-					$(this).siblings('.reForm').toggle();
+					$(this).next('.reForm').toggle();
 				})
 				// 点击我要点评，展开点评表单
 				$(".dianPing").click(function(){
@@ -195,6 +212,14 @@
 				$(".keyWord img").click(function(){
 					$(this).toggle().siblings('img').toggle();
 				})
+                var checkLikes = "<?php echo ($checkLikes); ?>";
+				var checkStoreUp = "<?php echo ($checkStoreUp); ?>";
+				if (checkLikes > 0){
+					$("#likes").siblings('img').toggle();
+				}
+				if (checkStoreUp > 0){
+                    $("#keep").siblings('img').toggle();
+				}
 			})
 		</script>
 		<script type="text/javascript">

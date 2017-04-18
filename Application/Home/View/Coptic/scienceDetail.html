@@ -24,8 +24,8 @@
 				<div class="container">
 					<div class="col-lg-8 keyWord">关键词：<span>{$rows.keyword}</span></div>
 					<div class="col-lg-4 keyWord">
-						<strong><img src="__PUBLIC__/home/img/ss0.png" alt=""><img style="display: none;" src="__PUBLIC__/home/img/ss1.png" alt="">收藏</strong>
-						<strong><img src="__PUBLIC__/home/img/zz0.png" alt=""><img style="display: none;" src="__PUBLIC__/home/img/zz1.png" alt="">赞</strong>
+						<strong id="keep"><img src="__PUBLIC__/home/img/ss0.png" alt=""><img style="display: none;" src="__PUBLIC__/home/img/ss1.png" alt="">收藏</strong>
+						<strong id="likes"><img src="__PUBLIC__/home/img/zz0.png" alt=""><img style="display: none;" src="__PUBLIC__/home/img/zz1.png" alt="">赞</strong>
 					</div>
 				</div>
 				
@@ -42,49 +42,71 @@
 						<div class="filter">
 							<span class="filterActive">最热</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>最新</span>
 						</div>
-						<!-- 一个评论开始 -->
-						<div class="discussList">
-							<p class="user">
-								<img src="__PUBLIC__/home/img/img1.png" alt=""><!-- 头像 -->
-								<span>二十</span><!-- 用户名 -->
-							</p>
-							<!-- 评论内容开始 -->
-							<p>要说套路，要说套路，要说套路，要说套路，要说套路要说套路，要说套路，要说套路，要说套路</p>
-							<!-- 评论内容结束 -->
-							<!-- 对评论的点评内容开始 -->
-							<div class="reBox">
-								<img class="sanjiao" src="__PUBLIC__/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
-								<p class="reTitle"><span>点评</span></p>
-								<div class="container discussContent">
-									<div class="col-lg-3 username">
-										<img src="__PUBLIC__/home/img/img1.png" alt="">
-										辣条不辣 ：
-									</div>
-									<div class="col-lg-9 discussContentR">我差点就信了</div>
+						<volist name="comment" id="vo">
+							<!-- 一个评论开始 -->
+							<div class="discussList">
+								<p class="user">
+									<img src="{$vo.avatar}"
+										 alt=""><!-- 头像 -->
+									<span>{$vo.nickname}
+</span><!-- 用户名 -->
+								</p>
+								<!-- 评论内容开始 -->
+								<p>{$vo.content}</p>
+								<!-- 评论内容结束 -->
+								<!-- 对评论的点评内容开始 -->
+								<div class="reBox">
+									<img class="sanjiao"
+										 src="__PUBLIC__/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
+									<p class="reTitle"><span>点评
+</span></p>
+									<volist name="vo.subData"
+											id="item">
+										<div class="container
+discussContent">
+											<div
+													class="col-lg-3 username">
+												<img
+														src="{$item.avatar}" alt="">
+
+												{$item.nickname} ：
+											</div>
+											<div
+													class="col-lg-9 discussContentR">{$item.content}</div>
+										</div>
+										<p class="r1">回复</p>
+										<form action=""
+											  class="reForm">
+											<textarea
+													class="content1" placeholder="回复 {$item.nickname}："></textarea>
+											<button
+													class="reFormBtn">发表</button>
+										</form>
+									</volist>
 								</div>
-								<p class="r1">回复</p>
-								<form action="" class="reForm">
-									<textarea class="content1" placeholder="回复 辣条不辣："></textarea>
-									<button class="reFormBtn">发表</button>
+								<!-- 对评论的点评内容结束 -->
+								<!-- 评论时间开始 -->
+								<p class="discussTime">
+									<span class="discusstime">
+{$vo.create_time}</span>
+									<span class="dianPing">我要点评
+</span>
+									<img
+											src="__PUBLIC__/home/img/zz0.png" alt="">
+									<span>8</span>
+								</p>
+								<!-- 评论时间结束 -->
+								<!-- 发表点评表单开始 -->
+								<form action="" class="reForm2">
+									<textarea
+											class="content1"></textarea>
+									<button class="reFormBtn">发表
+									</button>
 								</form>
+								<!-- 发表点评表单结束 -->
 							</div>
-							<!-- 对评论的点评内容结束 -->
-							<!-- 评论时间开始 -->
-							<p class="discussTime">
-								<span class="discusstime">2017-04-01 09:10</span>
-								<span class="dianPing">我要点评</span>
-								<img src="__PUBLIC__/home/img/zz0.png" alt="">
-								<span>8</span>
-							</p>
-							<!-- 评论时间结束 -->
-							<!-- 发表点评表单开始 -->
-							<form action="" class="reForm2">
-								<textarea class="content1"></textarea>
-								<button class="reFormBtn">发表</button>
-							</form>
-							<!-- 发表点评表单结束 -->
-						</div>
-						<!-- 一个评论结束 -->
+							<!-- 一个评论结束 -->
+						</volist>
 						<!-- 一个评论开始 -->
 						<div class="discussList">
 							<p class="user">
@@ -153,7 +175,7 @@
 			$(function(){
 				// 点击回复，展开回复框
 				$(".r1").click(function(){
-					$(this).siblings('.reForm').toggle();
+					$(this).next('.reForm').toggle();
 				})
 				// 点击我要点评，展开点评表单
 				$(".dianPing").click(function(){
@@ -163,6 +185,14 @@
 				$(".keyWord img").click(function(){
 					$(this).toggle().siblings('img').toggle();
 				})
+                var checkLikes = "{$checkLikes}";
+				var checkStoreUp = "{$checkStoreUp}";
+				if (checkLikes > 0){
+					$("#likes").siblings('img').toggle();
+				}
+				if (checkStoreUp > 0){
+                    $("#keep").siblings('img').toggle();
+				}
 			})
 		</script>
 		<script type="text/javascript">

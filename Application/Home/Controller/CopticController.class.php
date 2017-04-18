@@ -36,10 +36,10 @@ class CopticController extends CommonController
      */
     public function details(){
         $data['rows'] = D("Coptic")->getCopticDetails();
-        $data['checkLikes'] = M("Comment")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id'], "status"=>1))->find();
-        $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->find();
+        $data['checkLikes'] = M("Likes")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
+        $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
         $data['comment'] = D("Comment")->getCopticComment();
-        //var_dump($data['checkLikes']);
+        //($data['comment']);
         $this->assign($data);
         $this->display("scienceDetail");
     }

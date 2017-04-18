@@ -18,7 +18,7 @@ class CommentModel extends CommonModel
             "c.coptic_id" => $id,
             "c.status" => 1
         );
-        $field = "c.id,c.parent_id,c.content,u.nickname,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum";
+        $field = "c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum";
         $list = $this->alias("c")->getJoinDataList($join, $where, $field, null, null, null);
 
         $listAry = array();
@@ -35,6 +35,7 @@ class CommentModel extends CommonModel
             }
             foreach ($listAry as $key=>$value){
                 $listAry[$key]['subData'] = array_reverse(RecursionCommentsAry($value['id'], $list));
+                $listAry[$key]['create_time'] = dateTime($value['create_time'], 6);
             }
             $listAry = $this->bubbleSort($listAry);
             return $listAry;
