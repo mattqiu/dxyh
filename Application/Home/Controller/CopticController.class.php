@@ -18,10 +18,10 @@ class CopticController extends CommonController
     }
 
     public function index(){
-        $data['rows'] = D("Coptic")->getList();
+        $data = D("Coptic")->getList();
 
         $data['copticType'] = M("CopticType")->order(array("sort"=>"desc","create_time"=>"desc"))->select();
-
+//var_dump($data);
         $this->assign($data);
         $this->display("science");
     }

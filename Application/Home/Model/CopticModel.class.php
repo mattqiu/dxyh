@@ -26,21 +26,14 @@ class CopticModel extends CommonModel
         }
         $join = array("INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id");
         $count = $this->alias('ct1')->getJoinCount($join, $where);
-        $pageSize = 1;
-        $p = 0;
-        $pageCount = ceil($count / $pageSize);
-        if (isset($quesData['p'])){
-            if (($quesData['p']-1) >= 0 && ($quesData['p']-1) <= $pageCount){
-                $p = ($quesData['p']-1);
-            }
-        }
-        $firstRow = $p * $pageSize;
+        import('Org.Api.Page');
+        $page = new \Page($count, C('PAGE_ROWS'));
         $field = "ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name";
-        $data['list'] = $this->alias('ct1')->getJoinDataList($join, $where, $field, array("ct1.create_time"=>"desc"), $firstRow, $pageSize);
-        foreach ($data['list'] as $key=>$item){
-            $data['list'][$key]['create_time'] = dateTime($item['create_time'], 2);
+        $data['rows'] = $this->alias('ct1')->getJoinDataList($join, $where, $field, array("ct1.create_time"=>"desc"), $page->firstRow, $page->listRows);
+        foreach ($data['rows'] as $key=>$item){
+            $data['rows'][$key]['create_time'] = dateTime($item['create_time'], 2);
         }
-        $data['totalPages'] = $pageCount;
+        /*$data['totalPages'] = $pageCount;
         $data['p'] = $p + 1;
         $data['typeId'] = $quesData['typeId'];
         $data['keyword'] = $quesData['keyword'];
@@ -48,7 +41,9 @@ class CopticModel extends CommonModel
             return array('code'=>'0', 'data'=>$data);
         }else{
             return array('code'=>'1', 'data'=>$data);
-        }
+        }*/
+        $data['page'] = $page->show();
+        return $data;
     }
 
     public function getCopticDetails(){

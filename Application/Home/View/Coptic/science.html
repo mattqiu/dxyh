@@ -29,6 +29,7 @@
 		<div class="container wrap activeStyle">
 			<div class="col-lg-1 activeStyleL">栏目分类</div>
 			<div class="col-lg-11 activeStyleR">
+                <a href="javascript:;" data-value="0">全部</a>
 					<volist name="copticType" id="vo">
 						<a href="javascript:;" data-value="{$vo.id}">{$vo.category_name}</a>
 					</volist>
@@ -54,9 +55,9 @@
 		<div class="container wrap searchBox">
 			<div class="col-lg-1 searchBoxL visible-lg">关键词</div>
 			<div class="col-lg-11 searchBoxR">
-				<form action="">
+				<form action="{:U('Coptic/index')}" method="get" id="form1">
 					<input type="text" class="input" name="keyword">
-					<input type="button" class="submit visible-lg" onclick="subKeyWord()" value="查询">
+					<input type="submit" class="submit visible-lg" onclick="subKeyWord()" value="查询">
 					<span class="submit visible-xs">查询</span><!-- 小屏幕下的查询 -->
 				</form>
 			</div>
@@ -71,93 +72,29 @@
 			<div class="col-lg-9 activeListWrap">
 				<div class="activeListBox">
 					<!-- 一个文章开始 -->
-					<div class="activeList clearfix">
-						<a href="scienceDetail.html">
-							<div class="col-xs-4 col-lg-3">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-							</div>
-							<div class="col-xs-8 col-lg-9 activeListR">
-								<h1>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h1>
-								<p>作者：XXXX&nbsp;&nbsp;&nbsp;&nbsp;2017-02-15 <span class="author visible-lg">踏雪无痕</span></p>
-								<div class="figcaption">
-									<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-								</div>
-								
-							</div>
-						</a>
-					</div>
-					<!-- 一个文章结束 -->
-					<!-- 一个文章开始 -->
-					<div class="activeList clearfix">
-						<a href="scienceDetail.html">
-							<div class="col-xs-4 col-lg-3">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-							</div>
-							<div class="col-xs-8 col-lg-9 activeListR">
-								<h1>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h1>
-								<p>作者：XXXX&nbsp;&nbsp;&nbsp;&nbsp;2017-02-15 <span class="author visible-lg">踏雪无痕</span></p>
-								<div class="figcaption">
-									<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-								</div>
-								
-							</div>
-						</a>
-					</div>
-					<!-- 一个文章结束 -->
-					<!-- 一个文章开始 -->
-					<div class="activeList clearfix">
-						<a href="scienceDetail.html">
-							<div class="col-xs-4 col-lg-3">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-							</div>
-							<div class="col-xs-8 col-lg-9 activeListR">
-								<h1>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h1>
-								<p>作者：XXXX&nbsp;&nbsp;&nbsp;&nbsp;2017-02-15 <span class="author visible-lg">踏雪无痕</span></p>
-								<div class="figcaption">
-									<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-								</div>
-								
-							</div>
-						</a>
-					</div>
-					<!-- 一个文章结束 -->
-					<!-- 一个文章开始 -->
-					<div class="activeList clearfix">
-						<a href="scienceDetail.html">
-							<div class="col-xs-4 col-lg-3">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-							</div>
-							<div class="col-xs-8 col-lg-9 activeListR">
-								<h1>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h1>
-								<p>作者：XXXX&nbsp;&nbsp;&nbsp;&nbsp;2017-02-15 <span class="author visible-lg">踏雪无痕</span></p>
-								<div class="figcaption">
-									<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-								</div>
-								
-							</div>
-						</a>
-					</div>
-					<!-- 一个文章结束 -->
-					<!-- 一个文章开始 -->
-					<div class="activeList clearfix">
-						<a href="scienceDetail.html">
-							<div class="col-xs-4 col-lg-3">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-							</div>
-							<div class="col-xs-8 col-lg-9 activeListR">
-								<h1>标题标题标题标题标题标题标题标题标题标题标题标题标题标题</h1>
-								<p>作者：XXXX&nbsp;&nbsp;&nbsp;&nbsp;2017-02-15 <span class="author visible-lg">踏雪无痕</span></p>
-								<div class="figcaption">
-									<p>文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容容，文章内容，文章内容，文章内容章内容，文章内容，文章内容，文章内容，文章内容，文章内容</p>
-								</div>
-								
-							</div>
-						</a>
-					</div>
+                    <volist name="rows" id="vo">
+                        <div class="activeList clearfix">
+                            <a href="{:U('Coptic/scienceDetail',array('id'=>$vo['id']))}">
+                                <div class="col-xs-4 col-lg-3">
+                                    <img src="{$vo.coptic_cover}" alt="">
+                                </div>
+                                <div class="col-xs-8 col-lg-9 activeListR">
+                                    <h1>{$vo.coptic_title}</h1>
+                                    <p>作者：{$vo.author}&nbsp;&nbsp;&nbsp;&nbsp;{$vo.create_time} <span class="author visible-lg">{$vo.category_name}</span></p>
+                                    <div class="figcaption">
+                                        <p>{$vo.abstract}</p>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                    </volist>
 					<!-- 一个文章结束 -->
 				</div>
 				<!-- 分页开始 -->
-				<div class="pages clearfix visible-lg"></div>
+				<div class="pages clearfix visible-lg">
+                    {$page}
+                </div>
 				<!-- 分页结束 -->
 			</div>
 			<!-- 左边文章列表结束 -->
@@ -206,6 +143,7 @@
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/home/js/dropload.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/home/js/science.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/home/js/common.js"></script>
 		<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
@@ -219,37 +157,170 @@
 		</script>
 		<include file="Public/bottom"/>
 		<script type="text/javascript">
-			$(function () {
-				Coptic();
-            })
+            $(function () {
+                $('.activeStyle a:first').addClass("activeStyleActive");
+            });
+            
+            $(".activeStyle").find('a').each(function () {
+                $(this).on('click', function () {
+                    alert('ss');
+                    var typeId = $(this).attr('data-value');
+                    $("#form1").submit();
+                });
+            });
 
-			function Coptic(typeId, keyword, p) {
-				var data = {};
-			    if (typeId){
-			        data['typeId'] = typeId;
-				}
-				if (keyword){
-			        data['keyword'] = keyword;
-				}
-                if (p){
-                    data['p'] = p;
-                }else{
-                    data['p'] = 0;
+
+
+            /*if (browserRedirect() == "pc") {
+
+                $(function () {
+                    $('.activeStyle a:first').addClass("activeStyleActive");
+                    Coptic();
+                })
+
+                function Coptic(typeId, keyword, p) {
+                    var data = {};
+                    if (typeId){
+                        data['typeId'] = typeId;
+                    }
+                    if (keyword){
+                        data['keyword'] = keyword;
+                    }
+                    if (p){
+                        data['p'] = p;
+                    }else{
+                        data['p'] = 0;
+                    }
+                    console.log(data);
+
+                    $.ajax({
+                        url: '{:U("Coptic/copticJsonData")}',
+                        data: data,
+                        dataType: 'json',
+                        type: 'get',
+                        success: function (json) {
+                            console.log(json);
+                            if (json.code == 0){
+                                var url = "{:U('Coptic/scienceDetail')}?id=";
+                                var row = [];
+                                $.each(json.data.list, function (key, item) {
+                                    row[key] = '<div class="activeList clearfix">';
+                                    row[key] += '<a href="'+url+item.id+'"><div class="col-xs-4 col-lg-3">';
+                                    row[key] += '<img src="'+item.coptic_cover+'"alt=""></div>';
+                                    row[key] += '<div class="col-xs-8 col-lg-9 activeListR">';
+                                    row[key] += '<h1>'+item.coptic_title+'</h1>';
+                                    row[key] += '<p>作者：'+item.author+'&nbsp;&nbsp;&nbsp;&nbsp;'+item.create_time;
+                                    row[key] += '<span class="author visible-lg">'+item.category_name+'</span></p>';
+                                    row[key] += '<div class="figcaption"><p>'+item.abstract+'</p></div></div></a></div>';
+                                });
+                                row = row.join('');
+                                console.log(row);
+                                $('.activeListBox').html(row);
+
+                                if (json.data.totalPages > 1){
+                                    //分页
+                                    var nowPage = parseInt(json.data.p);
+                                    var totalPages = json.data.totalPages;
+                                    var rollPage = 5;
+                                    var now_cool_page      = rollPage/2;
+                                    var now_cool_page_ceil = Math.ceil(now_cool_page);
+                                    var page;
+                                    var pages = '';
+                                    //首页
+                                    if(nowPage > 1) {
+                                        pages += '<a href="javascript:;" class="home" onclick="js_method(this)" data-value="0">首页</a>';
+                                    }
+                                    //上一页
+                                    pages += ((nowPage - 1) > 0)?'<a class="pre" href="javascript:;" onclick="js_method(this)" data-value="'+(nowPage-1)+'">上一页</a>':'';
+                                    for(var i = 1; i <= rollPage; i++){
+                                        if((nowPage - now_cool_page) <= 0 ){
+                                            page = i;
+                                        }else if((nowPage + now_cool_page - 1) >= totalPages){
+                                            page = totalPages - rollPage + i;
+                                        }else{
+                                            page = nowPage - now_cool_page_ceil + i;
+                                        }
+                                        if(page > 0 && page != nowPage){
+
+                                            if(page <= totalPages){
+                                                pages += '<a href="javascript:;" onclick="js_method(this)" data-value="'+page+'">'+page+'</a>';
+                                            }else{
+                                                break;
+                                            }
+                                        }else{
+                                            if(page > 0 && totalPages != 1){
+                                                pages += '<a class="pageActive" href="javascript:;" onclick="js_method(this)" data-value="'+page+'">'+page+'</a>';
+                                            }
+                                        }
+                                    }
+                                    pages += ((nowPage + 1) <= totalPages)?'<a class="pre" href="javascript:;" onclick="js_method(this)" data-value="'+(parseInt(nowPage)+1)+'">下一页</a>':'';
+                                    if(nowPage < totalPages) {
+                                        pages += '<a class="pre" href="javascript:;" onclick="js_method(this)" data-value="' + totalPages + '">尾页</a>';
+                                    }
+                                    $(".pages").html(pages);
+                                }else{
+                                    $(".pages").html('');
+                                }
+                            }else {
+                                $(".activeListBox").html("暂无数据");
+                                $(".pages").html('');
+                            }
+
+                            if (json.data.typeId){
+                                $(".activeStyle").find('a').removeClass('activeStyleActive');
+                                $(".activeStyle").find('a').each(function () {
+                                    if ($(this).attr("data-value") == json.data.typeId){
+                                        $(this).addClass('activeStyleActive');
+                                    }
+                                })
+                            }
+                        }
+                    });
                 }
-				console.log(data);
 
-				$.ajax({
-					url: '{:U("Coptic/copticJsonData")}',
-					data: data,
-					dataType: 'json',
-					type: 'get',
-					success: function (json) {
+                function js_method(obj) {
+                    var p = $(obj).attr('data-value');
+                    var typeId = '';
+                    $(".activeStyle").find("a").each(function () {
+                        if ($(this).hasClass("activeStyleActive")){
+                            typeId = $(this).attr('data-value');
+                        }
+                    });
+                    var keyword = $("input[name='keyword']").val();
+                    Coptic(typeId, keyword, p);
+                }
+
+                $(".activeStyle").find('a').each(function () {
+                    $(this).on('click', function () {
+                        var typeId = $(this).attr('data-value');
+                        var keyword = $("input[name='keyword']").val();
+                        Coptic(typeId, keyword);
+                    });
+                });
+
+                function subKeyWord() {
+                    var typeId = '';
+                    $(".activeStyle").find("a").each(function () {
+                        if ($(this).hasClass("activeStyleActive")){
+                            typeId = $(this).attr('data-value');
+                        }
+                    });
+                    var keyword = $("input[name='keyword']").val();
+                    Coptic(typeId, keyword);
+                }
+			}else if (browserRedirect() == "phone"){
+                $.ajax({
+                    url: '{:U("Coptic/copticJsonData")}',
+                    dataType: 'json',
+                    type: 'get',
+                    success: function (json) {
                         console.log(json);
                         if (json.code == 0){
+                            var url = "{:U('Coptic/scienceDetail')}?id=";
                             var row = [];
                             $.each(json.data.list, function (key, item) {
                                 row[key] = '<div class="activeList clearfix">';
-                                row[key] += '<a href="scienceDetail.html"><div class="col-xs-4 col-lg-3">';
+                                row[key] += '<a href="'+url+item.id+'"><div class="col-xs-4 col-lg-3">';
                                 row[key] += '<img src="'+item.coptic_cover+'"alt=""></div>';
                                 row[key] += '<div class="col-xs-8 col-lg-9 activeListR">';
                                 row[key] += '<h1>'+item.coptic_title+'</h1>';
@@ -259,52 +330,7 @@
                             });
                             row = row.join('');
                             console.log(row);
-                            $('.activeListBox').html(row);
-
-                            if (json.data.totalPages > 1){
-                                //分页
-                                var nowPage = parseInt(json.data.p);
-                                var totalPages = json.data.totalPages;
-                                var rollPage = 5;
-                                var now_cool_page      = rollPage/2;
-                                var now_cool_page_ceil = Math.ceil(now_cool_page);
-                                var page;
-                                var pages = '';
-                                //首页
-                                if(nowPage > 1) {
-                                    pages += '<a href="javascript:;" class="home" onclick="js_method(this)" data-value="0">首页</a>';
-                                }
-                                //上一页
-                                pages += ((nowPage - 1) > 0)?'<a class="pre" href="javascript:;" onclick="js_method(this)" data-value="'+(nowPage-1)+'">上一页</a>':'';
-                                for(var i = 1; i <= rollPage; i++){
-                                    if((nowPage - now_cool_page) <= 0 ){
-                                        page = i;
-                                    }else if((nowPage + now_cool_page - 1) >= totalPages){
-                                        page = totalPages - rollPage + i;
-                                    }else{
-                                        page = nowPage - now_cool_page_ceil + i;
-                                    }
-                                    if(page > 0 && page != nowPage){
-
-                                        if(page <= totalPages){
-                                            pages += '<a href="javascript:;" onclick="js_method(this)" data-value="'+page+'">'+page+'</a>';
-                                        }else{
-                                            break;
-                                        }
-                                    }else{
-                                        if(page > 0 && totalPages != 1){
-                                            pages += '<a class="pageActive" href="javascript:;" onclick="js_method(this)" data-value="'+page+'">'+page+'</a>';
-                                        }
-                                    }
-                                }
-                                pages += ((nowPage + 1) <= totalPages)?'<a class="pre" href="javascript:;" onclick="js_method(this)" data-value="'+(parseInt(nowPage)+1)+'">下一页</a>':'';
-                                if(nowPage < totalPages) {
-                                    pages += '<a class="pre" href="javascript:;" onclick="js_method(this)" data-value="' + totalPages + '">尾页</a>';
-                                }
-                                $(".pages").html(pages);
-                            }else{
-								$(".pages").html('');
-							}
+                            $('.activeListBox').append(row);
                         }else {
                             $(".activeListBox").html("暂无数据");
                         }
@@ -318,32 +344,8 @@
                             })
                         }
                     }
-				});
-            }
-
-            function js_method(obj) {
-                var p = $(obj).attr('data-value');
-                Coptic(null, null, p);
-            }
-
-            $(".activeStyle").find('a').each(function () {
-                $(this).on('click', function () {
-                    var typeId = $(this).attr('data-value');
-                    var keyword = $("input[name='keyword']").val();
-                    Coptic(typeId, keyword);
-                });
-            });
-			
-			function subKeyWord() {
-				var typeId = '';
-				$(".activeStyle").find("a").each(function () {
-					if ($(this).hasClass("activeStyleActive")){
-						typeId = $(this).val();
-					}
-				});
-				var keyword = $("input[name='keyword']").val();
-				Coptic(typeId, keyword);
-			}
+                })
+            }*/
 		</script>
 	</body>
 </html>
