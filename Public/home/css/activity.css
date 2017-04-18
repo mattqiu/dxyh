@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-04 13:41:02
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-18 15:08:15
+* @Last Modified time: 2017-04-18 18:30:08
 */
 body{
 	background: #fff;
@@ -54,15 +54,16 @@ body{
 	}
 	.styleBtn{
 		display: inline-block;
-		width: 7%;
+		width: 12%;
 		line-height: 1.6;
 		float: left;
 		padding-top: 3px;
 		color: #2D9E12;
 		font-size: 16px;
+		text-align: center;
 	}
 	.input{
-	width: 83%;
+	width: 76%;
 	  height: 30px;
 	float: left;
 	font-size: 16px;
@@ -73,7 +74,7 @@ body{
 	background: #E3E3E5;
 }
 .submit{
-	width: 10%;
+	width: 12%;
 	height: 30px;
 	line-height: 30px;
 	outline: none;

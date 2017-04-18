@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-13 23:59:59
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-14 00:06:35
+* @Last Modified time: 2017-04-18 18:28:16
 */
 
 
@@ -12,6 +12,19 @@
  * @Last Modified by:   Administrator
  * @Last Modified time: 2017-04-13 23:58:18
  */
+$(function() {
+	var clientWidth = document.documentElement && document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+	if (clientWidth < 1200) {	
+	// 搜索框展示栏目分类
+	$(".styleBtn").click(function(){
+		$(".activeStyle").toggle();
+	})
+	// 点击分类标签后，隐藏分类栏
+	$(".activeStyleR a").click(function(){
+		$(".activeStyle").hide();
+	})
+}
+})
 function adjustF(){
 			$(".figcaption").each(function(i) {
 		var divH = $(this).height();
@@ -25,13 +38,6 @@ $(function() {
 		// 摘要多行显示省略号
 		adjustF();
 		
-	// 搜索框展示栏目分类
-	$(".input").focus(function() {
-		$(".activeStyle").show();
-	})
-	$(".input").blur(function() {
-        $(".activeStyle").hide();
-    })
 })
 
 
