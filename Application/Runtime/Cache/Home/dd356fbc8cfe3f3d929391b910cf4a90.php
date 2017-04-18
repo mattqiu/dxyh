@@ -6,9 +6,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="stylesheet" href="/Public/home/css/activeDetail.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
+		<link rel="stylesheet" href="/dxyh/Public/home/css/activeDetail.css">
+		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -16,10 +16,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <img src="/dxyh/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -52,14 +52,14 @@
 				<div class="container">
 					<div class="col-lg-8 keyWord">关键词：<span>XXXX</span><span>XXXX</span></div>
 					<div class="col-lg-4 keyWord">
-						<strong><img src="/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/Public/home/img/ss1.png" alt="">收藏</strong>
-						<strong><img src="/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/Public/home/img/zz1.png" alt="">赞</strong>
+						<strong><img src="/dxyh/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/dxyh/Public/home/img/ss1.png" alt="">收藏</strong>
+						<strong><img src="/dxyh/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/dxyh/Public/home/img/zz1.png" alt="">赞</strong>
 					</div>
 				</div>
 				
 				<!-- 活动内容开始 -->
 				<div class="content">
-					<img src="/Public/home/img/img1.png" alt="">
+					<img src="/dxyh/Public/home/img/img1.png" alt="">
 					<p><h4>基因库正式运行</h4>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
 					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B, Club,nce等不同风格都能完美呈现。</p>
 					<p><h4>基因库正式运行</h4>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
@@ -76,7 +76,7 @@
 						<!-- 一个评论开始 -->
 						<div class="discussList">
 							<p class="user">
-								<img src="/Public/home/img/img1.png" alt=""><!-- 头像 -->
+								<img src="/dxyh/Public/home/img/img1.png" alt=""><!-- 头像 -->
 								<span>二十</span><!-- 用户名 -->
 							</p>
 							<!-- 评论内容开始 -->
@@ -84,11 +84,11 @@
 							<!-- 评论内容结束 -->
 							<!-- 对评论的点评内容开始 -->
 							<div class="reBox">
-								<img class="sanjiao" src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
+								<img class="sanjiao" src="/dxyh/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
 								<p class="reTitle"><span>点评</span></p>
 								<div class="container discussContent">
 									<div class="col-lg-3 username">
-										<img src="/Public/home/img/img1.png" alt="">
+										<img src="/dxyh/Public/home/img/img1.png" alt="">
 										辣条不辣 ：
 									</div>
 									<div class="col-lg-9 discussContentR">我差点就信了</div>
@@ -104,7 +104,7 @@
 							<p class="discussTime">
 								<span class="discusstime">2017-04-01 09:10</span>
 								<span class="dianPing">我要点评</span>
-								<img src="/Public/home/img/zz0.png" alt="">
+								<img src="/dxyh/Public/home/img/zz0.png" alt="">
 								<span>8</span>
 							</p>
 							<!-- 评论时间结束 -->
@@ -119,7 +119,7 @@
 						<!-- 一个评论开始 -->
 						<div class="discussList">
 							<p class="user">
-								<img src="/Public/home/img/img1.png" alt=""><!-- 头像 -->
+								<img src="/dxyh/Public/home/img/img1.png" alt=""><!-- 头像 -->
 								<span>二十</span><!-- 用户名 -->
 							</p>
 							<!-- 评论内容开始 -->
@@ -130,7 +130,7 @@
 							<p class="discussTime">
 								<span class="discusstime">2017-04-01 09:10</span>
 								<span class="dianPing">我要点评</span>
-								<img src="/Public/home/img/zz1.png" alt="">
+								<img src="/dxyh/Public/home/img/zz1.png" alt="">
 								<span>8</span>
 							</p>
 							<!-- 评论时间结束 -->
@@ -163,7 +163,7 @@
 					<!-- 一个热门科普推荐开始 -->
 					<li>
 						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
+							<img src="/dxyh/Public/home/img/img1.png" alt="">
 							<!-- 标题 -->
 							<div class="mengceng"></div><!-- 蒙层 -->
 							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
@@ -173,7 +173,7 @@
 					<!-- 一个热门科普推荐开始 -->
 					<li>
 						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
+							<img src="/dxyh/Public/home/img/img1.png" alt="">
 							<!-- 标题 -->
 							<div class="mengceng"></div><!-- 蒙层 -->
 							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
@@ -183,7 +183,7 @@
 					<!-- 一个热门科普推荐开始 -->
 					<li>
 						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
+							<img src="/dxyh/Public/home/img/img1.png" alt="">
 							<!-- 标题 -->
 							<div class="mengceng"></div><!-- 蒙层 -->
 							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
@@ -203,7 +203,7 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 				// 点击回复，展开回复框

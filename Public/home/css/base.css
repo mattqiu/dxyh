@@ -21,7 +21,7 @@
 .commonTop{background-color: #FFFFFF;text-align: center;position: relative;border-bottom: 1px solid #e0e0e0;}
 .commonTop nav{display: none;background: #fff;padding-top: 30px;}
 .commonTop nav a{width:60%;margin:0 auto;line-height: 50px;border-bottom: 1px solid #e0e0e0;color:#666666;display:block;font-size: 16px;}
-.commonTop .logoImg img{width: 30px;height: 30px;margin:4px 5px 4px 10px;}
+.commonTop .logoImg img{width: 34px;height: 34px;margin:4px 5px 4px 10px;}
 .commonTop .logoImg{display: block;border-bottom: 1px solid #e0e0e0;}
 .commonTop .active{color: #F55351;}
 .commonTop .loginBox{text-align: right;position: absolute;top: 0;right:100px;display: inline-block;float: right;color: #666666;}

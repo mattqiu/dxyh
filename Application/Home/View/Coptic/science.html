@@ -55,10 +55,10 @@
 		<div class="container wrap searchBox">
 			<div class="col-lg-1 searchBoxL visible-lg">关键词</div>
 			<div class="col-lg-11 searchBoxR">
-				<form action="{:U('Coptic/index')}" method="get" id="form1">
+				<form action="{:U('Coptic/index')}" method="get" id="form1">    <span class="hidden-lg styleBtn" >分类</span>
 					<input type="text" class="input" name="keyword">
 					<input type="submit" class="submit visible-lg" onclick="subKeyWord()" value="查询">
-					<span class="submit visible-xs">查询</span><!-- 小屏幕下的查询 -->
+					<span class="submit hidden-lg">查询</span><!-- 小屏幕下的查询 -->
 				</form>
 			</div>
 		</div>

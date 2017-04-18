@@ -2,17 +2,18 @@
  * @Author: Administrator
  * @Date:   2017-04-13 23:37:58
  * @Last Modified by:   Administrator
- * @Last Modified time: 2017-04-18 12:31:28
+ * @Last Modified time: 2017-04-18 14:54:15
  */
 $(function() {
 	var clientWidth = document.documentElement && document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
 	var n = 3; //轮播图显示个数
 	if (clientWidth < 1200) {	
 	// 搜索框展示栏目分类
-	$(".input").focus(function() {
-		$(".activeStyle").show();
+	$(".styleBtn").click(function(){
+		$(".activeStyle").toggle();
 	})
-	$(".input").blur(function() {
+	// 点击分类标签后，隐藏分类栏
+	$(".activeStyleR a").click(function(){
 		$(".activeStyle").hide();
 	})
 }

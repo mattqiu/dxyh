@@ -6,8 +6,8 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
+		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
 		<style type="text/css">	
 		.bg { width: 100%; height: auto; }
 		body { background: #FFFFFF; }
@@ -31,10 +31,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <img src="/dxyh/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -57,7 +57,7 @@
     </div>
 </div>
 		<!-- 公共头部结束 -->
-		<img class="bg" src="/Public/home/img/A2.png" alt="">
+		<img class="bg" src="/dxyh/Public/home/img/A2.png" alt="">
 		<!-- 大屏幕下标题开始 -->
 		<div class="titleLogo container visible-lg">
 			<div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>A</p></div>
@@ -69,7 +69,7 @@
 		<!-- 大屏幕下标题结束 -->
 		<!-- 关于我们描述开始 -->
 		<div class="wrap aboutUs clearfix">
-			<img class="aboutusImg  visible-lg" src="/Public/home/img/aboutus.png" alt="">
+			<img class="aboutusImg  visible-lg" src="/dxyh/Public/home/img/aboutus.png" alt="">
 			<p>通达医学常识，知晓家庭护理，让老百姓获得健康生活、预防康复所需的知识与能力，做自我健康的管理者是“达医晓护”专题建立的初衷。最新图文将为您呈
 			现各类医学小知识；医学视频将用生动的方式为您科普；虾米妈咪将指导您成为完美父母；在急急如令，您能了解到形形色色的疾病和正确的质量方法；行为决定健康，带您度过健康的一生。</p>
 			<p>通达医学常识，知晓家庭护理，让老百姓获得健康生活、预防康复所需的知识与能力，做自我健康的管理者是“达医晓护”专题建立的初衷。最新图文将为您呈
@@ -85,7 +85,7 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
 			<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
