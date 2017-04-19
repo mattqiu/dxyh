@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
 		<link rel="stylesheet" href="__PUBLIC__/home/css/activeDetail.css">
 		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 	</head>
 	<body style="padding-bottom: 60px;">
 		<!-- 公共头部开始 -->
@@ -27,12 +28,12 @@
 						<a title="分享到LinkedIn" class="bshare-linkedin"></a>
 						<!--<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>-->
 					</div>
-					<p>时间：2017-03-23 19:00 至 2017-03-28 20:30</p>
-					<p>报名：2017-03-23 19:00 至 2017-03-28 20:30</p>
-					<p>地点：青青堂</p>
-					<p>人数：415/人数不限</p>
-					<p>浏览：2498</p>
-					<div class="joinBtnBox"><a href="#" class="joinBtn">我要去</a></div>
+					<p>时间：{$rows.activity_start_time} 至 {$rows.activity_end_time}</p>
+					<p>报名：{$rows.enroll_start_time} 至 {$rows.enroll_end_time}</p>
+					<p>地点：{$rows.address}</p>
+					<p>人数：<label class="attend">{$rows.enrollnum}</label>/{$rows.activity_number}</p>
+					<p>浏览：{$rows.browse_volume}</p>
+					<div class="joinBtnBox"><a href="javascript:;" class="joinBtn" data-value="{$rows.id}">我要去</a></div>
 				</div>
 				<!-- 报名及分享结束 -->
 				<h2 class="visible-lg">热门活动回顾</h2>
@@ -54,16 +55,13 @@
 			<!-- 右边热门活动回顾结束 -->
 			<!-- 左边详情开始 -->
 			<div class="col-lg-9 col-lg-pull-3 activeDetailL">
-				<div>活动类别：XXXXXX <span class="code"><img src="__PUBLIC__/home/img/code.png" alt="">活动二维码</span></div>
+				<div>活动类别：{$rows.type_name} <span class="code"><img src="__PUBLIC__/home/img/code.png" alt="">活动二维码</span></div>
 				<!-- 标题开始 -->
-				<h1 class="activeTitle">亚洲顶级‘蓝色警报’人声音乐</h1>
+				<h1 class="activeTitle">{$rows.activity_name}</h1>
 				<!-- 标题结束 -->
 				<!-- 活动内容开始 -->
 				<div class="content">
-					<img src="__PUBLIC__/home/img/img1.png" alt="">
-					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
-					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B, Club,nce等不同风格都能完美呈现。</p>
-					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
+					{$rows.content}
 					<!-- 活动时间等信息开始 -->
 					<div>时间:05月23日 周六 20:00-22:30</div>
 					<div>地点: 深圳 福田区 福中一路2016号</div>
@@ -90,6 +88,7 @@
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
 		<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 			<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
@@ -102,5 +101,31 @@
 			)
 		</script>
 		<include file="Public/bottom"/>
+	<script type="text/javascript">
+		$(function () {
+			$(".joinBtn").click(function () {
+				var id = $(this).attr("data-value");
+				$.ajax({
+					url: "{:U('Activity/participateActivity')}",
+					type: 'post',
+					data: {'id':id},
+					dataType: 'json',
+					success: function (json) {
+						console.log(json);
+						if (json.code == 0){
+							$(".attend").html(json.data);
+						}
+						var d = dialog({
+							content: json.msg
+						});
+						d.show();
+						setTimeout(function () {
+							d.close().remove();
+						}, 2000);
+					}
+				});
+			});
+		});
+	</script>
 	</body>
 </html>

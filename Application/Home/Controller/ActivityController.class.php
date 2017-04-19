@@ -36,7 +36,7 @@ class ActivityController extends CommonController
         $Model->execute("update dxyh_activity set browse_volume = browse_volume+1 where id={$_GET['id']}");
 
         $data['rows'] = D("Activity")->getActivityDetails();
-
+//var_dump($data);
         $this->assign($data);
         $this->display("activityDetail");
     }
@@ -52,5 +52,10 @@ class ActivityController extends CommonController
             $result = array('code'=>1, 'data'=>$data['rows']);
         }
         echo json_encode($result);
+    }
+
+    public function participateActivity(){
+        $data = D('AttendActivity')->participateActivity();
+        echo json_encode($data);
     }
 }

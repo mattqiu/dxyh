@@ -62,10 +62,17 @@ class ActivityModel extends CommonModel
 
     public function getActivityDetails(){
         $id = I('get.id');
-        $info = $this->getDataInfo(array('id'=>$id));
+        $join = array("INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id");
+        $field = "ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum";
+        $info = $this->alias("ay1")->getJoinDataInfo($join, array('ay1.id'=>$id), $field);
         $info['content'] = html_entity_decode($info['content']);
-        $info['create_time'] = dateTime($info['create_time'], 2);
-        $info['original_link'] = urldecode($info['original_link']);
+        $info['activity_start_time'] = dateTime($info['activity_start_time'], 6);
+        $info['activity_end_time'] = dateTime($info['activity_end_time'], 6);
+        $info['enroll_start_time'] = dateTime($info['enroll_start_time'], 6);
+        $info['enroll_end_time'] = dateTime($info['enroll_end_time'], 6);
+        $info['activity_number'] = empty($info['activity_number'])?"人数不限":$info['activity_number'];
         return $info;
     }
+
+    
 }
