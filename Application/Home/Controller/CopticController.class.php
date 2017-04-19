@@ -53,6 +53,17 @@ class CopticController extends CommonController
         }
         echo json_encode($result);
     }
+    
+    public function copticKeepLikes(){
+        $requset = I('post.');
+        if (isset($requset['type'])){
+            if ($requset['type'] == 'keep'){
+                D("Collection")->changeKeep();
+            }elseif ($requset['type'] == 'likes'){
+
+            }
+        }
+    }
 
 
 

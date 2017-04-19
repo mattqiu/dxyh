@@ -52,8 +52,13 @@
 				<div class="container">
 					<div class="col-lg-8 keyWord">关键词：<span><?php echo ($rows["keyword"]); ?></span></div>
 					<div class="col-lg-4 keyWord">
+<<<<<<< HEAD
 						<strong id="keep"><img src="/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/Public/home/img/ss1.png" alt="">收藏</strong>
 						<strong id="likes"><img src="/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/Public/home/img/zz1.png" alt="">赞</strong>
+=======
+						<strong id="keep"><img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><img style="display: none;" src="/Public/home/img/ss1.png" alt="" data-value="1" data-field-name="keep">收藏</strong>
+						<strong id="likes"><img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><img style="display: none;" src="/Public/home/img/zz1.png" alt="" data-value="1" data-field-name="likes">赞</strong>
+>>>>>>> f124a25156bf704012d240622d42338242c5fcf8
 					</div>
 				</div>
 				
@@ -211,6 +216,16 @@ discussContent">
 				// 点赞与收藏功能
 				$(".keyWord img").click(function(){
 					$(this).toggle().siblings('img').toggle();
+					var type = $(this).attr('data-field-name');
+					var item = $(this).attr('data-value');
+					var id = '<?php echo ($rows["id"]); ?>';
+					var coptic_type_id = '<?php echo ($rows["coptic_type_id"]); ?>';
+					$.ajax({
+						url: '<?php echo U("Coptic/copticKeepLikes");?>',
+						data: {'type':type,'item':item,'id':id,'coptic_type_id':coptic_type_id},
+						type: 'post',
+						success: function () {}
+					});
 				})
                 var checkLikes = "<?php echo ($checkLikes); ?>";
 				var checkStoreUp = "<?php echo ($checkStoreUp); ?>";

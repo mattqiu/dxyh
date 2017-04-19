@@ -24,8 +24,8 @@
 				<div class="container">
 					<div class="col-lg-8 keyWord">关键词：<span>{$rows.keyword}</span></div>
 					<div class="col-lg-4 keyWord">
-						<strong id="keep"><img src="__PUBLIC__/home/img/ss0.png" alt=""><img style="display: none;" src="__PUBLIC__/home/img/ss1.png" alt="">收藏</strong>
-						<strong id="likes"><img src="__PUBLIC__/home/img/zz0.png" alt=""><img style="display: none;" src="__PUBLIC__/home/img/zz1.png" alt="">赞</strong>
+						<strong id="keep"><img src="__PUBLIC__/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><img style="display: none;" src="__PUBLIC__/home/img/ss1.png" alt="" data-value="1" data-field-name="keep">收藏</strong>
+						<strong id="likes"><img src="__PUBLIC__/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><img style="display: none;" src="__PUBLIC__/home/img/zz1.png" alt="" data-value="1" data-field-name="likes">赞</strong>
 					</div>
 				</div>
 				
@@ -184,6 +184,16 @@ discussContent">
 				// 点赞与收藏功能
 				$(".keyWord img").click(function(){
 					$(this).toggle().siblings('img').toggle();
+					var type = $(this).attr('data-field-name');
+					var item = $(this).attr('data-value');
+					var id = '{$rows.id}';
+					var coptic_type_id = '{$rows.coptic_type_id}';
+					$.ajax({
+						url: '{:U("Coptic/copticKeepLikes")}',
+						data: {'type':type,'item':item,'id':id,'coptic_type_id':coptic_type_id},
+						type: 'post',
+						success: function () {}
+					});
 				})
                 var checkLikes = "{$checkLikes}";
 				var checkStoreUp = "{$checkStoreUp}";
