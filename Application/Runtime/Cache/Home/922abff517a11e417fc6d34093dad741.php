@@ -6,9 +6,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
-		<link rel="stylesheet" href="/dxyh/Public/home/css/activeDetail.css">
-		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/Public/home/css/base.css">
+		<link rel="stylesheet" href="/Public/home/css/activeDetail.css">
+		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
 	</head>
 	<body style="padding-bottom: 60px;">
 		<!-- 公共头部开始 -->
@@ -16,10 +16,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/dxyh/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
+            <img src="/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -65,48 +65,28 @@
 				<!-- 报名及分享结束 -->
 				<h2 class="visible-lg">热门活动回顾</h2>
 				<ul class="historyList visible-lg">
-					<!-- 一个热门活动开始 -->
-					<li>
-						<a href="#">
-							<img src="/dxyh/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门活动结束 -->
-					<!-- 一个热门活动开始 -->
-					<li>
-						<a href="#">
-							<img src="/dxyh/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门活动结束 -->
-					<!-- 一个热门活动开始 -->
-					<li>
-						<a href="#">
-							<img src="/dxyh/Public/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门活动结束 -->
+					<?php if(is_array($hotActivity)): $i = 0; $__LIST__ = $hotActivity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个热门活动开始 -->
+						<li>
+							<a href="<?php echo U('Activity/detail', array('id'=>$vo['id']));?>">
+								<img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
+								<!-- 标题 -->
+								<div class="mengceng"></div><!-- 蒙层 -->
+								<p class="historyTitle"><?php echo ($vo["activity_name"]); ?></p>
+							</a>
+						</li>
+						<!-- 一个热门活动结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
 				</ul>
 			</div>
 			<!-- 右边热门活动回顾结束 -->
 			<!-- 左边详情开始 -->
 			<div class="col-lg-9 col-lg-pull-3 activeDetailL">
-				<div>活动类别：XXXXXX <span class="code"><img src="/dxyh/Public/home/img/code.png" alt="">活动二维码</span></div>
+				<div>活动类别：XXXXXX <span class="code"><img src="/Public/home/img/code.png" alt="">活动二维码</span></div>
 				<!-- 标题开始 -->
 				<h1 class="activeTitle">亚洲顶级‘蓝色警报’人声音乐</h1>
 				<!-- 标题结束 -->
 				<!-- 活动内容开始 -->
 				<div class="content">
-					<img src="/dxyh/Public/home/img/img1.png" alt="">
+					<img src="/Public/home/img/img1.png" alt="">
 					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
 					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B, Club,nce等不同风格都能完美呈现。</p>
 					<p>MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B,MICappella 麦克疯人声乐团是新加坡现代阿卡贝拉全新的里程碑。在台上的演出充满能量，歌唱技巧精湛，现场魅力更是令人难忘。由六位个性不同的歌手组成的MICappella，从主流的摇滚与流行音乐到R&B Club,nce等不同风格都能完美呈现。</p>
@@ -120,8 +100,8 @@
 					<!-- 活动时间等信息结束 -->
 					<!-- 二维码开始 -->
 					<div class="codeBox">
-						<img class="activeCode" src="/dxyh/Public/home/img/code1.png" alt="">
-						<img  class="scanTip" src="/dxyh/Public/home/img/scanTip.png" alt="">
+						<img class="activeCode" src="/Public/home/img/code1.png" alt="">
+						<img  class="scanTip" src="/Public/home/img/scanTip.png" alt="">
 					</div>
 					<!-- 二维码结束 -->
 				</div>
@@ -139,7 +119,7 @@
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
 		<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 			<script type="text/javascript">

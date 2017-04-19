@@ -26,9 +26,12 @@ $(function() {
 	if (clientWidth < 1200) {	
 		 //小屏幕小，显示一个轮播页
 	// 页数
-	var page = 0;
+	var page = 1;
 	// 每页展示5个
 	var size = 5;
+	var url = 'http://www.dxyh.com/Home/Activity/detail?id=';
+	var typeId = $(".activeStyleActive").attr("data-value");
+	var keyword = $("input[name='keyword']").val();
 
 	// dropload
 	$('.activeListWrap').dropload({
@@ -40,14 +43,27 @@ $(function() {
 			var result = '';
 			$.ajax({
 				type: 'GET',
-				url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
+				url: 'http://www.dxyh.com/Home/Activity/activityJsonData',
 				dataType: 'json',
-				success: function(data) {
-					var arrLen = data.length;
-					if (arrLen > 0) {
-						for (var i = 0; i < arrLen; i++) {
-							result += '<!-- 一个活动开始 --><div class="activeList clearfix"><a href="activityDetail.html"><div class="col-xs-4 col-lg-3"><img src="../img/img1.png"alt=""></div><div class="col-xs-8 col-lg-9 activeListR"><h1>新加载的</h1><p>时间：2017-03-10&nbsp;&nbsp;10:30<span class="number">人数限制：300人</span><span class="activeState stateBg1">正在报名</span></p><p>积分：10积分</p><p class="visible-lg">地点：上海市长宁区xxx路526号&nbsp;&nbsp;&nbsp;&nbsp;xxx室</p><!-- 活动状态 --></div></a></div><!-- 一个活动结束 --> ';
-						}
+                data: {'p':page,'typeId':typeId,'keyword':keyword},
+				success: function(json) {
+					var arrLen = json.data;
+					console.log(arrLen);
+					if (json.code == 0) {
+						var rows = [];
+						$.each(arrLen, function (key, item) {
+							rows[key] = '<div class="activeList clearfix">';
+							rows[key] += '<a href="'+url+item.id+'"><div class="col-xs-4 col-lg-3">';
+							rows[key] += '<img src="'+item.activity_cover+'"alt=""></div>';
+							rows[key] += '<div class="col-xs-8 col-lg-9 activeListR">';
+							rows[key] += '<h1>'+item.activity_name+'</h1>';
+							rows[key] += '<p>时间：'+ item.activity_start_time + '-' + item.activity_end_time;
+							rows[key] += '<span class="number">人数限制：'+item.activity_number+'</span>';
+							rows[key] += item.status+'</p>';
+							rows[key] += '<p>积分：'+item.activity_integral+'积分</p>';
+							rows[key] += '<p class="visible-lg">地点：'+item.address+'</p></div></a></div>';
+						});
+						rows = rows.join('');
 						// 如果没有数据
 					} else {
 						// 锁定
@@ -55,10 +71,12 @@ $(function() {
 						// 无数据
 						me.noData();
 					}
+					console.log(rows);
+
 					// 为了测试，延迟1秒加载
 					setTimeout(function() {
 						// 插入数据到页面，放到最后面
-						$('.activeListBox').append(result);
+						$('.activeListBox').append(rows);
 						// 每次数据插入，必须重置
 						me.resetload();
 					}, 1000);

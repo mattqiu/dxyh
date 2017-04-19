@@ -37,36 +37,18 @@
 				<!-- 报名及分享结束 -->
 				<h2 class="visible-lg">热门活动回顾</h2>
 				<ul class="historyList visible-lg">
-					<!-- 一个热门活动开始 -->
-					<li>
-						<a href="#">
-							<img src="__PUBLIC__/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门活动结束 -->
-					<!-- 一个热门活动开始 -->
-					<li>
-						<a href="#">
-							<img src="__PUBLIC__/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门活动结束 -->
-					<!-- 一个热门活动开始 -->
-					<li>
-						<a href="#">
-							<img src="__PUBLIC__/home/img/img1.png" alt="">
-							<!-- 标题 -->
-							<div class="mengceng"></div><!-- 蒙层 -->
-							<p class="historyTitle">这里是标题，这里是标题，这里是标题,这里是标题，这里是标题，这里是标题</p>
-						</a>
-					</li>
-					<!-- 一个热门活动结束 -->
+					<volist name="hotActivity" id="vo">
+						<!-- 一个热门活动开始 -->
+						<li>
+							<a href="{:U('Activity/detail', array('id'=>$vo['id']))}">
+								<img src="{$vo.activity_cover}" alt="">
+								<!-- 标题 -->
+								<div class="mengceng"></div><!-- 蒙层 -->
+								<p class="historyTitle">{$vo.activity_name}</p>
+							</a>
+						</li>
+						<!-- 一个热门活动结束 -->
+					</volist>
 				</ul>
 			</div>
 			<!-- 右边热门活动回顾结束 -->

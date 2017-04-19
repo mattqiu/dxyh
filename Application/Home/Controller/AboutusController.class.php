@@ -17,7 +17,13 @@ class AboutusController extends CommonController
     }
 
     public function index(){
-
+        $data = file_get_contents("about.text");
+        if (empty($data)){
+            $data = "暂无数据";
+        }else{
+            $data = html_entity_decode($data);
+        }
+        $this->assign("rows", $data);
         $this->display("Public/aboutUs");
     }
 }
