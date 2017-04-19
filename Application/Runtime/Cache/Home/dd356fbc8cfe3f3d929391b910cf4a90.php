@@ -1,18 +1,19 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>科普详情</title>
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="stylesheet" href="/Public/home/css/activeDetail.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
-	</head>
-	<body>
-		<!-- 公共头部开始 -->
-		<div class="commonTop">
+<head>
+    <meta charset="utf-8">
+    <title>科普详情</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/Public/home/css/base.css">
+    <link rel="stylesheet" href="/Public/home/css/activeDetail.css">
+    <link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico">
+    <link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
+</head>
+<body>
+<!-- 公共头部开始 -->
+<div class="commonTop">
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
@@ -41,214 +42,323 @@
 
     </div>
 </div>
-		<!-- 公共头部结束 -->
-		<div class="container wrap activeDetail">
-			<!-- 左边详情开始 -->
-			<div class="col-lg-9 activeDetailL">
-				<!-- 标题开始 -->
-				<h1 class="activeTitle">科技部公布2016优秀科普作品名单</h1>
-				<!-- 标题结束 -->
-				<p class="author">作者：<?php echo ($rows["author"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($rows["create_time"]); ?></p>
-				<div class="container">
-					<div class="col-lg-8 keyWord">关键词：<span><?php echo ($rows["keyword"]); ?></span></div>
-					<div class="col-lg-4 keyWord">
-<<<<<<< HEAD
-						<strong id="keep"><img src="/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/Public/home/img/ss1.png" alt="">收藏</strong>
-						<strong id="likes"><img src="/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/Public/home/img/zz1.png" alt="">赞</strong>
-=======
-						<strong id="keep"><img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><img style="display: none;" src="/Public/home/img/ss1.png" alt="" data-value="1" data-field-name="keep">收藏</strong>
-						<strong id="likes"><img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><img style="display: none;" src="/Public/home/img/zz1.png" alt="" data-value="1" data-field-name="likes">赞</strong>
->>>>>>> f124a25156bf704012d240622d42338242c5fcf8
-					</div>
-				</div>
-				
-				<!-- 活动内容开始 -->
-				<div class="content">
-					<?php echo ($rows["content"]); ?>
-					<!-- 活动时间等信息开始 -->
-					<div class="from">来源：<?php echo ($rows["source"]); ?></div>
-					<div class="fromA">原文链接：<a href="<?php echo ($rows["original_link"]); ?>"><?php echo ($rows["original_link"]); ?></a></div>
-					<!-- 发表评论开始 -->
-					<a href="#publish" class="publishBtn">发表评论</a>
-					<!-- 评论列表开始 -->
-					<div class="discussBox">
-						<div class="filter">
-							<span class="filterActive">最热</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>最新</span>
-						</div>
-						<?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个评论开始 -->
-							<div class="discussList">
-								<p class="user">
-									<img src="<?php echo ($vo["avatar"]); ?>"
-										 alt=""><!-- 头像 -->
-									<span><?php echo ($vo["nickname"]); ?>
-</span><!-- 用户名 -->
-								</p>
-								<!-- 评论内容开始 -->
-								<p><?php echo ($vo["content"]); ?></p>
-								<!-- 评论内容结束 -->
-								<!-- 对评论的点评内容开始 -->
-								<div class="reBox">
-									<img class="sanjiao"
-										 src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
-									<p class="reTitle"><span>点评
-</span></p>
-									<?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><div class="container
-discussContent">
-											<div
-													class="col-lg-3 username">
-												<img
-														src="<?php echo ($item["avatar"]); ?>" alt="">
+<!-- 公共头部结束 -->
+<div class="container wrap activeDetail">
+    <!-- 左边详情开始 -->
+    <div class="col-lg-9 activeDetailL">
+        <!-- 标题开始 -->
+        <h1 class="activeTitle">科技部公布2016优秀科普作品名单</h1>
+        <!-- 标题结束 -->
+        <p class="author">作者：<?php echo ($rows["author"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($rows["create_time"]); ?></p>
+        <div class="container">
+            <div class="col-lg-8 keyWord">关键词：<span><?php echo ($rows["keyword"]); ?></span></div>
+            <div class="col-lg-4 keyWord">
+                <strong id="keep">
+                    <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep">
+                    <img style="display: none;" src="/Public/home/img/ss1.png" alt="" data-value="1" data-field-name="keep">收藏
+                </strong>
+                <strong id="likes">
+                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes">
+                    <img style="display: none;" src="/Public/home/img/zz1.png" alt="" data-value="1" data-field-name="likes">赞
+                </strong>
+            </div>
+        </div>
 
-												<?php echo ($item["nickname"]); ?> ：
-											</div>
-											<div
-													class="col-lg-9 discussContentR"><?php echo ($item["content"]); ?></div>
-										</div>
-										<p class="r1">回复</p>
-										<form action=""
-											  class="reForm">
-											<textarea
-													class="content1" placeholder="回复 <?php echo ($item["nickname"]); ?>："></textarea>
-											<button
-													class="reFormBtn">发表</button>
-										</form><?php endforeach; endif; else: echo "" ;endif; ?>
-								</div>
-								<!-- 对评论的点评内容结束 -->
-								<!-- 评论时间开始 -->
-								<p class="discussTime">
-									<span class="discusstime">
-<?php echo ($vo["create_time"]); ?></span>
-									<span class="dianPing">我要点评
-</span>
-									<img
-											src="/Public/home/img/zz0.png" alt="">
-									<span>8</span>
-								</p>
-								<!-- 评论时间结束 -->
-								<!-- 发表点评表单开始 -->
-								<form action="" class="reForm2">
-									<textarea
-											class="content1"></textarea>
-									<button class="reFormBtn">发表
-									</button>
-								</form>
-								<!-- 发表点评表单结束 -->
-							</div>
-							<!-- 一个评论结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
-						<!-- 一个评论开始 -->
-						<div class="discussList">
-							<p class="user">
-								<img src="/Public/home/img/img1.png" alt=""><!-- 头像 -->
-								<span>二十</span><!-- 用户名 -->
-							</p>
-							<!-- 评论内容开始 -->
-							<p>要说套路，要说套路，要说套路，要说套路，要说套路要说套路，要说套路，要说套路，要说套路</p>
-							<!-- 评论内容结束 -->
-							<!-- 点评结束 -->
-							<!-- 评论时间开始 -->
-							<p class="discussTime">
-								<span class="discusstime">2017-04-01 09:10</span>
-								<span class="dianPing">我要点评</span>
-								<img src="/Public/home/img/zz1.png" alt="">
-								<span>8</span>
-							</p>
-							<!-- 评论时间结束 -->
-							<!-- 发表点评表单开始 -->
-							<form action="" class="reForm2">
-								<textarea class="content1"></textarea>
-								<button class="reFormBtn">发表</button>
-							</form>
-							<!-- 发表点评表单结束 -->
-						</div>
-						<!-- 一个评论结束 -->
-					</div>
-					<!-- 评论列表结束 -->
-					<!-- 发表评论结束 -->
-				</div>
-				<!-- 发表评论开始 -->
-				<form id="publish" action="" class="reForm2 reForm3">
-					<p style="font-size: 18px;margin-bottom: 5px;">我要评论</p>
-					<textarea class="content1"></textarea>
-					<button class="reFormBtn">发表</button>
-				</form>
-				<!-- 发表评论结束 -->
-				<!-- 活动内容结束 -->
-			</div>
-			<!-- 左边详情结束 -->
-			<!-- 右边热门科普推荐开始 -->
-			<div class="col-lg-3 history scienceHistory">
-				<h2 class="visible-lg">热门科普推荐</h2>
-				<ul class="historyList visible-lg">
-					<!-- 一个热门科普推荐开始 -->
-					<?php if(is_array($hotCoptic)): $i = 0; $__LIST__ = $hotCoptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
-							<a href="<?php echo U('Coptic/details', array('id'=>$vo['id']));?>">
-								<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
-								<!-- 标题 -->
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p class="historyTitle"><?php echo ($vo["coptic_title"]); ?></p>
-							</a>
-						</li><?php endforeach; endif; else: echo "" ;endif; ?>
-					<!-- 一个热门科普推荐结束 -->
-				</ul>
-			</div>
-			<!-- 右边热门科普推荐结束 -->
-		</div>
-		<!-- 公共底部模块开始 -->
-		<div class="commonBottom visible-lg">
+        <!-- 活动内容开始 -->
+        <div class="content">
+            <?php echo ($rows["content"]); ?>
+            <!-- 活动时间等信息开始 -->
+            <div class="from">来源：<?php echo ($rows["source"]); ?></div>
+            <div class="fromA">原文链接：<a href="<?php echo ($rows["original_link"]); ?>"><?php echo ($rows["original_link"]); ?></a></div>
+            <!-- 发表评论开始 -->
+            <a href="#publish" class="publishBtn">发表评论</a>
+            <!-- 评论列表开始 -->
+            <div class="discussBox">
+                <div class="filter">
+                    <span class="filterActive">最热</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>最新</span>
+                </div>
+                <?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个评论开始 -->
+                    <div class="discussList">
+                        <p class="user">
+                            <img src="<?php echo ($vo["avatar"]); ?>" alt=""><!-- 头像 -->
+                            <span><?php echo ($vo["nickname"]); ?></span><!-- 用户名 -->
+                        </p>
+                        <!-- 评论内容开始 -->
+                        <p><?php echo ($vo["content"]); ?></p>
+                        <!-- 评论内容结束 -->
+                        <!-- 对评论的点评内容开始 -->
+                        <?php if(!empty($vo["subData"])): ?><div class="reBox">
+                                <img class="sanjiao"
+                                     src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
+                                <p class="reTitle"><span>点评</span></p>
+                                <?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><div class="containerdiscussContent">
+                                        <div class="col-lg-3 username">
+                                            <img src="<?php echo ($item["avatar"]); ?>" alt="">
+                                            <?php echo ($item["nickname"]); ?> ：
+                                        </div>
+                                        <div class="col-lg-9 discussContentR"><?php echo ($item["content"]); ?></div>
+                                    </div>
+                                    <p class="r1">回复</p>
+                                    <form action="" class="reForm">
+                                        <textarea class="content1" placeholder="回复 <?php echo ($item["nickname"]); ?>：" data-id="<?php echo ($item["id"]); ?>" data-coptic-id="<?php echo ($rows["id"]); ?>"></textarea>
+                                        <button class="reFormBtn submitCommon">发表</button>
+                                    </form><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </div><?php endif; ?>
+                        <!-- 对评论的点评内容结束 -->
+                        <!-- 评论时间开始 -->
+                        <p class="discussTime">
+                            <span class="discusstime"><?php echo ($vo["create_time"]); ?></span>
+                            <span class="dianPing">我要点评</span>
+                            <strong>
+                                <?php if($vo["likes"] == 1): ?><img src="/Public/home/img/zz0.png" style="display: none;" alt="" data-value="0" data-id="<?php echo ($vo["id"]); ?>">
+                                    <img src="/Public/home/img/zz1.png" alt="" data-value="1" data-id="<?php echo ($vo["id"]); ?>">
+                                <?php else: ?>
+                                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-id="<?php echo ($vo["id"]); ?>">
+                                    <img src="/Public/home/img/zz1.png" style="display: none;" alt="" data-value="1" data-id="<?php echo ($vo["id"]); ?>"><?php endif; ?>
+                            </strong>
+                            <span><?php echo ($vo["likesnum"]); ?></span>
+                        </p>
+                        <!-- 评论时间结束 -->
+                        <!-- 发表点评表单开始 -->
+                        <form action="" class="reForm2">
+                            <textarea class="content1" data-id="<?php echo ($vo["id"]); ?>" data-coptic-id="<?php echo ($rows["id"]); ?>"></textarea>
+                            <button class="reFormBtn submitCommon">发表</button>
+                        </form>
+                        <!-- 发表点评表单结束 -->
+                    </div>
+                    <!-- 一个评论结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+            <!-- 评论列表结束 -->
+            <!-- 发表评论结束 -->
+        </div>
+        <!-- 发表评论开始 -->
+        <form id="publish" action="" class="reForm2 reForm3">
+            <p style="font-size: 18px;margin-bottom: 5px;">我要评论</p>
+            <textarea class="content1"></textarea>
+            <button class="reFormBtn mainComment">发表</button>
+        </form>
+        <!-- 发表评论结束 -->
+        <!-- 活动内容结束 -->
+    </div>
+    <!-- 左边详情结束 -->
+    <!-- 右边热门科普推荐开始 -->
+    <div class="col-lg-3 history scienceHistory">
+        <h2 class="visible-lg">热门科普推荐</h2>
+        <ul class="historyList visible-lg">
+            <!-- 一个热门科普推荐开始 -->
+            <?php if(is_array($hotCoptic)): $i = 0; $__LIST__ = $hotCoptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+                    <a href="<?php echo U('Coptic/details', array('id'=>$vo['id']));?>">
+                        <img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+                        <!-- 标题 -->
+                        <div class="mengceng"></div><!-- 蒙层 -->
+                        <p class="historyTitle"><?php echo ($vo["coptic_title"]); ?></p>
+                    </a>
+                </li><?php endforeach; endif; else: echo "" ;endif; ?>
+            <!-- 一个热门科普推荐结束 -->
+        </ul>
+    </div>
+    <!-- 右边热门科普推荐结束 -->
+</div>
+<!-- 公共底部模块开始 -->
+<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
         <?php echo ($link); ?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>
-		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				// 点击回复，展开回复框
-				$(".r1").click(function(){
-					$(this).next('.reForm').toggle();
-				})
-				// 点击我要点评，展开点评表单
-				$(".dianPing").click(function(){
-					$(this).parent().siblings('.reForm2').toggle();
-				})
-				// 点赞与收藏功能
-				$(".keyWord img").click(function(){
-					$(this).toggle().siblings('img').toggle();
-					var type = $(this).attr('data-field-name');
-					var item = $(this).attr('data-value');
-					var id = '<?php echo ($rows["id"]); ?>';
-					var coptic_type_id = '<?php echo ($rows["coptic_type_id"]); ?>';
-					$.ajax({
-						url: '<?php echo U("Coptic/copticKeepLikes");?>',
-						data: {'type':type,'item':item,'id':id,'coptic_type_id':coptic_type_id},
-						type: 'post',
-						success: function () {}
-					});
-				})
-                var checkLikes = "<?php echo ($checkLikes); ?>";
-				var checkStoreUp = "<?php echo ($checkStoreUp); ?>";
-				if (checkLikes > 0){
-					$("#likes img").siblings('img').toggle();
-				}
-				if (checkStoreUp > 0){
-                    $("#keep img").siblings('img').toggle();
-				}
-			})
-		</script>
-		<script type="text/javascript">
-								// 小屏幕展开导航效果
-			$(function() {
-				$(".cmtMenuLogo").click(function() {
-					$(".commonTop nav").toggle();
-					$(".commonTop").toggleClass('t6');
-				}
-				)
-			}
-			)
-		</script>
-		<script>
+<!-- 公共底部模块结束 -->
+<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // 点击回复，展开回复框
+        $(".r1").live('click', function () {
+            $(this).next('.reForm').toggle();
+        });
+        // 点击我要点评，展开点评表单
+        $(".dianPing").live('click', function () {
+            $(this).parent().siblings('.reForm2').toggle();
+        });
+        // 点赞与收藏功能
+        $(".keyWord img").click(function () {
+            $(this).toggle().siblings('img').toggle();
+            var type = $(this).attr('data-field-name');
+            var item = $(this).attr('data-value');
+            var id = '<?php echo ($rows["id"]); ?>';
+            var coptic_type_id = '<?php echo ($rows["coptic_type_id"]); ?>';
+            $.ajax({
+                url: '<?php echo U("Coptic/copticKeepLikes");?>',
+                data: {'type': type, 'item': item, 'id': id, 'coptic_type_id': coptic_type_id},
+                type: 'post',
+                success: function () {
+                }
+            });
+        });
+
+        //点赞与收藏数据适配
+        var checkLikes = "<?php echo ($checkLikes); ?>";
+        var checkStoreUp = "<?php echo ($checkStoreUp); ?>";
+        if (checkLikes > 0) {
+            $("#likes img").toggle();
+        }
+        if (checkStoreUp > 0) {
+            $("#keep img").toggle();
+        }
+
+        //评论点赞功能
+        $(".discussTime strong img").live('click', function () {
+            $(this).toggle().siblings('img').toggle();
+        });
+
+
+        //评论发表功能
+        $(".submitCommon").live('click', function () {
+            var content = $(this).prev().val();
+            var parentId = $(this).prev().attr("data-id");
+            var copticId = $(this).prev().attr("data-coptic-id");
+            if (content == ''){
+                var d = dialog({
+                    content: '请输入评论内容'
+                });
+                d.show();
+                setTimeout(function () {
+                    d.close().remove();
+                }, 2000);
+                return false;
+            }
+            var result = '';
+            $.ajax({
+                url: '<?php echo U("Coptic/copticComment");?>',
+                type: 'post',
+                data: {'content':content,'parentId':parentId,'copticId':copticId},
+                dataType: 'json',
+                async:false,
+                success: function (json) {
+                    console.log(json);
+                    if (json.code == 0){
+                        result += '<div class="containerdiscussContent">';
+                        result += '<div class="col-lg-3 username">';
+                        result += '<img src="'+json.data.avatar+'" alt="">'+json.data.nickname+' ：</div>';
+                        result += '<div class="col-lg-9 discussContentR">' + content + '</div></div>';
+                        result += '<p class="r1">回复</p>';
+                        result += '<form action="" class="reForm">';
+                        result += '<textarea class="content1" placeholder="回复 '+json.data.nickname+'：" data-id="'+json.data.cid+'" data-coptic-id="<?php echo ($rows["id"]); ?>"></textarea>';
+                        result += '<button class="reFormBtn submitCommon">发表</button>';
+                        result += '</form>';
+                    }else{
+                        var d = dialog({
+                            content: json.msg
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 2000);
+                    }
+                }
+            });
+            if ($(this).parent().parent().is(".reBox")){
+                $(this).parent().parent(".reBox").append(result);
+            }else{
+                if ($(this).parent().siblings().is(".reBox")){
+                    $(this).parent().parent().find(".reBox").append(result);
+                }else{
+                    var subCom = '<div class="reBox"><img class="sanjiao"src="/Public/home/img/sanjiao.png" alt=""><p class="reTitle"><span>点评</span></p>'+ result + '</div>';
+                    $(this).parent().prev().before(subCom);
+                }
+            }
+            $(this).prev().val('');
+            $(this).parent().toggle();
+            return false;
+        });
+
+        //主评论
+        $(".mainComment").click(function () {
+            var copticId = "<?php echo ($rows["id"]); ?>";
+            var content = $(this).prev().val();
+            if (content == ''){
+                var d = dialog({
+                    content: '请输入评论内容'
+                });
+                d.show();
+                setTimeout(function () {
+                    d.close().remove();
+                }, 2000);
+                return false;
+            }
+            var result = '';
+            $.ajax({
+                url: '<?php echo U("Coptic/copticComment");?>',
+                type: 'post',
+                data: {'content':content,'copticId':copticId},
+                dataType: 'json',
+                async:false,
+                success: function (json) {
+                    console.log(json);
+                    if (json.code == 0){
+                        result += '<div class="discussList">';
+                        result += '<p class="user">';
+                        result += '<img src="'+json.data.avatar+'" alt="">';
+                        result += '<span>'+json.data.nickname+'</span></p>';
+                        result += '<p>'+content+'</p>';
+                        result += '<p class="discussTime">';
+                        result += '<span class="discusstime">'+json.data.create_time+'</span>';
+                        result += '<span class="dianPing">我要点评</span>';
+                        result += '<strong>';
+                        result += '<img src="/Public/home/img/zz0.png" alt="" data-value="0" data-id="'+json.data.cid+'">';
+                        result += '<img src="/Public/home/img/zz1.png" alt="" style="display: none;" data-value="1" data-id="'+json.data.cid+'">';
+                        result += '</strong>';
+                        result += '<span>0</span> </p>';
+                        result += '<form action="" class="reForm2">';
+                        result += '<textarea class="content1" data-id="'+json.data.cid+'" data-coptic-id="<?php echo ($rows["id"]); ?>"></textarea>';
+                        result += '<button class="reFormBtn submitCommon">发表</button></form></div>';
+                    }else{
+                        var d = dialog({
+                            content: json.msg
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 2000);
+                    }
+                }
+            });
+            $(".discussBox").append(result);
+            $(this).prev().val('');
+            return false;
+        });
+    })
+
+    //评论点赞功能
+    $(".discussTime img").live('click', function () {
+        var likes = $(this).attr('data-value');
+        var cid = $(this).attr('data-id');
+        var likesNum = '';
+        $.ajax({
+            url: '<?php echo U("Coptic/commentLikes");?>',
+            data: {'likes':likes,'cid':cid},
+            type: 'post',
+            dataType: 'json',
+            async: false,
+            success: function (json) {
+                likesNum = json.likesNum;
+            }
+        });
+        $(this).parent().next("span").html(likesNum);
+    })
+</script>
+<script type="text/javascript">
+    // 小屏幕展开导航效果
+    $(function () {
+            $(".cmtMenuLogo").click(function () {
+                    $(".commonTop nav").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+            )
+        }
+    )
+</script>
+<script>
     //js控制导航选中效果
     (function(){
         var tDiv = document.getElementById("sidebar-menu"),
@@ -269,5 +379,5 @@ discussContent">
 
 
 </script>
-	</body>
+</body>
 </html>

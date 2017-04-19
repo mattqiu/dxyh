@@ -39,11 +39,14 @@ class CopticController extends CommonController
         $data['checkLikes'] = M("Likes")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
         $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
         $data['comment'] = D("Comment")->getCopticComment();
-        //($data['comment']);
+        //var_dump($data['comment']);
         $this->assign($data);
         $this->display("scienceDetail");
     }
 
+    /**
+     * 移动端滚动翻页获取数据
+     */
     public function copticJsonData(){
         $data = D("Coptic")->getList();
         if ($data['rows']){
@@ -53,20 +56,35 @@ class CopticController extends CommonController
         }
         echo json_encode($result);
     }
-    
+
+    /**
+     * 科普文章收藏与点赞切换功能
+     */
     public function copticKeepLikes(){
         $requset = I('post.');
         if (isset($requset['type'])){
             if ($requset['type'] == 'keep'){
                 D("Collection")->changeKeep();
             }elseif ($requset['type'] == 'likes'){
-
+                D("Likes")->changeLikes();
             }
         }
     }
 
+    /**
+     * 评论添加与回复功能
+     */
+    public function copticComment(){
+        $data = D("Comment")->copticComment();
+        echo json_encode($data);
+    }
 
 
-
-
+    /**
+     * 评论点赞功能
+     */
+    public function commentLikes(){
+        $data = D("CommentLikes")->commentLikes();
+        echo json_encode($data);
+    }
 }

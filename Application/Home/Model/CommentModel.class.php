@@ -13,12 +13,13 @@ class CommentModel extends CommonModel
 {
     public function getCopticComment(){
         $id = I("get.id");
+        $uid = session("uid");
         $join = array("INNER JOIN dxyh_user as u ON u.uid=c.uid");
         $where = array(
             "c.coptic_id" => $id,
             "c.status" => 1
         );
-        $field = "c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum";
+        $field = "c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=$uid) as likes";
         $list = $this->alias("c")->getJoinDataList($join, $where, $field, null, null, null);
 
         $listAry = array();
@@ -76,4 +77,37 @@ class CommentModel extends CommonModel
         }
         return $array;
     }
+
+
+    /**
+     * 科普添加评论
+     */
+    public function copticComment(){
+        $param = I("post.");
+        $uid = session("uid");
+        if (!isset($param['content']) && empty($param['content'])){
+            return array('code'=>1, 'msg'=>'请输入评论内容！');
+        }
+        $data = array(
+            'uid' => $uid,
+            'parent_id' => empty($param['parentId'])?0:$param['parentId'],
+            'coptic_id' => $param['copticId'],
+            'content' => $param['content'],
+            'create_time' => time(),
+        );
+        $cid = $this->addData($data);
+        if ($cid){
+            $udata = M("User")->where(array('uid'=>$uid))->field('nickname,avatar')->find();
+            $rows = array(
+                'cid' => $cid,
+                'nickname' => $udata['nickname'],
+                'avatar' => $udata['avatar'],
+                'create_time' => dateTime($data['create_time'], 6)
+            );
+            return array('code'=>0, 'msg'=>'', 'data'=>$rows);
+        }else{
+            return array('code'=>1, 'msg'=>'系统繁忙，请稍后再试!');
+        }
+    }
+
 }
