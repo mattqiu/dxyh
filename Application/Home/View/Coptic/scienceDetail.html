@@ -66,7 +66,7 @@
                                      src="__PUBLIC__/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
                                 <p class="reTitle"><span>点评</span></p>
                                 <volist name="vo.subData" id="item">
-                                    <div class="containerdiscussContent">
+                                    <div class="container discussContent">
                                         <div class="col-lg-3 username">
                                             <img src="{$item.avatar}" alt="">
                                             {$item.nickname} ：
@@ -213,7 +213,7 @@
                 success: function (json) {
                     console.log(json);
                     if (json.code == 0){
-                        result += '<div class="containerdiscussContent">';
+                        result += '<div class="container discussContent">';
                         result += '<div class="col-lg-3 username">';
                         result += '<img src="'+json.data.avatar+'" alt="">'+json.data.nickname+' ：</div>';
                         result += '<div class="col-lg-9 discussContentR">' + content + '</div></div>';
