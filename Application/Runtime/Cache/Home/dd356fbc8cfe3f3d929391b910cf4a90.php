@@ -6,9 +6,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
-		<link rel="stylesheet" href="/dxyh/Public/home/css/activeDetail.css">
-		<link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/Public/home/css/base.css">
+		<link rel="stylesheet" href="/Public/home/css/activeDetail.css">
+		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -16,10 +16,10 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/dxyh/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
+            <img src="/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
         </a>
         <!-- logo -->
@@ -52,8 +52,8 @@
 				<div class="container">
 					<div class="col-lg-8 keyWord">关键词：<span><?php echo ($rows["keyword"]); ?></span></div>
 					<div class="col-lg-4 keyWord">
-						<strong id="keep"><img src="/dxyh/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/dxyh/Public/home/img/ss1.png" alt="">收藏</strong>
-						<strong id="likes"><img src="/dxyh/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/dxyh/Public/home/img/zz1.png" alt="">赞</strong>
+						<strong id="keep"><img src="/Public/home/img/ss0.png" alt=""><img style="display: none;" src="/Public/home/img/ss1.png" alt="">收藏</strong>
+						<strong id="likes"><img src="/Public/home/img/zz0.png" alt=""><img style="display: none;" src="/Public/home/img/zz1.png" alt="">赞</strong>
 					</div>
 				</div>
 				
@@ -84,7 +84,7 @@
 								<!-- 对评论的点评内容开始 -->
 								<div class="reBox">
 									<img class="sanjiao"
-										 src="/dxyh/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
+										 src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
 									<p class="reTitle"><span>点评
 </span></p>
 									<?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><div class="container
@@ -116,7 +116,7 @@ discussContent">
 									<span class="dianPing">我要点评
 </span>
 									<img
-											src="/dxyh/Public/home/img/zz0.png" alt="">
+											src="/Public/home/img/zz0.png" alt="">
 									<span>8</span>
 								</p>
 								<!-- 评论时间结束 -->
@@ -133,7 +133,7 @@ discussContent">
 						<!-- 一个评论开始 -->
 						<div class="discussList">
 							<p class="user">
-								<img src="/dxyh/Public/home/img/img1.png" alt=""><!-- 头像 -->
+								<img src="/Public/home/img/img1.png" alt=""><!-- 头像 -->
 								<span>二十</span><!-- 用户名 -->
 							</p>
 							<!-- 评论内容开始 -->
@@ -144,7 +144,7 @@ discussContent">
 							<p class="discussTime">
 								<span class="discusstime">2017-04-01 09:10</span>
 								<span class="dianPing">我要点评</span>
-								<img src="/dxyh/Public/home/img/zz1.png" alt="">
+								<img src="/Public/home/img/zz1.png" alt="">
 								<span>8</span>
 							</p>
 							<!-- 评论时间结束 -->
@@ -197,7 +197,7 @@ discussContent">
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
 		<script type="text/javascript">
 			$(function(){
 				// 点击回复，展开回复框
