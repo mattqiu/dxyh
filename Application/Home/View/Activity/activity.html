@@ -183,16 +183,27 @@
 <script type="text/javascript" src="__PUBLIC__/home/js/dropload.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/home/js/activity.js"></script>
 <script type="text/javascript">
-    // 小屏幕展开导航效果
-    $(function () {
-            $(".cmtMenuLogo").click(function () {
+                                
+            $(function() {
+                // 小屏幕展开导航效果
+                $(".cmtMenuLogo").click(function() {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
                     $(".commonTop nav").toggle();
                     $(".commonTop").toggleClass('t6');
                 }
+                )
+                // 小屏幕展开登录
+                $(".cmtUser").click(function() {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+            }
             )
-        }
-    )
-</script>
+        </script>
 <include file="Public/bottom"/>
 <script type="text/javascript">
     $(function () {
