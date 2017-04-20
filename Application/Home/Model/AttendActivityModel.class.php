@@ -50,4 +50,9 @@ class AttendActivityModel extends CommonModel
             return array('code'=>1, 'msg'=>'报名失败');
         }
     }
+
+
+    public function myActivity(){
+        
+    }
 }

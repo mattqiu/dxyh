@@ -24,11 +24,19 @@
 					<p class="rightTitle visible-lg">我的信息</p>
 					<div class="clearfix userMessage">
 						<!-- 头像开始 -->
-						<img class="userImg" src="__PUBLIC__/home/img/img1.png" alt="">
+						<img class="userImg" src="{$rows.avatar}" alt="">
 						<!-- 头像结束 -->
-						<p class="username">花香四溢<img src="__PUBLIC__/home/img/c1.png" alt=""></p><!-- 昵称 -->
-						<p><img src="__PUBLIC__/home/img/c6.png" alt="">董小姐</p>
-						<p><img src="__PUBLIC__/home/img/c7.png" alt="">18063754734</p>
+						<p class="username">{$rows.nickname}
+							<if condition="$rows.sex neq 0">
+								<if condition="$rows.sex eq 1">
+									<img src="__PUBLIC__/home/img/cm1.png" alt="">
+									<else/>
+									<img src="__PUBLIC__/home/img/c1.png" alt="">
+								</if>
+							</if>
+						</p><!-- 昵称 -->
+						<p><img src="__PUBLIC__/home/img/c6.png" alt="">{$rows.name}</p>
+						<p><img src="__PUBLIC__/home/img/c7.png" alt="">{$rows.mobile}</p>
 					</div>
 					<a href="{:U('User/changeMeaage')}" class="change">修改资料</a>
 				</div>

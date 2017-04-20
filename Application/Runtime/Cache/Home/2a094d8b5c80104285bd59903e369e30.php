@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/Public/home/css/base.css">
 		<link rel="stylesheet" href="/Public/home/css/center.css">
 		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+        <link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -21,6 +22,8 @@
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
+            <!-- 小屏幕下个人导航图标结束 -->
+                    <img src="/Public/home/img/c6.png" class="cmtUser hidden-lg" alt="">
         </a>
         <!-- logo -->
         <!-- 导航开始 -->
@@ -34,8 +37,8 @@
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
-        <div class="loginBox visible-lg">
-            <a href="<?php echo U('Public/login');?>">登录</a>|<a href="<?php echo U('Public/regist');?>">注册</a>
+        <div class="loginBox">
+            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -57,96 +60,21 @@
 			<div class="col-lg-10">
 				<div class="right">
 					<p class="rightTitle visible-lg">我的收藏</p>
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
+					<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个收藏开始 -->
+						<div class="col-lg-4 avtiveList">
+							<div>
+								<p class="sstyle">分类：<span><?php echo ($vo["category_name"]); ?></span></p>
+								<div class="activeImg">
+									<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+									<div class="mengceng"></div><!-- 蒙层 -->
+									<p><?php echo ($vo["coptic_title"]); ?></p>
+								</div>
+								<div class="activeMessage sbox1">
+									<p><?php echo ($vo["create_time"]); ?><a href="javascript:;" class="scancel" data-value="<?php echo ($vo["id"]); ?>">取消收藏</a></p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
-					<!-- 一个收藏开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="sstyle">分类：<span>肾入人心</span></p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage sbox1">
-								<p>2017-03-20<a href="#" class="scancel">取消收藏</a></p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个收藏结束 -->
+						<!-- 一个收藏结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
 				</div>
 			</div>
 			<!-- 右侧信息模块结束 -->
@@ -161,17 +89,29 @@
 </div>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+        <script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
-								// 小屏幕展开导航效果
-			$(function() {
-				$(".cmtMenuLogo").click(function() {
-					$(".commonTop nav").toggle();
-					$(".commonTop").toggleClass('t6');
-				}
-				)
-			}
-			)
-		</script>
+                                
+            $(function() {
+                // 小屏幕展开导航效果
+                $(".cmtMenuLogo").click(function() {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
+                    $(".commonTop nav").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+                // 小屏幕展开登录
+                $(".cmtUser").click(function() {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+            }
+            )
+        </script>
 		<script>
     //js控制导航选中效果
     (function(){
@@ -208,6 +148,30 @@
                 }
             }
             alinks[indexes].className = 'leftActive';
+
+            $(function () {
+				$(".scancel").click(function () {
+					var id = $(this).attr('data-value');
+					$.ajax({
+						url: '<?php echo U("User/changeKeep");?>',
+						type: 'post',
+						data: {'id':id},
+						dataType: 'json',
+						success: function (json) {
+                            var d = dialog({
+                                content: json.info
+                            });
+                            d.show();
+                            setTimeout(function () {
+                                d.close().remove();
+                                if (json.status){
+                                    location.reload();
+                                }
+                            }, 2000);
+                        }
+					});
+                });
+            });
         </script>
 	</body>
 </html>

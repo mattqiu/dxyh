@@ -74,5 +74,4 @@ class ActivityModel extends CommonModel
         return $info;
     }
 
-    
 }

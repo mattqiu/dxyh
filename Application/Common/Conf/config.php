@@ -2,10 +2,10 @@
 return array(
 	//'配置项'=>'配置值'
     'DB_TYPE'   => 'mysql',
-    'DB_HOST'   => '140.207.213.38',
+    'DB_HOST'   => '115.159.69.193',
     'DB_NAME'   => 'dxyh',
     'DB_USER'   => 'root',
-    'DB_PWD'    => 'songdian2015',
+    'DB_PWD'    => '123456',
     'DB_PORT'   => 3306,
     'DB_PREFIX' => 'dxyh_',
     'DB_CHARSET'=> 'utf8',

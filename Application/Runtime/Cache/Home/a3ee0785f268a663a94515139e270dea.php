@@ -21,6 +21,8 @@
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
+            <!-- 小屏幕下个人导航图标结束 -->
+                    <img src="/Public/home/img/c6.png" class="cmtUser hidden-lg" alt="">
         </a>
         <!-- logo -->
         <!-- 导航开始 -->
@@ -34,8 +36,8 @@
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
-        <div class="loginBox visible-lg">
-            <a href="<?php echo U('Public/login');?>">登录</a>|<a href="<?php echo U('Public/regist');?>">注册</a>
+        <div class="loginBox">
+            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -59,11 +61,15 @@
 					<p class="rightTitle visible-lg">我的信息</p>
 					<div class="clearfix userMessage">
 						<!-- 头像开始 -->
-						<img class="userImg" src="/Public/home/img/img1.png" alt="">
+						<img class="userImg" src="<?php echo ($rows["avatar"]); ?>" alt="">
 						<!-- 头像结束 -->
-						<p class="username">花香四溢<img src="/Public/home/img/c1.png" alt=""></p><!-- 昵称 -->
-						<p><img src="/Public/home/img/c6.png" alt="">董小姐</p>
-						<p><img src="/Public/home/img/c7.png" alt="">18063754734</p>
+						<p class="username"><?php echo ($rows["nickname"]); ?>
+							<?php if($rows["sex"] != 0): if($rows["sex"] == 1): ?><img src="/Public/home/img/cm1.png" alt="">
+									<?php else: ?>
+									<img src="/Public/home/img/c1.png" alt=""><?php endif; endif; ?>
+						</p><!-- 昵称 -->
+						<p><img src="/Public/home/img/c6.png" alt=""><?php echo ($rows["name"]); ?></p>
+						<p><img src="/Public/home/img/c7.png" alt=""><?php echo ($rows["mobile"]); ?></p>
 					</div>
 					<a href="<?php echo U('User/changeMeaage');?>" class="change">修改资料</a>
 				</div>
@@ -81,16 +87,27 @@
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
 			<script type="text/javascript">
-								// 小屏幕展开导航效果
-			$(function() {
-				$(".cmtMenuLogo").click(function() {
-					$(".commonTop nav").toggle();
-					$(".commonTop").toggleClass('t6');
-				}
-				)
-			}
-			)
-		</script>
+                                
+            $(function() {
+                // 小屏幕展开导航效果
+                $(".cmtMenuLogo").click(function() {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
+                    $(".commonTop nav").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+                // 小屏幕展开登录
+                $(".cmtUser").click(function() {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+            }
+            )
+        </script>
 		<script>
     //js控制导航选中效果
     (function(){

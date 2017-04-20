@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/Public/home/css/base.css">
 		<link rel="stylesheet" href="/Public/home/css/center.css">
 		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -21,6 +22,8 @@
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
+            <!-- 小屏幕下个人导航图标结束 -->
+                    <img src="/Public/home/img/c6.png" class="cmtUser hidden-lg" alt="">
         </a>
         <!-- logo -->
         <!-- 导航开始 -->
@@ -34,8 +37,8 @@
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
-        <div class="loginBox visible-lg">
-            <a href="<?php echo U('Public/login');?>">登录</a>|<a href="<?php echo U('Public/regist');?>">注册</a>
+        <div class="loginBox">
+            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -58,24 +61,24 @@
 				<div class="right cpright">
 					<p class="rightTitle visible-lg">修改密码</p>
 					<p class="cpTips">提示：使用大小写字母、数字与标点符号的组合，可以大幅提示账号安全!</p>
-					<form action="">
+					<form action="" id="form1">
 						<table class="cpTable">
 							<tr>
 								<td>原密码</td>
-								<td><input type="password" placeholder="请输入当前密码"></td>
+								<td><input type="password" placeholder="请输入当前密码" name="originalPasswd"></td>
 							</tr>
 							<tr>
 								<td>新密码</td>
-								<td><input type="password" placeholder="请输入当新密码"></td>
+								<td><input type="password" placeholder="请输入当新密码" name="newPasswd"></td>
 							</tr>
 							<tr>
 								<td>确认密码</td>
-								<td><input type="password" placeholder="请输入当新密码"></td>
+								<td><input type="password" placeholder="请输入当新密码" name="confirmPasswd"></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td>
-									<button type="submit" class="cpSubmit">确认</button>
+									<button type="button" class="cpSubmit">确认</button>
 									<button type="button" class="cpCancle">取消</button>
 								</td>
 							</tr>
@@ -89,40 +92,35 @@
 		<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <a href="#">中路成员企业</a>
-        <a href="#">星火钱包</a>
-        <a href="#">贷出去多赚</a>
-        <a href="#">网贷天眼</a>
-        <a href="#">网贷之家</a>
-        <a href="#">网贷专家</a>
-        <a href="#">二手车之家</a>
-        <a href="#">车300</a>
-        <a href="#">车虫网</a>
-        <a href="#">车8度</a>
-        <a href="#">车蚂蚁</a><br>
-        <a href="#">车讯商城</a>
-        <a href="#">易车二手车</a>
-        <a href="#">移动汽车网</a>
-        <a href="#">汽车改装店</a>
-        <a href="#">丝路汽车网</a>
-        <a href="#">一起网贷</a>
-        <a href="#">融途网</a>
+        <?php echo ($link); ?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
-								// 小屏幕展开导航效果
-			$(function() {
-				$(".cmtMenuLogo").click(function() {
-					$(".commonTop nav").toggle();
-					$(".commonTop").toggleClass('t6');
-				}
-				)
-			}
-			)
-		</script>
+                                
+            $(function() {
+                // 小屏幕展开导航效果
+                $(".cmtMenuLogo").click(function() {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
+                    $(".commonTop nav").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+                // 小屏幕展开登录
+                $(".cmtUser").click(function() {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+            }
+            )
+        </script>
 		<script>
     //js控制导航选中效果
     (function(){
@@ -159,6 +157,33 @@
                 }
             }
             alinks[indexes].className = 'leftActive';
+
+            $(".cpSubmit").click(function () {
+                var formData = new FormData($( "#form1" )[0]);
+                console.log(formData);
+                $.ajax({
+                    url: '<?php echo U("User/modifyPasswd");?>',
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (json) {
+                        console.log(json);
+                        var d = dialog({
+                            content: json.info
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            location.reload();
+                        }, 2000);
+                    }
+                });
+
+            })
         </script>
 	</body>
 </html>

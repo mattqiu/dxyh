@@ -22,6 +22,8 @@
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
+            <!-- 小屏幕下个人导航图标结束 -->
+                    <img src="/Public/home/img/c6.png" class="cmtUser hidden-lg" alt="">
         </a>
         <!-- logo -->
         <!-- 导航开始 -->
@@ -35,8 +37,8 @@
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
-        <div class="loginBox visible-lg">
-            <a href="<?php echo U('Public/login');?>">登录</a>|<a href="<?php echo U('Public/regist');?>">注册</a>
+        <div class="loginBox">
+            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -136,16 +138,27 @@
 		<script type="text/javascript" src="/Public/home/js/dropload.min.js"></script>
 		<script type="text/javascript" src="/Public/home/js/jifen.js"></script>
 			<script type="text/javascript">
-								// 小屏幕展开导航效果
-			$(function() {
-				$(".cmtMenuLogo").click(function() {
-					$(".commonTop nav").toggle();
-					$(".commonTop").toggleClass('t6');
-				}
-				)
-			}
-			)
-		</script>
+                                
+            $(function() {
+                // 小屏幕展开导航效果
+                $(".cmtMenuLogo").click(function() {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
+                    $(".commonTop nav").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+                // 小屏幕展开登录
+                $(".cmtUser").click(function() {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+            }
+            )
+        </script>
 		<script>
     //js控制导航选中效果
     (function(){

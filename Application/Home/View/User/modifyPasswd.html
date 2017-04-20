@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
 		<link rel="stylesheet" href="__PUBLIC__/home/css/center.css">
 		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -23,24 +24,24 @@
 				<div class="right cpright">
 					<p class="rightTitle visible-lg">修改密码</p>
 					<p class="cpTips">提示：使用大小写字母、数字与标点符号的组合，可以大幅提示账号安全!</p>
-					<form action="">
+					<form action="" id="form1">
 						<table class="cpTable">
 							<tr>
 								<td>原密码</td>
-								<td><input type="password" placeholder="请输入当前密码"></td>
+								<td><input type="password" placeholder="请输入当前密码" name="originalPasswd"></td>
 							</tr>
 							<tr>
 								<td>新密码</td>
-								<td><input type="password" placeholder="请输入当新密码"></td>
+								<td><input type="password" placeholder="请输入当新密码" name="newPasswd"></td>
 							</tr>
 							<tr>
 								<td>确认密码</td>
-								<td><input type="password" placeholder="请输入当新密码"></td>
+								<td><input type="password" placeholder="请输入当新密码" name="confirmPasswd"></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td>
-									<button type="submit" class="cpSubmit">确认</button>
+									<button type="button" class="cpSubmit">确认</button>
 									<button type="button" class="cpCancle">取消</button>
 								</td>
 							</tr>
@@ -54,6 +55,7 @@
 		<include file="Public/footer"/>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
                                 
             $(function() {
@@ -92,6 +94,35 @@
                 }
             }
             alinks[indexes].className = 'leftActive';
+
+            $(".cpSubmit").click(function () {
+                var formData = new FormData($( "#form1" )[0]);
+                console.log(formData);
+                $.ajax({
+                    url: '{:U("User/modifyPasswd")}',
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (json) {
+                        console.log(json);
+                        var d = dialog({
+                            content: json.info
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            if (json.status){
+                                location.reload();
+                            }
+                        }, 2000);
+                    }
+                });
+
+            })
         </script>
 	</body>
 </html>
