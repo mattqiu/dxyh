@@ -90,10 +90,21 @@
 		<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 			<script type="text/javascript">
-								// 小屏幕展开导航效果
+								
 			$(function() {
+				// 小屏幕展开导航效果
 				$(".cmtMenuLogo").click(function() {
+					$(".cmtUser").toggle();
+					$(".logoImg").toggleClass('commonPR');
 					$(".commonTop nav").toggle();
+					$(".commonTop").toggleClass('t6');
+				}
+				)
+				// 小屏幕展开登录
+				$(".cmtUser").click(function() {
+					$(".cmtMenuLogo").toggle();
+					$(".logoImg").toggleClass('commonPL');
+					$(".loginBox").toggle();
 					$(".commonTop").toggleClass('t6');
 				}
 				)

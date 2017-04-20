@@ -6,10 +6,10 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/Public/home/css/base.css">
-    <link rel="stylesheet" href="/Public/home/css/dropload.css">
-    <link rel="stylesheet" href="/Public/home/css/activity.css">
-    <link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico">
+    <link rel="stylesheet" href="/dxyh/Public/home/css/base.css">
+    <link rel="stylesheet" href="/dxyh/Public/home/css/dropload.css">
+    <link rel="stylesheet" href="/dxyh/Public/home/css/activity.css">
+    <link rel="Shortcut Icon" href="/dxyh/Public/home/img/dyxh.ico">
 </head>
 <body>
 <!-- 公共头部开始 -->
@@ -17,11 +17,13 @@
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
-            <img src="/Public/home/img/logo.png" alt="">
-            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <img src="/dxyh/Public/home/img/logo.png" alt="">
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/dxyh/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
-            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <img  class="hidden-lg cmtMenuLogo" src="/dxyh/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
+            <!-- 小屏幕下个人导航图标结束 -->
+                    <img src="/dxyh/Public/home/img/c6.png" class="cmtUser hidden-lg" alt="">
         </a>
         <!-- logo -->
         <!-- 导航开始 -->
@@ -35,15 +37,15 @@
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
-        <div class="loginBox visible-lg">
-            <a href="<?php echo U('Public/login');?>">登录</a>|<a href="<?php echo U('Public/regist');?>">注册</a>
+        <div class="loginBox">
+            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
         </div>
         <!-- 登陆注册结束 -->
 
     </div>
 </div>
 <!-- 公共头部结束 -->
-<img class="visible-lg" style="width: 100%;height: 460px;" src="/Public/home/img/a3.png" alt="">
+<img class="visible-lg" style="width: 100%;height: 460px;" src="/dxyh/Public/home/img/a3.png" alt="">
 <!-- 大屏幕下标题开始 -->
 <div class="titleLogo container visible-lg">
     <div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>A</p></div>
@@ -77,7 +79,7 @@
 </div>
 <!-- 搜索结束 -->
 <!-- 小屏幕下显示的图片开始 -->
-<img class="visible-xs" style="width: 100%;height: auto;margin-top: 20px;" src="/Public/home/img/s1.png" alt="">
+<img class="visible-xs" style="width: 100%;height: auto;margin-top: 20px;" src="/dxyh/Public/home/img/s1.png" alt="">
 <!-- 小屏幕下显示的图片结束 -->
 <!-- 活动开始 -->
 <div class="container wrap activeBox">
@@ -106,7 +108,7 @@
             <div class="activeList clearfix">
                 <a href="activityDetail.html">
                     <div class="col-xs-4 col-lg-3">
-                        <img src="/Public/home/img/img1.png" alt="">
+                        <img src="/dxyh/Public/home/img/img1.png" alt="">
                     </div>
                     <div class="col-xs-8 col-lg-9 activeListR">
                         <h1>活动标题</h1>
@@ -124,7 +126,7 @@
             <div class="activeList clearfix">
                 <a href="activityDetail.html">
                     <div class="col-xs-4 col-lg-3">
-                        <img src="/Public/home/img/img1.png" alt="">
+                        <img src="/dxyh/Public/home/img/img1.png" alt="">
                     </div>
                     <div class="col-xs-8 col-lg-9 activeListR">
                         <h1>活动标题</h1>
@@ -141,7 +143,7 @@
             <div class="activeList clearfix">
                 <a href="activityDetail.html">
                     <div class="col-xs-4 col-lg-3">
-                        <img src="/Public/home/img/img1.png" alt="">
+                        <img src="/dxyh/Public/home/img/img1.png" alt="">
                     </div>
                     <div class="col-xs-8 col-lg-9 activeListR">
                         <h1>活动标题</h1>
@@ -158,7 +160,7 @@
             <div class="activeList clearfix">
                 <a href="activityDetail.html">
                     <div class="col-xs-4 col-lg-3">
-                        <img src="/Public/home/img/img1.png" alt="">
+                        <img src="/dxyh/Public/home/img/img1.png" alt="">
                     </div>
                     <div class="col-xs-8 col-lg-9 activeListR">
                         <h1>活动标题</h1>
@@ -207,20 +209,31 @@
     </div>
 </div>
 <!-- 公共底部模块结束 -->
-<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
-<script type="text/javascript" src="/Public/home/js/dropload.min.js"></script>
-<script type="text/javascript" src="/Public/home/js/activity.js"></script>
+<script type="text/javascript" src="/dxyh/Public/home/js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="/dxyh/Public/home/js/dropload.min.js"></script>
+<script type="text/javascript" src="/dxyh/Public/home/js/activity.js"></script>
 <script type="text/javascript">
-    // 小屏幕展开导航效果
-    $(function () {
-            $(".cmtMenuLogo").click(function () {
+                                
+            $(function() {
+                // 小屏幕展开导航效果
+                $(".cmtMenuLogo").click(function() {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
                     $(".commonTop nav").toggle();
                     $(".commonTop").toggleClass('t6');
                 }
+                )
+                // 小屏幕展开登录
+                $(".cmtUser").click(function() {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+                )
+            }
             )
-        }
-    )
-</script>
+        </script>
 <script>
     //js控制导航选中效果
     (function(){
