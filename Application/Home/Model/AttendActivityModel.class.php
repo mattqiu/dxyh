@@ -16,10 +16,6 @@ class AttendActivityModel extends CommonModel
         if (empty($id)){
             return array('code'=>1, 'msg'=>'参数丢失');
         }
-        $checkActivity = $this->countData(array('activity_id'=>$id,'uid'=>session('uid')));
-        if ($checkActivity){
-            return array('code'=>1, 'msg'=>'您已报名该活动');
-        }
         $row = M('Activity')->where(array('id'=>$id))->find();
         if (!$row){
             return array('code'=>1, 'msg'=>'活动不存在，可能已被管理员删除');
@@ -35,6 +31,10 @@ class AttendActivityModel extends CommonModel
             if ($rowNum >= $row['activity_number']){
                 return array('code'=>1, 'msg'=>'活动报名人数已满');
             }
+        }
+        $checkActivity = $this->countData(array('activity_id'=>$id,'uid'=>session('uid')));
+        if ($checkActivity){
+            return array('code'=>1, 'msg'=>'您已报名该活动');
         }
         $data = array(
             'uid' => session('uid'),

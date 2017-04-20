@@ -17,9 +17,10 @@ class WebsiteImageModel extends CommonModel
             if ($item['img_link']){
                 $list[$key]['img_link'] = urldecode($item['img_link']);
             }else{
-                $list[$key]['img_link'] = "#";
+                $list[$key]['img_link'] = "javascript:;";
             }
         }
         return $list;
     }
+
 }

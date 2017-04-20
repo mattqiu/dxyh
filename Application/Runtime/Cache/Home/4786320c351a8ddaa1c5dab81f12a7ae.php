@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/Public/home/css/base.css">
 		<link rel="stylesheet" href="/Public/home/css/familyDetail.css">
 		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -45,31 +46,31 @@
 		<div class="wrap main">
 			<!-- 左侧目录模块开始 -->
 			<div class="leftMenu visible-lg">
-				<a href="#" class="leftMulu">目录</a>
-				<a href="#" class="leftSZ">上一章</a>
-				<a href="#" class="leftSJ">上一节</a>
-				<a href="#" class="leftXJ">下一节</a>
-				<a href="#" class="leftXZ">下一章</a>
+				<a href="<?php echo U('HomeCare/index',array('id'=>1));?>" class="leftMulu">目录</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$prevChapter));?>" data-value="<?php echo ($prevChapter); ?>" class="leftSZ prev">上一章</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$prevSection));?>" data-value="<?php echo ($prevSection); ?>" class="leftSJ prev">上一节</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$nextSection));?>" data-value="<?php echo ($nextSection); ?>" class="leftXJ next">下一节</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$nextChapter));?>" data-value="<?php echo ($nextChapter); ?>" class="leftXZ next">下一章</a>
 			</div>
 			<!-- 左侧目录模块结束 -->
 			<!-- 文字区域开始 -->
-			<h1>第一章&nbsp;&nbsp;第一节</h1>
-			<div class="time">2017-03-22&nbsp;&nbsp;12:00</div>
-			<h2 class="title">基本清洁</h2>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的<br>肌肤完美的肌肤完美<br>的肌肤完美的肌肤完美的肌肤完<br>美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完<br>美的肌肤完美的肌肤完美的肌肤完美</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
+			<?php if($chapter): if($chapter.parent_name): ?><h1><?php echo ($chapter["parent_name"]); ?>&nbsp;&nbsp;<?php echo ($chapter["chapter_name"]); ?></h1>
+					<?php else: ?>
+					<h1><?php echo ($chapter["chapter_name"]); ?></h1><?php endif; ?>
+				<div class="time"><?php echo ($chapter["create_time"]); ?></div>
+				<h2 class="title"><?php echo ($chapter["title"]); ?></h2>
+				<?php echo ($chapter["content"]); ?>
+				<?php else: ?>
+				<h2 class="title">暂无数据</h2><?php endif; ?>
+
 			<!-- 文字区域结束 -->
 			<!-- 底部上一章控制区域开始 -->
 			<div class="bottomMenu">
-				<a href="#">上一章</a>
-				<a href="#">上一节</a>
-				<a href="#" class="mulu">目录</a>
-				<a href="#">下一节</a>
-				<a href="#">下一章</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$prevChapter));?>" data-value="<?php echo ($prevChapter); ?>" class="prev">上一章</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$prevSection));?>" data-value="<?php echo ($prevSection); ?>" class="prev">上一节</a>
+				<a href="<?php echo U('HomeCare/index',array('id'=>1));?>" class="mulu">目录</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$nextSection));?>" data-value="<?php echo ($nextSection); ?>" class="next">下一节</a>
+				<a href="<?php echo U('HomeCare/detail',array('id'=>$nextChapter));?>" data-value="<?php echo ($nextChapter); ?>" class="next">下一章</a>
 			</div>
 			<!-- 底部上一章控制区域结束 -->
 			<div></div>
@@ -78,29 +79,13 @@
 		<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <a href="#">中路成员企业</a>
-        <a href="#">星火钱包</a>
-        <a href="#">贷出去多赚</a>
-        <a href="#">网贷天眼</a>
-        <a href="#">网贷之家</a>
-        <a href="#">网贷专家</a>
-        <a href="#">二手车之家</a>
-        <a href="#">车300</a>
-        <a href="#">车虫网</a>
-        <a href="#">车8度</a>
-        <a href="#">车蚂蚁</a><br>
-        <a href="#">车讯商城</a>
-        <a href="#">易车二手车</a>
-        <a href="#">移动汽车网</a>
-        <a href="#">汽车改装店</a>
-        <a href="#">丝路汽车网</a>
-        <a href="#">一起网贷</a>
-        <a href="#">融途网</a>
+        <?php echo ($link); ?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
@@ -133,5 +118,34 @@
 
 
 </script>
+		<script type="text/javascript">
+			$(function () {
+				$(".prev").click(function () {
+					if ($(this).attr('data-value') == ''){
+                        var d = dialog({
+                            content: '已经是开始章节'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 2000);
+                        return false;
+					}
+                });
+
+				$(".next").click(function () {
+                    if ($(this).attr('data-value') == ''){
+                        var d = dialog({
+                            content: '已经是最新章节'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 2000);
+                        return false;
+                    }
+                })
+            })
+		</script>
 	</body>
 </html>

@@ -48,13 +48,13 @@
 			<div class="swiper-container swiper2 visible-lg">
 				<!-- 图片开始 -->
 				<div class="swiper-wrapper">
-					<!-- 一个轮播页开始 -->
-					<div class="swiper-slide container plateStyleListBox">
-						<a href="#">
-							<img src="/Public/home/img/img1.png" alt="">
-						</a>
-					</div>
-					<!-- 一个轮播页结束 -->
+					<?php if(is_array($homeCareImage)): $i = 0; $__LIST__ = $homeCareImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个轮播页开始 -->
+						<div class="swiper-slide container plateStyleListBox">
+							<a href="<?php echo ($vo["img_link"]); ?>">
+								<img src="<?php echo ($vo["image"]); ?>" alt="">
+							</a>
+						</div>
+						<!-- 一个轮播页结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
 					<!-- 一个轮播页开始 -->
 					<div class="swiper-slide container plateStyleListBox">
 						<a href="#">
@@ -95,7 +95,20 @@
 		<!-- 目录开始 -->
 		<div class="wrap menu">
 			<h1>目录</h1>
-			<p class="title newTitle"><a href="familyDetail.html">序言</a></p>
+			<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><p class="title newTitle">
+                    <a href="<?php echo U('HomeCare/detail',array('id'=>$vo['id']));?>">
+                        <span><?php echo ($vo["chapter_name"]); ?></span>
+                        <noempty name="vo.title"><?php echo ($vo["title"]); ?></noempty>
+                    </a>
+                </p>
+                <noempty name="vo.subData">
+                    <?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><p>
+                            <a class="new" href="<?php echo U('HomeCare/detail',array('id'=>$item['id']));?>">
+                                <?php echo ($item["chapter_name"]); ?>&nbsp;&nbsp;<?php echo ($item["title"]); ?>
+                            </a>
+                        </p><?php endforeach; endif; else: echo "" ;endif; ?>
+                </noempty><?php endforeach; endif; else: echo "" ;endif; ?>
+			<!--<p class="title newTitle"><a href="familyDetail.html">序言</a></p>
 			<p class="title newTitle"><a href="familyDetail.html"><span>第一章</span>基本家庭护理操作</a></p>
 			<p><a class="new" href="familyDetail.html">第一节&nbsp;&nbsp;基本清洁</a></p>
 			<p><a class="new" href="familyDetail.html">第二节&nbsp;&nbsp;基本清洁</a></p>
@@ -107,7 +120,7 @@
 			<p><a href="#">第三节&nbsp;&nbsp;基本清洁</a></p>
 			<p><a href="#">第四节&nbsp;&nbsp;基本清洁</a></p>
 			<p><a href="#">第五节&nbsp;&nbsp;基本清洁</a></p>
-			<p class="title"><a href="#"><span>第二章</span>基本家庭护理操作</a></p>
+			<p class="title"><a href="#"><span>第二章</span>基本家庭护理操作</a></p>-->
 		</div>
 		<!-- 目录结束 -->
 		<!-- 公共底部模块开始 -->

@@ -91,7 +91,7 @@
                                 <img class="sanjiao"
                                      src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
                                 <p class="reTitle"><span>点评</span></p>
-                                <?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><div class="containerdiscussContent">
+                                <?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><div class="container discussContent">
                                         <div class="col-lg-3 username">
                                             <img src="<?php echo ($item["avatar"]); ?>" alt="">
                                             <?php echo ($item["nickname"]); ?> ：
@@ -237,7 +237,7 @@
                 success: function (json) {
                     console.log(json);
                     if (json.code == 0){
-                        result += '<div class="containerdiscussContent">';
+                        result += '<div class="container discussContent">';
                         result += '<div class="col-lg-3 username">';
                         result += '<img src="'+json.data.avatar+'" alt="">'+json.data.nickname+' ：</div>';
                         result += '<div class="col-lg-9 discussContentR">' + content + '</div></div>';

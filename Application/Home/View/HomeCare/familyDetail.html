@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
 		<link rel="stylesheet" href="__PUBLIC__/home/css/familyDetail.css">
 		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -17,31 +18,35 @@
 		<div class="wrap main">
 			<!-- 左侧目录模块开始 -->
 			<div class="leftMenu visible-lg">
-				<a href="#" class="leftMulu">目录</a>
-				<a href="#" class="leftSZ">上一章</a>
-				<a href="#" class="leftSJ">上一节</a>
-				<a href="#" class="leftXJ">下一节</a>
-				<a href="#" class="leftXZ">下一章</a>
+				<a href="{:U('HomeCare/index',array('id'=>1))}" class="leftMulu">目录</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$prevChapter))}" data-value="{$prevChapter}" class="leftSZ prev">上一章</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$prevSection))}" data-value="{$prevSection}" class="leftSJ prev">上一节</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$nextSection))}" data-value="{$nextSection}" class="leftXJ next">下一节</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$nextChapter))}" data-value="{$nextChapter}" class="leftXZ next">下一章</a>
 			</div>
 			<!-- 左侧目录模块结束 -->
 			<!-- 文字区域开始 -->
-			<h1>第一章&nbsp;&nbsp;第一节</h1>
-			<div class="time">2017-03-22&nbsp;&nbsp;12:00</div>
-			<h2 class="title">基本清洁</h2>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的<br>肌肤完美的肌肤完美<br>的肌肤完美的肌肤完美的肌肤完<br>美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完<br>美的肌肤完美的肌肤完美的肌肤完美</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
-			<p>完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤完美的肌肤</p>
+			<if condition="$chapter">
+				<if condition="$chapter.parent_name">
+					<h1>{$chapter.parent_name}&nbsp;&nbsp;{$chapter.chapter_name}</h1>
+					<else/>
+					<h1>{$chapter.chapter_name}</h1>
+				</if>
+				<div class="time">{$chapter.create_time}</div>
+				<h2 class="title">{$chapter.title}</h2>
+				{$chapter.content}
+				<else/>
+				<h2 class="title">暂无数据</h2>
+			</if>
+
 			<!-- 文字区域结束 -->
 			<!-- 底部上一章控制区域开始 -->
 			<div class="bottomMenu">
-				<a href="#">上一章</a>
-				<a href="#">上一节</a>
-				<a href="#" class="mulu">目录</a>
-				<a href="#">下一节</a>
-				<a href="#">下一章</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$prevChapter))}" data-value="{$prevChapter}" class="prev">上一章</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$prevSection))}" data-value="{$prevSection}" class="prev">上一节</a>
+				<a href="{:U('HomeCare/index',array('id'=>1))}" class="mulu">目录</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$nextSection))}" data-value="{$nextSection}" class="next">下一节</a>
+				<a href="{:U('HomeCare/detail',array('id'=>$nextChapter))}" data-value="{$nextChapter}" class="next">下一章</a>
 			</div>
 			<!-- 底部上一章控制区域结束 -->
 			<div></div>
@@ -50,6 +55,7 @@
 		<include file="Public/footer"/>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
 								// 小屏幕展开导航效果
 			$(function() {
@@ -62,5 +68,34 @@
 			)
 		</script>
 		<include file="Public/bottom"/>
+		<script type="text/javascript">
+			$(function () {
+				$(".prev").click(function () {
+					if ($(this).attr('data-value') == ''){
+                        var d = dialog({
+                            content: '已经是开始章节'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 2000);
+                        return false;
+					}
+                });
+
+				$(".next").click(function () {
+                    if ($(this).attr('data-value') == ''){
+                        var d = dialog({
+                            content: '已经是最新章节'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 2000);
+                        return false;
+                    }
+                })
+            })
+		</script>
 	</body>
 </html>

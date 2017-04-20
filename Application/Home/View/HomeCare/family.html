@@ -20,13 +20,15 @@
 			<div class="swiper-container swiper2 visible-lg">
 				<!-- 图片开始 -->
 				<div class="swiper-wrapper">
-					<!-- 一个轮播页开始 -->
-					<div class="swiper-slide container plateStyleListBox">
-						<a href="#">
-							<img src="__PUBLIC__/home/img/img1.png" alt="">
-						</a>
-					</div>
-					<!-- 一个轮播页结束 -->
+					<volist name="homeCareImage" id="vo">
+						<!-- 一个轮播页开始 -->
+						<div class="swiper-slide container plateStyleListBox">
+							<a href="{$vo.img_link}">
+								<img src="{$vo.image}" alt="">
+							</a>
+						</div>
+						<!-- 一个轮播页结束 -->
+					</volist>
 					<!-- 一个轮播页开始 -->
 					<div class="swiper-slide container plateStyleListBox">
 						<a href="#">
@@ -67,7 +69,24 @@
 		<!-- 目录开始 -->
 		<div class="wrap menu">
 			<h1>目录</h1>
-			<p class="title newTitle"><a href="familyDetail.html">序言</a></p>
+			<volist name="rows" id="vo">
+				<p class="title newTitle">
+                    <a href="{:U('HomeCare/detail',array('id'=>$vo['id']))}">
+                        <span>{$vo.chapter_name}</span>
+                        <noempty name="vo.title">{$vo.title}</noempty>
+                    </a>
+                </p>
+                <noempty name="vo.subData">
+                    <volist name="vo.subData" id="item">
+                        <p>
+                            <a class="new" href="{:U('HomeCare/detail',array('id'=>$item['id']))}">
+                                {$item.chapter_name}&nbsp;&nbsp;{$item.title}
+                            </a>
+                        </p>
+                    </volist>
+                </noempty>
+			</volist>
+			<!--<p class="title newTitle"><a href="familyDetail.html">序言</a></p>
 			<p class="title newTitle"><a href="familyDetail.html"><span>第一章</span>基本家庭护理操作</a></p>
 			<p><a class="new" href="familyDetail.html">第一节&nbsp;&nbsp;基本清洁</a></p>
 			<p><a class="new" href="familyDetail.html">第二节&nbsp;&nbsp;基本清洁</a></p>
@@ -79,7 +98,7 @@
 			<p><a href="#">第三节&nbsp;&nbsp;基本清洁</a></p>
 			<p><a href="#">第四节&nbsp;&nbsp;基本清洁</a></p>
 			<p><a href="#">第五节&nbsp;&nbsp;基本清洁</a></p>
-			<p class="title"><a href="#"><span>第二章</span>基本家庭护理操作</a></p>
+			<p class="title"><a href="#"><span>第二章</span>基本家庭护理操作</a></p>-->
 		</div>
 		<!-- 目录结束 -->
 		<!-- 公共底部模块开始 -->
