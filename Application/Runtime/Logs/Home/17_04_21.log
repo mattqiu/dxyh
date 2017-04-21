@@ -7540,3 +7540,2609 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-04-21T15:22:11+08:00 ] 127.0.0.1 /Home/Public/signOut.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:22:11+08:00 ] 127.0.0.1 /Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.1560s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: link D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\ddaf032eeb3f0e441c9409c65fc90ee1.php 第 116 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:22:12+08:00 ] 127.0.0.1 /Home/Public/regist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: link D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\c79d8bb67f5b37c9d9d415cb7640d5f3.php 第 136 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:22:13+08:00 ] 127.0.0.1 /Home/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:23:03+08:00 ] 127.0.0.1 /Home/Public/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.1020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE `nickname` = '风中的芦苇' LIMIT 1   [ RunTime:0.0660s ]
+
+[ 2017-04-21T15:23:36+08:00 ] 127.0.0.1 /Home/Public/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0590s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE `nickname` = '追蝶逐梦' LIMIT 1   [ RunTime:0.0580s ]
+SQL: INSERT INTO `dxyh_user` (`nickname`,`passwd`,`create_time`) VALUES ('追蝶逐梦','25f9e794323b453885f5181f1b624d0b','1492759416') [ RunTime:0.0770s ]
+
+[ 2017-04-21T15:23:39+08:00 ] 127.0.0.1 /Home/User/changeMeaage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0720s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant avatar - assumed 'avatar' D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\5b5ccb792419e6e6b09759476c0af80b.php 第 70 行.
+NOTIC: [8] Array to string conversion D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\5b5ccb792419e6e6b09759476c0af80b.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:08+08:00 ] 127.0.0.1 /Home/User/changeMeaage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0680s ]
+SQL: UPDATE `dxyh_user` SET `nickname`='追蝶逐梦',`name`='石头',`sex`='0',`mobile`='1331234578',`avatar`='/upload/avatar/20170421/20170421152408104.jpg' WHERE `uid` = 5 [ RunTime:0.0900s ]
+
+[ 2017-04-21T15:24:11+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0680s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.2200s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:15+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0550s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0590s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '5' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:17+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0620s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '5' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:20+08:00 ] 127.0.0.1 /Home/User/myIntegral.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0600s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_integral_detail` [ RunTime:0.0650s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_integral_detail` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0830s ]
+SQL: SELECT * FROM `dxyh_integral_detail` WHERE `uid` = 5 ORDER BY `create_time` desc LIMIT 0,5   [ RunTime:0.1690s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0580s ]
+SQL: SELECT `integral` FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:24:21+08:00 ] 127.0.0.1 /Home/User/modifyPasswd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0630s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0690s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:26+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0690s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0700s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:29+08:00 ] 127.0.0.1 /Home/Aboutus/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:33+08:00 ] 127.0.0.1 /Home/HomeCare/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0590s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0590s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 2 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `dxyh_chapter_section` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `bookid` = 1 LIMIT 0,15   [ RunTime:0.0560s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:36+08:00 ] 127.0.0.1 /Home/HomeCare/detail/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_chapter_section` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0570s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 1   [ RunTime:0.0560s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 0,15   [ RunTime:0.0590s ]
+NOTIC: [8] Undefined offset: -1 D:\WWW\daxiaoyihu\Application\Home\Model\ChapterSectionModel.class.php 第 287 行.
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0560s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 0,15   [ RunTime:0.0570s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0600s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 5 LIMIT 1   [ RunTime:0.0570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant parent_name - assumed 'parent_name' D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+NOTIC: [8] Array to string conversion D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:24:39+08:00 ] 127.0.0.1 /Home/HomeCare/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_chapter_section` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0680s ]
+NOTIC: [8] Undefined offset: -1 D:\WWW\daxiaoyihu\Application\Home\Model\ChapterSectionModel.class.php 第 389 行.
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0670s ]
+NOTIC: [8] Undefined offset: -1 D:\WWW\daxiaoyihu\Application\Home\Model\ChapterSectionModel.class.php 第 331 行.
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0690s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 1   [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant parent_name - assumed 'parent_name' D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+NOTIC: [8] Array to string conversion D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-21T15:24:42+08:00 ] 127.0.0.1 /Home/HomeCare/index/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0580s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0600s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 2 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_chapter_section` [ RunTime:0.0600s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `bookid` = 1 LIMIT 0,15   [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:24:45+08:00 ] 127.0.0.1 /Home/HomeCare/detail/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_chapter_section` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0630s ]
+NOTIC: [8] Undefined offset: -1 D:\WWW\daxiaoyihu\Application\Home\Model\ChapterSectionModel.class.php 第 389 行.
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0610s ]
+NOTIC: [8] Undefined offset: -1 D:\WWW\daxiaoyihu\Application\Home\Model\ChapterSectionModel.class.php 第 331 行.
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 1   [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant parent_name - assumed 'parent_name' D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+NOTIC: [8] Array to string conversion D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:51+08:00 ] 127.0.0.1 /Home/HomeCare/detail/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0660s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `dxyh_chapter_section` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 0,15   [ RunTime:0.0670s ]
+NOTIC: [8] Undefined offset: -1 D:\WWW\daxiaoyihu\Application\Home\Model\ChapterSectionModel.class.php 第 287 行.
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 0,15   [ RunTime:0.0700s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 5 LIMIT 1   [ RunTime:0.0710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant parent_name - assumed 'parent_name' D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+NOTIC: [8] Array to string conversion D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-21T15:24:54+08:00 ] 127.0.0.1 /Home/HomeCare/detail/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0700s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0780s ]
+SQL: SHOW COLUMNS FROM `dxyh_chapter_section` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0690s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 0,15   [ RunTime:0.0730s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 2 LIMIT 0,15   [ RunTime:0.0720s ]
+NOTIC: [8] Undefined offset: 2 D:\WWW\daxiaoyihu\Application\Home\Model\ChapterSectionModel.class.php 第 138 行.
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 5 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 0 AND `bookid` = 1 LIMIT 0,15   [ RunTime:0.0710s ]
+SQL: SELECT * FROM `dxyh_chapter_section` WHERE `chapter` = 5 LIMIT 1   [ RunTime:0.0770s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant parent_name - assumed 'parent_name' D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+NOTIC: [8] Array to string conversion D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\4786320c351a8ddaa1c5dab81f12a7ae.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:24:57+08:00 ] 127.0.0.1 /Home/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0660s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0680s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 31 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  LIMIT 1   [ RunTime:0.0630s ]
+SQL: SELECT ay1.id,ay1.activity_cover,ay1.address,ay1.activity_name,ay1.activity_number,ay1.activity_integral,ay1.status,ay1.activity_start_time,ay1.activity_end_time,ay1.enroll_start_time,ay1.enroll_end_time,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as activityNum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  ORDER BY ay1.create_time desc LIMIT 0,5   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `dxyh_activity_type` ORDER BY `sort` desc  [ RunTime:0.0650s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:25:00+08:00 ] 127.0.0.1 /Home/Activity/detail/id/12.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0630s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0670s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0640s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=12 [ RunTime:0.0870s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0640s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '12' LIMIT 1   [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:25:08+08:00 ] 127.0.0.1 /Home/Activity/participateActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0580s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0590s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `dxyh_activity` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_attend_activity` WHERE `activity_id` = 12 AND `uid` = 5 LIMIT 1   [ RunTime:0.0620s ]
+SQL: INSERT INTO `dxyh_attend_activity` (`uid`,`activity_type_id`,`activity_id`,`create_time`) VALUES ('5','1','12','1492759507') [ RunTime:0.0720s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_attend_activity` WHERE `activity_id` = 12 LIMIT 1   [ RunTime:0.0560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:25:14+08:00 ] 127.0.0.1 /Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0640s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0630s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0660s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 21 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 24 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  LIMIT 1   [ RunTime:0.0630s ]
+SQL: SELECT ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  ORDER BY ct1.create_time desc LIMIT 0,5   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc  [ RunTime:0.0640s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:25:18+08:00 ] 127.0.0.1 /Home/Coptic/details/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0730s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0720s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0690s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 5 AND `coptic_id` = 9 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0690s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 5 AND `coptic_id` = 9 LIMIT 1   [ RunTime:0.0770s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0680s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=5) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '9' AND c.status = 1  [ RunTime:0.5030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:25:24+08:00 ] 127.0.0.1 /Home/Coptic/copticKeepLikes.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0600s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0610s ]
+SQL: INSERT INTO `dxyh_collection` (`uid`,`coptic_id`,`coptic_type_id`,`create_time`) VALUES ('5','9','1','1492759523') [ RunTime:0.8700s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:25:28+08:00 ] 127.0.0.1 /Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0700s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0710s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 21 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 24 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  ORDER BY ct1.create_time desc LIMIT 0,5   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc  [ RunTime:0.0760s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-21T15:25:31+08:00 ] 127.0.0.1 /Home/Coptic/details/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0640s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0670s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0620s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 5 AND `coptic_id` = 9 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0620s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 5 AND `coptic_id` = 9 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0660s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=5) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '9' AND c.status = 1  [ RunTime:0.0630s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:25:34+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0660s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-21T15:25:36+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0660s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '5' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:25:38+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0680s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0660s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '5' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-21T15:25:40+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0640s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.1330s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '5' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:26:37+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0620s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0590s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '5' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:26:40+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0660s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0680s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '5' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0690s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:26:42+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0640s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0650s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '5' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:26:48+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0600s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0610s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '5' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:26:55+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0600s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0650s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '5' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:27:30+08:00 ] 127.0.0.1 /Home/User/myIntegral.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0630s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `dxyh_integral_detail` [ RunTime:0.0580s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_integral_detail` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0570s ]
+SQL: SELECT * FROM `dxyh_integral_detail` WHERE `uid` = 5 ORDER BY `create_time` desc LIMIT 0,5   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0580s ]
+SQL: SELECT `integral` FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:27:32+08:00 ] 127.0.0.1 /Home/User/modifyPasswd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0620s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0620s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:27:34+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 5 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:27:36+08:00 ] 127.0.0.1 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0720s ]
+SQL: INSERT INTO `dxyh_visit` (`ip`,`create_time`) VALUES ('2130706433','1492759656') [ RunTime:0.0920s ]
+SQL: SHOW COLUMNS FROM `dxyh_website_image` [ RunTime:0.0660s ]
+SQL: SELECT `image`,`img_link` FROM `dxyh_website_image` WHERE `type` = 1 AND `status` = 1 ORDER BY `sort` desc LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0650s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover`,`abstract` FROM `dxyh_coptic` ORDER BY `create_time` desc LIMIT 0,8   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0640s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover`,`enroll_end_time`,`browse_volume` FROM `dxyh_activity` WHERE `status` <> '3' ORDER BY `create_time` desc LIMIT 0,3   [ RunTime:0.0640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:27:41+08:00 ] 127.0.0.1 /Home/Public/signOut.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:27:42+08:00 ] 127.0.0.1 /Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: link D:\WWW\daxiaoyihu\Application\Runtime\Cache\Home\ddaf032eeb3f0e441c9409c65fc90ee1.php 第 116 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:36:17+08:00 ] 127.0.0.1 /Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `nickname` = '小黄' LIMIT 1   [ RunTime:0.0670s ]
+
+[ 2017-04-21T15:36:20+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:36:23+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0680s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '1' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:36:38+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0710s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0990s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0890s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:37:51+08:00 ] 127.0.0.1 /Home/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0660s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0830s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0730s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0660s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 31 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  LIMIT 1   [ RunTime:0.0810s ]
+SQL: SELECT ay1.id,ay1.activity_cover,ay1.address,ay1.activity_name,ay1.activity_number,ay1.activity_integral,ay1.status,ay1.activity_start_time,ay1.activity_end_time,ay1.enroll_start_time,ay1.enroll_end_time,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as activityNum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  ORDER BY ay1.create_time desc LIMIT 0,5   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `dxyh_activity_type` ORDER BY `sort` desc  [ RunTime:0.0670s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:37:57+08:00 ] 127.0.0.1 /Home/Activity/detail/id/12.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0680s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0600s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0590s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=12 [ RunTime:0.1000s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0610s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '12' LIMIT 1   [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:38:33+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0600s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:38:35+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0570s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0600s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:38:39+08:00 ] 127.0.0.1 /Home/Activity/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0650s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0650s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=7 [ RunTime:0.0830s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0670s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '7' LIMIT 1   [ RunTime:0.2680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:38:45+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0600s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:38:48+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0810s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:39:22+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0640s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0670s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:39:34+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0760s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:40:09+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0740s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0670s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:40:37+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0660s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0650s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:40:40+08:00 ] 127.0.0.1 /Home/Activity/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0680s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.3350s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0640s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=7 [ RunTime:0.0810s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0670s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '7' LIMIT 1   [ RunTime:0.2740s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:41:00+08:00 ] 127.0.0.1 /Home/Activity/participateActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0580s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0620s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0710s ]
+SQL: SELECT * FROM `dxyh_activity` WHERE `id` = 7 LIMIT 1   [ RunTime:0.1820s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_attend_activity` WHERE `activity_id` = 7 AND `uid` = 1 LIMIT 1   [ RunTime:0.0660s ]
+SQL: INSERT INTO `dxyh_attend_activity` (`uid`,`activity_type_id`,`activity_id`,`create_time`) VALUES ('1','1','7','1492760460') [ RunTime:0.0870s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_attend_activity` WHERE `activity_id` = 7 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:41:08+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-21T15:41:11+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0660s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:41:22+08:00 ] 127.0.0.1 /Home/Activity/detail/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0590s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0560s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0590s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0630s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=7 [ RunTime:0.0940s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0580s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '7' LIMIT 1   [ RunTime:0.2400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:41:41+08:00 ] 127.0.0.1 /Home/Activity/participateActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0630s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0640s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `dxyh_activity` WHERE `id` = 7 LIMIT 1   [ RunTime:0.2480s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_attend_activity` WHERE `activity_id` = 7 AND `uid` = 1 LIMIT 1   [ RunTime:0.0600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:41:46+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-21T15:41:54+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0590s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0590s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:41:58+08:00 ] 127.0.0.1 /Home/Activity/detail/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0630s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0670s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=10 [ RunTime:0.0810s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0650s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '10' LIMIT 1   [ RunTime:0.1970s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:42:09+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0600s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:42:15+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0690s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0670s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:42:54+08:00 ] 127.0.0.1 /Home/Activity/detail/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0660s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0680s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0630s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=6 [ RunTime:0.0930s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0660s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '6' LIMIT 1   [ RunTime:0.0670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:42:59+08:00 ] 127.0.0.1 /Home/Activity/participateActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0600s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0590s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `dxyh_activity` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0610s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:43:07+08:00 ] 127.0.0.1 /Home/Activity/participateActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0700s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.3940s ]
+SQL: SELECT * FROM `dxyh_activity` WHERE `id` = 6 LIMIT 1   [ RunTime:0.2620s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-21T15:43:14+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.4630s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0590s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:44:12+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0730s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0710s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '1' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:44:14+08:00 ] 127.0.0.1 /Home/Coptic/details/id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0700s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0760s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0660s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 2 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0680s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 2 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0740s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '2' AND c.status = 1  [ RunTime:0.0670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:44:22+08:00 ] 127.0.0.1 /Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0590s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0610s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.4160s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 21 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 24 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  LIMIT 1   [ RunTime:0.0600s ]
+SQL: SELECT ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  ORDER BY ct1.create_time desc LIMIT 0,5   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.1410s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc  [ RunTime:0.0590s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:44:26+08:00 ] 127.0.0.1 /Home/Coptic/details/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0710s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0590s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.1030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 8 LIMIT 1   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0740s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 8 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0680s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '8' AND c.status = 1  [ RunTime:0.0980s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:44:30+08:00 ] 127.0.0.1 /Home/Coptic/copticKeepLikes.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0600s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0560s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0580s ]
+SQL: INSERT INTO `dxyh_collection` (`uid`,`coptic_id`,`coptic_type_id`,`create_time`) VALUES ('1','8','1','1492760670') [ RunTime:0.0750s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:44:38+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0750s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0790s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:44:40+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0650s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '1' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0650s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:44:43+08:00 ] 127.0.0.1 /Home/Coptic/details/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0580s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0590s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 7 LIMIT 1   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0670s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 7 LIMIT 1   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0600s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '7' AND c.status = 1  [ RunTime:0.0620s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:44:56+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0610s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0740s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0580s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:45:01+08:00 ] 127.0.0.1 /Home/User/myActivity.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0730s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_attend_activity` [ RunTime:0.0620s ]
+SQL: SELECT ay1.id,ay2.activity_name,ay2.activity_cover,ay2.activity_start_time,ay2.activity_end_time,ay2.activity_number,ay2.address,ay2.browse_volume FROM dxyh_attend_activity ay1 INNER JOIN dxyh_activity as ay2 ON ay1.activity_id=ay2.id  WHERE ay1.uid = '1' ORDER BY ay1.create_time desc LIMIT 0,15   [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:45:02+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0620s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0600s ]
+SQL: SELECT ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '1' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0640s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:45:06+08:00 ] 127.0.0.1 /Home/Coptic/details/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0630s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0790s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0620s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 7 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.3600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 7 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0690s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '7' AND c.status = 1  [ RunTime:0.0670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:46:00+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0590s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:47:40+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0660s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0700s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:47:42+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0590s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0590s ]
+SQL: SELECT ct1.id,ct1.create_time,ct1.coptic_id,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '1' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0570s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:47:51+08:00 ] 127.0.0.1 /Home/Coptic/details/id/8.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.1140s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.1000s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0670s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0880s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.2090s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 8 LIMIT 1   [ RunTime:0.1680s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0660s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 8 LIMIT 1   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0750s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 8 LIMIT 1   [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.1930s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '8' AND c.status = 1  [ RunTime:0.0870s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:48:00+08:00 ] 127.0.0.1 /Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0680s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0680s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 21 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 24 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  LIMIT 1   [ RunTime:0.0700s ]
+SQL: SELECT ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  ORDER BY ct1.create_time desc LIMIT 0,5   [ RunTime:0.2460s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc  [ RunTime:0.0710s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:48:07+08:00 ] 127.0.0.1 /Home/Coptic/details/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0600s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0640s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 5 LIMIT 1   [ RunTime:0.2690s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0590s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 5 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0660s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 5 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0680s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '5' AND c.status = 1  [ RunTime:0.0590s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:49:55+08:00 ] 127.0.0.1 /Home/Coptic/details/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0640s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0650s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 5 LIMIT 1   [ RunTime:0.3410s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0670s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 5 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0680s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 5 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0650s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '5' AND c.status = 1  [ RunTime:0.0620s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:50:00+08:00 ] 127.0.0.1 /Home/Coptic/copticKeepLikes.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0660s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0670s ]
+SQL: INSERT INTO `dxyh_collection` (`uid`,`coptic_id`,`coptic_type_id`,`create_time`) VALUES ('1','5','2','1492761000') [ RunTime:0.1060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-21T15:50:01+08:00 ] 127.0.0.1 /Home/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0620s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0610s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0600s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 31 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  LIMIT 1   [ RunTime:0.0620s ]
+SQL: SELECT ay1.id,ay1.activity_cover,ay1.address,ay1.activity_name,ay1.activity_number,ay1.activity_integral,ay1.status,ay1.activity_start_time,ay1.activity_end_time,ay1.enroll_start_time,ay1.enroll_end_time,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as activityNum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  ORDER BY ay1.create_time desc LIMIT 0,5   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0600s ]
+SQL: SELECT * FROM `dxyh_activity_type` ORDER BY `sort` desc  [ RunTime:0.0580s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:50:04+08:00 ] 127.0.0.1 /Home/Activity/detail/id/12.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0680s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0730s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0790s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0690s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=12 [ RunTime:0.0970s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0810s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '12' LIMIT 1   [ RunTime:0.0720s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:50:09+08:00 ] 127.0.0.1 /Home/Activity/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0640s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0620s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0700s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\ActivityModel.class.php 第 31 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  LIMIT 1   [ RunTime:0.0610s ]
+SQL: SELECT ay1.id,ay1.activity_cover,ay1.address,ay1.activity_name,ay1.activity_number,ay1.activity_integral,ay1.status,ay1.activity_start_time,ay1.activity_end_time,ay1.enroll_start_time,ay1.enroll_end_time,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as activityNum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  ORDER BY ay1.create_time desc LIMIT 0,5   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity_type` [ RunTime:0.0620s ]
+SQL: SELECT * FROM `dxyh_activity_type` ORDER BY `sort` desc  [ RunTime:0.0630s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\ActivityController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:50:13+08:00 ] 127.0.0.1 /Home/Activity/detail/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0590s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0600s ]
+SQL: SELECT `id`,`activity_name`,`activity_cover` FROM `dxyh_activity` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0580s ]
+SQL: update dxyh_activity set browse_volume = browse_volume+1 where id=10 [ RunTime:0.0940s ]
+SQL: SHOW COLUMNS FROM `dxyh_activity` [ RunTime:0.0620s ]
+SQL: SELECT ay1.*,ay2.type_name,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as enrollnum FROM dxyh_activity ay1 INNER JOIN dxyh_activity_type as ay2 ON ay1.activity_type_id=ay2.id  WHERE ay1.id = '10' LIMIT 1   [ RunTime:0.2470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:50:19+08:00 ] 127.0.0.1 /Home/Coptic/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0580s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0550s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0560s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 21 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Model\CopticModel.class.php 第 24 行.
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  LIMIT 1   [ RunTime:0.0550s ]
+SQL: SELECT ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name FROM dxyh_coptic ct1 INNER JOIN dxyh_coptic_type as ct2 ON ct1.coptic_type_id=ct2.id  ORDER BY ct1.create_time desc LIMIT 0,5   [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `sort` desc,`create_time` desc  [ RunTime:0.0620s ]
+NOTIC: [8] Undefined index: typeId D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Home\Controller\CopticController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:50:23+08:00 ] 127.0.0.1 /Home/Coptic/details/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0740s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0650s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0680s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 9 LIMIT 1   [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0670s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 9 LIMIT 1   [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0670s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '9' AND c.status = 1  [ RunTime:0.0700s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:50:31+08:00 ] 127.0.0.1 /Home/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0650s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0700s ]
+SQL: SELECT * FROM `dxyh_user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-21T15:50:33+08:00 ] 127.0.0.1 /Home/User/myKeep.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0670s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0660s ]
+SQL: SELECT ct1.id,ct1.create_time,ct1.coptic_id,ct2.coptic_cover,ct2.coptic_title,ct3.category_name FROM dxyh_collection ct1 INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id  WHERE ct1.uid = '1' ORDER BY ct1.create_time desc LIMIT 0,15   [ RunTime:0.0680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-21T15:50:37+08:00 ] 127.0.0.1 /Home/Coptic/details/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0750s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link` LIMIT 0,15   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0680s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 5 LIMIT 1   [ RunTime:0.2760s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0660s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 1 AND `coptic_id` = 5 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 1 AND `coptic_id` = 5 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0660s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=1) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '5' AND c.status = 1  [ RunTime:0.0630s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

@@ -64,19 +64,21 @@
 					<p class="rightTitle visible-lg">我的活动</p>
 					<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个活动开始 -->
 						<div class="col-lg-4 avtiveList">
-							<div>
-								<p class="c2p">浏览：<?php echo ($vo["browse_volume"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;人数：<?php echo ($vo["activity_number"]); ?></p>
-								<div class="activeImg">
-									<img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
-									<div class="mengceng"></div><!-- 蒙层 -->
-									<p><?php echo ($vo["activity_name"]); ?></p>
-								</div>
-								<div class="activeMessage">
-									<p>开始时间：<?php echo ($vo["activity_start_time"]); ?><a href="javascript:;" class="cancel" data-value="<?php echo ($vo["id"]); ?>">取消参加</a></p>
-									<p>结束时间：<?php echo ($vo["activity_end_time"]); ?></p>
-									<p>地点：<?php echo ($vo["address"]); ?></p>
-								</div>
-							</div>
+                            <div>
+                                <p class="c2p">浏览：<?php echo ($vo["browse_volume"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;人数：<?php echo ($vo["activity_number"]); ?></p>
+                                <div class="activeImg">
+                                    <a href="<?php echo U('Activity/detail',array('id'=>$vo['id']));?>">
+                                    <img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
+                                    </a>
+                                    <div class="mengceng"></div><!-- 蒙层 -->
+                                    <p><?php echo ($vo["activity_name"]); ?></p>
+                                </div>
+                                <div class="activeMessage">
+                                    <p>开始时间：<?php echo ($vo["activity_start_time"]); ?><a href="javascript:;" class="cancel" data-value="<?php echo ($vo["id"]); ?>">取消参加</a></p>
+                                    <p>结束时间：<?php echo ($vo["activity_end_time"]); ?></p>
+                                    <p>地点：<?php echo ($vo["address"]); ?></p>
+                                </div>
+                            </div>
 						</div>
 						<!-- 一个活动结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
 				</div>

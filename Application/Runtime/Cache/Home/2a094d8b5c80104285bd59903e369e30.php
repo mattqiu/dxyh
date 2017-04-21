@@ -67,7 +67,9 @@
 							<div>
 								<p class="sstyle">分类：<span><?php echo ($vo["category_name"]); ?></span></p>
 								<div class="activeImg">
+									<a href="<?php echo U('Coptic/details',array('id'=>$vo['coptic_id']));?>">
 									<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+									</a>
 									<div class="mengceng"></div><!-- 蒙层 -->
 									<p><?php echo ($vo["coptic_title"]); ?></p>
 								</div>

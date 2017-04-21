@@ -29,7 +29,9 @@
 							<div>
 								<p class="sstyle">分类：<span>{$vo.category_name}</span></p>
 								<div class="activeImg">
+									<a href="{:U('Coptic/details',array('id'=>$vo['coptic_id']))}">
 									<img src="{$vo.coptic_cover}" alt="">
+									</a>
 									<div class="mengceng"></div><!-- 蒙层 -->
 									<p>{$vo.coptic_title}</p>
 								</div>

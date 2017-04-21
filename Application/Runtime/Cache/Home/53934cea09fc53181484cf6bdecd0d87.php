@@ -33,7 +33,7 @@
             <a href="<?php echo U('Activity/index');?>">活动中心</a>
             <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
             <a href="<?php echo U('Aboutus/index');?>">关于我们</a>
-            <?php if($Think.session.uid): ?><a href="<?php echo U('User/index');?>">个人中心</a><?php endif; ?>
+            <?php if(!empty($_SESSION['uid'])): ?><a href="<?php echo U('User/index');?>">个人中心</a><?php endif; ?>
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->

@@ -31,7 +31,7 @@ class CollectionModel extends CommonModel
         $uid = session('uid');
         $join = array('INNER JOIN dxyh_coptic as ct2 ON ct1.coptic_id=ct2.id','INNER JOIN dxyh_coptic_type as ct3 ON ct1.coptic_type_id=ct3.id');
         $where = array('ct1.uid'=>$uid);
-        $field = "ct1.id,ct1.create_time,ct2.coptic_cover,ct2.coptic_title,ct3.category_name";
+        $field = "ct1.id,ct1.create_time,ct1.coptic_id,ct2.coptic_cover,ct2.coptic_title,ct3.category_name";
         $list = $this->alias('ct1')->getJoinDataList($join, $where, $field, array('ct1.create_time'=>'desc'));
         foreach ($list as $key => $item) {
             $list[$key]['create_time'] = dateTime($item['create_time']);
