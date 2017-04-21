@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
 		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+        <link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 		<style>
 		body{background: #fff;}
 		.main { background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
@@ -57,27 +58,27 @@
 		<div class="wrap main">
 			<h1 class="visible-lg">注册</h1>
 			<!-- 表单开始 -->
-			<form action="" class="form1">
+			<form action="{:U('Public/register')}" class="form1">
 				<table>
 					<tr>
 						<td>昵称</td>
-						<td><input type="text" placeholder="请输入昵称"></td>
+						<td><input type="text" placeholder="请输入昵称" name="nickname"></td>
 					</tr>
 					<tr>
 						<td>设置密码</td>
-						<td><input type="password" placeholder="密码长度6-20个字符"></td>
+						<td><input type="password" placeholder="密码长度6-20个字符" name="passwd"></td>
 					</tr>
 					<tr>
 						<td>确认密码</td>
-						<td><input type="password" placeholder="密码长度6-20个字符"></td>
+						<td><input type="password" placeholder="密码长度6-20个字符" name="confirmPasswd"></td>
 					</tr>
 					<tr>
 						<td>验证码</td>
-						<td class="codeBox"><input type="text" ><img src="__PUBLIC__/home/img/fp1.png" alt=""><span>看不清<br>换一张</span></td>
+						<td class="codeBox"><input type="text" name="verifyCode" ><img src="{:U('Public/verify')}" alt=""><span class="changeA">看不清<br>换一张</span></td><!--__PUBLIC__/home/img/fp1.png-->
 					</tr>
 					<tr>
 						<td></td>
-						<td><input class="submit" type="submit" value="同意协议并注册"></td>
+						<td><input class="submit" type="button" value="同意协议并注册" disabled></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -100,6 +101,7 @@
 		<include file="footer"/>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
                                 
             $(function() {
@@ -121,6 +123,132 @@
                 )
             }
             )
+
+
+			$(function () {
+				$('.submit').css("background","#b2b5b1");
+
+				$('.check').change(function () {
+                    if($('.check').attr("checked")){
+                        $('.submit').css("background","#2D9E12");
+                        $('.submit').attr("disabled",false);
+                    }else{
+                        $('.submit').css("background","#b2b5b1");
+                        $('.submit').attr("disabled",true);
+                    }
+                });
+
+				$(".changeA").click(function () {
+				    var url = "{:U('Public/verify')}?r="+new Date().getTime()+Math.floor(Math.random() * ( 1000 + 1));
+                    $(this).prev("img").attr("src",url);
+                });
+            });
+
+
+            $('.submit').click(function () {
+                if ($("input[name='nickname']").val() == ''){
+                    var d = dialog({
+                        content: '请输入昵称'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='nickname']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='passwd']").val() == ''){
+                    var d = dialog({
+                        content: '请输入密码'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='passwd']").focus();
+                    }, 2000);
+                    return false;
+                }else if ($("input[name='passwd']").val().length < 6 || $("input[name='passwd']").val().length > 20){
+                    var d = dialog({
+                        content: '密码长度6-20个字符'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='passwd']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='confirmPasswd']").val() == ''){
+                    var d = dialog({
+                        content: '请输入确认密码'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='confirmPasswd']").focus();
+                    }, 2000);
+                    return false;
+                }else if ($("input[name='confirmPasswd']").val().length < 6 || $("input[name='confirmPasswd']").val().length > 20){
+                    var d = dialog({
+                        content: '密码长度6-20个字符'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='confirmPasswd']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='confirmPasswd']").val() != $("input[name='passwd']").val()){
+                    var d = dialog({
+                        content: '密码与确认密码不一致'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='confirmPasswd']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='verifyCode']").val() == ''){
+                    var d = dialog({
+                        content: '请输入验证码'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='verifyCode']").focus();
+                    }, 2000);
+                    return false;
+                }
+
+                var data = {
+                    'nickname':$("input[name='nickname']").val(),
+                    'passwd':$("input[name='passwd']").val(),
+                    'confirmPasswd':$("input[name='confirmPasswd']").val(),
+                    'verifyCode':$("input[name='verifyCode']").val()
+                };
+
+                $.ajax({
+                    url: '{:U("Public/register")}',
+                    type: 'post',
+                    data: data,
+                    dataType: 'json',
+                    success: function (json) {
+                        console.log(json);
+                        var d = dialog({
+                            content: json.info
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            if (json.status){
+                                location.href = json.url;
+                            }
+                        }, 2000);
+                    }
+                });
+            });
         </script>
 	</body>
 </html>

@@ -26,15 +26,24 @@ class UserController extends CommonController
      * 我的活动
      */
     public function myActivity(){
+        $data['rows'] = D("AttendActivity")->myActivity();
 
+        $this->assign($data);
         $this->display();
+    }
+
+    public function cancelActivity(){
+        D("AttendActivity")->cancelActivity();
     }
 
     /**
      * 我的积分
      */
     public function myIntegral(){
+        $data = D("IntegralDetail")->getList();
+        $data['nowIntegral'] = M("User")->where(array('uid'=>session('uid')))->field('integral')->find()['integral'];
 
+        $this->assign($data);
         $this->display();
     }
 

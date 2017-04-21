@@ -73,10 +73,10 @@
 				<p class="title newTitle">
                     <a href="{:U('HomeCare/detail',array('id'=>$vo['id']))}">
                         <span>{$vo.chapter_name}</span>
-                        <noempty name="vo.title">{$vo.title}</noempty>
+                        <notempty name="vo.title">{$vo.title}</notempty>
                     </a>
                 </p>
-                <noempty name="vo.subData">
+                <notempty name="vo.subData">
                     <volist name="vo.subData" id="item">
                         <p>
                             <a class="new" href="{:U('HomeCare/detail',array('id'=>$item['id']))}">
@@ -84,7 +84,7 @@
                             </a>
                         </p>
                     </volist>
-                </noempty>
+                </notempty>
 			</volist>
 			<!--<p class="title newTitle"><a href="familyDetail.html">序言</a></p>
 			<p class="title newTitle"><a href="familyDetail.html"><span>第一章</span>基本家庭护理操作</a></p>

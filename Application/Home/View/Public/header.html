@@ -18,12 +18,18 @@
             <a href="{:U('Activity/index')}">活动中心</a>
             <a href="{:U('HomeCare/index')}">家庭护理</a>
             <a href="{:U('Aboutus/index')}">关于我们</a>
-            <a href="{:U('User/index')}">个人中心</a>
+            <notempty name="Think.session.uid">
+                <a href="{:U('User/index')}">个人中心</a>
+            </notempty>
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox">
-            <a href="{:U('Public/login')}">登录</a><span>|</span><a href="{:U('Public/regist')}">注册</a>
+            <empty name="Think.session.uid">
+                <a href="{:U('Public/login')}">登录</a><span>|</span><a href="{:U('Public/regist')}">注册</a>
+                <else/>
+                <a href="{:U('Public/signOut')}">退出</a>
+            </empty>
         </div>
         <!-- 登陆注册结束 -->
 

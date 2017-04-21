@@ -9,15 +9,27 @@
 namespace Home\Controller;
 
 use Think\Controller;
+use Think\Verify;
+
 class PublicController extends Controller
 {
     public function login(){
-
+        D("User")->login();
+        $data['checkLogin'] = "";
+        if (cookie("daychina_message")){
+            $userAry = json_decode(base64_decode(cookie("daychina_message"), true), true);
+            if ($userAry['nickname']){
+                $data['checkLogin'] = "checked";
+            }
+            $data['nickname'] = isset($userAry['nickname'])?$userAry['nickname']:"";
+            $data['passwd'] = isset($userAry['passwd'])?$userAry['passwd']:"";
+        }
+        $this->assign($data);
         $this->display();
     }
 
     public function register(){
-
+        D("User")->register();
         $this->display();
     }
 
@@ -52,5 +64,26 @@ class PublicController extends Controller
             $response = $qc->urlUtils->get_contents($token_url);
             var_dump(json_decode($response, true));
         }
+    }
+
+    public function verify(){
+        $config = array(
+            'fontSize' => 14,// 验证码字体大小
+            'length' => 4,// 验证码位数
+            'useCurve' => true, // 是否画混淆曲线
+            'useNoise' => false, // 关闭验证码杂点
+            'reset' => false, // 验证成功后是否重置
+            'imageH' => 40,
+            'imageW' => 93
+        );
+        $code = new Verify($config);
+        $code->entry();
+
+    }
+
+    public function signOut(){
+        unset($_SESSION['uid']);
+        session('uid','');
+        redirect(U("Public/login"));
     }
 }

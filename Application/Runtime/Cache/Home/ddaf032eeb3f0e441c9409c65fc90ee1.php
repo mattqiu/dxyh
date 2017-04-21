@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/Public/home/css/base.css">
 		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+        <link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
 		<style>
 		body{background: #fff;}
 		.main { background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
@@ -66,12 +67,14 @@
             <a href="<?php echo U('Activity/index');?>">活动中心</a>
             <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
             <a href="<?php echo U('Aboutus/index');?>">关于我们</a>
-            <a href="<?php echo U('User/index');?>">个人中心</a>
+            <?php if(!empty($_SESSION['uid'])): ?><a href="<?php echo U('User/index');?>">个人中心</a><?php endif; ?>
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox">
-            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+                <?php else: ?>
+                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -84,13 +87,13 @@
 				<!-- 表单开始 -->
 				<form action="" class="form1">
 					<h2>昵称</h2>
-					<input type="text" placeholder="请输入昵称">
+					<input type="text" placeholder="请输入昵称" name="nickname" value="<?php echo ($nickname); ?>">
 					<h2>密码</h2>
-					<input type="password" placeholder="请输入密码">
+					<input type="password" placeholder="请输入密码" name="passwd" value="<?php echo ($passwd); ?>">
 					<div class="checkBox">
-						<input type="checkbox">记住用户名
+						<input type="checkbox" name="remember" value="1" >记住用户名
 					</div>
-					<input class="submit" type="submit" value="立即登录">
+					<input class="submit" type="button" value="立即登录">
 				</form>
 				<!-- 表单结束 -->
 			</div>
@@ -116,6 +119,7 @@
 </div>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+        <script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
                                 
             $(function() {
@@ -137,6 +141,64 @@
                 )
             }
             )
+
+			$(function () {
+			    var checkLogin = "<?php echo ($checkLogin); ?>";
+			    if (checkLogin){
+                    $("input[name='remember']").attr("checked", true);
+                }
+
+
+				$(".submit").click(function () {
+                    if ($("input[name='nickname']").val() == ''){
+                        var d = dialog({
+                            content: '请输入昵称'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            $("input[name='nickname']").focus();
+                        }, 2000);
+                        return false;
+                    }
+                    if ($("input[name='passwd']").val() == ''){
+                        var d = dialog({
+                            content: '请输入密码'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            $("input[name='passwd']").focus();
+                        }, 2000);
+                        return false;
+                    }
+
+                    var data = {
+                        'nickname':$("input[name='nickname']").val(),
+                        'passwd':$("input[name='passwd']").val(),
+                        'remember':$("input[name='remember']:checked").val()
+                    };
+                    $.ajax({
+                        url: '<?php echo U("Public/login");?>',
+                        type: 'post',
+                        data: data,
+                        dataType: 'json',
+                        success: function (json) {
+                            console.log(json);
+                            var d = dialog({
+                                content: json.info
+                            });
+                            d.show();
+                            setTimeout(function () {
+                                d.close().remove();
+                                if (json.status){
+                                    location.href = json.url;
+                                }
+                            }, 2000);
+                        }
+                    });
+                });
+            })
         </script>
 	</body>
 </html>

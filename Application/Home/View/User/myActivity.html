@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
 		<link rel="stylesheet" href="__PUBLIC__/home/css/center.css">
 		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -22,57 +23,25 @@
 			<div class="col-lg-10">
 				<div class="right">
 					<p class="rightTitle visible-lg">我的活动</p>
-					<!-- 一个活动开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="c2p">浏览：232425&nbsp;&nbsp;&nbsp;&nbsp;人数：2235</p>
-							<div class="activeImg">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage">
-								<p>开始时间：2017-03-20<a href="#">取消参加</a></p>
-								<p>结束时间：2017-03-30</p>
-								<p>地点：上海市长宁区天山路23号</p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个活动结束 -->
-					<!-- 一个活动开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="c2p">浏览：232425&nbsp;&nbsp;&nbsp;&nbsp;人数：2235</p>
-							<div class="activeImg">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage">
-								<p>开始时间：2017-03-20<a href="#">取消参加</a></p>
-								<p>结束时间：2017-03-30</p>
-								<p>地点：上海市长宁区天山路23号</p>
+					<volist name="rows" id="vo">
+						<!-- 一个活动开始 -->
+						<div class="col-lg-4 avtiveList">
+							<div>
+								<p class="c2p">浏览：{$vo.browse_volume}&nbsp;&nbsp;&nbsp;&nbsp;人数：{$vo.activity_number}</p>
+								<div class="activeImg">
+									<img src="{$vo.activity_cover}" alt="">
+									<div class="mengceng"></div><!-- 蒙层 -->
+									<p>{$vo.activity_name}</p>
+								</div>
+								<div class="activeMessage">
+									<p>开始时间：{$vo.activity_start_time}<a href="javascript:;" class="cancel" data-value="{$vo.id}">取消参加</a></p>
+									<p>结束时间：{$vo.activity_end_time}</p>
+									<p>地点：{$vo.address}</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- 一个活动结束 -->
-					<!-- 一个活动开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="c2p">浏览：232425&nbsp;&nbsp;&nbsp;&nbsp;人数：2235</p>
-							<div class="activeImg">
-								<img src="__PUBLIC__/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage">
-								<p>开始时间：2017-03-20<a href="#">取消参加</a></p>
-								<p>结束时间：2017-03-30</p>
-								<p>地点：上海市长宁区天山路23号</p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个活动结束 -->
+						<!-- 一个活动结束 -->
+					</volist>
 				</div>
 			</div>
 			<!-- 右侧信息模块结束 -->
@@ -81,6 +50,7 @@
 		<include file="Public/footer"/>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 	    <script type="text/javascript">
                                 
             $(function() {
@@ -119,6 +89,30 @@
                 }
             }
             alinks[indexes].className = 'leftActive';
+
+            $(function () {
+                $(".cancel").click(function () {
+                    var id = $(this).attr('data-value');
+                    $.ajax({
+                        url: '{:U("User/cancelActivity")}',
+                        type: 'post',
+                        data: {'id':id},
+                        dataType: 'json',
+                        success: function (json) {
+                            var d = dialog({
+                                content: json.info
+                            });
+                            d.show();
+                            setTimeout(function () {
+                                d.close().remove();
+                                if (json.status){
+                                    location.reload();
+                                }
+                            }, 2000);
+                        }
+                    });
+                });
+            });
         </script>
 	</body>
 </html>

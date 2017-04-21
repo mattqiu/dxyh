@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="/Public/home/css/base.css">
 		<link rel="stylesheet" href="/Public/home/css/center.css">
 		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
@@ -32,12 +33,14 @@
             <a href="<?php echo U('Activity/index');?>">活动中心</a>
             <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
             <a href="<?php echo U('Aboutus/index');?>">关于我们</a>
-            <a href="<?php echo U('User/index');?>">个人中心</a>
+            <?php if(!empty($_SESSION['uid'])): ?><a href="<?php echo U('User/index');?>">个人中心</a><?php endif; ?>
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox">
-            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+                <?php else: ?>
+                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -59,57 +62,23 @@
 			<div class="col-lg-10">
 				<div class="right">
 					<p class="rightTitle visible-lg">我的活动</p>
-					<!-- 一个活动开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="c2p">浏览：232425&nbsp;&nbsp;&nbsp;&nbsp;人数：2235</p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage">
-								<p>开始时间：2017-03-20<a href="#">取消参加</a></p>
-								<p>结束时间：2017-03-30</p>
-								<p>地点：上海市长宁区天山路23号</p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个活动结束 -->
-					<!-- 一个活动开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="c2p">浏览：232425&nbsp;&nbsp;&nbsp;&nbsp;人数：2235</p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage">
-								<p>开始时间：2017-03-20<a href="#">取消参加</a></p>
-								<p>结束时间：2017-03-30</p>
-								<p>地点：上海市长宁区天山路23号</p>
+					<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个活动开始 -->
+						<div class="col-lg-4 avtiveList">
+							<div>
+								<p class="c2p">浏览：<?php echo ($vo["browse_volume"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;人数：<?php echo ($vo["activity_number"]); ?></p>
+								<div class="activeImg">
+									<img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
+									<div class="mengceng"></div><!-- 蒙层 -->
+									<p><?php echo ($vo["activity_name"]); ?></p>
+								</div>
+								<div class="activeMessage">
+									<p>开始时间：<?php echo ($vo["activity_start_time"]); ?><a href="javascript:;" class="cancel" data-value="<?php echo ($vo["id"]); ?>">取消参加</a></p>
+									<p>结束时间：<?php echo ($vo["activity_end_time"]); ?></p>
+									<p>地点：<?php echo ($vo["address"]); ?></p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- 一个活动结束 -->
-					<!-- 一个活动开始 -->
-					<div class="col-lg-4 avtiveList">
-						<div>
-							<p class="c2p">浏览：232425&nbsp;&nbsp;&nbsp;&nbsp;人数：2235</p>
-							<div class="activeImg">
-								<img src="/Public/home/img/img1.png" alt="">
-								<div class="mengceng"></div><!-- 蒙层 -->
-								<p>‘达医晓护’学生社团成立活动</p>
-							</div>
-							<div class="activeMessage">
-								<p>开始时间：2017-03-20<a href="#">取消参加</a></p>
-								<p>结束时间：2017-03-30</p>
-								<p>地点：上海市长宁区天山路23号</p>
-							</div>
-						</div>
-					</div>
-					<!-- 一个活动结束 -->
+						<!-- 一个活动结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
 				</div>
 			</div>
 			<!-- 右侧信息模块结束 -->
@@ -124,6 +93,7 @@
 </div>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+		<script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 	    <script type="text/javascript">
                                 
             $(function() {
@@ -182,6 +152,30 @@
                 }
             }
             alinks[indexes].className = 'leftActive';
+
+            $(function () {
+                $(".cancel").click(function () {
+                    var id = $(this).attr('data-value');
+                    $.ajax({
+                        url: '<?php echo U("User/cancelActivity");?>',
+                        type: 'post',
+                        data: {'id':id},
+                        dataType: 'json',
+                        success: function (json) {
+                            var d = dialog({
+                                content: json.info
+                            });
+                            d.show();
+                            setTimeout(function () {
+                                d.close().remove();
+                                if (json.status){
+                                    location.reload();
+                                }
+                            }, 2000);
+                        }
+                    });
+                });
+            });
         </script>
 	</body>
 </html>

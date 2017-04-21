@@ -47,9 +47,9 @@ class CollectionModel extends CommonModel
         );
         $boole = $this->deleteData($data);
         if ($boole){
-            message(1, '取消收藏成功');
+            message(1, '已取消收藏');
         }else{
-            message(0, '取消收藏失败');
+            message(0, '未取消收藏');
         }
     }
 }

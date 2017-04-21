@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="/Public/home/css/base.css">
 		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+        <link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
 		<style>
 		body{background: #fff;}
 		.main { background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
@@ -72,12 +73,16 @@
             <a href="<?php echo U('Activity/index');?>">活动中心</a>
             <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
             <a href="<?php echo U('Aboutus/index');?>">关于我们</a>
-            <a href="<?php echo U('User/index');?>">个人中心</a>
+            <noempty name="Think.session.uid">
+                <a href="<?php echo U('User/index');?>">个人中心</a>
+            </noempty>
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox">
-            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+                <?php else: ?>
+                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -87,27 +92,27 @@
 		<div class="wrap main">
 			<h1 class="visible-lg">注册</h1>
 			<!-- 表单开始 -->
-			<form action="" class="form1">
+			<form action="<?php echo U('Public/register');?>" class="form1">
 				<table>
 					<tr>
 						<td>昵称</td>
-						<td><input type="text" placeholder="请输入昵称"></td>
+						<td><input type="text" placeholder="请输入昵称" name="nickname"></td>
 					</tr>
 					<tr>
 						<td>设置密码</td>
-						<td><input type="password" placeholder="密码长度6-20个字符"></td>
+						<td><input type="password" placeholder="密码长度6-20个字符" name="passwd"></td>
 					</tr>
 					<tr>
 						<td>确认密码</td>
-						<td><input type="password" placeholder="密码长度6-20个字符"></td>
+						<td><input type="password" placeholder="密码长度6-20个字符" name="confirmPasswd"></td>
 					</tr>
 					<tr>
 						<td>验证码</td>
-						<td class="codeBox"><input type="text" ><img src="/Public/home/img/fp1.png" alt=""><span>看不清<br>换一张</span></td>
+						<td class="codeBox"><input type="text" name="verifyCode" ><img src="<?php echo U('Public/verify');?>" alt=""><span class="changeA">看不清<br>换一张</span></td><!--/Public/home/img/fp1.png-->
 					</tr>
 					<tr>
 						<td></td>
-						<td><input class="submit" type="submit" value="同意协议并注册"></td>
+						<td><input class="submit" type="button" value="同意协议并注册" disabled></td>
 					</tr>
 					<tr>
 						<td></td>
@@ -136,6 +141,7 @@
 </div>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+        <script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
                                 
             $(function() {
@@ -157,6 +163,132 @@
                 )
             }
             )
+
+
+			$(function () {
+				$('.submit').css("background","#b2b5b1");
+
+				$('.check').change(function () {
+                    if($('.check').attr("checked")){
+                        $('.submit').css("background","#2D9E12");
+                        $('.submit').attr("disabled",false);
+                    }else{
+                        $('.submit').css("background","#b2b5b1");
+                        $('.submit').attr("disabled",true);
+                    }
+                });
+
+				$(".changeA").click(function () {
+				    var url = "<?php echo U('Public/verify');?>?r="+new Date().getTime()+Math.floor(Math.random() * ( 1000 + 1));
+                    $(this).prev("img").attr("src",url);
+                });
+            });
+
+
+            $('.submit').click(function () {
+                if ($("input[name='nickname']").val() == ''){
+                    var d = dialog({
+                        content: '请输入昵称'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='nickname']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='passwd']").val() == ''){
+                    var d = dialog({
+                        content: '请输入密码'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='passwd']").focus();
+                    }, 2000);
+                    return false;
+                }else if ($("input[name='passwd']").val().length < 6 || $("input[name='passwd']").val().length > 20){
+                    var d = dialog({
+                        content: '密码长度6-20个字符'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='passwd']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='confirmPasswd']").val() == ''){
+                    var d = dialog({
+                        content: '请输入确认密码'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='confirmPasswd']").focus();
+                    }, 2000);
+                    return false;
+                }else if ($("input[name='confirmPasswd']").val().length < 6 || $("input[name='confirmPasswd']").val().length > 20){
+                    var d = dialog({
+                        content: '密码长度6-20个字符'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='confirmPasswd']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='confirmPasswd']").val() != $("input[name='passwd']").val()){
+                    var d = dialog({
+                        content: '密码与确认密码不一致'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='confirmPasswd']").focus();
+                    }, 2000);
+                    return false;
+                }
+                if ($("input[name='verifyCode']").val() == ''){
+                    var d = dialog({
+                        content: '请输入验证码'
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        $("input[name='verifyCode']").focus();
+                    }, 2000);
+                    return false;
+                }
+
+                var data = {
+                    'nickname':$("input[name='nickname']").val(),
+                    'passwd':$("input[name='passwd']").val(),
+                    'confirmPasswd':$("input[name='confirmPasswd']").val(),
+                    'verifyCode':$("input[name='verifyCode']").val()
+                };
+
+                $.ajax({
+                    url: '<?php echo U("Public/register");?>',
+                    type: 'post',
+                    data: data,
+                    dataType: 'json',
+                    success: function (json) {
+                        console.log(json);
+                        var d = dialog({
+                            content: json.info
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            if (json.status){
+                                location.href = json.url;
+                            }
+                        }, 2000);
+                    }
+                });
+            });
         </script>
 	</body>
 </html>

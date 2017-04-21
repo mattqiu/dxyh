@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
 		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
+        <link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 		<style>
 		body{background: #fff;}
 		.main { background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
@@ -54,13 +55,13 @@
 				<!-- 表单开始 -->
 				<form action="" class="form1">
 					<h2>昵称</h2>
-					<input type="text" placeholder="请输入昵称">
+					<input type="text" placeholder="请输入昵称" name="nickname" value="{$nickname}">
 					<h2>密码</h2>
-					<input type="password" placeholder="请输入密码">
+					<input type="password" placeholder="请输入密码" name="passwd" value="{$passwd}">
 					<div class="checkBox">
-						<input type="checkbox">记住用户名
+						<input type="checkbox" name="remember" value="1" >记住用户名
 					</div>
-					<input class="submit" type="submit" value="立即登录">
+					<input class="submit" type="button" value="立即登录">
 				</form>
 				<!-- 表单结束 -->
 			</div>
@@ -80,6 +81,7 @@
 		<include file="Public/footer"/>
 		<!-- 公共底部模块结束 -->
 		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
                                 
             $(function() {
@@ -101,6 +103,64 @@
                 )
             }
             )
+
+			$(function () {
+			    var checkLogin = "{$checkLogin}";
+			    if (checkLogin){
+                    $("input[name='remember']").attr("checked", true);
+                }
+
+
+				$(".submit").click(function () {
+                    if ($("input[name='nickname']").val() == ''){
+                        var d = dialog({
+                            content: '请输入昵称'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            $("input[name='nickname']").focus();
+                        }, 2000);
+                        return false;
+                    }
+                    if ($("input[name='passwd']").val() == ''){
+                        var d = dialog({
+                            content: '请输入密码'
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                            $("input[name='passwd']").focus();
+                        }, 2000);
+                        return false;
+                    }
+
+                    var data = {
+                        'nickname':$("input[name='nickname']").val(),
+                        'passwd':$("input[name='passwd']").val(),
+                        'remember':$("input[name='remember']:checked").val()
+                    };
+                    $.ajax({
+                        url: '{:U("Public/login")}',
+                        type: 'post',
+                        data: data,
+                        dataType: 'json',
+                        success: function (json) {
+                            console.log(json);
+                            var d = dialog({
+                                content: json.info
+                            });
+                            d.show();
+                            setTimeout(function () {
+                                d.close().remove();
+                                if (json.status){
+                                    location.href = json.url;
+                                }
+                            }, 2000);
+                        }
+                    });
+                });
+            })
         </script>
 	</body>
 </html>

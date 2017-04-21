@@ -23,65 +23,33 @@
 			<div class="col-lg-10">
 				<div class="right">
 					<p class="rightTitle visible-lg">我的积分</p>
-					<p class="Jamount">当前账户积分：<span>0</span><span>分</span></p>
-					<table class="Jtable">
-						<tr class="t1">
-							<th>时间</th>
-							<th>积分变化</th>
-							<th>详情</th>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjian">-1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjian">-1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjian">-1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-					</table>
+					<p class="Jamount">当前账户积分：<span>{$nowIntegral}</span><span>分</span></p>
+					<if condition="$rows">
+						<table class="Jtable">
+							<tr class="t1">
+								<th>时间</th>
+								<th>积分变化</th>
+								<th>详情</th>
+							</tr>
+							<volist name="rows" id="vo">
+								<tr>
+									<td>{$vo.create_time|dateTime=###,6}</td>
+									<if condition="$vo.integral_num gt 0">
+										<td class="Jjia">{$vo.integral_num}</td>
+										<else/>
+										<td class="Jjian">{$vo.integral_num}</td>
+									</if>
+									<td>{$vo.reason}</td>
+								</tr>
+							</volist>
+						</table>
+						<else/>
+						暂无数据
+					</if>
+
 					<!-- 分页开始 -->
 					<div class="pages clearfix visible-lg">
-						<a href="#" class="home">首页</a>
-						<a class="pre" href="#">上一页</a>
-						<a class="pageActive" href="#">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a class="next" href="#">下一页</a>
-						<a href="#">尾页</a>
+						{$page}
 					</div>
 					<!-- 分页结束 -->
 				</div>

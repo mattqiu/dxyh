@@ -33,12 +33,14 @@
             <a href="<?php echo U('Activity/index');?>">活动中心</a>
             <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
             <a href="<?php echo U('Aboutus/index');?>">关于我们</a>
-            <a href="<?php echo U('User/index');?>">个人中心</a>
+            <?php if(!empty($_SESSION['uid'])): ?><a href="<?php echo U('User/index');?>">个人中心</a><?php endif; ?>
         </nav>
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox">
-            <a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+                <?php else: ?>
+                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -60,65 +62,27 @@
 			<div class="col-lg-10">
 				<div class="right">
 					<p class="rightTitle visible-lg">我的积分</p>
-					<p class="Jamount">当前账户积分：<span>0</span><span>分</span></p>
-					<table class="Jtable">
-						<tr class="t1">
-							<th>时间</th>
-							<th>积分变化</th>
-							<th>详情</th>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjian">-1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjian">-1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjia">+1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-						<tr>
-							<td>2016-12-04&nbsp;&nbsp;10:52</td>
-							<td class="Jjian">-1230</td>
-							<td>参与活动获取积分</td>
-						</tr>
-					</table>
+					<p class="Jamount">当前账户积分：<span><?php echo ($nowIntegral); ?></span><span>分</span></p>
+					<?php if($rows): ?><table class="Jtable">
+							<tr class="t1">
+								<th>时间</th>
+								<th>积分变化</th>
+								<th>详情</th>
+							</tr>
+							<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+									<td><?php echo (dateTime($vo["create_time"],6)); ?></td>
+									<?php if($vo["integral_num"] > 0): ?><td class="Jjia"><?php echo ($vo["integral_num"]); ?></td>
+										<?php else: ?>
+										<td class="Jjian"><?php echo ($vo["integral_num"]); ?></td><?php endif; ?>
+									<td><?php echo ($vo["reason"]); ?></td>
+								</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+						</table>
+						<?php else: ?>
+						暂无数据<?php endif; ?>
+
 					<!-- 分页开始 -->
 					<div class="pages clearfix visible-lg">
-						<a href="#" class="home">首页</a>
-						<a class="pre" href="#">上一页</a>
-						<a class="pageActive" href="#">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a class="next" href="#">下一页</a>
-						<a href="#">尾页</a>
+						<?php echo ($page); ?>
 					</div>
 					<!-- 分页结束 -->
 				</div>
