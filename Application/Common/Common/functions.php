@@ -208,3 +208,14 @@ function RecursionCommentsAry($parentId, $array=array()){
     }
     return $subAry;
 }
+
+
+/**
+ * 判断微信内置浏览器访问
+ */
+function is_weixin(){
+    if ( strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false ) {
+        return true;
+    }
+    return false;
+}

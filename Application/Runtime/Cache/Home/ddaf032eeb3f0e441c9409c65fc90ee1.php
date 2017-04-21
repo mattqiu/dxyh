@@ -102,7 +102,7 @@
 				<div class="others">
 					<p class="p1">还没有账号？<a href="regist.html">立即注册</a></p>
 					<p class="p2">可使用以下账号直接登录</p>
-					<p class="col-xs-4 col-lg-12"><a href="#"><img src="/Public/home/img/wexin2.png" alt="">微信登录</a></p>
+					<p class="col-xs-4 col-lg-12"><a href="<?php echo ($weixin_url); ?>"><img src="/Public/home/img/wexin2.png" alt="">微信登录</a></p>
 					<p class="col-xs-4 col-lg-12"><a href="#"><img src="/Public/home/img/qq2.png" alt="">QQ登录</a></p>
 					<p class="col-xs-4 col-lg-12"><a href="#"><img src="/Public/home/img/weibo2.png" alt="">微博登录</a></p>
 				</div>

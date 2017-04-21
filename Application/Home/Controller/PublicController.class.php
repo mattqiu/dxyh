@@ -24,6 +24,7 @@ class PublicController extends Controller
             $data['nickname'] = isset($userAry['nickname'])?$userAry['nickname']:"";
             $data['passwd'] = isset($userAry['passwd'])?$userAry['passwd']:"";
         }
+        $data['weixin_url'] = "https://open.weixin.qq.com/connect/qrconnect?appid=wxbdc5610cc59c1631&redirect_uri=".urlencode("http://www.dxyh.com")."&response_type=code&scope=snsapi_login&state=3d6be0a4035d839573b04816624a415e#wechat_redirect";
         $this->assign($data);
         $this->display();
     }
