@@ -28,3 +28,33 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 ERR: 无法加载模块:Public
 
+[ 2017-04-21T16:12:19+08:00 ] 127.0.0.1 /upload/copticimag/20170421/20170421160655613.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Upload
+
+[ 2017-04-21T16:32:50+08:00 ] 127.0.0.1 /upload/website/20170421/20170421154657494.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Upload
+
+[ 2017-04-21T16:32:50+08:00 ] 127.0.0.1 /Public/home/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2017-04-21T16:32:51+08:00 ] 127.0.0.1 /upload/copticimag/20170421/20170421160655613.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Upload
+
+[ 2017-04-21T16:33:12+08:00 ] 127.0.0.1 /Public/home/js/maps/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+

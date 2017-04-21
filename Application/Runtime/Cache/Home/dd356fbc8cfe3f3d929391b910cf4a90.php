@@ -79,7 +79,7 @@
             <!-- 评论列表开始 -->
             <div class="discussBox">
                 <div class="filter">
-                    <span class="filterActive">最热</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span>最新</span>
+                    <!--<span class="filterActive" onclick="cutComment()">最热</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span onclick="cutComment()">最新</span>-->
                 </div>
                 <?php if(is_array($comment)): $i = 0; $__LIST__ = $comment;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个评论开始 -->
                     <div class="discussList">
@@ -195,7 +195,16 @@
                 url: '<?php echo U("Coptic/copticKeepLikes");?>',
                 data: {'type': type, 'item': item, 'id': id, 'coptic_type_id': coptic_type_id},
                 type: 'post',
-                success: function () {
+                success: function (json) {
+                    if (json){
+                        var d = dialog({
+                            content: json.info
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 2000);
+                    }
                 }
             });
         });

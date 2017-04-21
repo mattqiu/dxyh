@@ -24,6 +24,7 @@ class CollectionModel extends CommonModel
             $data['coptic_type_id'] = $_POST['coptic_type_id'];
             $data['create_time'] = time();
             $this->addData($data);
+            message(1, '已收藏');
         }
     }
 
