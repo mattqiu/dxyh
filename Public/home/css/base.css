@@ -41,7 +41,7 @@
 .commonTop .loginBox span{display: inline-block;}
 .commonTop .logoImg img{margin-bottom: 4px;width: 60px;height: 60px;}
 .commonTop .logoImg{float: left;border-bottom: none;}
-.commonTop .active{color: #2D9E12;}
+.commonTop .active{color: #F55351;}
 .commonTop .loginBox{padding-top: 0;text-align: right;position: absolute;top: 0;right:100px;display: inline-block;float: right;color: #666666;}
 .commonTop .loginBox a{width:auto;display: inline-block;border: none;color:#666666;margin-left: 10px;margin-right: 10px;font-size: 14px;}
 .commonTop .loginBox a:nth-child(3){color:#F55351;background: none;margin-top: 0;}

@@ -67,12 +67,12 @@
                                 <p class="reTitle"><span>点评</span></p>
                                 <volist name="vo.subData" id="item">
                                     <div class="container discussContent">
-                                        <div class="col-lg-3 username">
+                                        <div class="col-lg-2 username">
                                             <img src="{$item.avatar}" alt="">
-                                            {$item.nickname} ：
                                         </div>
-                                        <div class="col-lg-9 discussContentR">{$item.content}</div>
+                                        <div class="col-lg-10 discussContentR">{$item.nickname} ：{$item.content}</div>
                                     </div>
+                                    <p class="r2">青青2&nbsp;&nbsp;<span style="color:#000;">回复青青1</span>：好！</p>
                                     <p class="r1">回复</p>
                                     <form action="" class="reForm">
                                         <textarea class="content1" placeholder="回复 {$item.nickname}：" data-id="{$item.id}" data-coptic-id="{$rows.id}"></textarea>

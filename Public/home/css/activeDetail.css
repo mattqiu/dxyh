@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-05 22:06:29
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-14 20:00:24
+* @Last Modified time: 2017-04-24 18:07:47
 */
 /* 分享按钮 */
 .bshare-custom{
@@ -281,6 +281,7 @@ cursor: pointer;
 }
 .username{
 	color: #BBBBBB;
+	width: 8%;
 }
 .scienceHistory{
 	margin-top: 0;
@@ -293,7 +294,7 @@ cursor: pointer;
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
-	margin-right: 20px;
+	/* margin-right: 20px; */
 }
 .discussContent{
 	margin-top: 20px;
@@ -325,7 +326,7 @@ cursor: pointer;
 	margin-bottom: 20px!important;
 }
 	.discussContentR{
-	margin-left: -40px;
+	/* margin-left: -40px; */
 	padding-left: 0;
 }
 .reForm{
@@ -344,6 +345,10 @@ cursor: pointer;
 	color: #BBBBBB;
 	margin-top: 10px;
 	cursor: pointer;
+}
+.r2{
+	margin-top: 10px;
+	padding-left: 60px;
 }
 .content1{
 	resize: none;

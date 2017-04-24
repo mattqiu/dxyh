@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-04-10 14:11:05
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-17 13:52:14
+* @Last Modified time: 2017-04-24 18:16:59
 */
 /* 分页 */
 .pages{
@@ -344,6 +344,7 @@ text-overflow: ellipsis;/*多余的文字省略号展示*/
 	float: right;
 	width: 45%;
 	height: 40px;
+	line-height: 40px;
 	border: none;
 	color: #fff;
 	text-align: center;
