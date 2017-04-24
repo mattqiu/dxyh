@@ -138,6 +138,7 @@ class UserModel extends CommonModel
                 message(0, '密码不正确');
             }else{
                 session('uid',$result['uid']);
+                session('nickname', $parem['nickname']);
                 if (isset($parem['remember'])){
                     $Ary = array(
                         'nickname' => $result['nickname'],

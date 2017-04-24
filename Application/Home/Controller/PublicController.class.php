@@ -86,6 +86,7 @@ class PublicController extends Controller
 
     public function signOut(){
         unset($_SESSION['uid']);
+        unset($_SESSION['nickname']);
         session('uid','');
         redirect(U("Public/login"));
     }

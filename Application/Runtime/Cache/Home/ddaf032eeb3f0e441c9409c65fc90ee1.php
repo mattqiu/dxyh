@@ -23,7 +23,7 @@
 		.p1 a { color: #F55351; }
 		.p2 { color: #999999; margin-top: 20px; }
 		.checkBox input { width: 20px !important; height: 20px !important; vertical-align: middle; margin-right: 10px; }
-		.submit { border: none; background: #2D9E12; color: #fff; cursor: pointer;border-radius: 5px; }
+		.submit { border: none; background: #2D9E12; color: #fff; cursor: pointer;border-radius: 5px; height: 40px;width: 310px;}
 		@media (min-width: 1200px) {
 			body{
 				background-color: #F5F5F5;
@@ -74,7 +74,7 @@
         <div class="loginBox">
             <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
                 <?php else: ?>
-                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
+                <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -93,7 +93,7 @@
 					<div class="checkBox">
 						<input type="checkbox" name="remember" value="1" >记住用户名
 					</div>
-					<input class="submit" type="button" value="立即登录">
+					<button class="submit" type="button" >立即登录</button>
 				</form>
 				<!-- 表单结束 -->
 			</div>
