@@ -110,11 +110,11 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td><input class="submit" type="button" value="同意协议并注册" disabled></td>
+						<td><input class="submit" type="button" value="注册"></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td class="checkBox"><input class="check" type="checkbox"><a href="#">我已阅读并同意《达医晓护协议》</a></td>
+						<!--<td class="checkBox"><input class="check" type="checkbox"><a href="#">我已阅读并同意《达医晓护协议》</a></td>-->
 					</tr>
 				</table>
 			</form>
@@ -164,9 +164,9 @@
 
 
 			$(function () {
-				$('.submit').css("background","#b2b5b1");
+				//$('.submit').css("background","#b2b5b1");
 
-				$('.check').change(function () {
+				/*$('.check').change(function () {
                     if($('.check').attr("checked")){
                         $('.submit').css("background","#2D9E12");
                         $('.submit').attr("disabled",false);
@@ -174,7 +174,7 @@
                         $('.submit').css("background","#b2b5b1");
                         $('.submit').attr("disabled",true);
                     }
-                });
+                });*/
 
 				$(".changeA").click(function () {
 				    var url = "<?php echo U('Public/verify');?>?r="+new Date().getTime()+Math.floor(Math.random() * ( 1000 + 1));

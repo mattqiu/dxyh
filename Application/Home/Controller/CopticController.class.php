@@ -35,6 +35,9 @@ class CopticController extends CommonController
      * 科普详情
      */
     public function details(){
+        if (empty(session('uid'))) {
+            redirect(U("Public/login"));
+        }
         $data['rows'] = D("Coptic")->getCopticDetails();
         $data['checkLikes'] = M("Likes")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
         $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();

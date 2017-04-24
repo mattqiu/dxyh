@@ -91,9 +91,9 @@
                             <input checked="checked" name="sex" value="0" type="radio"
                                    <?php echo (Judgement($rows["sex"],0,"checked")); ?>>保密
                             <input name="sex" type="radio" value="1" <?php echo (Judgement($rows["sex"],1,"checked")); ?>><img
-                                src="/Public/home/img/cm1.png" alt="">
+                                src="/Public/home/img/cm1.png" alt="">男
                             <input style="margin-left: 20px" name="sex" value="2" type="radio"
-                                   <?php echo (Judgement($rows["sex"],2,"checked")); ?>><img src="/Public/home/img/c1.png" alt="">
+                                   <?php echo (Judgement($rows["sex"],2,"checked")); ?>><img src="/Public/home/img/c1.png" alt="">女
                         </td>
                     </tr>
                     <tr>

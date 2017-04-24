@@ -17,8 +17,5 @@ class CommonController extends Controller
 
         $link = D("FriendshipLink")->getHomeList();
         $this->assign('link',$link);
-        if (empty(session('uid'))){
-            redirect(U("Public/login"));
-        }
     }
 }

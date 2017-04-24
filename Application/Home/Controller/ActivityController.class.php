@@ -54,7 +54,13 @@ class ActivityController extends CommonController
         echo json_encode($result);
     }
 
+    /**
+     * 参加活动
+     */
     public function participateActivity(){
+        if (empty(session('uid'))){
+            exit(json_encode(array('code'=>2,'msg'=>'您还未登陆','url'=>U("Public/login"))));
+        }
         $data = D('AttendActivity')->participateActivity();
         echo json_encode($data);
     }

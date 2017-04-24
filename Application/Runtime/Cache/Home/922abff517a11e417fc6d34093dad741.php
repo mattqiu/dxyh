@@ -174,6 +174,10 @@
 						d.show();
 						setTimeout(function () {
 							d.close().remove();
+                            if (json.code == 2){
+                                location.href = json.url;
+                                return false;
+                            }
 						}, 2000);
 					}
 				});

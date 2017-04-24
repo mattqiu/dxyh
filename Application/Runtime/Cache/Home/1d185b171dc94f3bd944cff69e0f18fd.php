@@ -67,7 +67,7 @@
                             <div>
                                 <p class="c2p">浏览：<?php echo ($vo["browse_volume"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;人数：<?php echo ($vo["activity_number"]); ?></p>
                                 <div class="activeImg">
-                                    <a href="<?php echo U('Activity/detail',array('id'=>$vo['id']));?>">
+                                    <a href="<?php echo U('Activity/detail',array('id'=>$vo['activity_id']));?>">
                                     <img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
                                     </a>
                                     <div class="mengceng"></div><!-- 蒙层 -->

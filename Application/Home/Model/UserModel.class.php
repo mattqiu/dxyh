@@ -23,6 +23,10 @@ class UserModel extends CommonModel
             if (!isset($param['nickname']) || empty($param['nickname'])){
                 message(0, '请输入昵称');
             }
+            $result = $this->countData(array('nickname'=>$param['nickname'],'uid'=>array('neq',session('uid'))));
+            if ($result){
+                message(0, '昵称已存在');
+            }
             $fileUrl = "./upload/avatar/" . dateTime(time(), 4) . "/";
             import('Org.Net.FileUpload');
             $fileUp = new \FileUpload(array('filepath'=>$fileUrl));

@@ -14,6 +14,9 @@ class UserController extends CommonController
     public function __construct()
     {
         parent::__construct();
+        if (empty(session('uid'))) {
+            redirect(U("Public/login"));
+        }
     }
 
     public function index(){

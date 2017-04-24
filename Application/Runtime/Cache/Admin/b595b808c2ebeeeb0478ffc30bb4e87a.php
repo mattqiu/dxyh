@@ -487,7 +487,7 @@
         yAxis: {
             type: 'value',
             min: 0,
-			max: 50
+			max: 500
         },
         series: [
             {
