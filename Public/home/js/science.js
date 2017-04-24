@@ -52,7 +52,7 @@ $(function() {
 	var page = 1;
 	// 每页展示5个
 	var size = 5;
-    var url = 'http://www.dxyh.com/Home/Coptic/details?id=';
+    var url = 'http://www.daychina.net/Home/Coptic/details?id=';
 	var typeId = $(".activeStyleActive").attr("data-value");
 	var keyword = $("input[name='keyword']").val();
 
@@ -66,7 +66,7 @@ $(function() {
 			var result = '';
 			$.ajax({
 				type: 'GET',
-				url: 'http://www.dxyh.com/Home/Coptic/copticJsonData',
+				url: 'http://www.daychina.net/Home/Coptic/copticJsonData',
                 data: {'p':page,'typeId':typeId,'keyword':keyword},
 				dataType: 'json',
 				success: function(json) {

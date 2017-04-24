@@ -29,7 +29,7 @@ $(function() {
 	var page = 1;
 	// 每页展示5个
 	var size = 5;
-	var url = 'http://www.dxyh.com/Home/Activity/detail?id=';
+	var url = 'http://www.daychina.net/Home/Activity/detail?id=';
 	var typeId = $(".activeStyleActive").attr("data-value");
 	var keyword = $("input[name='keyword']").val();
 
@@ -43,7 +43,7 @@ $(function() {
 			var result = '';
 			$.ajax({
 				type: 'GET',
-				url: 'http://www.dxyh.com/Home/Activity/activityJsonData',
+				url: 'http://www.daychina.net/Home/Activity/activityJsonData',
 				dataType: 'json',
                 data: {'p':page,'typeId':typeId,'keyword':keyword},
 				success: function(json) {

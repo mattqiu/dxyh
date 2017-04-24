@@ -145,7 +145,7 @@
                             <p class="newActivityP"><?php echo ($vo["activity_name"]); ?></p>
                             <div class="activeMessage">
                                 截止：<?php echo ($vo["enroll_end_time"]); ?> <?php echo ($vo["week"]); ?> <?php echo ($vo["time"]); ?>
-                                <span class="joinActive">我要报名</span>
+                                <span class="joinActive">立即参与</span>
                             </div>
                         </a>
                     </div><?php endforeach; endif; else: echo "" ;endif; ?>

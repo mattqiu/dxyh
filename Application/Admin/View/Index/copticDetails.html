@@ -82,7 +82,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 </label>
                                 <div class="col-sm-9">
-                                    <img src="{$rows.coptic_cover}" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                    <img src="{$rows.coptic_cover}" style="width: 380px;height: 250px;background-color: darkgrey;" />
                                 </div>
                             </div>
 
@@ -90,7 +90,7 @@
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 摘要 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-9" style="width: 50%;">
                                     {$rows.abstract}
                                 </div>
                             </div>
@@ -99,8 +99,8 @@
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 </label>
-                                <div class="col-sm-9">
-                                    <script id="editor" name="content" type="text/plain" style="width:824px;height:500px;">{$rows.content|htmlspecialchars_decode=###}</script>
+                                <div class="col-sm-9" style="width: 50%;">
+                                    <script id="editor" name="content" type="text/plain" >{$rows.content|htmlspecialchars_decode=###}</script>
                                 </div>
                             </div>
 
@@ -175,7 +175,7 @@
                                                 <else/>
                                                 {$vo.nickname}<lable style="margin: 0 4px;">回复</lable>{$vo.parent_name}&nbsp;<lable style="margin: 0 8px;">{$vo.create_time|dateTime=###}</lable>
                                             </if>
-                                            <button><a href="{:U('Index/shieldComment',array('id'=>$vo['id']))}" class="ajax-get">屏蔽此评论</a></button>
+                                            <button><a href="{:U('Index/shieldComment',array('id'=>$vo['id'],''=>$vo['id']))}" class="ajax-get">屏蔽此评论</a></button>
                                         </p>
                                         {$vo.content}
                                     </td>

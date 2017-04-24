@@ -65,7 +65,7 @@
 					<p>地点：<?php echo ($rows["address"]); ?></p>
 					<p>人数：<label class="attend"><?php echo ($rows["enrollnum"]); ?></label>/<?php echo ($rows["activity_number"]); ?></p>
 					<p>浏览：<?php echo ($rows["browse_volume"]); ?></p>
-					<div class="joinBtnBox"><a href="javascript:;" class="joinBtn" data-value="<?php echo ($rows["id"]); ?>">我要去</a></div>
+					<div class="joinBtnBox"><a href="javascript:;" class="joinBtn" data-value="<?php echo ($rows["id"]); ?>">我要参加</a></div>
 				</div>
 				<!-- 报名及分享结束 -->
 				<h2 class="visible-lg">热门活动回顾</h2>

@@ -24,7 +24,7 @@ class PublicController extends Controller
             $data['nickname'] = isset($userAry['nickname'])?$userAry['nickname']:"";
             $data['passwd'] = isset($userAry['passwd'])?$userAry['passwd']:"";
         }
-        $data['weixin_url'] = "https://open.weixin.qq.com/connect/qrconnect?appid=wxbdc5610cc59c1631&redirect_uri=".urlencode("http://www.dxyh.com")."&response_type=code&scope=snsapi_login&state=3d6be0a4035d839573b04816624a415e#wechat_redirect";
+        $data['weixin_url'] = "https://open.weixin.qq.com/connect/qrconnect?appid=wxbdc5610cc59c1631&redirect_uri=".urlencode("http://www.daychina.net")."&response_type=code&scope=snsapi_login&state=3d6be0a4035d839573b04816624a415e#wechat_redirect";
         $this->assign($data);
         $this->display();
     }
@@ -51,19 +51,21 @@ class PublicController extends Controller
     public function callback(){
         vendor("API.QQ.qqConnectAPI");
         $qc = new \QC();
-        $accessToken = $qc->qq_callback();
+        //$accessToken = $qc->qq_callback();
         $openId = $qc->get_openid();
         $boole = M("User")->where(array('qq_openid'=>$openId))->find();
         if (!$boole){
-            $keysArr = array(
+            /*$keysArr = array(
                 "access_token" => $accessToken,
                 "oauth_consumer_key" => $qc->recorder->readInc("appid"),
                 "openid" => $openId,
                 "format" => "json"
             );
-            $token_url = $qc->urlUtils->combineURL(self::GET_USER_INFO, $keysArr);
+
+            $token_url = $qc->urlUtils->combineURL("https://graph.qq.com/user/get_user_info", $keysArr);
             $response = $qc->urlUtils->get_contents($token_url);
-            var_dump(json_decode($response, true));
+            var_dump(json_decode($response, true));*/
+            var_dump($qc->get_user_info());
         }
     }
 

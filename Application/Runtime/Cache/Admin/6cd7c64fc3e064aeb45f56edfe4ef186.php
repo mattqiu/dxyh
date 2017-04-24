@@ -404,7 +404,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 封面图片 </label>
                                 <div class="col-sm-9">
-                                    <img src="<?php echo ($rows["coptic_cover"]); ?>" style="width: 170px;height: 200px;background-color: darkgrey;" />
+                                    <img src="<?php echo ($rows["coptic_cover"]); ?>" style="width: 380px;height: 250px;background-color: darkgrey;" />
                                 </div>
                             </div>
 
@@ -412,7 +412,7 @@
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 摘要 </label>
-                                <div class="col-sm-9">
+                                <div class="col-sm-9" style="width: 50%;">
                                     <?php echo ($rows["abstract"]); ?>
                                 </div>
                             </div>
@@ -421,8 +421,8 @@
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 </label>
-                                <div class="col-sm-9">
-                                    <script id="editor" name="content" type="text/plain" style="width:824px;height:500px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
+                                <div class="col-sm-9" style="width: 50%;">
+                                    <script id="editor" name="content" type="text/plain" ><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
                                 </div>
                             </div>
 

@@ -1,2 +1,2 @@
 <?php die('forbidden'); ?>
-{"appid":"1105539375","appkey":"Dnt6SM6J4no1evqY","callback":"http://wx.yuqing.mobi/index.php/Home/Index/callback","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}
+{"appid":"1105539375","appkey":"Dnt6SM6J4no1evqY","callback":"http://www.daychina.net/Home/Public/callback?type=qq","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}
