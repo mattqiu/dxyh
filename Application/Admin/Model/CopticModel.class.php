@@ -140,9 +140,8 @@ class CopticModel extends BaseModel
         $list['coptic_type_id'] = M("CopticType")->where(array("id"=>$list['coptic_type_id']))->field('category_name')->find()['category_name'];
 
         $join = array('INNER JOIN dxyh_user as u ON u.uid=c.uid');
-        $field = "c.id,c.parent_id,u.nickname,c.content,c.create_time";
+        $field = "c.id,c.parent_id,u.nickname,c.content,c.create_time,c.status";
         $where = array(
-            "status" => 1,
             "coptic_id" => $id
         );
         $comment = M("Comment")->alias('c')->join($join)->where($where)->field($field)->select();

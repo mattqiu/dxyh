@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>活动详情</title>
+		<title><?php echo is_weixin()?$rows['activity_name']:"活动详情";?></title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,7 +65,9 @@
 					<p>地点：<?php echo ($rows["address"]); ?></p>
 					<p>人数：<label class="attend"><?php echo ($rows["enrollnum"]); ?></label>/<?php echo ($rows["activity_number"]); ?></p>
 					<p>浏览：<?php echo ($rows["browse_volume"]); ?></p>
-					<div class="joinBtnBox"><a href="javascript:;" class="joinBtn" data-value="<?php echo ($rows["id"]); ?>">我要参加</a></div>
+					<div class="joinBtnBox"><a href="javascript:;" class="joinBtn" data-value="<?php echo ($rows["id"]); ?>">
+                        <?php echo isset($rows['checkAttend'])?"取消参加":"我要参加";?>
+                        </a></div>
 				</div>
 				<!-- 报名及分享结束 -->
 				<h2 class="visible-lg">热门活动回顾</h2>

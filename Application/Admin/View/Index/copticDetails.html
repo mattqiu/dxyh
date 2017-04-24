@@ -175,7 +175,7 @@
                                                 <else/>
                                                 {$vo.nickname}<lable style="margin: 0 4px;">回复</lable>{$vo.parent_name}&nbsp;<lable style="margin: 0 8px;">{$vo.create_time|dateTime=###}</lable>
                                             </if>
-                                            <button><a href="{:U('Index/shieldComment',array('id'=>$vo['id'],''=>$vo['id']))}" class="ajax-get">屏蔽此评论</a></button>
+                                            <button><a href="{:U('Index/shieldComment',array('id'=>$vo['id'],'status'=>$vo['status']))}" class="ajax-get"><if condition="$vo.status eq 1">屏蔽此评论<else/>取消屏蔽</if></a></button>
                                         </p>
                                         {$vo.content}
                                     </td>

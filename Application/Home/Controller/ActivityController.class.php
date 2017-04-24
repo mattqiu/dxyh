@@ -36,6 +36,12 @@ class ActivityController extends CommonController
         $Model->execute("update dxyh_activity set browse_volume = browse_volume+1 where id={$_GET['id']}");
 
         $data['rows'] = D("Activity")->getActivityDetails();
+        if (session("uid")){
+            $boole = M("AttendActivity")->where(array('uid'=>session('uid'),'activity_id'=>$_GET['id']))->count();
+            if ($boole){
+                $data['rows']['checkAttend'] = $boole;
+            }
+        }
 //var_dump($data);
         $this->assign($data);
         $this->display("activityDetail");

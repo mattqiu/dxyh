@@ -38,18 +38,25 @@ class ActivityModel extends CommonModel
         $field = "ay1.id,ay1.activity_cover,ay1.address,ay1.activity_name,ay1.activity_number,ay1.activity_integral,ay1.status,ay1.activity_start_time,ay1.activity_end_time,ay1.enroll_start_time,ay1.enroll_end_time,(select count(*) from dxyh_attend_activity where dxyh_attend_activity.activity_id=ay1.id) as activityNum";
         $data['rows'] = $this->alias('ay1')->getJoinDataList($join, $where, $field, array("ay1.create_time"=>"desc"), $page->firstRow, $page->listRows);
         foreach ($data['rows'] as $key=>$item){
-            if ($item['enroll_start_time'] > time()){
+            /*if ($item['enroll_start_time'] > time()){
                 $data['rows'][$key]['status'] = "<span class=\"activeState\">未开始</span>";
             }elseif ($item['enroll_end_time'] < time()){
-                $data['rows'][$key]['status'] = "<span class=\"activeState\">已截止</span>";
+                $data['rows'][$key]['status'] = "<span class=\"activeState\">活动结束</span>";
             }elseif ($item['activity_number'] > 0){
                 if ($item['activityNum'] >= $item['activity_number']){
                     $data['rows'][$key]['status'] = "<span class=\"activeState stateBg2\">已报满</span>";
                 }elseif ($item['enroll_start_time'] <= time() && $item['enroll_end_time'] >= time()){
-                    $data['rows'][$key]['status'] = "<span class=\"activeState stateBg1\">正在报名</span>";
+                    $data['rows'][$key]['status'] = "<span class=\"activeState stateBg1\">立即参与</span>";
                 }
             }elseif ($item['enroll_start_time'] <= time() && $item['enroll_end_time'] >= time()){
                 $data['rows'][$key]['status'] = "<span class=\"activeState stateBg1\">正在报名</span>";
+            }*/
+            if ($item['activity_start_time'] > time()){
+                $data['rows'][$key]['status'] = "<span class=\"activeState\">敬请期待</span>";
+            }elseif ($item['activity_start_time'] < time() && $item['activity_end_time'] > time()){
+                $data['rows'][$key]['status'] = "<span class=\"activeState stateBg1\">立即参与</span>";
+            }elseif ($item['activity_end_time'] < time()){
+                $data['rows'][$key]['status'] = "<span class=\"activeState\">活动结束</span>";
             }
             $data['rows'][$key]['activity_start_time'] = dateTime($item['activity_start_time'], 6);
             $data['rows'][$key]['activity_end_time'] = dateTime($item['activity_end_time'], 6);

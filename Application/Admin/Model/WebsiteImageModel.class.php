@@ -18,9 +18,9 @@ class WebsiteImageModel extends BaseModel
             if (!isset($requst['imageType']) || empty($requst['imageType'])){
                 message(0, "请选择图片类别！");
             }
-            if (!isset($requst['sort']) || empty($requst['sort'])){
+            /*if (!isset($requst['sort']) || empty($requst['sort'])){
                 message(0, "请输入排序！");
-            }
+            }*/
             $filePath = "./upload/website/" . dateTime(time(), 4) . "/";
             import('Org.Net.FileUpload');
             $fileUp = new \FileUpload(array('filepath'=>$filePath));

@@ -38,6 +38,9 @@ class CopticController extends CommonController
         if (empty(session('uid'))) {
             redirect(U("Public/login"));
         }
+        $Model = new \Think\Model();
+        $Model->execute("update dxyh_coptic set browse_volume = browse_volume+1 where id={$_GET['id']}");
+
         $data['rows'] = D("Coptic")->getCopticDetails();
         $data['checkLikes'] = M("Likes")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
         $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();

@@ -63,14 +63,13 @@ class CopticTypeModel extends BaseModel
                     message(0, "编辑失败");
                 }
             }else{
-                if (empty($_FILES['categoryImage']['tmp_name'])){
-                    message(0, "类别图片不能为空！");
+                if ($_FILES['categoryImage']['tmp_name']){
+                    $url = $fileUp->UploadFile("categoryImage");
+                    if (empty($url)){
+                        message(0, "图片上传失败!");
+                    }
+                    $data['category_image'] = $url;
                 }
-                $url = $fileUp->UploadFile("categoryImage");
-                if (empty($url)){
-                    message(0, "图片上传失败!");
-                }
-                $data['category_image'] = $url;
                 $data['create_time'] = time();
                 $boole = $this->addData($data);
                 if ($boole){

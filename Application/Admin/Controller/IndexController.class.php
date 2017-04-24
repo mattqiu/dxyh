@@ -73,11 +73,17 @@ class IndexController extends Controller {
     }
 
     public function shieldComment(){
-        $boole = M("Comment")->where(array('id'=>$_GET['id']))->save(array('status' => 0));
+        $status = "";
+        if ($_GET['status'] == 0){
+            $status = 1;
+        }elseif ($_GET['status'] == 0){
+            $status = 0;
+        }
+        $boole = M("Comment")->where(array('id'=>$_GET['id']))->save(array('status' => $status));
         if ($boole){
-            message(1, "屏蔽成功");
+            message(1, "操作成功");
         }else{
-            message(0, "屏蔽失败");
+            message(0, "操作失败");
         }
     }
 }

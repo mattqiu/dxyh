@@ -50,7 +50,7 @@ class ActivityModel extends BaseModel
                     $list[$key]['status'] = "已结束";
                     break;
             }
-            $list[$key]['attend_count'] = M("AttendActivity")->where(array('activity_type_id'=>$item['id']))->count();
+            $list[$key]['attend_count'] = M("AttendActivity")->where(array('activity_id'=>$item['id']))->count();
         }
         $list['page'] = $page->show();
         return $list;

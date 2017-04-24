@@ -492,7 +492,7 @@
                                             <?php if($vo["parent_id"] == 0): echo ($vo["nickname"]); ?>&nbsp;<lable style="margin: 0 8px;"><?php echo (dateTime($vo["create_time"])); ?></lable>
                                                 <?php else: ?>
                                                 <?php echo ($vo["nickname"]); ?><lable style="margin: 0 4px;">回复</lable><?php echo ($vo["parent_name"]); ?>&nbsp;<lable style="margin: 0 8px;"><?php echo (dateTime($vo["create_time"])); ?></lable><?php endif; ?>
-                                            <button><a href="<?php echo U('Index/shieldComment',array('id'=>$vo['id']));?>" class="ajax-get">屏蔽此评论</a></button>
+                                            <button><a href="<?php echo U('Index/shieldComment',array('id'=>$vo['id'],'status'=>$vo['status']));?>" class="ajax-get"><?php if($vo["status"] == 1): ?>屏蔽此评论<?php else: ?>取消屏蔽<?php endif; ?></a></button>
                                         </p>
                                         <?php echo ($vo["content"]); ?>
                                     </td>
