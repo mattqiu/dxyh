@@ -19,8 +19,10 @@ class LikesModel extends CommonModel
         );
         if ($item){
             $this->deleteData($data);
+            message(1, '已取消');
         }else{
             $this->addData($data);
+            message(1, '已点赞');
         }
     }
 }

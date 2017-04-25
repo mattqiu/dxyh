@@ -40,7 +40,7 @@
         <div class="loginBox">
             <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
                 <?php else: ?>
-                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
+                <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -76,9 +76,7 @@
 										<td class="Jjian"><?php echo ($vo["integral_num"]); ?></td><?php endif; ?>
 									<td><?php echo ($vo["reason"]); ?></td>
 								</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-						</table>
-						<?php else: ?>
-						暂无数据<?php endif; ?>
+						</table><?php endif; ?>
 
 					<!-- 分页开始 -->
 					<div class="pages clearfix visible-lg">

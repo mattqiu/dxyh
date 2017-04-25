@@ -172,11 +172,12 @@
                         }, 2000);
                         return false;
                     }
-
+					var callbackUrl = "<?php echo ($callbackUrl); ?>";
                     var data = {
                         'nickname':$("input[name='nickname']").val(),
                         'passwd':$("input[name='passwd']").val(),
-                        'remember':$("input[name='remember']:checked").val()
+                        'remember':$("input[name='remember']:checked").val(),
+						'callbackUrl':callbackUrl
                     };
                     $.ajax({
                         url: '<?php echo U("Public/login");?>',

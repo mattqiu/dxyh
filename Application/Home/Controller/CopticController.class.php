@@ -35,15 +35,17 @@ class CopticController extends CommonController
      * 科普详情
      */
     public function details(){
-        if (empty(session('uid'))) {
+        /*if (empty(session('uid'))) {
             redirect(U("Public/login"));
-        }
+        }*/
         $Model = new \Think\Model();
         $Model->execute("update dxyh_coptic set browse_volume = browse_volume+1 where id={$_GET['id']}");
 
         $data['rows'] = D("Coptic")->getCopticDetails();
-        $data['checkLikes'] = M("Likes")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
-        $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
+        if (session('uid')){
+            $data['checkLikes'] = M("Likes")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
+            $data['checkStoreUp'] = M("Collection")->where(array("uid"=>session("uid"), "coptic_id"=>$_GET['id']))->count();
+        }
         $data['comment'] = D("Comment")->getCopticComment();
         //var_dump($data['comment']);
         $this->assign($data);
@@ -67,6 +69,9 @@ class CopticController extends CommonController
      * 科普文章收藏与点赞切换功能
      */
     public function copticKeepLikes(){
+        if (empty(session('uid'))){
+            exit(json_encode(array('status'=>2,'info'=>'您还未登陆','url'=>U("Public/login",array('callbackUrl'=>$_POST['callbackUrl'])))));
+        }
         $requset = I('post.');
         if (isset($requset['type'])){
             if ($requset['type'] == 'keep'){
@@ -81,6 +86,9 @@ class CopticController extends CommonController
      * 评论添加与回复功能
      */
     public function copticComment(){
+        if (empty(session('uid'))){
+            exit(json_encode(array('code'=>2,'msg'=>'您还未登陆','url'=>U("Public/login",array('callbackUrl'=>$_POST['callbackUrl'])))));
+        }
         $data = D("Comment")->copticComment();
         echo json_encode($data);
     }
@@ -90,6 +98,9 @@ class CopticController extends CommonController
      * 评论点赞功能
      */
     public function commentLikes(){
+        if (empty(session('uid'))){
+            exit(json_encode(array('code'=>2,'msg'=>'您还未登陆','url'=>U("Public/login",array('callbackUrl'=>$_POST['callbackUrl'])))));
+        }
         $data = D("CommentLikes")->commentLikes();
         echo json_encode($data);
     }

@@ -40,7 +40,7 @@
         <div class="loginBox">
             <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
                 <?php else: ?>
-                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
+                <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -72,8 +72,8 @@
         <div class="content">
             <?php echo ($rows["content"]); ?>
             <!-- 活动时间等信息开始 -->
-            <div class="from">来源：<?php echo ($rows["source"]); ?></div>
-            <div class="fromA">原文链接：<a href="<?php echo ($rows["original_link"]); ?>"><?php echo ($rows["original_link"]); ?></a></div>
+            <?php if(!empty($rows["source"])): ?><div class="from">来源：<?php echo ($rows["source"]); ?></div><?php endif; ?>
+            <?php if(!empty($rows["original_link"])): ?><div class="fromA">原文链接：<a href="<?php echo ($rows["original_link"]); ?>"><?php echo ($rows["original_link"]); ?></a></div><?php endif; ?>
             <!-- 发表评论开始 -->
             <a href="#publish" class="publishBtn">发表评论</a>
             <!-- 评论列表开始 -->
@@ -96,11 +96,11 @@
                                      src="/Public/home/img/sanjiao.png" alt=""><!-- 三角图标 -->
                                 <p class="reTitle"><span>点评</span></p>
                                 <?php if(is_array($vo["subData"])): $i = 0; $__LIST__ = $vo["subData"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><div class="container discussContent">
-                                        <div class="col-lg-3 username">
+                                        <div class="col-lg-2 username">
                                             <img src="<?php echo ($item["avatar"]); ?>" alt="">
-                                            <?php echo ($item["nickname"]); ?> ：
                                         </div>
-                                        <div class="col-lg-9 discussContentR"><?php echo ($item["content"]); ?></div>
+                                        <!--<div class="col-lg-10 discussContentR"><?php echo ($item["nickname"]); ?> ：<?php echo ($item["content"]); ?></div>-->
+                                        <p class="r2"><?php echo ($item["nickname"]); ?>&nbsp;&nbsp;<span style="color:#000;">回复<?php echo ($item["parent_name"]); ?></span>：<?php echo ($item["content"]); ?></p>
                                     </div>
                                     <p class="r1">回复</p>
                                     <form action="" class="reForm">
@@ -175,6 +175,7 @@
 <script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
 <script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 <script type="text/javascript">
+    var callbackUrl = encodeURIComponent(window.location.href);
     $(function () {
         // 点击回复，展开回复框
         $(".r1").live('click', function () {
@@ -186,27 +187,31 @@
         });
         // 点赞与收藏功能
         $(".keyWord img").click(function () {
-            $(this).toggle().siblings('img').toggle();
             var type = $(this).attr('data-field-name');
             var item = $(this).attr('data-value');
             var id = '<?php echo ($rows["id"]); ?>';
             var coptic_type_id = '<?php echo ($rows["coptic_type_id"]); ?>';
             $.ajax({
                 url: '<?php echo U("Coptic/copticKeepLikes");?>',
-                data: {'type': type, 'item': item, 'id': id, 'coptic_type_id': coptic_type_id},
+                data: {'type': type, 'item': item, 'id': id, 'coptic_type_id': coptic_type_id,'callbackUrl':callbackUrl},
                 type: 'post',
+                dataType: 'json',
                 success: function (json) {
-                    if (json){
-                        var d = dialog({
-                            content: json.info
-                        });
-                        d.show();
-                        setTimeout(function () {
-                            d.close().remove();
-                        }, 2000);
-                    }
+                    console.log(json);
+                    var d = dialog({
+                        content: json.info
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        if (json.status == 2){
+                            window.location.href = json.url;
+                            return false;
+                        }
+                    }, 2000);
                 }
             });
+            $(this).toggle().siblings('img').toggle();
         });
 
         //点赞与收藏数据适配
@@ -223,7 +228,6 @@
         $(".discussTime strong img").live('click', function () {
             $(this).toggle().siblings('img').toggle();
         });
-
 
         //评论发表功能
         $(".submitCommon").live('click', function () {
@@ -244,16 +248,17 @@
             $.ajax({
                 url: '<?php echo U("Coptic/copticComment");?>',
                 type: 'post',
-                data: {'content':content,'parentId':parentId,'copticId':copticId},
+                data: {'content':content,'parentId':parentId,'copticId':copticId,'callbackUrl':callbackUrl},
                 dataType: 'json',
                 async:false,
                 success: function (json) {
                     console.log(json);
                     if (json.code == 0){
                         result += '<div class="container discussContent">';
-                        result += '<div class="col-lg-3 username">';
-                        result += '<img src="'+json.data.avatar+'" alt="">'+json.data.nickname+' ：</div>';
-                        result += '<div class="col-lg-9 discussContentR">' + content + '</div></div>';
+                        result += '<div class="col-lg-2 username">';
+                        result += '<img src="'+json.data.avatar+'" alt=""></div>';
+                        result += '<p class="r2">'+json.data.nickname+'&nbsp;&nbsp;<span style="color:#000;">回复'+json.data.parent_name+'</span>：' + content + '</p>';
+                        result += '</div>';
                         result += '<p class="r1">回复</p>';
                         result += '<form action="" class="reForm">';
                         result += '<textarea class="content1" placeholder="回复 '+json.data.nickname+'：" data-id="'+json.data.cid+'" data-coptic-id="<?php echo ($rows["id"]); ?>"></textarea>';
@@ -267,6 +272,9 @@
                         setTimeout(function () {
                             d.close().remove();
                         }, 2000);
+                        if (json.code == 2){
+                            window.location.href = json.url
+                        }
                     }
                 }
             });
@@ -303,7 +311,7 @@
             $.ajax({
                 url: '<?php echo U("Coptic/copticComment");?>',
                 type: 'post',
-                data: {'content':content,'copticId':copticId},
+                data: {'content':content,'copticId':copticId,'callbackUrl':callbackUrl},
                 dataType: 'json',
                 async:false,
                 success: function (json) {
@@ -333,6 +341,9 @@
                         setTimeout(function () {
                             d.close().remove();
                         }, 2000);
+                        if (json.code == 2){
+                            window.location.href = json.url
+                        }
                     }
                 }
             });
@@ -349,11 +360,22 @@
         var likesNum = '';
         $.ajax({
             url: '<?php echo U("Coptic/commentLikes");?>',
-            data: {'likes':likes,'cid':cid},
+            data: {'likes':likes,'cid':cid,'callbackUrl':callbackUrl},
             type: 'post',
             dataType: 'json',
             async: false,
             success: function (json) {
+                if (json.code == 2){
+                    var d = dialog({
+                        content: json.msg
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        window.location.href = json.url
+                    }, 2000);
+                    return false;
+                }
                 likesNum = json.likesNum;
             }
         });

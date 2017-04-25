@@ -36,12 +36,7 @@ class ActivityController extends CommonController
         $Model->execute("update dxyh_activity set browse_volume = browse_volume+1 where id={$_GET['id']}");
 
         $data['rows'] = D("Activity")->getActivityDetails();
-        if (session("uid")){
-            $boole = M("AttendActivity")->where(array('uid'=>session('uid'),'activity_id'=>$_GET['id']))->count();
-            if ($boole){
-                $data['rows']['checkAttend'] = $boole;
-            }
-        }
+
 //var_dump($data);
         $this->assign($data);
         $this->display("activityDetail");
@@ -65,7 +60,7 @@ class ActivityController extends CommonController
      */
     public function participateActivity(){
         if (empty(session('uid'))){
-            exit(json_encode(array('code'=>2,'msg'=>'您还未登陆','url'=>U("Public/login"))));
+            exit(json_encode(array('code'=>2,'msg'=>'您还未登陆','url'=>U("Public/login",array('callbackUrl'=>$_POST['callbackUrl'])))));
         }
         $data = D('AttendActivity')->participateActivity();
         echo json_encode($data);

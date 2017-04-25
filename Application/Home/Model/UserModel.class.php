@@ -136,20 +136,24 @@ class UserModel extends CommonModel
                 message(0, '帐户不存在');
             }elseif ($result['passwd'] !== md5($parem['passwd'])){
                 message(0, '密码不正确');
-            }else{
-                session('uid',$result['uid']);
+            }else {
+                session('uid', $result['uid']);
                 session('nickname', $parem['nickname']);
-                if (isset($parem['remember'])){
+                if (isset($parem['remember'])) {
                     $Ary = array(
                         'nickname' => $result['nickname'],
                         'passwd' => $parem['passwd']
                     );
                     $Ary = base64_encode(json_encode($Ary));
-                    setcookie('daychina_message', $Ary, (time() + 86400*7));
-                }else{
-                    setcookie('daychina_message', " ", (time() + 86400*7));
+                    setcookie('daychina_message', $Ary, (time() + 86400 * 7));
+                } else {
+                    setcookie('daychina_message', " ", (time() + 86400 * 7));
                 }
-                message(1, '登录成功', U("User/index"));
+                if ($parem['callbackUrl']) {
+                    message(1, '登录成功', urldecode($parem['callbackUrl']));
+                } else{
+                    message(1, '登录成功', U("User/index"));
+                }
             }
 
         }

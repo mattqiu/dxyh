@@ -51,7 +51,7 @@
 		<div class="swiper-container swiper1">
 			<!-- 图片开始 -->
 			<div class="swiper-wrapper">
-				<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo ($vo["image"]); ?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+				<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo isMobile()?$vo['app_image']:$vo['image'];?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
 			</div>
 			<!-- 图片结束 -->
 			<!-- 轮播分页开始 -->
@@ -105,7 +105,7 @@
 					<div class="swiper-wrapper">
 						<!-- 一个轮播页开始 -->
                         <?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide container plateStyleListBox">
-                                <a href="#">
+                                <a href="<?php echo U('Coptic/index',array('typeId'=>$vo['id']));?>">
                                     <img src="<?php echo ($vo["category_image"]); ?>" alt="">
                                 </a>
                             </div><?php endforeach; endif; else: echo "" ;endif; ?>

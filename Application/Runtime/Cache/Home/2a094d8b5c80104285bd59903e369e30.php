@@ -40,7 +40,7 @@
         <div class="loginBox">
             <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
                 <?php else: ?>
-                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
+                <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -62,23 +62,25 @@
 			<div class="col-lg-10">
 				<div class="right">
 					<p class="rightTitle visible-lg">我的收藏</p>
-					<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个收藏开始 -->
-						<div class="col-lg-4 avtiveList">
-							<div>
-								<p class="sstyle">分类：<span><?php echo ($vo["category_name"]); ?></span></p>
-								<div class="activeImg">
-									<a href="<?php echo U('Coptic/details',array('id'=>$vo['coptic_id']));?>">
-									<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
-									</a>
-									<div class="mengceng"></div><!-- 蒙层 -->
-									<p><?php echo ($vo["coptic_title"]); ?></p>
-								</div>
-								<div class="activeMessage sbox1">
-									<p><?php echo ($vo["create_time"]); ?><a href="javascript:;" class="scancel" data-value="<?php echo ($vo["id"]); ?>">取消收藏</a></p>
+					<?php if($rows): if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个收藏开始 -->
+							<div class="col-lg-4 avtiveList">
+								<div>
+									<p class="sstyle">分类：<span><?php echo ($vo["category_name"]); ?></span></p>
+									<div class="activeImg">
+										<a href="<?php echo U('Coptic/details',array('id'=>$vo['coptic_id']));?>">
+											<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+										</a>
+										<div class="mengceng"></div><!-- 蒙层 -->
+										<p><?php echo ($vo["coptic_title"]); ?></p>
+									</div>
+									<div class="activeMessage sbox1">
+										<p><?php echo ($vo["create_time"]); ?><a href="javascript:;" class="scancel" data-value="<?php echo ($vo["id"]); ?>">取消收藏</a></p>
+									</div>
 								</div>
 							</div>
-						</div>
-						<!-- 一个收藏结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
+							<!-- 一个收藏结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php else: ?>
+						暂无数据<?php endif; ?>
 				</div>
 			</div>
 			<!-- 右侧信息模块结束 -->

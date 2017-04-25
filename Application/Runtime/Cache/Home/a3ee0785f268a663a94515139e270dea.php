@@ -63,15 +63,15 @@
 					<p class="rightTitle visible-lg">我的信息</p>
 					<div class="clearfix userMessage">
 						<!-- 头像开始 -->
-						<img class="userImg" src="<?php echo ($rows["avatar"]); ?>" alt="">
+						<img class="userImg" src="<?php echo empty($rows['avatar'])?'/Public/img/logo.png':$rows['avatar'];?>" alt="">
 						<!-- 头像结束 -->
 						<p class="username"><?php echo ($rows["nickname"]); ?>
 							<?php if($rows["sex"] != 0): if($rows["sex"] == 1): ?><img src="/Public/home/img/cm1.png" alt="">
 									<?php else: ?>
 									<img src="/Public/home/img/c1.png" alt=""><?php endif; endif; ?>
 						</p><!-- 昵称 -->
-						<p><img src="/Public/home/img/c6.png" alt=""><?php echo ($rows["name"]); ?></p>
-						<p><img src="/Public/home/img/c7.png" alt=""><?php echo ($rows["mobile"]); ?></p>
+						<p><img src="/Public/home/img/c6.png" alt=""><?php echo empty($rows['name'])?'未填写':$rows['name'];?></p>
+						<p><img src="/Public/home/img/c7.png" alt=""><?php echo empty($rows['mobile'])?'未填写':$rows['mobile'];?></p>
 					</div>
 					<a href="<?php echo U('User/changeMeaage');?>" class="change">修改资料</a>
 				</div>

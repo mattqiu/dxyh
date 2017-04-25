@@ -40,8 +40,12 @@
         <div class="content">
             {$rows.content}
             <!-- 活动时间等信息开始 -->
-            <div class="from">来源：{$rows.source}</div>
-            <div class="fromA">原文链接：<a href="{$rows.original_link}">{$rows.original_link}</a></div>
+            <notempty name="rows.source">
+                <div class="from">来源：{$rows.source}</div>
+            </notempty>
+            <notempty name="rows.original_link">
+                <div class="fromA">原文链接：<a href="{$rows.original_link}">{$rows.original_link}</a></div>
+            </notempty>
             <!-- 发表评论开始 -->
             <a href="#publish" class="publishBtn">发表评论</a>
             <!-- 评论列表开始 -->
@@ -70,9 +74,9 @@
                                         <div class="col-lg-2 username">
                                             <img src="{$item.avatar}" alt="">
                                         </div>
-                                        <div class="col-lg-10 discussContentR">{$item.nickname} ：{$item.content}</div>
+                                        <!--<div class="col-lg-10 discussContentR">{$item.nickname} ：{$item.content}</div>-->
+                                        <p class="r2">{$item.nickname}&nbsp;&nbsp;<span style="color:#000;">回复{$item.parent_name}</span>：{$item.content}</p>
                                     </div>
-                                    <p class="r2">青青2&nbsp;&nbsp;<span style="color:#000;">回复青青1</span>：好！</p>
                                     <p class="r1">回复</p>
                                     <form action="" class="reForm">
                                         <textarea class="content1" placeholder="回复 {$item.nickname}：" data-id="{$item.id}" data-coptic-id="{$rows.id}"></textarea>
@@ -147,6 +151,7 @@
 <script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
 <script type="text/javascript">
+    var callbackUrl = encodeURIComponent(window.location.href);
     $(function () {
         // 点击回复，展开回复框
         $(".r1").live('click', function () {
@@ -158,27 +163,31 @@
         });
         // 点赞与收藏功能
         $(".keyWord img").click(function () {
-            $(this).toggle().siblings('img').toggle();
             var type = $(this).attr('data-field-name');
             var item = $(this).attr('data-value');
             var id = '{$rows.id}';
             var coptic_type_id = '{$rows.coptic_type_id}';
             $.ajax({
                 url: '{:U("Coptic/copticKeepLikes")}',
-                data: {'type': type, 'item': item, 'id': id, 'coptic_type_id': coptic_type_id},
+                data: {'type': type, 'item': item, 'id': id, 'coptic_type_id': coptic_type_id,'callbackUrl':callbackUrl},
                 type: 'post',
+                dataType: 'json',
                 success: function (json) {
-                    if (json){
-                        var d = dialog({
-                            content: json.info
-                        });
-                        d.show();
-                        setTimeout(function () {
-                            d.close().remove();
-                        }, 2000);
-                    }
+                    console.log(json);
+                    var d = dialog({
+                        content: json.info
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        if (json.status == 2){
+                            window.location.href = json.url;
+                            return false;
+                        }
+                    }, 2000);
                 }
             });
+            $(this).toggle().siblings('img').toggle();
         });
 
         //点赞与收藏数据适配
@@ -195,7 +204,6 @@
         $(".discussTime strong img").live('click', function () {
             $(this).toggle().siblings('img').toggle();
         });
-
 
         //评论发表功能
         $(".submitCommon").live('click', function () {
@@ -216,16 +224,17 @@
             $.ajax({
                 url: '{:U("Coptic/copticComment")}',
                 type: 'post',
-                data: {'content':content,'parentId':parentId,'copticId':copticId},
+                data: {'content':content,'parentId':parentId,'copticId':copticId,'callbackUrl':callbackUrl},
                 dataType: 'json',
                 async:false,
                 success: function (json) {
                     console.log(json);
                     if (json.code == 0){
                         result += '<div class="container discussContent">';
-                        result += '<div class="col-lg-3 username">';
-                        result += '<img src="'+json.data.avatar+'" alt="">'+json.data.nickname+' ：</div>';
-                        result += '<div class="col-lg-9 discussContentR">' + content + '</div></div>';
+                        result += '<div class="col-lg-2 username">';
+                        result += '<img src="'+json.data.avatar+'" alt=""></div>';
+                        result += '<p class="r2">'+json.data.nickname+'&nbsp;&nbsp;<span style="color:#000;">回复'+json.data.parent_name+'</span>：' + content + '</p>';
+                        result += '</div>';
                         result += '<p class="r1">回复</p>';
                         result += '<form action="" class="reForm">';
                         result += '<textarea class="content1" placeholder="回复 '+json.data.nickname+'：" data-id="'+json.data.cid+'" data-coptic-id="{$rows.id}"></textarea>';
@@ -239,6 +248,9 @@
                         setTimeout(function () {
                             d.close().remove();
                         }, 2000);
+                        if (json.code == 2){
+                            window.location.href = json.url
+                        }
                     }
                 }
             });
@@ -275,7 +287,7 @@
             $.ajax({
                 url: '{:U("Coptic/copticComment")}',
                 type: 'post',
-                data: {'content':content,'copticId':copticId},
+                data: {'content':content,'copticId':copticId,'callbackUrl':callbackUrl},
                 dataType: 'json',
                 async:false,
                 success: function (json) {
@@ -305,6 +317,9 @@
                         setTimeout(function () {
                             d.close().remove();
                         }, 2000);
+                        if (json.code == 2){
+                            window.location.href = json.url
+                        }
                     }
                 }
             });
@@ -321,11 +336,22 @@
         var likesNum = '';
         $.ajax({
             url: '{:U("Coptic/commentLikes")}',
-            data: {'likes':likes,'cid':cid},
+            data: {'likes':likes,'cid':cid,'callbackUrl':callbackUrl},
             type: 'post',
             dataType: 'json',
             async: false,
             success: function (json) {
+                if (json.code == 2){
+                    var d = dialog({
+                        content: json.msg
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                        window.location.href = json.url
+                    }, 2000);
+                    return false;
+                }
                 likesNum = json.likesNum;
             }
         });

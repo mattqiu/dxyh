@@ -40,7 +40,7 @@
         <div class="loginBox">
             <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
                 <?php else: ?>
-                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
+                <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -65,9 +65,7 @@
 					<p>地点：<?php echo ($rows["address"]); ?></p>
 					<p>人数：<label class="attend"><?php echo ($rows["enrollnum"]); ?></label>/<?php echo ($rows["activity_number"]); ?></p>
 					<p>浏览：<?php echo ($rows["browse_volume"]); ?></p>
-					<div class="joinBtnBox"><a href="javascript:;" class="joinBtn" data-value="<?php echo ($rows["id"]); ?>">
-                        <?php echo isset($rows['checkAttend'])?"取消参加":"我要参加";?>
-                        </a></div>
+					<div class="joinBtnBox"><?php echo ($rows["checkAttend"]); ?></div>
 				</div>
 				<!-- 报名及分享结束 -->
 				<h2 class="visible-lg">热门活动回顾</h2>
@@ -160,15 +158,17 @@
 		$(function () {
 			$(".joinBtn").click(function () {
 				var id = $(this).attr("data-value");
+				var url = encodeURIComponent(window.location.href);
 				$.ajax({
 					url: "<?php echo U('Activity/participateActivity');?>",
 					type: 'post',
-					data: {'id':id},
+					data: {'id':id,'callbackUrl':url},
 					dataType: 'json',
 					success: function (json) {
 						console.log(json);
 						if (json.code == 0){
-							$(".attend").html(json.data);
+							$(".attend").html(json.data.num);
+							$(".joinBtn").html(json.data.title);
 						}
 						var d = dialog({
 							content: json.msg

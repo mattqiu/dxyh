@@ -19,14 +19,17 @@ class CommentModel extends CommonModel
             "c.coptic_id" => $id,
             "c.status" => 1
         );
-        $field = "c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=$uid) as likes";
+        $field = "c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum";
+        if ($uid){
+            $field .= " ,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=$uid) as likes ";
+        }
         $list = $this->alias("c")->getJoinDataList($join, $where, $field, array('c.create_time'=>'desc'), null, null);
 
         $listAry = array();
         if ($list){
             foreach ($list as $key=>$value){
                 if ($value['parent_id'] != 0){
-                    $list[$key]['parentName'] = $this->search($value['parent_id'], $list);
+                    $list[$key]['parent_name'] = $this->search($value['parent_id'], $list);
                 }
             }
             foreach ($list as $key=>$value){
@@ -34,8 +37,8 @@ class CommentModel extends CommonModel
                     $listAry[] = $value;
                 }
             }
-            foreach ($listAry as $key=>$value){
-                $listAry[$key]['subData'] = array_reverse(RecursionCommentsAry($value['id'], $list));
+            foreach ($listAry as $key=>$value){     //array_reverse
+                $listAry[$key]['subData'] = RecursionCommentsAry($value['id'], $list);
                 $listAry[$key]['create_time'] = dateTime($value['create_time'], 6);
             }
             //$listAry = $this->bubbleSort($listAry);
@@ -104,6 +107,9 @@ class CommentModel extends CommonModel
                 'avatar' => $udata['avatar'],
                 'create_time' => dateTime($data['create_time'], 6)
             );
+            if ($param['parentId']){
+                $rows['parent_name'] = $this->alias('c')->getJoinDataInfo(array("INNER JOIN dxyh_user as u ON c.uid=u.uid"),array('parent_id'=>$param['parentId']), "u.nickname")['nickname'];
+            }
             return array('code'=>0, 'msg'=>'', 'data'=>$rows);
         }else{
             return array('code'=>1, 'msg'=>'系统繁忙，请稍后再试!');

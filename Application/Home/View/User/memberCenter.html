@@ -24,7 +24,7 @@
 					<p class="rightTitle visible-lg">我的信息</p>
 					<div class="clearfix userMessage">
 						<!-- 头像开始 -->
-						<img class="userImg" src="{$rows.avatar}" alt="">
+						<img class="userImg" src="{:empty($rows['avatar'])?'__PUBLIC__/img/logo.png':$rows['avatar']}" alt="">
 						<!-- 头像结束 -->
 						<p class="username">{$rows.nickname}
 							<if condition="$rows.sex neq 0">
@@ -35,8 +35,8 @@
 								</if>
 							</if>
 						</p><!-- 昵称 -->
-						<p><img src="__PUBLIC__/home/img/c6.png" alt="">{$rows.name}</p>
-						<p><img src="__PUBLIC__/home/img/c7.png" alt="">{$rows.mobile}</p>
+						<p><img src="__PUBLIC__/home/img/c6.png" alt="">{:empty($rows['name'])?'未填写':$rows['name']}</p>
+						<p><img src="__PUBLIC__/home/img/c7.png" alt="">{:empty($rows['mobile'])?'未填写':$rows['mobile']}</p>
 					</div>
 					<a href="{:U('User/changeMeaage')}" class="change">修改资料</a>
 				</div>

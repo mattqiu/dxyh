@@ -20,6 +20,7 @@ class CollectionModel extends CommonModel
         );
         if ($item){
             $this->deleteData($data);
+            message(1, '已取消');
         }else{
             $data['coptic_type_id'] = $_POST['coptic_type_id'];
             $data['create_time'] = time();

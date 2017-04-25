@@ -20,7 +20,7 @@
 			<!-- 图片开始 -->
 			<div class="swiper-wrapper">
 				<volist name="websiteImage" id="vo">
-					<div class="swiper-slide"><a href="{$vo.img_link}"> <img src="{$vo.image}" alt=""></a></div>
+					<div class="swiper-slide"><a href="{$vo.img_link}"> <img src="{:isMobile()?$vo['app_image']:$vo['image']}" alt=""></a></div>
 				</volist>
 			</div>
 			<!-- 图片结束 -->
@@ -78,7 +78,7 @@
 						<!-- 一个轮播页开始 -->
                         <volist name="copticType" id="vo">
                             <div class="swiper-slide container plateStyleListBox">
-                                <a href="#">
+                                <a href="{:U('Coptic/index',array('typeId'=>$vo['id']))}">
                                     <img src="{$vo.category_image}" alt="">
                                 </a>
                             </div>

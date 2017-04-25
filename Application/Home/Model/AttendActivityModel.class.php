@@ -34,7 +34,13 @@ class AttendActivityModel extends CommonModel
         }
         $checkActivity = $this->countData(array('activity_id'=>$id,'uid'=>session('uid')));
         if ($checkActivity){
-            return array('code'=>1, 'msg'=>'您已报名该活动');
+            $boole = $this->deleteData(array('activity_id'=>$id,'uid'=>session('uid')));
+            if ($boole){
+                $rowNum = $this->countData(array('activity_id'=>$id));
+                return array('code'=>0, 'msg'=>'已取消参与', 'data'=>array('num'=>$rowNum,'title'=>'我要参与'));
+            }else{
+                return array('code'=>1, 'msg'=>'未取消参与');
+            }
         }
         $data = array(
             'uid' => session('uid'),
@@ -42,10 +48,13 @@ class AttendActivityModel extends CommonModel
             'activity_id' => $row['id'],
             'create_time' => time()
         );
+        if ($row['whether_audit'] == 1){
+            $data['audit'] = 3;
+        }
         $boole = $this->addData($data);
         if ($boole){
             $rowNum = $this->countData(array('activity_id'=>$id));
-            return array('code'=>0, 'msg'=>'报名成功', 'data'=>$rowNum);
+            return array('code'=>0, 'msg'=>'报名成功', 'data'=>array('num'=>$rowNum,'title'=>'取消参与'));
         }else{
             return array('code'=>1, 'msg'=>'报名失败');
         }
