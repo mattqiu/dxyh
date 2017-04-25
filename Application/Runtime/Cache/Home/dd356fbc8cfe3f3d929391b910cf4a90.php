@@ -271,10 +271,10 @@
                         d.show();
                         setTimeout(function () {
                             d.close().remove();
+                            if (json.code == 2){
+                                window.location.href = json.url
+                            }
                         }, 2000);
-                        if (json.code == 2){
-                            window.location.href = json.url
-                        }
                     }
                 }
             });
@@ -340,10 +340,10 @@
                         d.show();
                         setTimeout(function () {
                             d.close().remove();
+                            if (json.code == 2){
+                                window.location.href = json.url
+                            }
                         }, 2000);
-                        if (json.code == 2){
-                            window.location.href = json.url
-                        }
                     }
                 }
             });
