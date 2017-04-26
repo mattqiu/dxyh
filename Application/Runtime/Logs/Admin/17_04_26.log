@@ -1,0 +1,185 @@
+[ 2017-04-26T13:08:56+08:00 ] 127.0.0.1 /Admin/Public/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dxyh_admin` WHERE `aname` = 'root' LIMIT 1   [ RunTime:0.0060s ]
+
+[ 2017-04-26T13:08:58+08:00 ] 127.0.0.1 /Admin/Index/sevenDay.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1492531201 AND create_time <= 1492617599 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1492531201 AND create_time <= 1492617599 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `dxyh_visit` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1492531201 AND create_time <= 1492617599 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1492617601 AND create_time <= 1492703999 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1492617601 AND create_time <= 1492703999 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1492617601 AND create_time <= 1492703999 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1492704001 AND create_time <= 1492790399 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1492704001 AND create_time <= 1492790399 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1492704001 AND create_time <= 1492790399 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1492790401 AND create_time <= 1492876799 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1492790401 AND create_time <= 1492876799 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1492790401 AND create_time <= 1492876799 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1492876801 AND create_time <= 1492963199 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1492876801 AND create_time <= 1492963199 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1492876801 AND create_time <= 1492963199 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1492963201 AND create_time <= 1493049599 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1492963201 AND create_time <= 1493049599 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1492963201 AND create_time <= 1493049599 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE ( create_time >= 1493049601 AND create_time <= 1493135999 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_user` WHERE ( create_time >= 1493049601 AND create_time <= 1493135999 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_visit` WHERE ( create_time >= 1493049601 AND create_time <= 1493135999 ) LIMIT 1   [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-26T13:09:02+08:00 ] 127.0.0.1 /Admin/Coptic/copticType.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0050s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_coptic_type` LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT * FROM `dxyh_coptic_type` ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-26T14:17:02+08:00 ] 127.0.0.1 /Admin/Coptic/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0080s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0100s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time,c.browse_volume FROM dxyh_coptic c INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id  ORDER BY c.id desc LIMIT 0,10   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `coptic_id` = 11 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `coptic_id` = 11 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_comment` WHERE `coptic_id` = 11 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `dxyh_coptic_type`  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: copticType D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 27 行.
+NOTIC: [8] Undefined index: nominate D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 28 行.
+NOTIC: [8] Undefined index: keyword D:\WWW\daxiaoyihu\Application\Admin\Controller\CopticController.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-26T14:17:43+08:00 ] 127.0.0.1 /Admin/Coptic/edit/id/11.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0060s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`category_name` FROM `dxyh_coptic_type` LIMIT 0,15   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-26T14:17:59+08:00 ] 127.0.0.1 /Admin/Coptic/edit/id/11.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0330s ]
+SQL: SELECT `id`,`category_name` FROM `dxyh_coptic_type` LIMIT 0,15   [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-26T15:05:59+08:00 ] 127.0.0.1 /Admin/Coptic/edit.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0230s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0090s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0070s ]
+SQL: UPDATE `dxyh_coptic` SET `coptic_type_id`='8',`coptic_title`='科普文章测试',`abstract`='摘要',`content`='&lt;p&gt;&lt;video class=&quot;edui-upload-video  vjs-default-skin video-js&quot; controls=&quot;&quot; preload=&quot;none&quot; width=&quot;420&quot; height=&quot;280&quot; src=&quot;/upload/video/20170426/1493190329710712.avi&quot; data-setup=&quot;{}&quot;&gt;&lt;/video&gt;&lt;/p&gt;&lt;p&gt;http://baidu.iqiyi.com/kan/aFLHA?fr=v.baidu.com/&lt;/p&gt;',`author`='青青',`source`='百度',`keyword`='科普',`original_link`='https%3A%2F%2Fwww.baidu.com',`referral`='1' WHERE `id` = 11 [ RunTime:0.0270s ]
+
+[ 2017-04-26T15:06:12+08:00 ] 127.0.0.1 /Admin/Coptic/edit/id/11.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_group_access` [ RunTime:0.0170s ]
+SQL: SELECT `aid`,`group_id`,`title`,`rules` FROM dxyh_auth_group_access a INNER JOIN dxyh_auth_group g on a.group_id=g.id  WHERE ( a.aid='1' and g.status='1' )  [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `dxyh_auth_rule` [ RunTime:0.0670s ]
+SQL: SELECT `condition`,`name` FROM `dxyh_auth_rule` WHERE `id` IN ('19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','43','44','45','39','40','41','42','35','36','37','38','1','6','7','8','2','3','4','5','9','10','11','12','13','14','15','16','17','18') AND `type` = 1 AND `status` = 1  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic_type` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`category_name` FROM `dxyh_coptic_type` LIMIT 0,15   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

@@ -53,11 +53,11 @@
 				<!-- 报名及分享开始 -->
 				<div class="joinBox">
 					<div class="bshare-custom  visible-lg">
-						<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+						<!--<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
 						<a title="分享到QQ空间" class="bshare-qzone"></a>
 						<a title="分享到QQ好友" class="bshare-qqim"></a>
 						<a title="分享到微信" class="bshare-weixin"></a>
-						<a title="分享到LinkedIn" class="bshare-linkedin"></a>
+						<a title="分享到LinkedIn" class="bshare-linkedin"></a>-->
 						<!--<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>-->
 					</div>
 					<p>时间：<?php echo ($rows["activity_start_time"]); ?> 至 <?php echo ($rows["activity_end_time"]); ?></p>
@@ -102,7 +102,7 @@
 		<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <?php echo ($link); ?>
+        <?php echo isset($link)?$link:"";?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>

@@ -72,7 +72,7 @@ class ActivityController extends BaseController
         unset($data['rows']['page']);
         $data['keyword'] = $_GET['keyword'];
         $this->assign($data);
-        $this->display();
+        $this->display("activityType");
     }
 
     /**

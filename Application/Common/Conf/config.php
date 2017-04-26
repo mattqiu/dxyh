@@ -20,9 +20,12 @@ return array(
     'PAGE_NUM'          => 10,  //分页：每页条数
     'URL_MODEL' => 2,
 
+    'SHOW_PAGE_TRACE' =>true,   // 显示页面Trace信息
     'DB_SQL_BUILD_CACHE' => true,   //SQL解析缓存
     'DB_SQL_BUILD_QUEUE' => 'xcache',
     'DB_SQL_BUILD_LENGTH' => 20,
 
+    'LOG_RECORD' => true, // 开启日志记录
+    'LOG_LEVEL'  =>'EMERG,ALERT,CRIT,ERR',
 
 );
