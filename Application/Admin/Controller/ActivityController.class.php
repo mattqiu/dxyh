@@ -23,7 +23,7 @@ class ActivityController extends BaseController
         $data['rows'] = D("Activity")->getList();
         $data['page'] = $data['rows']['page'];
         unset($data['rows']['page']);
-        $data['activityType'] = D("ActivityType")->getDataList(null, "id,type_name");
+        $data['activityType'] = D("ActivityType")->getDataList(null, "id,type_name", null, null, null);
         $data['typeId'] = $_GET['typeId'];
         $data['keyword'] = $_GET['keyword'];
         $data['status'] = $_GET['status'];
@@ -36,7 +36,7 @@ class ActivityController extends BaseController
      */
     public function add(){
         D("Activity")->modify();
-        $data['activityType'] = D("ActivityType")->getDataList(null, "id,type_name");
+        $data['activityType'] = D("ActivityType")->getDataList(null, "id,type_name", null, null, null);
         $data['title'] = "新增活动";
         $data['Url'] = U("Activity/add");
         $this->assign($data);
@@ -49,7 +49,7 @@ class ActivityController extends BaseController
     public function edit(){
         D("Activity")->modify();
         $data['rows'] = D("Activity")->getDataInfo(array('id'=>$_GET['id']));
-        $data['activityType'] = D("ActivityType")->getDataList(null, "id,type_name");//var_dump($data['rows']);
+        $data['activityType'] = D("ActivityType")->getDataList(null, "id,type_name", null, null, null);//var_dump($data['rows']);
         $data['title'] = "编辑活动";
         $data['Url'] = U("Activity/edit");
         $this->assign($data);

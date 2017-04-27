@@ -1,4 +1,4 @@
-/*
+﻿/*
 * @Author: Administrator
 * @Date:   2017-04-05 22:06:29
 * @Last Modified by:   Administrator
@@ -41,7 +41,7 @@
 .content p{
 	text-indent: 2em;
 	line-height: 1.4;
-	margin-bottom: 40px;
+	/*margin-bottom: 40px;*/
 }
 @media (min-width: 1200px) {
 	.activeTitle{
@@ -52,8 +52,16 @@
 }
 }
 .content img{
-	width: 100%;
+	/*width: 100%;*/
 	height: auto;
+}
+.content pre{
+	whitewhite-space: pre-wrap; /* css-3 */ 
+	whitewhite-space: -moz-pre-wrap; /* Mozilla, since 1999 */ 
+	whitewhite-space: -pre-wrap; /* Opera 4-6 */ 
+	whitewhite-space: -o-pre-wrap; /* Opera 7 */ 
+	word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+	whitewhite-space : normal ; /* Internet Explorer 5.5+ */ 
 }
 
 .tips{
