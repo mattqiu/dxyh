@@ -18,6 +18,7 @@
         <!-- logo -->
         <a href="#" class="logoImg">
             <img src="/Public/home/img/logo.png" alt="">
+             <span class="c_h1">通达医学常识，知晓家庭护理</span>
             <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">

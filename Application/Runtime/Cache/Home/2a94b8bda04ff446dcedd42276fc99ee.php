@@ -18,6 +18,7 @@
         <!-- logo -->
         <a href="#" class="logoImg">
             <img src="/Public/home/img/logo.png" alt="">
+             <span class="c_h1">通达医学常识，知晓家庭护理</span>
             <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
@@ -48,7 +49,7 @@
 </div>
 		<!-- 公共头部结束 -->
 		<!-- 顶部轮播图开始 -->
-		<div class="swiper-container swiper1">
+		<div class="swiper-container swiper1 wrap">
 			<!-- 图片开始 -->
 			<div class="swiper-wrapper">
 				<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo isMobile()?$vo['app_image']:$vo['image'];?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
