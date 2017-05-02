@@ -31,6 +31,7 @@
 .commonTop .loginBox a:nth-child(3){margin-top: 10px; color:#fff;background: #4AA7EC;}
 .cmtMenuLogo{float: left;width: 20px!important;height: 20px!important;margin-right: 10px!important;margin-top: 10px!important;}
 .t6{position: fixed;top: 0;width: 100%;bottom: 0;z-index: 999;}
+.c_h1{color: #1A822D;font-size: 16px;display: none;}
 /* 公共头部结束 */
 @media (min-width: 1200px) {
   /* 公共头部开始 */
@@ -45,6 +46,7 @@
 .commonTop .loginBox{padding-top: 0;text-align: right;position: absolute;top: 0;right:100px;display: inline-block;float: right;color: #666666;}
 .commonTop .loginBox a{width:auto;display: inline-block;border: none;color:#666666;margin-left: 10px;margin-right: 10px;font-size: 14px;}
 .commonTop .loginBox a:nth-child(3){color:#F55351;background: none;margin-top: 0;}
+.c_h1{display: inline-block;}
 /* 公共头部结束 */
 }
 .commonPR{
