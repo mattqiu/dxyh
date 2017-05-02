@@ -59,7 +59,7 @@ class IndexController extends Controller {
     public function copticDetails(){
         $data['rows'] = D('Coptic')->copticDetails();//var_dump($data['rows']['comment']);
         $this->assign($data);
-        $this->display();
+        $this->display("copticDetails");
     }
 
     /**
@@ -69,7 +69,7 @@ class IndexController extends Controller {
         $data['rows'] = D("Activity")->getDataInfo(array('id'=>$_GET['id']));
         $data['rows']['activity_type_id'] = M("ActivityType")->where(array('id'=>$data['rows']['activity_type_id']))->field('type_name')->find()['type_name'];
         $this->assign($data);
-        $this->display();
+        $this->display("activityDetails");
     }
 
     public function shieldComment(){

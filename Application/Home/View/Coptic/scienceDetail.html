@@ -23,7 +23,7 @@
         <!-- 标题结束 -->
         <p class="author">作者：{$rows.author}&nbsp;&nbsp;&nbsp;&nbsp;{$rows.create_time}</p>
         <div class="container">
-            <div class="col-lg-8 keyWord">关键词：<span>{$rows.keyword}</span></div>
+            <div class="col-lg-8 keyWord"><notempty name="rows.keyword">关键词：<span>{$rows.keyword}</span></notempty></div>
             <div class="col-lg-4 keyWord">
                 <strong id="keep">
                     <img src="__PUBLIC__/home/img/ss0.png" alt="" data-value="0" data-field-name="keep">

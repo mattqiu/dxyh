@@ -18,7 +18,7 @@ class CommonModel extends Model
      * @param int $pageSize 查询记录数，默认查询 15 条记录
      * @return mixed    返回数据（二维数组形式）
      */
-    public function getDataList($where=null, $field=null, $order=null, $pageNum=0, $pageSize=15){
+    public function getDataList($where=null, $field=null, $order=null, $pageNum=null, $pageSize=null){
         if ($where){
             $this->where($where);
         }
@@ -28,7 +28,9 @@ class CommonModel extends Model
         if ($order){
             $this->order($order);
         }
-        $this->limit($pageNum, $pageSize);
+        if (!is_null($pageNum) && !is_null($pageSize)){
+            $this->limit($pageNum, $pageSize);
+        }
         $list = $this->select();
         return $list;
     }
@@ -154,7 +156,7 @@ class CommonModel extends Model
      * @param int $pageSize 每页查询记录数
      * @return mixed
      */
-    public function getJoinDataList($join = array(), $where = array(), $field = "", $order = "", $pageNum = 0, $pageSize = 15){
+    public function getJoinDataList($join = array(), $where = array(), $field = "", $order = "", $pageNum = null, $pageSize = null){
         if ($join){
             $this->join($join);
         }
@@ -167,7 +169,10 @@ class CommonModel extends Model
         if ($order){
             $this->order($order);
         }
-        return $this->limit($pageNum, $pageSize)->select();
+        if (!is_null($pageNum) && !is_null($pageSize)){
+            $this->limit($pageNum, $pageSize);
+        }
+        return $this->select();
     }
 
     /**

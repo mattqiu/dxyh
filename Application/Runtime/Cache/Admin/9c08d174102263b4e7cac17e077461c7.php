@@ -371,9 +371,9 @@
                             </thead>
 
                             <tbody>
-                            <?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <?php if(is_array($rows)): $k = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><tr>
                                     <td class="center">
-                                        <?php echo ($vo["id"]); ?>
+                                        <?php echo ($k); ?>
                                     </td>
 
                                     <td <?php echo (Judgement($vo["chapter"],0,'style="padding-left: 40px;"','neq')); ?>>

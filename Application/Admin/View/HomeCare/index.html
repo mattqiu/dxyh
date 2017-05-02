@@ -49,10 +49,10 @@
                             </thead>
 
                             <tbody>
-                            <volist name="rows" id="vo">
+                            <volist name="rows" id="vo" key="k">
                                 <tr>
                                     <td class="center">
-                                        {$vo.id}
+                                        {$k}
                                     </td>
 
                                     <td {$vo.chapter|Judgement=###,0,'style="padding-left: 40px;"','neq'}>

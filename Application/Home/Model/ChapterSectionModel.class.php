@@ -13,7 +13,7 @@ class ChapterSectionModel extends CommonModel
 {
     public function getHomeList(){
         $bookId = 1;
-        $list = $this->getDataList(array('bookid'=>$bookId));
+        $list = $this->getDataList(array('bookid'=>$bookId), "id,bookid,chapter,chapter_name,title,create_time");
         $listAry = array();
         if ($list){
             foreach ($list as $key=>$value){

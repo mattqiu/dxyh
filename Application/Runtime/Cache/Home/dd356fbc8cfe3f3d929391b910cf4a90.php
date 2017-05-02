@@ -55,7 +55,7 @@
         <!-- 标题结束 -->
         <p class="author">作者：<?php echo ($rows["author"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($rows["create_time"]); ?></p>
         <div class="container">
-            <div class="col-lg-8 keyWord">关键词：<span><?php echo ($rows["keyword"]); ?></span></div>
+            <div class="col-lg-8 keyWord"><?php if(!empty($rows["keyword"])): ?>关键词：<span><?php echo ($rows["keyword"]); ?></span><?php endif; ?></div>
             <div class="col-lg-4 keyWord">
                 <strong id="keep">
                     <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep">
