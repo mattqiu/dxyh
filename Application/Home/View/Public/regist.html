@@ -11,9 +11,9 @@
         <link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 		<style>
 		body{background: #fff;}
-		.main { background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
-		.main h1{font-size: 20px;color: #000000;padding-left: 114px;font-weight: bold;margin-bottom: 40px;}
-		.form1 { display: inline-block; }
+		.main { text-align: center;background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
+		.main h1{font-size: 20px;color: #000000;padding-left: 114px;font-weight: bold;margin-bottom: 40px;text-align: left;}
+		.form1 { display: inline-block; text-align: left;}
 		.form1 tr td{padding-bottom: 20px;}
 		.form1 tr td:first-child{text-align: right;padding-right: 20px;}
 		.form1 table input{height: 40px; font-size: 16px;padding-left: 8px;border: 1px solid #e0e0e0;width: 100%;}
@@ -21,14 +21,11 @@
 		.codeBox input{width: 80px!important;}
 		.codeBox span{display: inline-block;line-height: 1;vertical-align: middle;cursor: pointer;}
 		.codeBox img{width: 95px;margin-left: 8px;margin-right: 8px;margin-top: -2px;}
-		.others {  font-size: 16px;text-align: center; }
-		.others a{color: #4D4D4D;}
-		.others p{margin-bottom: 30px;}
+        .p1{text-align: right;}
 		.p1 a{color: #F55351;}
 		.p2{color: #999999;margin-top: 40px;margin-bottom: 20px;}
 		.checkBox input{width: 20px!important;height: 20px!important;vertical-align: middle;margin-right: 10px;}
 		.checkBox a{color: #2D9E12;}
-		.others .p1{text-align: right;}
 		@media (min-width: 1200px) {
 			body{
 				background-color: #F5F5F5;
@@ -37,13 +34,8 @@
 			.p2{
 				margin-top: 40px; margin-bottom: 20px;
 			}
-			.others .p1{text-align: left;}
-			.others p img { margin-right: 10px; }
-			.others { float: right; width: 270px; font-size: 16px;text-align: left; }
 			.main { background: #fff; border: 1px solid #e0e0e0; margin-top: 50px; margin-bottom: 120px; padding-top: 60px; padding-bottom: 50px; width: 1000px; }
-			.form1 { margin-left: 160px; padding-right: 90px;border-right: 1px solid #e0e0e0;   }
 			.form1 table input{height: 40px; font-size: 16px;padding-left: 8px;width: 300px;border: 1px solid #e0e0e0;}
-			.others p { margin-bottom: 30px; }
 		}
 		@media (min-width:1400px) {
 			body { padding-bottom: 280px; }
@@ -85,17 +77,9 @@
 						<!--<td class="checkBox"><input class="check" type="checkbox"><a href="#">我已阅读并同意《达医晓护协议》</a></td>-->
 					</tr>
 				</table>
+                <p class="p1">已经注册过？<a href="login.html">立即登录</a></p>
 			</form>
 			<!-- 表单结束 -->
-			<!-- 其他登录方式开始 -->
-			<div class="others">
-				<p class="p1">已经注册过？<a href="login.html">立即登录</a></p>
-				<!--<p class="p2">可使用以下账号直接登录</p>
-				<p class="col-xs-4 col-lg-12"><a href="#"><img src="__PUBLIC__/home/img/wexin2.png" alt="">微信登录</a></p>
-				<p class="col-xs-4 col-lg-12"><a href="#"><img src="__PUBLIC__/home/img/qq2.png" alt="">QQ登录</a></p>
-				<p class="col-xs-4 col-lg-12"><a href="#"><img src="__PUBLIC__/home/img/weibo2.png" alt="">微博登录</a></p>-->
-			</div>
-			<!-- 其他登录方式结束 -->
 		</div>
 		<!-- 公共底部模块开始 -->
 		<include file="footer"/>

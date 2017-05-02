@@ -16,17 +16,19 @@
 		<include file="Public/header"/>
 		<!-- 公共头部结束 -->
 		<!-- 顶部轮播图开始 -->
-		<div class="swiper-container swiper1 wrap">
-			<!-- 图片开始 -->
-			<div class="swiper-wrapper">
-				<volist name="websiteImage" id="vo">
+		<div class="wrap">
+			<div class="swiper-container swiper1">
+				<!-- 图片开始 -->
+				<div class="swiper-wrapper">
+					<volist name="websiteImage" id="vo">
 					<div class="swiper-slide"><a href="{$vo.img_link}"> <img src="{:isMobile()?$vo['app_image']:$vo['image']}" alt=""></a></div>
-				</volist>
+					</volist>
+				</div>
+				<!-- 图片结束 -->
+				<!-- 轮播分页开始 -->
+				<div class="swiper-pagination"></div>
+				<!-- 轮播分页结束 -->
 			</div>
-			<!-- 图片结束 -->
-			<!-- 轮播分页开始 -->
-			<div class="swiper-pagination"></div>
-			<!-- 轮播分页结束 -->
 		</div>
 		<!-- 顶部轮播图结束 -->
 		<!-- 最新科普开始 -->
@@ -44,15 +46,15 @@
 			<div class="container wrap article1List">
 				<!-- 一个文章开始 -->
 				<volist name="coptic" id="vo">
-					<div class="col-lg-3 col-xs-6 article1">
-						<a href="{:U('Coptic/details',array('id'=>$vo['id']))}">
-							<img src="{$vo.coptic_cover}" alt="">
-							<h3>{$vo.coptic_title}</h3>
-							<div class="figcaption visible-lg">
-								<p>{$vo.abstract}</p>
-							</div>
-						</a>
-					</div>
+				<div class="col-lg-3 col-xs-6 article1">
+					<a href="{:U('Coptic/details',array('id'=>$vo['id']))}">
+						<img src="{$vo.coptic_cover}" alt="">
+						<h3>{$vo.coptic_title}</h3>
+						<div class="figcaption visible-lg">
+							<p>{$vo.abstract}</p>
+						</div>
+					</a>
+				</div>
 				</volist>
 				<!-- 一个文章结束 -->
 			</div>
@@ -76,13 +78,13 @@
 					<!-- 图片开始 -->
 					<div class="swiper-wrapper">
 						<!-- 一个轮播页开始 -->
-                        <volist name="copticType" id="vo">
-                            <div class="swiper-slide container plateStyleListBox">
-                                <a href="{:U('Coptic/index',array('typeId'=>$vo['id']))}">
-                                    <img src="{$vo.category_image}" alt="">
-                                </a>
-                            </div>
-                        </volist>
+						<volist name="copticType" id="vo">
+						<div class="swiper-slide container plateStyleListBox">
+							<a href="{:U('Coptic/index',array('typeId'=>$vo['id']))}">
+								<img src="{$vo.category_image}" alt="">
+							</a>
+						</div>
+						</volist>
 						<!-- 一个轮播页结束 -->
 					</div>
 					<!-- 图片结束 -->
@@ -112,19 +114,19 @@
 			<p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more" href="{:U('Activity/index')}">more>></a></p>
 			<div class="container  newActivity">
 				<!-- 一个活动开始 -->
-                <volist name="activity" id="vo">
-                    <div class="col-lg-4 newActivity1">
-                        <a href="{:U('Activity/detail',array('id'=>$vo['id']))}">
-                            <img src="{$vo.activity_cover}" alt="">
-                            <h3></h3><!-- 蒙层 -->
-                            <p class="newActivityP">{$vo.activity_name}</p>
-                            <div class="activeMessage">
-                                截止：{$vo.enroll_end_time} {$vo.week} {$vo.time}
-                                <span class="joinActive">立即参与</span>
-                            </div>
-                        </a>
-                    </div>
-                </volist>
+				<volist name="activity" id="vo">
+				<div class="col-lg-4 newActivity1">
+					<a href="{:U('Activity/detail',array('id'=>$vo['id']))}">
+						<img src="{$vo.activity_cover}" alt="">
+						<h3></h3><!-- 蒙层 -->
+						<p class="newActivityP">{$vo.activity_name}</p>
+						<div class="activeMessage">
+							截止：{$vo.enroll_end_time} {$vo.week} {$vo.time}
+							<span class="joinActive">立即参与</span>
+						</div>
+					</a>
+				</div>
+				</volist>
 				<!-- 一个活动结束 -->
 			</div>
 		</div>
@@ -136,27 +138,27 @@
 		<script type="text/javascript" src="__PUBLIC__/home/js/idangerous.swiper.min.js"></script>
 		<script type="text/javascript" src="__PUBLIC__/home/js/index.js"></script>
 		<script type="text/javascript">
-                                
-            $(function() {
-                // 小屏幕展开导航效果
-                $(".cmtMenuLogo").click(function() {
-                    $(".cmtUser").toggle();
-                    $(".logoImg").toggleClass('commonPR');
-                    $(".commonTop nav").toggle();
-                    $(".commonTop").toggleClass('t6');
-                }
-                )
-                // 小屏幕展开登录
-                $(".cmtUser").click(function() {
-                    $(".cmtMenuLogo").toggle();
-                    $(".logoImg").toggleClass('commonPL');
-                    $(".loginBox").toggle();
-                    $(".commonTop").toggleClass('t6');
-                }
-                )
-            }
-            )
-        </script>
+		
+		$(function() {
+		// 小屏幕展开导航效果
+		$(".cmtMenuLogo").click(function() {
+		$(".cmtUser").toggle();
+		$(".logoImg").toggleClass('commonPR');
+		$(".commonTop nav").toggle();
+		$(".commonTop").toggleClass('t6');
+		}
+		)
+		// 小屏幕展开登录
+		$(".cmtUser").click(function() {
+		$(".cmtMenuLogo").toggle();
+		$(".logoImg").toggleClass('commonPL');
+		$(".loginBox").toggle();
+		$(".commonTop").toggleClass('t6');
+		}
+		)
+		}
+		)
+		</script>
 		<include file="Public/bottom"/>
 	</body>
 </html>

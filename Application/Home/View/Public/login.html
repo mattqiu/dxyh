@@ -11,15 +11,12 @@
         <link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
 		<style>
 		body{background: #fff;}
-		.main { background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
-		.main h1 { font-size: 20px; color: #000000; padding-left: 114px; font-weight: bold; margin-bottom: 40px; }
-		.form1 { display: inline-block; }
+		.main { background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;text-align: center;}
+		.main h1 { text-align: left;font-size: 20px; color: #000000; padding-left: 114px; font-weight: bold; margin-bottom: 40px; }
+		.form1 { display: inline-block;text-align: left; }
 		.left h2 { color: #333333; font-size: 16px; }
 		.left input { width: 310px; height: 40px; font-size: 16px; padding-left: 8px; margin-top: 10px; margin-bottom: 10px;border: 1px solid #e0e0e0; }
-		.others {  font-size: 16px;text-align: center; }
-		.others a { color: #4D4D4D; }
-		.others p { margin-bottom: 5px; }
-		.others .p1{text-align: left;}
+		.p1{text-align: right;margin-top: 20px}
 		.p1 a { color: #F55351; }
 		.p2 { color: #999999; margin-top: 20px; }
 		.checkBox input { width: 20px !important; height: 20px !important; vertical-align: middle; margin-right: 10px; }
@@ -31,12 +28,9 @@
 			.p2{
 				margin-top: 40px; margin-bottom: 20px;
 			}
-			.others p img { margin-right: 10px; }
-			.others { float: right; width: 320px; font-size: 16px;text-align: left; }
 			.main { background: #fff; border: 1px solid #e0e0e0; margin-top: 50px; margin-bottom: 120px; padding-top: 60px; padding-bottom: 50px; width: 1000px; }
-			.form1 { margin-left: 160px; padding-right: 90px;border-right: 1px solid #e0e0e0;   }
+			.form1 { margin: 0 auto;  }
 			.left input { width: 310px; }
-			.others p { margin-bottom: 30px; }
 		}
 		@media (min-width:1400px) {
 			body { padding-bottom: 280px; }
@@ -51,7 +45,7 @@
 		<!-- 公共头部结束 -->
 		<div class="wrap main container">
 			<h1 class="visible-lg">登录</h1>
-			<div class="col-lg-6 left">
+			<div class="col-lg-12 left">
 				<!-- 表单开始 -->
 				<form action="" class="form1">
 					<h2>昵称</h2>
@@ -62,19 +56,9 @@
 						<input type="checkbox" name="remember" value="1" >记住用户名
 					</div>
 					<button class="submit" type="button" >立即登录</button>
+					<p class="p1">还没有账号？<a href="regist.html">立即注册</a></p>
 				</form>
 				<!-- 表单结束 -->
-			</div>
-			<div class="col-lg-6">
-				<!-- 其他登录方式开始 -->
-				<div class="others">
-					<p class="p1">还没有账号？<a href="regist.html">立即注册</a></p>
-					<!--<p class="p2">可使用以下账号直接登录</p>
-					<p class="col-xs-4 col-lg-12"><a href="{$weixin_url}"><img src="__PUBLIC__/home/img/wexin2.png" alt="">微信登录</a></p>
-					<p class="col-xs-4 col-lg-12"><a href="{:U('Public/thirdPartyLogin')}"><img src="__PUBLIC__/home/img/qq2.png" alt="">QQ登录</a></p>
-					<p class="col-xs-4 col-lg-12"><a href="#"><img src="__PUBLIC__/home/img/weibo2.png" alt="">微博登录</a></p>-->
-				</div>
-				<!-- 其他登录方式结束 -->
 			</div>
 		</div>
 		<!-- 公共底部模块开始 -->
