@@ -20,7 +20,7 @@ return array(
     'PAGE_NUM'          => 10,  //分页：每页条数
     'URL_MODEL' => 2,
 
-    'SHOW_PAGE_TRACE' =>true,   // 显示页面Trace信息
+    'SHOW_PAGE_TRACE' => false,   // 显示页面Trace信息
     'DB_SQL_BUILD_CACHE' => true,   //SQL解析缓存
     'DB_SQL_BUILD_QUEUE' => 'xcache',
     'DB_SQL_BUILD_LENGTH' => 20,

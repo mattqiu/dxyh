@@ -49,15 +49,17 @@
 </div>
 		<!-- 公共头部结束 -->
 		<!-- 顶部轮播图开始 -->
-		<div class="swiper-container swiper1 wrap">
-			<!-- 图片开始 -->
-			<div class="swiper-wrapper">
-				<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo isMobile()?$vo['app_image']:$vo['image'];?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+		<div class="wrap">
+			<div class="swiper-container swiper1">
+				<!-- 图片开始 -->
+				<div class="swiper-wrapper">
+					<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo isMobile()?$vo['app_image']:$vo['image'];?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+				</div>
+				<!-- 图片结束 -->
+				<!-- 轮播分页开始 -->
+				<div class="swiper-pagination"></div>
+				<!-- 轮播分页结束 -->
 			</div>
-			<!-- 图片结束 -->
-			<!-- 轮播分页开始 -->
-			<div class="swiper-pagination"></div>
-			<!-- 轮播分页结束 -->
 		</div>
 		<!-- 顶部轮播图结束 -->
 		<!-- 最新科普开始 -->
@@ -75,14 +77,14 @@
 			<div class="container wrap article1List">
 				<!-- 一个文章开始 -->
 				<?php if(is_array($coptic)): $i = 0; $__LIST__ = $coptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-3 col-xs-6 article1">
-						<a href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
-							<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
-							<h3><?php echo ($vo["coptic_title"]); ?></h3>
-							<div class="figcaption visible-lg">
-								<p><?php echo ($vo["abstract"]); ?></p>
-							</div>
-						</a>
-					</div><?php endforeach; endif; else: echo "" ;endif; ?>
+					<a href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
+						<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+						<h3><?php echo ($vo["coptic_title"]); ?></h3>
+						<div class="figcaption visible-lg">
+							<p><?php echo ($vo["abstract"]); ?></p>
+						</div>
+					</a>
+				</div><?php endforeach; endif; else: echo "" ;endif; ?>
 				<!-- 一个文章结束 -->
 			</div>
 		</div>
@@ -105,11 +107,11 @@
 					<!-- 图片开始 -->
 					<div class="swiper-wrapper">
 						<!-- 一个轮播页开始 -->
-                        <?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide container plateStyleListBox">
-                                <a href="<?php echo U('Coptic/index',array('typeId'=>$vo['id']));?>">
-                                    <img src="<?php echo ($vo["category_image"]); ?>" alt="">
-                                </a>
-                            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide container plateStyleListBox">
+							<a href="<?php echo U('Coptic/index',array('typeId'=>$vo['id']));?>">
+								<img src="<?php echo ($vo["category_image"]); ?>" alt="">
+							</a>
+						</div><?php endforeach; endif; else: echo "" ;endif; ?>
 						<!-- 一个轮播页结束 -->
 					</div>
 					<!-- 图片结束 -->
@@ -139,17 +141,17 @@
 			<p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more" href="<?php echo U('Activity/index');?>">more>></a></p>
 			<div class="container  newActivity">
 				<!-- 一个活动开始 -->
-                <?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 newActivity1">
-                        <a href="<?php echo U('Activity/detail',array('id'=>$vo['id']));?>">
-                            <img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
-                            <h3></h3><!-- 蒙层 -->
-                            <p class="newActivityP"><?php echo ($vo["activity_name"]); ?></p>
-                            <div class="activeMessage">
-                                截止：<?php echo ($vo["enroll_end_time"]); ?> <?php echo ($vo["week"]); ?> <?php echo ($vo["time"]); ?>
-                                <span class="joinActive">立即参与</span>
-                            </div>
-                        </a>
-                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
+				<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 newActivity1">
+					<a href="<?php echo U('Activity/detail',array('id'=>$vo['id']));?>">
+						<img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
+						<h3></h3><!-- 蒙层 -->
+						<p class="newActivityP"><?php echo ($vo["activity_name"]); ?></p>
+						<div class="activeMessage">
+							截止：<?php echo ($vo["enroll_end_time"]); ?> <?php echo ($vo["week"]); ?> <?php echo ($vo["time"]); ?>
+							<span class="joinActive">立即参与</span>
+						</div>
+					</a>
+				</div><?php endforeach; endif; else: echo "" ;endif; ?>
 				<!-- 一个活动结束 -->
 			</div>
 		</div>
@@ -167,27 +169,27 @@
 		<script type="text/javascript" src="/Public/home/js/idangerous.swiper.min.js"></script>
 		<script type="text/javascript" src="/Public/home/js/index.js"></script>
 		<script type="text/javascript">
-                                
-            $(function() {
-                // 小屏幕展开导航效果
-                $(".cmtMenuLogo").click(function() {
-                    $(".cmtUser").toggle();
-                    $(".logoImg").toggleClass('commonPR');
-                    $(".commonTop nav").toggle();
-                    $(".commonTop").toggleClass('t6');
-                }
-                )
-                // 小屏幕展开登录
-                $(".cmtUser").click(function() {
-                    $(".cmtMenuLogo").toggle();
-                    $(".logoImg").toggleClass('commonPL');
-                    $(".loginBox").toggle();
-                    $(".commonTop").toggleClass('t6');
-                }
-                )
-            }
-            )
-        </script>
+		
+		$(function() {
+		// 小屏幕展开导航效果
+		$(".cmtMenuLogo").click(function() {
+		$(".cmtUser").toggle();
+		$(".logoImg").toggleClass('commonPR');
+		$(".commonTop nav").toggle();
+		$(".commonTop").toggleClass('t6');
+		}
+		)
+		// 小屏幕展开登录
+		$(".cmtUser").click(function() {
+		$(".cmtMenuLogo").toggle();
+		$(".logoImg").toggleClass('commonPL');
+		$(".loginBox").toggle();
+		$(".commonTop").toggleClass('t6');
+		}
+		)
+		}
+		)
+		</script>
 		<script>
     //js控制导航选中效果
     (function(){

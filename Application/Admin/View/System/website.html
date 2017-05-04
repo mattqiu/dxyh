@@ -58,7 +58,7 @@
                                     <input type="file" id="fileupload" onchange="showPreview(this)" class="col-xs-10 col-sm-5" name="fileImage" style="display: none;" />
                                     <div class="showImage" style="width:520px;">
                                         <img src="{$rows.image}" style="width: 523px;height: 200px;background-color: darkgrey;" />
-                                        <p class="message_p1" style="position: absolute;top: 70px;left: 28px;font-size: xx-large;font-family: cursive;color: aliceblue;">点击此处上传图片,尺寸:1920x460</p>
+                                        <p class="message_p1" style="position: absolute;top: 70px;left: 28px;font-size: xx-large;font-family: cursive;color: aliceblue;">点击此处上传图片,尺寸:1200x460</p>
                                     </div>
                                     <br>
                                     <button type="button" class="unImage" onclick="unsetImage()" style="display: none;">清除上传图片</button>
@@ -220,7 +220,7 @@
             $(".message_p1").html("点击此处上传图片,尺寸:208x294");
         }else {
             $(".image2").css("display","block");
-            $(".message_p1").html("点击此处上传图片,尺寸:1920x460");
+            $(".message_p1").html("点击此处上传图片,尺寸:1200x460");
             $(".showImage2 p").css('display','block');
         }
     });
