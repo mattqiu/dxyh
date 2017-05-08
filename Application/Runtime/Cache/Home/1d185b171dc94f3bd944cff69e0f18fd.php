@@ -18,6 +18,7 @@
         <!-- logo -->
         <a href="#" class="logoImg">
             <img src="/Public/home/img/logo.png" alt="">
+             <span class="c_h1">通达医学常识，知晓家庭护理</span>
             <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
@@ -40,7 +41,7 @@
         <div class="loginBox">
             <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
                 <?php else: ?>
-                <a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
+                <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
 
@@ -62,25 +63,27 @@
 			<div class="col-lg-10">
 				<div class="right">
 					<p class="rightTitle visible-lg">我的活动</p>
-					<?php if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个活动开始 -->
-						<div class="col-lg-4 avtiveList">
-                            <div>
-                                <p class="c2p">浏览：<?php echo ($vo["browse_volume"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;人数：<?php echo ($vo["activity_number"]); ?></p>
-                                <div class="activeImg">
-                                    <a href="<?php echo U('Activity/detail',array('id'=>$vo['activity_id']));?>">
-                                    <img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
-                                    </a>
-                                    <div class="mengceng"></div><!-- 蒙层 -->
-                                    <p><?php echo ($vo["activity_name"]); ?></p>
-                                </div>
-                                <div class="activeMessage">
-                                    <p>开始时间：<?php echo ($vo["activity_start_time"]); ?><a href="javascript:;" class="cancel" data-value="<?php echo ($vo["id"]); ?>">取消参加</a></p>
-                                    <p>结束时间：<?php echo ($vo["activity_end_time"]); ?></p>
-                                    <p>地点：<?php echo ($vo["address"]); ?></p>
-                                </div>
-                            </div>
-						</div>
-						<!-- 一个活动结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
+					<?php if($rows): if(is_array($rows)): $i = 0; $__LIST__ = $rows;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- 一个活动开始 -->
+							<div class="col-lg-4 avtiveList">
+								<div>
+									<p class="c2p">浏览：<?php echo ($vo["browse_volume"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;人数：<?php echo ($vo["activity_number"]); ?></p>
+									<div class="activeImg">
+										<a href="<?php echo U('Activity/detail',array('id'=>$vo['activity_id']));?>">
+											<img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
+										</a>
+										<div class="mengceng"></div><!-- 蒙层 -->
+										<p><?php echo ($vo["activity_name"]); ?></p>
+									</div>
+									<div class="activeMessage">
+										<p>开始时间：<?php echo ($vo["activity_start_time"]); ?><a href="javascript:;" class="cancel" data-value="<?php echo ($vo["id"]); ?>">取消参加</a></p>
+										<p>结束时间：<?php echo ($vo["activity_end_time"]); ?></p>
+										<p>地点：<?php echo ($vo["address"]); ?></p>
+									</div>
+								</div>
+							</div>
+							<!-- 一个活动结束 --><?php endforeach; endif; else: echo "" ;endif; ?>
+						<?php else: ?>
+						暂无数据<?php endif; ?>
 				</div>
 			</div>
 			<!-- 右侧信息模块结束 -->
@@ -89,7 +92,7 @@
 		<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <?php echo ($link); ?>
+        <?php echo isset($link)?$link:"";?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>

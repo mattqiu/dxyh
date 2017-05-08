@@ -30,8 +30,6 @@ $(function() {
 	// 每页展示5个
 	var size = 5;
 	var url = 'http://www.daychina.net/Home/Activity/detail?id=';
-	var typeId = $(".activeStyleActive").attr("data-value");
-	var keyword = $("input[name='keyword']").val();
 
 	// dropload
 	$('.activeListWrap').dropload({
@@ -41,6 +39,8 @@ $(function() {
 			page++;
 			// 拼接HTML
 			var result = '';
+            var typeId = $(".activeStyleActive").attr("data-value");
+            var keyword = $("input[name='keyword']").val();
 			$.ajax({
 				type: 'GET',
 				url: 'http://www.daychina.net/Home/Activity/activityJsonData',

@@ -1,164 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>达医晓护-首页</title>
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/idangerous.swiper.css">
-		<link rel="stylesheet" href="__PUBLIC__/home/css/index.css">
-		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
-	</head>
-	<body>
-		<!-- 公共头部开始 -->
-		<include file="Public/header"/>
-		<!-- 公共头部结束 -->
-		<!-- 顶部轮播图开始 -->
-		<div class="wrap">
-			<div class="swiper-container swiper1">
-				<!-- 图片开始 -->
-				<div class="swiper-wrapper">
-					<volist name="websiteImage" id="vo">
-					<div class="swiper-slide"><a href="{$vo.img_link}"> <img src="{:isMobile()?$vo['app_image']:$vo['image']}" alt=""></a></div>
-					</volist>
-				</div>
-				<!-- 图片结束 -->
-				<!-- 轮播分页开始 -->
-				<div class="swiper-pagination"></div>
-				<!-- 轮播分页结束 -->
-			</div>
-		</div>
-		<!-- 顶部轮播图结束 -->
-		<!-- 最新科普开始 -->
-		<!-- 大屏幕下标题开始 -->
-		<div class="titleLogo container visible-lg">
-			<div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>S</p></div>
-			<div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
-				<p>最新科普</p>
-				<p>cience</p>
-			</div>
-		</div>
-		<!-- 大屏幕下标题结束 -->
-		<div class="wrap">
-			<p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more" href="{:U('Coptic/index')}">more>></a></p>
-			<div class="container wrap article1List">
-				<!-- 一个文章开始 -->
-				<volist name="coptic" id="vo">
-				<div class="col-lg-3 col-xs-6 article1">
-					<a href="{:U('Coptic/details',array('id'=>$vo['id']))}">
-						<img src="{$vo.coptic_cover}" alt="">
-						<h3>{$vo.coptic_title}</h3>
-						<div class="figcaption visible-lg">
-							<p>{$vo.abstract}</p>
-						</div>
-					</a>
-				</div>
-				</volist>
-				<!-- 一个文章结束 -->
-			</div>
-		</div>
-		<!-- 最新科普结束 -->
-		<!-- 板块风采开始 -->
-		<!-- 大屏幕下标题开始 -->
-		<div class="titleLogo container visible-lg">
-			<div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>P</p></div>
-			<div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
-				<p>板块风采</p>
-				<p>late style</p>
-			</div>
-		</div>
-		<!-- 大屏幕下标题结束 -->
-		<div class="wrap bankuai">
-			<div class="hidden-lg min-title">板块风采</div><!-- 小屏幕下的标题 -->
-			<div class="container  box3">
-				<!-- 轮播开始 -->
-				<div class="swiper-container swiper2">
-					<!-- 图片开始 -->
-					<div class="swiper-wrapper">
-						<!-- 一个轮播页开始 -->
-						<volist name="copticType" id="vo">
-						<div class="swiper-slide container plateStyleListBox">
-							<a href="{:U('Coptic/index',array('typeId'=>$vo['id']))}">
-								<img src="{$vo.category_image}" alt="">
-							</a>
-						</div>
-						</volist>
-						<!-- 一个轮播页结束 -->
-					</div>
-					<!-- 图片结束 -->
-					<!-- 轮播分页开始 -->
-					<div class="swiper-pagination2 hidden-lg"></div>
-					<!-- 轮播分页结束 -->
-				</div>
-				<!-- 轮播结束 -->
-				<!-- 上一页，下一页控制按钮开始 -->
-				<img class="pre2 visible-lg" src="__PUBLIC__/home/img/pre2.png" alt="">
-				<img class="next2 visible-lg" src="__PUBLIC__/home/img/next2.png" alt="">
-				<!-- 上一页，下一页控制按钮结束 -->
-			</div>
-		</div>
-		<!-- 板块风采结束 -->
-		<!-- 最近活动开始 -->
-		<!-- 大屏幕下标题开始 -->
-		<div class="titleLogo container visible-lg">
-			<div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>A</p></div>
-			<div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
-				<p>最近活动</p>
-				<p>ctivity</p>
-			</div>
-		</div>
-		<!-- 大屏幕下标题结束 -->
-		<div class="wrap wnewActivity">
-			<p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more" href="{:U('Activity/index')}">more>></a></p>
-			<div class="container  newActivity">
-				<!-- 一个活动开始 -->
-				<volist name="activity" id="vo">
-				<div class="col-lg-4 newActivity1">
-					<a href="{:U('Activity/detail',array('id'=>$vo['id']))}">
-						<img src="{$vo.activity_cover}" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP">{$vo.activity_name}</p>
-						<div class="activeMessage">
-							截止：{$vo.enroll_end_time} {$vo.week} {$vo.time}
-							<span class="joinActive">立即参与</span>
-						</div>
-					</a>
-				</div>
-				</volist>
-				<!-- 一个活动结束 -->
-			</div>
-		</div>
-		<!-- 最近活动结束 -->
-		<!-- 公共底部模块开始 -->
-		<include file="Public/footer"/>
-		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/home/js/idangerous.swiper.min.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/home/js/index.js"></script>
-		<script type="text/javascript">
-		
-		$(function() {
-		// 小屏幕展开导航效果
-		$(".cmtMenuLogo").click(function() {
-		$(".cmtUser").toggle();
-		$(".logoImg").toggleClass('commonPR');
-		$(".commonTop nav").toggle();
-		$(".commonTop").toggleClass('t6');
-		}
-		)
-		// 小屏幕展开登录
-		$(".cmtUser").click(function() {
-		$(".cmtMenuLogo").toggle();
-		$(".logoImg").toggleClass('commonPL');
-		$(".loginBox").toggle();
-		$(".commonTop").toggleClass('t6');
-		}
-		)
-		}
-		)
-		</script>
-		<include file="Public/bottom"/>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <title>达医晓护-首页</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/index.css">
+    <link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico">
+</head>
+<body>
+<!-- 公共头部开始 -->
+<include file="Public/header"/>
+<!-- 公共头部结束 -->
+<!-- 顶部轮播图开始 -->
+<div class="wrap">
+    <div class="swiper-container swiper1">
+        <!-- 图片开始 -->
+        <div class="swiper-wrapper">
+            <volist name="websiteImage" id="vo">
+                <div class="swiper-slide"><a href="{$vo.img_link}"> <img
+                        src="{:isMobile()?$vo['app_image']:$vo['image']}" alt=""></a></div>
+            </volist>
+        </div>
+        <!-- 图片结束 -->
+        <!-- 轮播分页开始 -->
+        <div class="swiper-pagination"></div>
+        <!-- 轮播分页结束 -->
+    </div>
+</div>
+<!-- 顶部轮播图结束 -->
+<!-- 最新科普开始 -->
+<!-- 大屏幕下标题开始 -->
+<div class="titleLogo container visible-lg">
+    <div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>S</p></div>
+    <div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
+        <p>最新科普</p>
+        <p>cience</p>
+    </div>
+</div>
+<!-- 大屏幕下标题结束 -->
+<div class="wrap">
+    <p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more"
+                                                                        href="{:U('Coptic/index')}">more>></a></p>
+    <div class="container wrap article1List">
+        <!-- 一个文章开始 -->
+        <volist name="coptic" id="vo">
+            <div class="col-lg-3 col-xs-6 article1">
+                <a href="{:U('Coptic/details',array('id'=>$vo['id']))}">
+                    <img src="{$vo.coptic_cover}" alt="">
+                    <h3>{$vo.coptic_title}</h3>
+                    <div class="figcaption visible-lg">
+                        <p>{$vo.abstract}</p>
+                    </div>
+                </a>
+            </div>
+        </volist>
+        <!-- 一个文章结束 -->
+    </div>
+</div>
+<!-- 最新科普结束 -->
+<!-- 板块风采开始 -->
+<!-- 大屏幕下标题开始 -->
+<div class="titleLogo container visible-lg">
+    <div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>P</p></div>
+    <div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
+        <p>板块风采</p>
+        <p>late style</p>
+    </div>
+</div>
+<!-- 大屏幕下标题结束 -->
+<div class="wrap bankuai">
+    <div class="hidden-lg min-title">板块风采</div><!-- 小屏幕下的标题 -->
+    <div class="container  box3">
+        <!-- 轮播开始 -->
+        <div class="swiper-container swiper2">
+            <!-- 图片开始 -->
+            <div class="swiper-wrapper">
+                <!-- 一个轮播页开始 -->
+                <volist name="copticType" id="vo">
+                    <div class="swiper-slide container plateStyleListBox">
+                        <a href="{:U('Coptic/index',array('typeId'=>$vo['id']))}">
+                            <img src="{$vo.category_image}" alt="">
+                        </a>
+                    </div>
+                </volist>
+                <!-- 一个轮播页结束 -->
+            </div>
+            <!-- 图片结束 -->
+            <!-- 轮播分页开始 -->
+            <div class="swiper-pagination2 hidden-lg"></div>
+            <!-- 轮播分页结束 -->
+        </div>
+        <!-- 轮播结束 -->
+        <!-- 上一页，下一页控制按钮开始 -->
+        <img class="pre2 visible-lg" src="__PUBLIC__/home/img/pre2.png" alt="">
+        <img class="next2 visible-lg" src="__PUBLIC__/home/img/next2.png" alt="">
+        <!-- 上一页，下一页控制按钮结束 -->
+    </div>
+</div>
+<!-- 板块风采结束 -->
+<!-- 最近活动开始 -->
+<!-- 大屏幕下标题开始 -->
+<div class="titleLogo container visible-lg">
+    <div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>A</p></div>
+    <div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
+        <p>最近活动</p>
+        <p>ctivity</p>
+    </div>
+</div>
+<!-- 大屏幕下标题结束 -->
+<div class="wrap wnewActivity">
+    <p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more"
+                                                                                                   href="{:U('Activity/index')}">more>></a>
+    </p>
+    <div class="container  newActivity">
+        <!-- 一个活动开始 -->
+        <volist name="activity" id="vo">
+            <div class="col-lg-4 newActivity1">
+                <a href="{:U('Activity/detail',array('id'=>$vo['id']))}">
+                    <img src="{$vo.activity_cover}" alt="">
+                    <h3></h3><!-- 蒙层 -->
+                    <p class="newActivityP">{$vo.activity_name}</p>
+                    <div class="activeMessage">
+                        截止：{$vo.enroll_end_time} {$vo.week} {$vo.time}
+                        <span class="joinActive">立即参与</span>
+                    </div>
+                </a>
+            </div>
+        </volist>
+        <!-- 一个活动结束 -->
+    </div>
+</div>
+<!-- 最近活动结束 -->
+<!-- 公共底部模块开始 -->
+<include file="Public/footer"/>
+<!-- 公共底部模块结束 -->
+<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/index.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+            // 小屏幕展开导航效果
+            $(".cmtMenuLogo").click(function () {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
+                    $(".commonTop nav").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+            )
+            // 小屏幕展开登录
+            $(".cmtUser").click(function () {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+            )
+        }
+    );
+
+</script>
+<include file="Public/bottom"/>
+</body>
 </html>

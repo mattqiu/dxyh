@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>首页</title>
+		<title>达医晓护-首页</title>
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="/Public/home/css/idangerous.swiper.css">
 		<link rel="stylesheet" href="/Public/home/css/index.css">
 		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+		<div id='wx_pic' style='margin:0 auto;display:none;'>
+			<img src='/Public/img/logo.jpg' />
+		</div>
 	</head>
 	<body>
 		<!-- 公共头部开始 -->

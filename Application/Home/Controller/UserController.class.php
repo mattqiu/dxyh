@@ -32,7 +32,7 @@ class UserController extends CommonController
         $data['rows'] = D("AttendActivity")->myActivity();
 
         $this->assign($data);
-        $this->display();
+        $this->display("myActivity");
     }
 
     public function cancelActivity(){
@@ -47,7 +47,7 @@ class UserController extends CommonController
         $data['nowIntegral'] = M("User")->where(array('uid'=>session('uid')))->field('integral')->find()['integral'];
 
         $this->assign($data);
-        $this->display();
+        $this->display("myIntegral");
     }
 
     /**
@@ -57,7 +57,7 @@ class UserController extends CommonController
         $data['rows'] = D("Collection")->myKeepList();
 
         $this->assign($data);
-        $this->display();
+        $this->display("myKeep");
     }
 
     /**
@@ -74,7 +74,7 @@ class UserController extends CommonController
         $data['rows'] = D("User")->getUserInfo();
         D('User')->edit();
         $this->assign($data);
-        $this->display();
+        $this->display("changeMeaage");
     }
 
     /**
@@ -82,6 +82,6 @@ class UserController extends CommonController
      */
     public function modifyPasswd(){
         D("User")->modifyPasswd();
-        $this->display();
+        $this->display("modifyPasswd");
     }
 }
