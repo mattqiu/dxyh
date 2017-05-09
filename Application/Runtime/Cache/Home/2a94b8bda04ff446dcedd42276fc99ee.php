@@ -1,22 +1,19 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>达医晓护-首页</title>
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/Public/home/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/Public/home/css/idangerous.swiper.css">
-		<link rel="stylesheet" href="/Public/home/css/index.css">
-		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
-		<div id='wx_pic' style='margin:0 auto;display:none;'>
-			<img src='/Public/img/logo.jpg' />
-		</div>
-	</head>
-	<body>
-		<!-- 公共头部开始 -->
-		<div class="commonTop">
+<head>
+    <meta charset="utf-8">
+    <title>达医晓护-首页官网</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/Public/home/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/Public/home/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/Public/home/css/index.css">
+    <link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico">
+</head>
+<body>
+<!-- 公共头部开始 -->
+<div class="commonTop">
     <div class="wrap">
         <!-- logo -->
         <a href="#" class="logoImg">
@@ -50,150 +47,155 @@
 
     </div>
 </div>
-		<!-- 公共头部结束 -->
-		<!-- 顶部轮播图开始 -->
-		<div class="wrap">
-			<div class="swiper-container swiper1">
-				<!-- 图片开始 -->
-				<div class="swiper-wrapper">
-					<?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img src="<?php echo isMobile()?$vo['app_image']:$vo['image'];?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
-				</div>
-				<!-- 图片结束 -->
-				<!-- 轮播分页开始 -->
-				<div class="swiper-pagination"></div>
-				<!-- 轮播分页结束 -->
-			</div>
-		</div>
-		<!-- 顶部轮播图结束 -->
-		<!-- 最新科普开始 -->
-		<!-- 大屏幕下标题开始 -->
-		<div class="titleLogo container visible-lg">
-			<div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>S</p></div>
-			<div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
-				<p>最新科普</p>
-				<p>cience</p>
-			</div>
-		</div>
-		<!-- 大屏幕下标题结束 -->
-		<div class="wrap">
-			<p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more" href="<?php echo U('Coptic/index');?>">more>></a></p>
-			<div class="container wrap article1List">
-				<!-- 一个文章开始 -->
-				<?php if(is_array($coptic)): $i = 0; $__LIST__ = $coptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-3 col-xs-6 article1">
-					<a href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
-						<img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
-						<h3><?php echo ($vo["coptic_title"]); ?></h3>
-						<div class="figcaption visible-lg">
-							<p><?php echo ($vo["abstract"]); ?></p>
-						</div>
-					</a>
-				</div><?php endforeach; endif; else: echo "" ;endif; ?>
-				<!-- 一个文章结束 -->
-			</div>
-		</div>
-		<!-- 最新科普结束 -->
-		<!-- 板块风采开始 -->
-		<!-- 大屏幕下标题开始 -->
-		<div class="titleLogo container visible-lg">
-			<div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>P</p></div>
-			<div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
-				<p>板块风采</p>
-				<p>late style</p>
-			</div>
-		</div>
-		<!-- 大屏幕下标题结束 -->
-		<div class="wrap bankuai">
-			<div class="hidden-lg min-title">板块风采</div><!-- 小屏幕下的标题 -->
-			<div class="container  box3">
-				<!-- 轮播开始 -->
-				<div class="swiper-container swiper2">
-					<!-- 图片开始 -->
-					<div class="swiper-wrapper">
-						<!-- 一个轮播页开始 -->
-						<?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide container plateStyleListBox">
-							<a href="<?php echo U('Coptic/index',array('typeId'=>$vo['id']));?>">
-								<img src="<?php echo ($vo["category_image"]); ?>" alt="">
-							</a>
-						</div><?php endforeach; endif; else: echo "" ;endif; ?>
-						<!-- 一个轮播页结束 -->
-					</div>
-					<!-- 图片结束 -->
-					<!-- 轮播分页开始 -->
-					<div class="swiper-pagination2 hidden-lg"></div>
-					<!-- 轮播分页结束 -->
-				</div>
-				<!-- 轮播结束 -->
-				<!-- 上一页，下一页控制按钮开始 -->
-				<img class="pre2 visible-lg" src="/Public/home/img/pre2.png" alt="">
-				<img class="next2 visible-lg" src="/Public/home/img/next2.png" alt="">
-				<!-- 上一页，下一页控制按钮结束 -->
-			</div>
-		</div>
-		<!-- 板块风采结束 -->
-		<!-- 最近活动开始 -->
-		<!-- 大屏幕下标题开始 -->
-		<div class="titleLogo container visible-lg">
-			<div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>A</p></div>
-			<div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
-				<p>最近活动</p>
-				<p>ctivity</p>
-			</div>
-		</div>
-		<!-- 大屏幕下标题结束 -->
-		<div class="wrap wnewActivity">
-			<p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more" href="<?php echo U('Activity/index');?>">more>></a></p>
-			<div class="container  newActivity">
-				<!-- 一个活动开始 -->
-				<?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 newActivity1">
-					<a href="<?php echo U('Activity/detail',array('id'=>$vo['id']));?>">
-						<img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
-						<h3></h3><!-- 蒙层 -->
-						<p class="newActivityP"><?php echo ($vo["activity_name"]); ?></p>
-						<div class="activeMessage">
-							截止：<?php echo ($vo["enroll_end_time"]); ?> <?php echo ($vo["week"]); ?> <?php echo ($vo["time"]); ?>
-							<span class="joinActive">立即参与</span>
-						</div>
-					</a>
-				</div><?php endforeach; endif; else: echo "" ;endif; ?>
-				<!-- 一个活动结束 -->
-			</div>
-		</div>
-		<!-- 最近活动结束 -->
-		<!-- 公共底部模块开始 -->
-		<div class="commonBottom visible-lg">
+<!-- 公共头部结束 -->
+<!-- 顶部轮播图开始 -->
+<div class="wrap">
+    <div class="swiper-container swiper1">
+        <!-- 图片开始 -->
+        <div class="swiper-wrapper">
+            <?php if(is_array($websiteImage)): $i = 0; $__LIST__ = $websiteImage;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide"><a href="<?php echo ($vo["img_link"]); ?>"> <img
+                        src="<?php echo isMobile()?$vo['app_image']:$vo['image'];?>" alt=""></a></div><?php endforeach; endif; else: echo "" ;endif; ?>
+        </div>
+        <!-- 图片结束 -->
+        <!-- 轮播分页开始 -->
+        <div class="swiper-pagination"></div>
+        <!-- 轮播分页结束 -->
+    </div>
+</div>
+<!-- 顶部轮播图结束 -->
+<!-- 最新科普开始 -->
+<!-- 大屏幕下标题开始 -->
+<div class="titleLogo container visible-lg">
+    <div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>S</p></div>
+    <div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
+        <p>最新科普</p>
+        <p>cience</p>
+    </div>
+</div>
+<!-- 大屏幕下标题结束 -->
+<div class="wrap">
+    <p class="clearfix"><span class="hidden-lg min-title">最新科普</span><a class="more"
+                                                                        href="<?php echo U('Coptic/index');?>">more>></a></p>
+    <div class="container wrap article1List">
+        <!-- 一个文章开始 -->
+        <?php if(is_array($coptic)): $i = 0; $__LIST__ = $coptic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-3 col-xs-6 article1">
+                <a href="<?php echo U('Coptic/details',array('id'=>$vo['id']));?>">
+                    <img src="<?php echo ($vo["coptic_cover"]); ?>" alt="">
+                    <h3><?php echo ($vo["coptic_title"]); ?></h3>
+                    <div class="figcaption visible-lg">
+                        <p><?php echo ($vo["abstract"]); ?></p>
+                    </div>
+                </a>
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+        <!-- 一个文章结束 -->
+    </div>
+</div>
+<!-- 最新科普结束 -->
+<!-- 板块风采开始 -->
+<!-- 大屏幕下标题开始 -->
+<div class="titleLogo container visible-lg">
+    <div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>P</p></div>
+    <div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
+        <p>板块风采</p>
+        <p>late style</p>
+    </div>
+</div>
+<!-- 大屏幕下标题结束 -->
+<div class="wrap bankuai">
+    <div class="hidden-lg min-title">板块风采</div><!-- 小屏幕下的标题 -->
+    <div class="container  box3">
+        <!-- 轮播开始 -->
+        <div class="swiper-container swiper2">
+            <!-- 图片开始 -->
+            <div class="swiper-wrapper">
+                <!-- 一个轮播页开始 -->
+                <?php if(is_array($copticType)): $i = 0; $__LIST__ = $copticType;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="swiper-slide container plateStyleListBox">
+                        <a href="<?php echo U('Coptic/index',array('typeId'=>$vo['id']));?>">
+                            <img src="<?php echo ($vo["category_image"]); ?>" alt="">
+                        </a>
+                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                <!-- 一个轮播页结束 -->
+            </div>
+            <!-- 图片结束 -->
+            <!-- 轮播分页开始 -->
+            <div class="swiper-pagination2 hidden-lg"></div>
+            <!-- 轮播分页结束 -->
+        </div>
+        <!-- 轮播结束 -->
+        <!-- 上一页，下一页控制按钮开始 -->
+        <img class="pre2 visible-lg" src="/Public/home/img/pre2.png" alt="">
+        <img class="next2 visible-lg" src="/Public/home/img/next2.png" alt="">
+        <!-- 上一页，下一页控制按钮结束 -->
+    </div>
+</div>
+<!-- 板块风采结束 -->
+<!-- 最近活动开始 -->
+<!-- 大屏幕下标题开始 -->
+<div class="titleLogo container visible-lg">
+    <div class="col-xs-6 col-lg-1 col-lg-push-5 titleLogoL"><p>A</p></div>
+    <div class="col-xs-6 col-lg-2 col-lg-push-5 titleLogoR">
+        <p>最近活动</p>
+        <p>ctivity</p>
+    </div>
+</div>
+<!-- 大屏幕下标题结束 -->
+<div class="wrap wnewActivity">
+    <p class="clearfix" style="margin-top: 10px;"><span class=" hidden-lg min-title">最近活动</span><a class="more"
+                                                                                                   href="<?php echo U('Activity/index');?>">more>></a>
+    </p>
+    <div class="container  newActivity">
+        <!-- 一个活动开始 -->
+        <?php if(is_array($activity)): $i = 0; $__LIST__ = $activity;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="col-lg-4 newActivity1">
+                <a href="<?php echo U('Activity/detail',array('id'=>$vo['id']));?>">
+                    <img src="<?php echo ($vo["activity_cover"]); ?>" alt="">
+                    <h3></h3><!-- 蒙层 -->
+                    <p class="newActivityP"><?php echo ($vo["activity_name"]); ?></p>
+                    <div class="activeMessage">
+                        截止：<?php echo ($vo["enroll_end_time"]); ?> <?php echo ($vo["week"]); ?> <?php echo ($vo["time"]); ?>
+                        <span class="joinActive">立即参与</span>
+                    </div>
+                </a>
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+        <!-- 一个活动结束 -->
+    </div>
+</div>
+<!-- 最近活动结束 -->
+<!-- 公共底部模块开始 -->
+<div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
         <?php echo isset($link)?$link:"";?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>
-		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
-		<script type="text/javascript" src="/Public/home/js/idangerous.swiper.min.js"></script>
-		<script type="text/javascript" src="/Public/home/js/index.js"></script>
-		<script type="text/javascript">
-		
-		$(function() {
-		// 小屏幕展开导航效果
-		$(".cmtMenuLogo").click(function() {
-		$(".cmtUser").toggle();
-		$(".logoImg").toggleClass('commonPR');
-		$(".commonTop nav").toggle();
-		$(".commonTop").toggleClass('t6');
-		}
-		)
-		// 小屏幕展开登录
-		$(".cmtUser").click(function() {
-		$(".cmtMenuLogo").toggle();
-		$(".logoImg").toggleClass('commonPL');
-		$(".loginBox").toggle();
-		$(".commonTop").toggleClass('t6');
-		}
-		)
-		}
-		)
-		</script>
-		<script>
+<!-- 公共底部模块结束 -->
+<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="/Public/home/js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="/Public/home/js/index.js"></script>
+<script type="text/javascript">
+
+    $(function () {
+            // 小屏幕展开导航效果
+            $(".cmtMenuLogo").click(function () {
+                    $(".cmtUser").toggle();
+                    $(".logoImg").toggleClass('commonPR');
+                    $(".commonTop nav").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+            )
+            // 小屏幕展开登录
+            $(".cmtUser").click(function () {
+                    $(".cmtMenuLogo").toggle();
+                    $(".logoImg").toggleClass('commonPL');
+                    $(".loginBox").toggle();
+                    $(".commonTop").toggleClass('t6');
+                }
+            )
+        }
+    );
+
+</script>
+<script>
     //js控制导航选中效果
     (function(){
         var tDiv = document.getElementById("sidebar-menu"),
@@ -214,5 +216,49 @@
 
 
 </script>
-	</body>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var imgUrl = $(".logoImg img").attr('src');
+    var config = '<?php echo ($wxConfig); ?>';
+    var link = location.href;
+    console.log(config);
+    wx.config(config);
+    wx.ready(function(){
+
+        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+
+        wx.onMenuShareTimeline({
+            title: 'test', // 分享标题
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+        wx.onMenuShareAppMessage({
+            title: '', // 分享标题
+            desc: '', // 分享描述
+            link: '', // 分享链接
+            imgUrl: '', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+    wx.error(function(res){
+
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+
+    });
+</script>
+</body>
 </html>

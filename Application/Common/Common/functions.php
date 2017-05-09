@@ -238,3 +238,102 @@ function isMobile() {
     }
     return false;
 }
+
+/**
+ * 微信js-jdk配置参数获取
+ * @param array $config     配置文件设置的微信配置参数
+ * @return bool|string  返回json字符串类型的配置参数
+ */
+function weixin_config($config = array()){
+    if (empty($config)) return false;
+    $jsapi_ticket = file_get_contents('jsapi_ticket.json');
+    if (empty($jsapi_ticket)){
+        $jsapi_ticket = get_jsapi_ticket($config);
+    }else{
+        $jsapi_ticket = json_decode($jsapi_ticket, true);
+        if ($jsapi_ticket['expire_time'] < time()){
+            $jsapi_ticket = get_jsapi_ticket($config);
+        }else{
+            $jsapi_ticket = $jsapi_ticket['ticket'];
+        }
+    }
+    if (empty($jsapi_ticket)) return false;
+    $weixin_config = array(
+        'debug' => $config['debug'],
+        'appId' => $config['appId'],
+        'timestamp' => time(),
+        'nonceStr'  => get_rand_str(),
+        'signature' => $config['signature'],
+        'jsApiList' => $config['jsApiList']
+    );
+    $signArr = array(
+        'jsapi_ticket' => $jsapi_ticket,
+        'noncestr' => $weixin_config['nonceStr'],
+        'timestamp' => $weixin_config['timestamp'],
+        'url' => $config['url']
+    );
+    $weixin_config['signature'] = signature($signArr);
+    return json_encode($weixin_config);
+}
+
+/**
+ * 获取公众号用于调用微信JS接口的临时票据jsapi_ticket参数
+ * @param array $config     系统配置中的微信配置参数
+ * @return bool 成功返回jsapi_ticket字符串，失败返回false
+ */
+function get_jsapi_ticket($config = array()){
+    if (empty($config)) return false;
+    $access_toke_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$config['appId']."&secret=".$config['appSecret'];
+    $access_token = json_decode(http_request($access_toke_url), true);
+    if (isset($access_token['errcode'])) return false;
+    $access_token = $access_token['access_token'];
+    $jsapi_ticket_url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=jsapi";
+    $jsapi_ticket = json_decode(http_request($jsapi_ticket_url), true);
+    if ($jsapi_ticket['errcode'] != 0) return false;
+    $jsapi_ticket['expire_time'] = time() + 7000;
+    $boole = file_put_contents('jsapi_ticket.json',json_encode($jsapi_ticket));
+    if (empty($boole)) return false;
+    return $jsapi_ticket['ticket'];
+}
+
+/**
+ * curl请求函数
+ * @param $url  请求地址
+ * @param string $keysArr   请求类型为post是的参数
+ * @param string $type  请求类型，默认get方式请求
+ * @return mixed    返回请求结果
+ */
+function http_request($url, $keysArr = "", $type = 'get'){
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    if ($type === 'post') curl_setopt($ch, CURLOPT_POST, TRUE);
+    if ($type === 'post') curl_setopt($ch, CURLOPT_POSTFIELDS, $keysArr);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $ret = curl_exec($ch);
+    curl_close($ch);
+    return $ret;
+}
+
+/**
+ * 微信签名函数
+ * @param array $Arr    参与签名的参数数组
+ * @return bool|string  返回签名后的字符串
+ */
+function signature($Arr = array()){
+    if (empty($Arr)) return false;
+    $string1 = array();
+    foreach ($Arr as $key=>$val){
+        $string1[] = $key . "=" . $val;
+    }
+    return sha1(implode("&", $string1));
+}
+
+//获取随机数字字母字符串
+function get_rand_str($len=16){
+    $randArr=array_merge(range(0,9),range('a','z'),range('A','Z'));
+    shuffle($randArr);
+    $rs=array_slice($randArr,0,$len);
+    return implode($rs);
+}
