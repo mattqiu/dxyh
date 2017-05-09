@@ -32,6 +32,7 @@
 .cmtMenuLogo{float: left;width: 20px!important;height: 20px!important;margin-right: 10px!important;margin-top: 10px!important;}
 .t6{position: fixed;top: 0;width: 100%;bottom: 0;z-index: 999;}
 .c_h1{color: #1A822D;font-size: 16px;display: none;}
+.logoR6B{height: 50px;margin-top: 10px;width: auto;float: right;}
 /* 公共头部结束 */
 @media (min-width: 1200px) {
   /* 公共头部开始 */
@@ -101,7 +102,7 @@
     width: 80%!important;    
   }
   .commonTop .loginBox{
-    right: 260px;
+    right: 270px;
   }
 }
 /*栅栏布局*/
