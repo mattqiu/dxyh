@@ -44,7 +44,9 @@
                 <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
-
+        <!-- 新增图标开始 -->
+        <img class="visible-lg" style="float: right;height: 50px;margin-top: 10px;width: auto;" src="/Public/home/img/H6.jpg" alt="">
+        <!-- 新增图片结束 -->
     </div>
 </div>
 <!-- 公共头部结束 -->
