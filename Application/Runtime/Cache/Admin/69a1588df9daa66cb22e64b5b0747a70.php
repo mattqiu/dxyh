@@ -387,6 +387,7 @@
 								<th class="center">阅读/评论数</th>
 								<th class="center">是否推荐</th>
 								<th class="center">创建时间</th>
+								<th class="center">排序</th>
 								<th class="center">操作</th>
 							</tr>
 							</thead>
@@ -417,6 +418,7 @@
 									</td>
 									<td><?php echo ($vo["referral"]); ?> </td>
 									<td class="hidden-480"><?php echo ($vo["create_time"]); ?></td>
+									<td><?php echo ($vo["sort"]); ?> </td>
 									<td class="center">
 										<a class="btn btn-xs btn-info" title="查看详情" href="<?php echo U('index/copticDetails',array('id'=>$vo['id']));?>">
 											<i class="icon-zoom-in bigger-130"></i>

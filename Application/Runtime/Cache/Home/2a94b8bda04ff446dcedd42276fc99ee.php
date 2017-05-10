@@ -20,6 +20,9 @@
             <img src="/Public/home/img/logo.png" alt="">
              <span class="c_h1">通达医学常识，知晓家庭护理</span>
             <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <!-- 新增图标手机端开始 -->
+        <img class="hidden-lg"  src="/Public/home/img/H6.jpg" alt="">
+        <!-- 新增图标手机端结束 -->
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
@@ -44,9 +47,9 @@
                 <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
-        <!-- 新增图标开始 -->
-        <img class="visible-lg" style="float: right;height: 50px;margin-top: 10px;width: auto;" src="/Public/home/img/H6.jpg" alt="">
-        <!-- 新增图片结束 -->
+        <!-- 新增图标pc端开始 -->
+        <img class="logoR6B visible-lg"  src="/Public/home/img/H6.jpg" alt="">
+        <!-- 新增图标pc端开始 -->
     </div>
 </div>
 <!-- 公共头部结束 -->

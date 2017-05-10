@@ -12,7 +12,7 @@ namespace Home\Model;
 class CopticModel extends CommonModel
 {
     public function getHomeList(){
-        return $this->getDataList(null, "id,coptic_title,coptic_cover,abstract", array("create_time"=>"desc"), 0, 8);
+        return $this->getDataList(null, "id,coptic_title,coptic_cover,abstract", array("sort"=>"desc"), 0, 8);
     }
 
     public function getList(){
@@ -29,7 +29,7 @@ class CopticModel extends CommonModel
         import('Org.Api.Page');
         $page = new \Page($count, C('PAGE_ROWS'));
         $field = "ct1.id,ct1.abstract,ct1.author,ct1.create_time,ct1.coptic_title,ct1.coptic_cover,ct2.category_name";
-        $data['rows'] = $this->alias('ct1')->getJoinDataList($join, $where, $field, array("ct1.create_time"=>"desc"), $page->firstRow, $page->listRows);
+        $data['rows'] = $this->alias('ct1')->getJoinDataList($join, $where, $field, array("ct1.sort"=>"desc"), $page->firstRow, $page->listRows);
         foreach ($data['rows'] as $key=>$item){
             $data['rows'][$key]['create_time'] = dateTime($item['create_time'], 2);
         }
