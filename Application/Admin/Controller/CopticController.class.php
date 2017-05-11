@@ -45,7 +45,7 @@ class CopticController extends BaseController
         $data['copticType'] = D("CopticType")->getDataList(null, "id,category_name", null, null, null);
         $data['rows'] = D("Coptic")->getDataInfo(array('id'=>$_GET['id']));
         $data['title'] = "编辑科普文章";
-        $data['Url'] = U("Coptic/edit");
+        $data['Url'] = U("Coptic/edit",array('p'=>$_GET['p']));
         $this->assign($data);
         $this->display("view");
     }

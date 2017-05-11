@@ -100,7 +100,8 @@ class CopticModel extends BaseModel
                 }
                 $boole = $this->editData(array('id'=>$request['id']), $data);
                 if ($boole !== false){
-                    message(1, "编辑成功", "#");
+                    $this->addressUrl = $this->addressUrl."?p=".$_GET['p'];
+                    message(1, "编辑成功", $this->addressUrl);
                 }else{
                     message(0, "编辑失败");
                 }
