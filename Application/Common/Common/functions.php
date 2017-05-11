@@ -52,7 +52,7 @@ function dateTime($dateTime, $status = 0){
  * @return bool|string  返回bool或给定的返回值
  */
 function Judgement($data="", $value=0, $result="", $type='eq'){
-    if (empty($data)){
+    if ($data == null){
         return false;
     }
     if (empty($result)){

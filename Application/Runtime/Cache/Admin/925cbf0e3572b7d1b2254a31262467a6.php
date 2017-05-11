@@ -51,6 +51,12 @@
             vertical-align: middle;
         }
     </style>
+<style type="text/css">
+    #editor {
+        width:1024px;
+        min-height:500px;
+    }
+</style>
 </head>
 <body>
 <!--顶部导航-->
@@ -408,8 +414,8 @@
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 <i style="color: red;">*</i></label>
-                                <div class="col-sm-9">
-                                    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;"><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
+                                <div class="col-sm-9" >
+                                    <script id="editor" name="content" type="text/plain" ><?php echo (htmlspecialchars_decode($rows["content"])); ?></script>
                                 </div>
                             </div>
 
@@ -465,6 +471,16 @@
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 排序 </label>
                                 <div class="col-sm-9">
                                 <input type="text" class="col-xs-10 col-sm-5" name="sort" value="<?php echo ($rows["sort"]); ?>" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 原创 </label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="original" value="0" <?php echo (Judgement($rows["original"],0,"checked")); ?> <?php echo (Judgement($title,"新增科普文章","checked")); ?> />否
+                                    <input type="radio" name="original" value="1" <?php echo (Judgement($rows["original"],1,"checked")); ?>/>是
                                 </div>
                             </div>
 

@@ -59,17 +59,15 @@
         <!-- 标题开始 -->
         <h1 class="activeTitle"><?php echo ($rows["coptic_title"]); ?></h1>
         <!-- 标题结束 -->
-        <p class="author">作者：<?php echo ($rows["author"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($rows["create_time"]); ?></p>
+        <p class="author">作者：<?php echo ($rows["author"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($rows["create_time"]); if(!empty($rows["original"])): ?><img style="margin-left: 30px;" src="/Public/home/img/yuanchuang.png" alt="原创标识"><?php endif; ?></p>
         <div class="container">
             <div class="col-lg-8 keyWord"><?php if(!empty($rows["keyword"])): ?>关键词：<span><?php echo ($rows["keyword"]); ?></span><?php endif; ?></div>
             <div class="col-lg-4 keyWord">
                 <strong id="keep">
-                    <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep">
-                    <img style="display: none;" src="/Public/home/img/ss1.png" alt="" data-value="1" data-field-name="keep">收藏
+                    <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><img style="display: none;" src="/Public/home/img/ss1.png" alt="" data-value="1" data-field-name="keep">收藏
                 </strong>
                 <strong id="likes">
-                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes">
-                    <img style="display: none;" src="/Public/home/img/zz1.png" alt="" data-value="1" data-field-name="likes">赞
+                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><img style="display: none;" src="/Public/home/img/zz1.png" alt="" data-value="1" data-field-name="likes">赞
                 </strong>
             </div>
         </div>

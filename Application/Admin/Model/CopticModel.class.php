@@ -87,7 +87,8 @@ class CopticModel extends BaseModel
                 "keyword" => $request['keyword'],
                 "original_link" => urlencode($request['original_link']),
                 "referral" => $request['referral'],
-                "sort" => $request['sort']
+                "sort" => $request['sort'],
+                "original" => $request['original']
             );
             if ($request['id'] > 0){
                 if ($_FILES['copticCover']['tmp_name']){

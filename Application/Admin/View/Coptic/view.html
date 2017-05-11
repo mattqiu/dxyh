@@ -1,4 +1,10 @@
 <include file="Public/header" title="{$title} - 达晓医护"/>
+<style type="text/css">
+    #editor {
+        width:1024px;
+        min-height:500px;
+    }
+</style>
 </head>
 <body>
 <include file="Public/top"/>
@@ -88,8 +94,8 @@
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正文 <i style="color: red;">*</i></label>
-                                <div class="col-sm-9">
-                                    <script id="editor" name="content" type="text/plain" style="width:1024px;height:500px;">{$rows.content|htmlspecialchars_decode=###}</script>
+                                <div class="col-sm-9" >
+                                    <script id="editor" name="content" type="text/plain" >{$rows.content|htmlspecialchars_decode=###}</script>
                                 </div>
                             </div>
 
@@ -145,6 +151,16 @@
                                 <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 排序 </label>
                                 <div class="col-sm-9">
                                 <input type="text" class="col-xs-10 col-sm-5" name="sort" value="{$rows.sort}" />
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 原创 </label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="original" value="0" {$rows.original|Judgement=###,0,"checked"} {$title|Judgement=###,"新增科普文章","checked"} />否
+                                    <input type="radio" name="original" value="1" {$rows.original|Judgement=###,1,"checked"}/>是
                                 </div>
                             </div>
 
