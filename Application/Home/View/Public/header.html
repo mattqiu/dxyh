@@ -30,7 +30,7 @@
         <!-- 登陆注册开始 -->
         <div class="loginBox">
             <empty name="Think.session.uid">
-                <a href="{:U('Public/login')}">登录</a><span>|</span><a href="{:U('Public/regist')}">注册</a>
+                <a href="{:U('Public/login')}">登录</a><span>|</span><a href="{:U('Public/register')}">注册</a>
                 <else/>
                 <span>{$Think.session.nickname}</span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="{:U('Public/signOut')}">退出</a>
             </empty>
