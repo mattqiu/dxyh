@@ -26,10 +26,10 @@
             <div class="col-lg-8 keyWord"><notempty name="rows.keyword">关键词：<span>{$rows.keyword}</span></notempty></div>
             <div class="col-lg-4 keyWord">
                 <strong id="keep">
-                    <img src="__PUBLIC__/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><img src="__PUBLIC__/home/img/ss1.png" class="c_hide" data-value="1" data-field-name="keep">收藏
+                    <img src="__PUBLIC__/home/img/ss0.png" alt="" data-value="0" data-field-name="keep">收藏
                 </strong>
                 <strong id="likes">
-                    <img src="__PUBLIC__/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><img src="__PUBLIC__/home/img/zz1.png" class="c_hide" data-value="1" data-field-name="likes">赞
+                    <img src="__PUBLIC__/home/img/zz0.png" alt="" data-value="0" data-field-name="likes">赞
                 </strong>
             </div>
         </div>
@@ -151,6 +151,10 @@
 <script type="text/javascript">
     var callbackUrl = encodeURIComponent(window.location.href);
     $(function () {
+        var ss0 = "__PUBLIC__/home/img/ss0.png";
+        var ss1 = "__PUBLIC__/home/img/ss1.png";
+        var zz0 = "__PUBLIC__/home/img/zz0.png";
+        var zz1 = "__PUBLIC__/home/img/zz1.png";
         // 点击回复，展开回复框
         $(".r1").live('click', function () {
             $(this).next('.reForm').toggle();
@@ -185,17 +189,38 @@
                     }, 2000);
                 }
             });
-            $(this).toggle().siblings('img').toggle();
+            switch (type){
+                case 'likes':
+                    if (item > 0){
+                        $(this).attr('src', zz0);
+                        $(this).attr('data-value', 0)
+                    }else{
+                        $(this).attr('src', zz1);
+                        $(this).attr('data-value', 1)
+                    }
+                    break;
+                case 'keep':
+                    if (item > 0){
+                        $(this).attr('src', ss0);
+                        $(this).attr('data-value', 0)
+                    }else{
+                        $(this).attr('src', ss1);
+                        $(this).attr('data-value', 1)
+                    }
+                    break;
+            }
         });
 
         //点赞与收藏数据适配
         var checkLikes = "{$checkLikes}";
         var checkStoreUp = "{$checkStoreUp}";
         if (checkLikes > 0) {
-            $("#likes img").toggle();
+            $("#likes img").attr('src', zz1);
+            $("#likes img").attr('data-value', 1)
         }
         if (checkStoreUp > 0) {
-            $("#keep img").toggle();
+            $("#keep img").attr('src',ss1);
+            $("#keep img").attr('data-value', 1)
         }
 
         //评论点赞功能

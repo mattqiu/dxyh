@@ -42,7 +42,7 @@
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox">
-            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/register');?>">注册</a>
                 <?php else: ?>
                 <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
@@ -64,10 +64,10 @@
             <div class="col-lg-8 keyWord"><?php if(!empty($rows["keyword"])): ?>关键词：<span><?php echo ($rows["keyword"]); ?></span><?php endif; ?></div>
             <div class="col-lg-4 keyWord">
                 <strong id="keep">
-                    <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><img style="display: none;" src="/Public/home/img/ss1.png" alt="" data-value="1" data-field-name="keep">收藏
+                    <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><!--<img src="/Public/home/img/ss1.png" class="c_hide" data-value="1" data-field-name="keep">-->收藏
                 </strong>
                 <strong id="likes">
-                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><img style="display: none;" src="/Public/home/img/zz1.png" alt="" data-value="1" data-field-name="likes">赞
+                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><!--<img src="/Public/home/img/zz1.png" class="c_hide" data-value="1" data-field-name="likes">-->赞
                 </strong>
             </div>
         </div>
@@ -181,6 +181,10 @@
 <script type="text/javascript">
     var callbackUrl = encodeURIComponent(window.location.href);
     $(function () {
+        var ss0 = "/Public/home/img/ss0.png";
+        var ss1 = "/Public/home/img/ss1.png";
+        var zz0 = "/Public/home/img/zz0.png";
+        var zz1 = "/Public/home/img/zz1.png";
         // 点击回复，展开回复框
         $(".r1").live('click', function () {
             $(this).next('.reForm').toggle();
@@ -215,17 +219,38 @@
                     }, 2000);
                 }
             });
-            $(this).toggle().siblings('img').toggle();
+            switch (type){
+                case 'likes':
+                    if (item > 0){
+                        $(this).attr('src', zz0);
+                        $(this).attr('data-value', 0)
+                    }else{
+                        $(this).attr('src', zz1);
+                        $(this).attr('data-value', 1)
+                    }
+                    break;
+                case 'keep':
+                    if (item > 0){
+                        $(this).attr('src', ss0);
+                        $(this).attr('data-value', 0)
+                    }else{
+                        $(this).attr('src', ss1);
+                        $(this).attr('data-value', 1)
+                    }
+                    break;
+            }
         });
 
         //点赞与收藏数据适配
         var checkLikes = "<?php echo ($checkLikes); ?>";
         var checkStoreUp = "<?php echo ($checkStoreUp); ?>";
         if (checkLikes > 0) {
-            $("#likes img").toggle();
+            $("#likes img").attr('src', zz1);
+            $("#likes img").attr('data-value', 1)
         }
         if (checkStoreUp > 0) {
-            $("#keep img").toggle();
+            $("#keep img").attr('src',ss1);
+            $("#keep img").attr('data-value', 1)
         }
 
         //评论点赞功能
