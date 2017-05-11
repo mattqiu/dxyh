@@ -37,8 +37,8 @@
 @media (min-width: 1200px) {
   /* 公共头部开始 */
 .commonTop{background-color: #FFFFFF;height: 70px;line-height: 70px;text-align: center;position: relative;border-bottom: 1px solid #e0e0e0;}
-.commonTop nav{display: inline-block;margin:0 auto;height: 69px;padding-top: 0;}
-.commonTop nav a{border-bottom: none;line-height: 40px;color:#666666;display: inline-block;width: 120px;height: 100%;text-align: center;font-size: 16px;}
+.commonTop nav{display: inline-block;margin:0 auto;height: 69px;padding-top: 0;margin-left: -100px;}
+.commonTop nav a{border-bottom: none;line-height: 40px;color:#666666;display: inline-block;width: 110px;height: 100%;text-align: center;font-size: 16px;}
 .commonTop .wrap{height: 70px;}
 .commonTop .loginBox span{display: inline-block;}
 .commonTop .logoImg img{margin-bottom: 4px;width: 60px;height: 60px;}
