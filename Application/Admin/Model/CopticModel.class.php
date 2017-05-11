@@ -31,7 +31,7 @@ class CopticModel extends BaseModel
             $where['referral'] = $qustData['nominate'];
         }
         $join = "INNER JOIN dxyh_coptic_type as ct ON c.coptic_type_id = ct.id";
-        $field = "c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time,c.browse_volume,c.sort";
+        $field = "c.id,ct.category_name,c.coptic_title,c.author,c.referral,c.create_time,c.browse_volume,c.sort,c.original";
         $order = array('c.sort'=>'desc');
         $count = $this->alias("c")->getJoinCount($join, $where);
         $page = new Page($count, C("PAGE_NUM"));
