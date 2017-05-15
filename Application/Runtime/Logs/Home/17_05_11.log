@@ -1439,3 +1439,86 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2017-05-11T18:20:32+08:00 ] 127.0.0.1 /Home/Coptic/details/id/79.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_friendship_link` [ RunTime:0.0090s ]
+SQL: SELECT `link_name`,`link` FROM `dxyh_friendship_link`  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`coptic_title`,`coptic_cover` FROM `dxyh_coptic` WHERE `referral` = 1 ORDER BY `create_time` desc  [ RunTime:0.0110s ]
+SQL: update dxyh_coptic set browse_volume = browse_volume+1 where id=79 [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `dxyh_coptic` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dxyh_coptic` WHERE `id` = 79 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `dxyh_likes` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_likes` WHERE `uid` = 5 AND `coptic_id` = 79 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `dxyh_collection` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dxyh_collection` WHERE `uid` = 5 AND `coptic_id` = 79 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `dxyh_comment` [ RunTime:0.0070s ]
+SQL: SELECT c.id,c.parent_id,c.content,u.nickname,u.avatar,c.create_time,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id) as likesnum,(select count(*) from dxyh_comment_likes WHERE dxyh_comment_likes.comment_id=c.id AND uid=5) as likes FROM dxyh_comment c INNER JOIN dxyh_user as u ON u.uid=c.uid  WHERE c.coptic_id = '79' AND c.status = 1 ORDER BY c.create_time desc  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-11T18:20:33+08:00 ] 127.0.0.1 /Home/Public/signOut.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-11T18:20:33+08:00 ] 127.0.0.1 /Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-11T18:20:35+08:00 ] 127.0.0.1 /Home/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `dxyh_user` [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

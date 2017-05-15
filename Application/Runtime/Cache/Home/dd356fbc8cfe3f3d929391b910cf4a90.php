@@ -64,10 +64,10 @@
             <div class="col-lg-8 keyWord"><?php if(!empty($rows["keyword"])): ?>关键词：<span><?php echo ($rows["keyword"]); ?></span><?php endif; ?></div>
             <div class="col-lg-4 keyWord">
                 <strong id="keep">
-                    <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep"><!--<img src="/Public/home/img/ss1.png" class="c_hide" data-value="1" data-field-name="keep">-->收藏
+                    <img src="/Public/home/img/ss0.png" alt="" data-value="0" data-field-name="keep">收藏
                 </strong>
                 <strong id="likes">
-                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes"><!--<img src="/Public/home/img/zz1.png" class="c_hide" data-value="1" data-field-name="likes">-->赞
+                    <img src="/Public/home/img/zz0.png" alt="" data-value="0" data-field-name="likes">赞
                 </strong>
             </div>
         </div>
