@@ -18,7 +18,11 @@
         <!-- logo -->
         <a href="#" class="logoImg">
             <img src="/Public/home/img/logo.png" alt="">
+             <span class="c_h1">通达医学常识，知晓家庭护理</span>
             <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <!-- 新增图标手机端开始 -->
+        <img class="hidden-lg"  src="/Public/home/img/H6.jpg" alt="">
+        <!-- 新增图标手机端结束 -->
             <!-- 小屏幕下个人导航图标开始 -->
             <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
             <!-- 小屏幕下个人导航图标结束 -->
@@ -38,12 +42,14 @@
         <!-- 导航结束 -->
         <!-- 登陆注册开始 -->
         <div class="loginBox">
-            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/regist');?>">注册</a>
+            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/register');?>">注册</a>
                 <?php else: ?>
                 <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
         </div>
         <!-- 登陆注册结束 -->
-
+        <!-- 新增图标pc端开始 -->
+        <img class="logoR6B visible-lg"  src="/Public/home/img/H6.jpg" alt="">
+        <!-- 新增图标pc端开始 -->
     </div>
 </div>
 <!-- 公共头部结束 -->
@@ -67,7 +73,7 @@
                     <tr>
                         <td>头像</td>
                         <td>
-                            <?php if($rows.avatar): ?><label class="cmImgLabel" for="cmIMG" style="padding: 0;">
+                            <?php if($rows['avatar']): ?><label class="cmImgLabel" for="cmIMG" style="padding: 0;">
                                     <img src="<?php echo ($rows["avatar"]); ?>" alt="" style="height: inherit;">
                                 </label>
                                 <?php else: ?>
@@ -120,7 +126,7 @@
 <div class="commonBottom visible-lg">
     <div class="links">
         <a href="#" class="key">友情链接</a>
-        <?php echo ($link); ?>
+        <?php echo isset($link)?$link:"";?>
         <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
     </div>
 </div>
@@ -170,6 +176,50 @@
     })();
 
 
+</script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var imgUrl = $(".logoImg img").attr('src');
+    var config = '<?php echo ($wxConfig); ?>';
+    var link = location.href;
+    console.log(config);
+    wx.config(config);
+    wx.ready(function(){
+
+        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+
+        wx.onMenuShareTimeline({
+            title: 'test', // 分享标题
+            link: link, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+        wx.onMenuShareAppMessage({
+            title: '', // 分享标题
+            desc: '', // 分享描述
+            link: '', // 分享链接
+            imgUrl: '', // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+    });
+    wx.error(function(res){
+
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+
+    });
 </script>
 <script type="text/javascript">
     var mcenter = document.getElementById("memberCenter"),

@@ -12,12 +12,12 @@ namespace Home\Model;
 class CopticModel extends CommonModel
 {
     public function getHomeList(){
-        return $this->getDataList(null, "id,coptic_title,coptic_cover,abstract", array("sort"=>"desc"), 0, 8);
+        return $this->getDataList(array('isdisplay'=>2), "id,coptic_title,coptic_cover,abstract", array("sort"=>"desc"), 0, 8);
     }
 
     public function getList(){
         $quesData = I("get.");
-        $where = null;
+        $where = array('isdisplay'=>2);
         if ($quesData['typeId']){
             $where['ct1.coptic_type_id'] = $quesData['typeId'];
         }

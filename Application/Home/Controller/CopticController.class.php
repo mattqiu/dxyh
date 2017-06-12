@@ -14,7 +14,7 @@ class CopticController extends CommonController
     public function __construct()
     {
         parent::__construct();
-        $hotCoptic = M("Coptic")->where(array("referral"=>1))->field('id,coptic_title,coptic_cover')->order(array("create_time"=>"desc"))->select();
+        $hotCoptic = M("Coptic")->where(array("referral"=>1,"isdisplay"=>2))->field('id,coptic_title,coptic_cover')->order(array("create_time"=>"desc"))->select();
         $this->assign('hotCoptic', $hotCoptic);
     }
 

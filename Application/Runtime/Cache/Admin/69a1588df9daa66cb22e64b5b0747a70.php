@@ -389,6 +389,7 @@
 								<th class="center">创建时间</th>
 								<th class="center">排序</th>
                                 <th class="center">是否原创</th>
+								<th class="center">是否显示</th>
 								<th class="center">操作</th>
 							</tr>
 							</thead>
@@ -421,6 +422,7 @@
 									<td class="hidden-480"><?php echo ($vo["create_time"]); ?></td>
 									<td><?php echo ($vo["sort"]); ?> </td>
                                     <td><?php if(empty($vo["original"])): ?>否<?php else: ?>是<?php endif; ?> </td>
+                                    <td><?php if($vo['isdisplay'] == 1): ?>否<?php else: ?>是<?php endif; ?> </td>
 									<td class="center">
 										<a class="btn btn-xs btn-info" title="查看详情" href="<?php echo U('index/copticDetails',array('id'=>$vo['id']));?>">
 											<i class="icon-zoom-in bigger-130"></i>

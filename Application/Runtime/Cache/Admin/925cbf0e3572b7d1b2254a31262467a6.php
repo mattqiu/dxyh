@@ -486,6 +486,16 @@
 
                             <div class="space-4"></div>
 
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 是否显示 </label>
+                                <div class="col-sm-9">
+                                    <input type="radio" name="isdisplay" value="1" <?php echo (Judgement($rows["isdisplay"],1,"checked")); ?> <?php echo (Judgement($title,"新增科普文章","checked")); ?> />否
+                                    <input type="radio" name="isdisplay" value="2" <?php echo (Judgement($rows["isdisplay"],2,"checked")); ?>/>是
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
                             <div class="clearfix form-actions" style="background-color: inherit;border: inherit;">
                                 <div class="col-md-offset-3 col-md-9">
                                     <button class="btn btn-info ajax-post" type="button" target-form="form-submit">

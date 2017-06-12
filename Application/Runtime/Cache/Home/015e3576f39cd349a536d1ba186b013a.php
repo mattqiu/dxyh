@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -6,9 +6,9 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="__PUBLIC__/home/css/base.css">
-		<link rel="Shortcut Icon" href="__PUBLIC__/home/img/dyxh.ico" >
-        <link rel="stylesheet" href="__PUBLIC__/artDialog/css/dialog.css">
+		<link rel="stylesheet" href="/Public/home/css/base.css">
+		<link rel="Shortcut Icon" href="/Public/home/img/dyxh.ico" >
+        <link rel="stylesheet" href="/Public/artDialog/css/dialog.css">
 		<style>
 		body{background: #fff;}
 		.main { text-align: center;background: #fff;  padding-top: 10px;padding-left: 10px;padding-right: 10px;}
@@ -45,12 +45,50 @@
 	</head>
 	<body>
 		<!-- 公共头部开始 -->
-		<include file="header"/>
+		<div class="commonTop">
+    <div class="wrap">
+        <!-- logo -->
+        <a href="#" class="logoImg">
+            <img src="/Public/home/img/logo.png" alt="">
+             <span class="c_h1">通达医学常识，知晓家庭护理</span>
+            <img style="height: 18px;width: auto;" class="hidden-lg" src="/Public/home/img/cmt2.png" alt="">
+            <!-- 新增图标手机端开始 -->
+        <img class="hidden-lg"  src="/Public/home/img/H6.jpg" alt="">
+        <!-- 新增图标手机端结束 -->
+            <!-- 小屏幕下个人导航图标开始 -->
+            <img  class="hidden-lg cmtMenuLogo" src="/Public/home/img/cmt1.png" alt="">
+            <!-- 小屏幕下个人导航图标结束 -->
+            <!-- 小屏幕下个人导航图标结束 -->
+                    <img src="/Public/home/img/c6.png" class="cmtUser hidden-lg" alt="">
+        </a>
+        <!-- logo -->
+        <!-- 导航开始 -->
+        <nav id="sidebar-menu">
+            <a href="<?php echo U('Index/index');?>">首页</a>
+            <a href="<?php echo U('Coptic/index');?>">科普中心</a>
+            <a href="<?php echo U('Activity/index');?>">活动中心</a>
+            <a href="<?php echo U('HomeCare/index');?>">家庭护理</a>
+            <a href="<?php echo U('Aboutus/index');?>">关于我们</a>
+            <?php if(!empty($_SESSION['uid'])): ?><a href="<?php echo U('User/index');?>">个人中心</a><?php endif; ?>
+        </nav>
+        <!-- 导航结束 -->
+        <!-- 登陆注册开始 -->
+        <div class="loginBox">
+            <?php if(empty($_SESSION['uid'])): ?><a href="<?php echo U('Public/login');?>">登录</a><span>|</span><a href="<?php echo U('Public/register');?>">注册</a>
+                <?php else: ?>
+                <span><?php echo (session('nickname')); ?></span>&nbsp;&nbsp;&nbsp;<span>|</span><a href="<?php echo U('Public/signOut');?>">退出</a><?php endif; ?>
+        </div>
+        <!-- 登陆注册结束 -->
+        <!-- 新增图标pc端开始 -->
+        <img class="logoR6B visible-lg"  src="/Public/home/img/H6.jpg" alt="">
+        <!-- 新增图标pc端开始 -->
+    </div>
+</div>
 		<!-- 公共头部结束 -->
 		<div class="wrap main">
 			<h1 class="visible-lg">注册</h1>
 			<!-- 表单开始 -->
-			<form action="{:U('Public/register')}" class="form1">
+			<form action="<?php echo U('Public/register');?>" class="form1">
 				<table>
 					<tr>
 						<td>昵称</td>
@@ -66,7 +104,7 @@
 					</tr>
 					<tr>
 						<td>验证码</td>
-						<td class="codeBox"><input type="text" name="verifyCode" ><img src="{:U('Public/verify')}" alt=""><span class="changeA">看不清<br>换一张</span></td><!--__PUBLIC__/home/img/fp1.png-->
+						<td class="codeBox"><input type="text" name="verifyCode" ><img src="<?php echo U('Public/verify');?>" alt=""><span class="changeA">看不清<br>换一张</span></td><!--/Public/home/img/fp1.png-->
 					</tr>
 					<tr>
 						<td></td>
@@ -82,10 +120,16 @@
 			<!-- 表单结束 -->
 		</div>
 		<!-- 公共底部模块开始 -->
-		<include file="footer"/>
+		<div class="commonBottom visible-lg">
+    <div class="links">
+        <a href="#" class="key">友情链接</a>
+        <?php echo isset($link)?$link:"";?>
+        <p class="Copyright">Copyright © 2017达医晓护网，All&nbsp;rights&nbsp;reserved&nbsp;&nbsp;沪[CP备]4008832号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海松点网络科技有限公司技术支持</p>
+    </div>
+</div>
 		<!-- 公共底部模块结束 -->
-		<script type="text/javascript" src="__PUBLIC__/home/js/jquery1.91.min.js"></script>
-        <script type="text/javascript" src="__PUBLIC__/artDialog/dist/dialog.js"></script>
+		<script type="text/javascript" src="/Public/home/js/jquery1.91.min.js"></script>
+        <script type="text/javascript" src="/Public/artDialog/dist/dialog.js"></script>
 		<script type="text/javascript">
                                 
             $(function() {
@@ -123,7 +167,7 @@
                 });*/
 
 				$(".changeA").click(function () {
-				    var url = "{:U('Public/verify')}?r="+new Date().getTime()+Math.floor(Math.random() * ( 1000 + 1));
+				    var url = "<?php echo U('Public/verify');?>?r="+new Date().getTime()+Math.floor(Math.random() * ( 1000 + 1));
                     $(this).prev("img").attr("src",url);
                 });
             });
@@ -214,7 +258,7 @@
                 };
 
                 $.ajax({
-                    url: '{:U("Public/register")}',
+                    url: '<?php echo U("Public/register");?>',
                     type: 'post',
                     data: data,
                     dataType: 'json',
